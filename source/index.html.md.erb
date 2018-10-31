@@ -33,12 +33,12 @@ We hope by providing an API it will allow developers to build cool and useful to
 ```shell
 curl --request GET \
   --url '<%= config[:api_endpoint] %>...' \
-  --header 'Authorization: Token token=YOUR-API-KEY' \
+  --header 'Authorization: Token token=YOUR-API-TOKEN' \
   --header 'Accept: application/json' \
 ```
 
-The Tito API uses API keys to allow users to authenticate without exposing their credentials.
+The Tito API uses API tokens to allow users to authenticate without exposing their credentials.
 
-Developers can find their API key by signing in at [https://id.tito.io](https://id.tito.io).
+Developers can find their API token by signing in at [https://id.tito.io](https://id.tito.io).
 
-Your API key needs to included in the `Authorization` header so your requests can be authenticated.
+Your API token needs to included in the `Authorization` header so your requests can be authenticated.
