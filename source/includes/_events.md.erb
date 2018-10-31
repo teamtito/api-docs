@@ -1,0 +1,87 @@
+# Events
+
+Events are the primary object in Tito. An event is added to an `Account`, and most other resources belong to an `Event` object.
+
+An event URL is comprised of the combination of the `Account`’s `slug` and the 'Event'’s `slug`, for example `https://ti.to/ultimateconf/<%= Date.today.year %>` is composed of the base `ti.to` URL, the Ultimateconf slug `ultimateconf` and the specific `Event` slug for the <%= Date.today.year %> edition.
+
+The equivalent event can be looked up using a similar URL structure with the API base URL:
+
+`<%= config[:api_endpoint] %>/ultimateconf/<%= Date.today.year %>`
+
+
+## Attributes
+
+## Get all Events
+
+<%= partial "includes/requests/get", locals: { url: "#{config[:api_endpoint]}/:account_slug/events" } %>
+
+Retrieves all `Events` for the given `Account`.
+
+* `account_slug` - The `slug` attribute of an `Account`.
+
+
+## Get an Event
+
+<%= partial "includes/requests/get", locals: { url: "#{config[:api_endpoint]}/:account_slug/:event_slug" } %>
+
+Retrieve an individual `Event` for the given `Account`.
+
+* `account_slug` - The `slug` attribute of an `Account`.
+* `event_slug` - The `slug` attribute of an `Event`.
+
+## Create an Event
+
+Create a new `Event` belonging to the given `Account`.
+
+* `account_slug` - The `slug` attribute of an `Account`.
+
+<%= partial "includes/requests/post", locals: {
+      url: "#{config[:api_endpoint]}/:account_slug/events",
+      parameters: {
+        event: {
+          slug: "awesome-conf",
+          title: "Awesome Conf"
+        }
+      }
+    } %>
+
+## Update an Event
+
+Update an `Event` belonging to the given `Account`.
+
+* `account_slug` - The `slug` attribute of an `Account`.
+* `event_slug` - The `slug` attribute of an `Event`.
+
+<%= partial "includes/requests/patch",
+  locals: {
+    url: "#{config[:api_endpoint]}/:account_slug/:event_slug",
+    parameters: {
+      event: {
+        location: "Dublin, Ireland"
+      }
+    }
+  }
+%>
+
+
+## Delete an Event
+
+Delete an `Event` belonging to the given `Account`.
+
+* `account_slug` - The `slug` attribute of an `Account`.
+* `event_slug` - The `slug` attribute of an `Event`.
+
+<%= partial "includes/requests/delete", locals: {
+  url: "#{config[:api_endpoint]}/:account_slug/:event_slug"
+} %>
+
+
+
+## Duplicate an Event
+
+Duplicate an existing `Event` belonging to the given `Account`.
+
+* `account_slug` - The `slug` attribute of an `Account`.
+* `event_slug` - The `slug` attribute of an `Event` to be duplicated.
+
+<%= partial "includes/requests/post", locals: { url: "#{config[:api_endpoint]}/:account_slug/:event_slug/duplicate", parameters: {} } %>

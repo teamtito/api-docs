@@ -8,6 +8,7 @@ toc_footers:
   -
 
 includes:
+  - events
 
 search: true
 ---
@@ -17,7 +18,7 @@ search: true
 > **API endpoint**
 
 ```
-<%= config[:api_endpoint] %>
+<%= config[:api_endpoint] %>/
 ```
 
 > Examples in this documentation are written using curl.
@@ -32,7 +33,7 @@ We hope by providing an API it will allow developers to build cool and useful to
 
 ```shell
 curl --request GET \
-  --url '<%= config[:api_endpoint] %>...' \
+  --url '<%= config[:api_endpoint] %>/...' \
   --header 'Authorization: Token token=YOUR-API-TOKEN' \
   --header 'Accept: application/json' \
 ```
