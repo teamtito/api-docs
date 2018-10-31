@@ -50,8 +50,6 @@ html, body {
 .toc-wrapper {
   transition: left 0.3s ease-in-out;
 
-  overflow-y: auto;
-  overflow-x: hidden;
   position: fixed;
   z-index: 30;
   top: 0;
@@ -73,12 +71,21 @@ html, body {
 
   // This is the logo at the top of the ToC
   .logo {
-    display: block;
+    color: $link-blue;
+    font-size: 27px;
+    font-weight: 200;
+    line-height: 27px;
     max-width: 100%;
-    margin-bottom: $logo-margin;
+    padding: 32px 32px 0;
+    img {
+      height: auto;
+      width: 64px;
+    }
   }
 
   &>.search {
+    padding-top: 16px;
+    padding-bottom: 16px;
     position: relative;
 
     input {
@@ -96,9 +103,9 @@ html, body {
 
     &:before {
       position: absolute;
-      top: 17px;
+      top: 33px;
       left: $nav-padding;
-      color: $nav-text;
+      /* color: $nav-text; */
       @extend %icon-search;
     }
   }
@@ -155,6 +162,20 @@ html, body {
   .toc-link.active {
     background-color: $nav-active-bg;
     color: $nav-active-text;
+    &:after {
+      left: 100%;
+      top: 50%;
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+      border-color: rgba(0,0,0,0);
+      border-left-color: $link-blue;
+      border-width: 8px;
+      margin-top: -8px;
+    }
   }
 
   // this is parent links of the currently selected ToC entry
@@ -177,7 +198,7 @@ html, body {
   .toc-footer {
     padding: 1em 0;
     margin-top: 1em;
-    border-top: 1px dashed $nav-footer-border-color;
+    /* border-top: 1px dashed $nav-footer-border-color; */
 
     li,a {
       color: $nav-text;
@@ -197,9 +218,11 @@ html, body {
 }
 
 .toc-link, .toc-footer li {
-  padding: 0 $nav-padding 0 $nav-padding;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 12px $nav-padding 12px $nav-padding;
   display: block;
-  overflow-x: hidden;
+  position: relative;
   white-space: nowrap;
   text-overflow: ellipsis;
   text-decoration: none;
@@ -279,16 +302,20 @@ html, body {
 
 .lang-selector {
   background-color: $lang-select-bg;
+  padding: 32px 0 0 0;
   width: 100%;
-  font-weight: bold;
   a {
     display: block;
     float:left;
     color: $lang-select-text;
     text-decoration: none;
-    padding: 0 10px;
+    padding: 16px 32px;
+    letter-spacing: 1px;
     line-height: 30px;
     outline: 0;
+    text-align: center;
+    text-transform: uppercase;
+    width: 10%;
 
     &:active, &:focus {
       background-color: $lang-select-pressed-bg;
