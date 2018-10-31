@@ -1,8 +1,16 @@
 # Events
 
-Events are the primary object in Tito. An event is added to an `Account`, and most other resources belong to an `Event` object.
+Events are planned social occasions that tickets will be sold for and people will attend.
 
-An event URL is comprised of the combination of the `Account`’s `slug` and the 'Event'’s `slug`, for example `https://ti.to/ultimateconf/<%= Date.today.year %>` is composed of the base `ti.to` URL, the Ultimateconf slug `ultimateconf` and the specific `Event` slug for the <%= Date.today.year %> edition.
+An Event belongs to an `Account` and most other resources belong to an event.
+
+An event URL is comprised of the combination of the `account_slug` and the `event_slug`.
+
+For example `https://ti.to/ultimateconf/<%= Date.today.year %>` is composed:
+
+* The base `ti.to` URL
+* The Ultimate Conf `Account` slug `ultimateconf`
+* The specific `Event` slug for the <%= Date.today.year %> edition.
 
 The equivalent event can be looked up using a similar URL structure with the API base URL:
 
