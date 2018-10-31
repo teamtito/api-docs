@@ -38,6 +38,8 @@ end
 activate :relative_assets
 set :relative_links, true
 
+config[:api_endpoint] = "https://api.tito.io/v3/"
+
 # Build Configuration
 configure :build do
   # If you're having trouble with Middleman hanging, commenting
