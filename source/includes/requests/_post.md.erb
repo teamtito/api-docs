@@ -1,7 +1,7 @@
 ```shell
 curl --request POST \
   --url '<%= url %>' \
-  --header 'Authorization: Token token=YOUR-API-TOKEN' \
+  --header 'Authorization: Token token=<%= config[:api_token] %>' \
   --header 'Accept: application/json' \
   --header 'Content-Type: application/json' \
   --data '<%= parameters.to_json %>'

@@ -1,6 +1,6 @@
 ```shell
 curl --request GET \
   --url '<%= url %>' \
-  --header 'Authorization: Token token=YOUR-API-TOKEN' \
+  --header 'Authorization: Token token=<%= config[:api_token] %>' \
   --header 'Accept: application/json'
 ```

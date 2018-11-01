@@ -34,7 +34,7 @@ We hope by providing an API it will allow developers to build cool and useful to
 ```shell
 curl --request GET \
   --url '<%= config[:api_endpoint] %>/...' \
-  --header 'Authorization: Token token=YOUR-API-TOKEN' \
+  --header 'Authorization: Token token=<%= config[:api_token] %>' \
   --header 'Accept: application/json' \
 ```
 
