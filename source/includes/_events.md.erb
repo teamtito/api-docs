@@ -19,6 +19,8 @@ The equivalent event can be looked up using a similar URL structure with the API
 
 ## Attributes
 
+<%= partial "includes/shared/attributes", locals: { attributes: data.events.attributes } %>
+
 ## Get all Events
 
 <%= partial "includes/requests/get", locals: { url: "#{config[:api_endpoint]}/:account_slug/events" } %>
@@ -39,10 +41,6 @@ Retrieve an individual `Event` for the given `Account`.
 
 ## Create an Event
 
-Create a new `Event` belonging to the given `Account`.
-
-* `account_slug` - The `slug` attribute of an `Account`.
-
 <%= partial "includes/requests/post", locals: {
       url: "#{config[:api_endpoint]}/:account_slug/events",
       parameters: {
@@ -52,6 +50,14 @@ Create a new `Event` belonging to the given `Account`.
         }
       }
     } %>
+
+Create a new `Event` belonging to the given `Account`.
+
+* `account_slug` - The `slug` attribute of an `Account`.
+
+### Parameters
+
+<%= partial "includes/shared/parameters", locals: { parameters: data.events.attributes.reject { |attribute| attribute["read_only"] } } %>
 
 ## Update an Event
 
@@ -74,22 +80,20 @@ Update an `Event` belonging to the given `Account`.
 
 ## Delete an Event
 
+<%= partial "includes/requests/delete", locals: {
+  url: "#{config[:api_endpoint]}/:account_slug/:event_slug"
+} %>
+
 Delete an `Event` belonging to the given `Account`.
 
 * `account_slug` - The `slug` attribute of an `Account`.
 * `event_slug` - The `slug` attribute of an `Event`.
 
-<%= partial "includes/requests/delete", locals: {
-  url: "#{config[:api_endpoint]}/:account_slug/:event_slug"
-} %>
-
-
-
 ## Duplicate an Event
+
+<%= partial "includes/requests/post", locals: { url: "#{config[:api_endpoint]}/:account_slug/:event_slug/duplicate", parameters: {} } %>
 
 Duplicate an existing `Event` belonging to the given `Account`.
 
 * `account_slug` - The `slug` attribute of an `Account`.
 * `event_slug` - The `slug` attribute of an `Event` to be duplicated.
-
-<%= partial "includes/requests/post", locals: { url: "#{config[:api_endpoint]}/:account_slug/:event_slug/duplicate", parameters: {} } %>
