@@ -24,6 +24,7 @@ The equivalent event can be looked up using a similar URL structure with the API
 ## Get all Events
 
 <%= partial "includes/requests/get", locals: { url: "#{config[:api_endpoint]}/:account_slug/events" } %>
+<%= partial "includes/events/index.json" %>
 
 Retrieves all `Events` for the given `Account`.
 
@@ -33,6 +34,7 @@ Retrieves all `Events` for the given `Account`.
 ## Get an Event
 
 <%= partial "includes/requests/get", locals: { url: "#{config[:api_endpoint]}/:account_slug/:event_slug" } %>
+<%= partial "includes/events/show.json" %>
 
 Retrieve an individual `Event` for the given `Account`.
 
