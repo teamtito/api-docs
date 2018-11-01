@@ -52,7 +52,7 @@
       "description": null,
       "type": "string",
       "read_only": false,
-      "required": true
+      "required": false
     },
     "start-date": {
       "description": null,
