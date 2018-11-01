@@ -3,62 +3,74 @@
     "banner-url": {
       "description": "A link to the event's banner image.",
       "type": "url",
-      "read_only": true
+      "read_only": true,
+      "required": false
     },
     "currency": {
       "description": "3 letter ISO currency code e.g. `USD`",
       "type": "string",
-      "read_only": false
+      "read_only": false,
+      "required": false
     },
     "description": {
       "description": null,
       "type": "markdown",
-      "read_only": false
+      "read_only": false,
+      "required": false
     },
     "end-date": {
       "description": null,
       "type": "date",
-      "read_only": false
+      "read_only": false,
+      "required": false
     },
     "live": {
       "description": "Is it visible to the public or not.",
       "type": "boolean",
-      "read_only": false
+      "read_only": false,
+      "required": false
     },
     "location": {
       "description": "The location of the event.",
       "type": "string",
-      "read_only": false
+      "read_only": false,
+      "required": false
     },
     "logo-url": {
       "description": "A link to the event's logo image.",
       "type": "url",
-      "read_only": true
+      "read_only": true,
+      "required": false
     },
     "private": {
       "description": "Is it to be listed on the event's account page or not.",
       "type": "boolean",
-      "read_only": false
+      "read_only": false,
+      "required": false
     },
     "slug": {
       "description": null,
       "type": "string",
-      "read_only": false
+      "read_only": false,
+      "required": true
     },
     "start-date": {
       "description": null,
       "type": "date",
-      "read_only": false
+      "read_only": false,
+      "required": false
     },
     "test-mode": {
       "description": "Is the event in test mode or not.",
       "type": "boolean",
-      "read_only": false
+      "read_only": false,
+      "required": false
     },
     "title": {
       "description": null,
       "type": "string",
-      "read_only": false
+      "read_only": false,
+      "required": true
     }
   }
 }

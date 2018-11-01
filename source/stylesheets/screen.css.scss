@@ -640,3 +640,11 @@ html, body {
 .highlight, .highlight .w {
   background-color: $code-bg;
 }
+
+.required {
+  color: #EF5350;
+  display: block;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 400;
+}
