@@ -58,7 +58,7 @@ Create a new `Event` belonging to the given `Account`.
 
 ### Parameters
 
-<%= partial "includes/shared/parameters", locals: { parameters: data.events.attributes.reject { |attribute| attribute["read_only"] } } %>
+<%= partial "includes/shared/parameters", locals: { parameters: data.events.attributes.reject { |name,attribute| attribute["read_only"] } } %>
 
 ## Update an Event
 

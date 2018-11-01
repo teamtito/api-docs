@@ -1,6 +1,24 @@
 {
   "attributes": {
-    "banner-url": {
+    "title": {
+      "description": null,
+      "type": "string",
+      "read_only": false,
+      "required": true
+    },
+    "description": {
+      "description": null,
+      "type": "markdown",
+      "read_only": false,
+      "required": false
+    },
+    "banner": {
+      "description": null,
+      "type": "object",
+      "read_only": false,
+      "required": false
+    },
+    "banner_url": {
       "description": "A link to the event's banner image.",
       "type": "url",
       "read_only": true,
@@ -12,15 +30,9 @@
       "read_only": false,
       "required": false
     },
-    "description": {
-      "description": null,
-      "type": "markdown",
-      "read_only": false,
-      "required": false
-    },
-    "end-date": {
-      "description": null,
-      "type": "date",
+    "default_locale": {
+      "description": "The default locale of the event",
+      "type": "string",
       "read_only": false,
       "required": false
     },
@@ -30,16 +42,28 @@
       "read_only": false,
       "required": false
     },
+    "test_mode": {
+      "description": "Is the event in test mode or not.",
+      "type": "boolean",
+      "read_only": false,
+      "required": false
+    },
+    "locales": {
+      "description": "A list of locales supported for this event",
+      "type": "Array",
+      "read_only": false,
+      "required": false
+    },
     "location": {
-      "description": "The location of the event.",
+      "description": "The location the event is taking place",
       "type": "string",
       "read_only": false,
       "required": false
     },
-    "logo-url": {
-      "description": "A link to the event's logo image.",
-      "type": "url",
-      "read_only": true,
+    "logo": {
+      "description": null,
+      "type": "object",
+      "read_only": false,
       "required": false
     },
     "private": {
@@ -54,23 +78,83 @@
       "read_only": false,
       "required": false
     },
-    "start-date": {
+    "account_id": {
+      "description": null,
+      "type": "integer",
+      "read_only": false,
+      "required": false
+    },
+    "start_date": {
       "description": null,
       "type": "date",
       "read_only": false,
       "required": false
     },
-    "test-mode": {
-      "description": "Is the event in test mode or not.",
+    "end_date": {
+      "description": null,
+      "type": "date",
+      "read_only": false,
+      "required": false
+    },
+    "date_or_range": {
+      "description": null,
+      "type": "string",
+      "read_only": false,
+      "required": false
+    },
+    "security_token": {
+      "description": null,
+      "type": "string",
+      "read_only": false,
+      "required": false
+    },
+    "metadata": {
+      "description": null,
+      "type": "object",
+      "read_only": false,
+      "required": false
+    },
+    "url": {
+      "description": null,
+      "type": "string",
+      "read_only": true,
+      "required": false
+    },
+    "setup": {
+      "description": null,
       "type": "boolean",
       "read_only": false,
       "required": false
     },
-    "title": {
+    "show_discount_code_field": {
+      "description": null,
+      "type": "boolean",
+      "read_only": false,
+      "required": false
+    },
+    "discount_codes_count": {
+      "description": null,
+      "type": "integer",
+      "read_only": true,
+      "required": false
+    },
+    "account_slug": {
       "description": null,
       "type": "string",
-      "read_only": false,
-      "required": true
+      "read_only": true,
+      "required": false
+    },
+    "users_count": {
+      "description": null,
+      "type": "integer",
+      "read_only": true,
+      "required": false
+    },
+    "releases": {
+      "description": "",
+      "type": "array",
+      "read_only": true,
+      "required": false
     }
   }
 }
