@@ -1,0 +1,10 @@
+```json
+{
+   "duplication":{  
+      "_type":"duplication",
+      "status":"processing",
+      "title":null,
+      "slug":null
+   }
+}
+```

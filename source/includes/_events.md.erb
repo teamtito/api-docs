@@ -96,9 +96,36 @@ FIXME: RETURNS HTML INSTEAD OF JSON SAYING YOU ARE BEING REDIRECTED
 
 ## Duplicate an Event
 
-<%= partial "includes/requests/post", locals: { url: "#{config[:api_endpoint]}/:account_slug/:event_slug/duplicate", parameters: {} } %>
+<%= partial "includes/requests/post", locals: { url: "#{config[:api_endpoint]}/:account_slug/:event_slug/duplication", parameters: {} } %>
+<%= partial "includes/events/duplication.json" %>
 
 Duplicate an existing `Event` belonging to the given `Account`.
 
 * `account_slug` - The `slug` attribute of an `Account`.
 * `event_slug` - The `slug` attribute of an `Event` to be duplicated.
+
+As duplicating an `Event` happens asynchronously the Tito API provides a response
+indicating the current `status` of the duplication:
+
+* `processing` - The duplication is still being processed.
+* `complete` - The duplication has successfully completed.
+
+The latest status of the duplication can be then looked up.
+
+## Duplicate an Event status
+
+<%= partial "includes/requests/get", locals: { url: "#{config[:api_endpoint]}/:account_slug/:event_slug/duplication" } %>
+<%= partial "includes/events/duplication_complete.json" %>
+
+The latest status of the `Event` duplication.
+
+* `account_slug` - The `slug` attribute of an `Account`.
+* `event_slug` - The `slug` attribute of an `Event` to be duplicated.
+
+As duplicating an `Event` happens asynchronously the API provides the ability to
+lookup the latest status of the duplication. The status can be either:
+
+* `processing` - The duplication is still being processed.
+* `complete` - The duplication has successfully completed.
+
+Once the duplication completes the Event `slug` and `title` will be assigned.
