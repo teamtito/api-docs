@@ -1,0 +1,28 @@
+# Errors
+
+The Tito API uses conventional HTTP response codes to indicate errors, and includes more detailed information on the exact nature of an error in the HTTP response.
+
+
+For example, if a resource requires a name to be present:
+
+<code>
+{
+  "errors": {
+    "name": [
+      "can't be blank"
+    ]
+  }
+}
+</code>
+
+
+Code | Meaning
+---- | -------
+`200` OK | All is well.
+`201` Created | The request has been fulfilled and has resulted in one or more new resources being created.
+`204` No Content | The request has been fulfilled and that there is no additional content to send in the response payload body. e.g deleting a resource.
+`404` Page Not Found | The endpoint requested does not exist.
+`422` Unprocessable Entity | The resource couldn't be created or updated due to a validation error. Please see the response body for more information.
+`429` Too Many Requests | Your application is exceeding its rate limit. Slow down, pal!
+`500` Internal Server Error | Something is wrong on our end.
+`504` Gateway Timeout|Something has timed out on our end.
