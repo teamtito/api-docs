@@ -25,7 +25,7 @@
       "required": false
     },
     "currency": {
-      "description": "3 letter ISO currency code e.g. `USD`",
+      "description": "3 letter ISO 4217 currency code e.g. `USD`",
       "type": "string",
       "read_only": false,
       "required": false
