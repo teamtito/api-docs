@@ -16,43 +16,58 @@ The equivalent event can be looked up using a similar URL structure with the API
 
 `<%= config[:api_endpoint] %>/ultimateconf/<%= Date.today.year %>`
 
-
 ## Attributes
 
 <%= partial "includes/shared/attributes", locals: { attributes: data.events.attributes } %>
 
 ## Get all Events
 
-<%= partial "includes/requests/get", locals: { url: "#{config[:api_endpoint]}/:account_slug/events" } %>
+<%= partial "includes/requests/get",
+  locals: {
+    url: "#{config[:api_endpoint]}/:account_slug/events"
+  }
+%>
 <%= partial "includes/events/index.json" %>
 
 Retrieves all `Events` for the given `Account`.
+
+`<%= "GET #{config[:api_endpoint]}/:account_slug/events" %>`
 
 * `account_slug` - The `slug` attribute of an `Account`.
 
 
 ## Get an Event
 
-<%= partial "includes/requests/get", locals: { url: "#{config[:api_endpoint]}/:account_slug/:event_slug" } %>
+<%= partial "includes/requests/get",
+  locals: {
+    url: "#{config[:api_endpoint]}/:account_slug/:event_slug"
+  }
+%>
 <%= partial "includes/events/show.json" %>
 
 Retrieve an individual `Event` for the given `Account`.
+
+`<%= "GET #{config[:api_endpoint]}/:account_slug/:event_slug" %>`
 
 * `account_slug` - The `slug` attribute of an `Account`.
 * `event_slug` - The `slug` attribute of an `Event`.
 
 ## Create an Event
 
-<%= partial "includes/requests/post", locals: {
-      url: "#{config[:api_endpoint]}/:account_slug/events",
-      parameters: {
-        event: {
-          title: "Awesome Conf"
-        }
+<%= partial "includes/requests/post",
+  locals: {
+    url: "#{config[:api_endpoint]}/:account_slug/events",
+    parameters: {
+      event: {
+        title: "Awesome Conf"
       }
-    } %>
+    }
+  }
+%>
 
 Create a new `Event` belonging to the given `Account`.
+
+`<%= "POST #{config[:api_endpoint]}/:account_slug/events" %>`
 
 * `account_slug` - The `slug` attribute of an `Account`.
 
@@ -61,13 +76,6 @@ Create a new `Event` belonging to the given `Account`.
 <%= partial "includes/shared/parameters", locals: { parameters: data.events.attributes.reject { |name,attribute| attribute["read_only"] } } %>
 
 ## Update an Event
-
-Update an `Event` belonging to the given `Account`.
-
-* `account_slug` - The `slug` attribute of an `Account`.
-* `event_slug` - The `slug` attribute of an `Event`.
-
-FIXME: THIS IS MISSING FROM DASHBOARD
 
 <%= partial "includes/requests/patch",
   locals: {
@@ -80,6 +88,15 @@ FIXME: THIS IS MISSING FROM DASHBOARD
   }
 %>
 
+Update an `Event` belonging to the given `Account`.
+
+`<%= "PATCH #{config[:api_endpoint]}/:account_slug/:event_slug" %>`
+
+* `account_slug` - The `slug` attribute of an `Account`.
+* `event_slug` - The `slug` attribute of an `Event`.
+
+FIXME: THIS IS MISSING FROM DASHBOARD
+
 
 ## Delete an Event
 
@@ -89,6 +106,8 @@ FIXME: THIS IS MISSING FROM DASHBOARD
 
 Delete an `Event` belonging to the given `Account`.
 
+`<%= "DELETE #{config[:api_endpoint]}/:account_slug/:event_slug" %>`
+
 * `account_slug` - The `slug` attribute of an `Account`.
 * `event_slug` - The `slug` attribute of an `Event`.
 
@@ -96,10 +115,17 @@ FIXME: RETURNS HTML INSTEAD OF JSON SAYING YOU ARE BEING REDIRECTED
 
 ## Duplicate an Event
 
-<%= partial "includes/requests/post", locals: { url: "#{config[:api_endpoint]}/:account_slug/:event_slug/duplication", parameters: {} } %>
+<%= partial "includes/requests/post",
+  locals: {
+    url: "#{config[:api_endpoint]}/:account_slug/:event_slug/duplication",
+    parameters: {}
+  }
+%>
 <%= partial "includes/events/duplication.json" %>
 
 Duplicate an existing `Event` belonging to the given `Account`.
+
+`<%= "POST #{config[:api_endpoint]}/:account_slug/:event_slug/duplication" %>`
 
 * `account_slug` - The `slug` attribute of an `Account`.
 * `event_slug` - The `slug` attribute of an `Event` to be duplicated.
@@ -114,10 +140,16 @@ The latest status of the duplication can be then looked up.
 
 ## Duplicate an Event status
 
-<%= partial "includes/requests/get", locals: { url: "#{config[:api_endpoint]}/:account_slug/:event_slug/duplication" } %>
+<%= partial "includes/requests/get",
+  locals: {
+    url: "#{config[:api_endpoint]}/:account_slug/:event_slug/duplication"
+  }
+%>
 <%= partial "includes/events/duplication_complete.json" %>
 
 The latest status of the `Event` duplication.
+
+`<%= "GET #{config[:api_endpoint]}/:account_slug/:event_slug/duplication" %>`
 
 * `account_slug` - The `slug` attribute of an `Account`.
 * `event_slug` - The `slug` attribute of an `Event` to be duplicated.
