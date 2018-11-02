@@ -1,0 +1,59 @@
+{
+  "attributes": {
+    "capacity": {
+      "description": "The number of people who can attend. If not set then there is no limit.",
+      "type": "integer",
+      "read_only": false,
+      "required": false
+
+    },
+    "date": {
+      "description": "The date of this activity",
+      "type": "date",
+      "read_only": false,
+      "required": false
+    },
+    "description": {
+      "description": "A statement or tag line describing the activity",
+      "type": "text",
+      "read_only": false,
+      "required": false
+    },
+    "end_time": {
+      "description": "The time the activity is going to start",
+      "type": "time",
+      "read_only": false,
+      "required": false
+    },
+    "name": {
+      "description": "The name of the activity",
+      "type": "string",
+      "read_only": false,
+      "required": true
+    },
+    "private": {
+      "description": "Is it to be hidden on the event homepage and tickets or not. Default: `false`",
+      "type": "boolean",
+      "read_only": false,
+      "required": false
+    },
+    "question_ids": {
+      "description": "The `Questions` to be asked to those who register for this activity. Format: An array of `Question` IDs.",
+      "type": "array",
+      "read_only": false,
+      "required": false
+    },
+    "release_ids": {
+      "description": "The `Releases` that are part of the activity. Format: An array of `Release` IDs.",
+      "type": "array",
+      "read_only": false,
+      "required": false
+    },
+    "start_time": {
+      "description": "The time the activity is going to start",
+      "type": "time",
+      "read_only": false,
+      "required": false
+    }
+  }
+}

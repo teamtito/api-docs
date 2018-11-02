@@ -4,8 +4,7 @@
 
 ## Attributes
 
-<aside class="warning">FIXME: Add attributes table</aside>
-
+<%= partial "includes/shared/attributes", locals: { attributes: data.activities.attributes } %>
 
 ## Get all Activities
 
@@ -65,7 +64,7 @@ Create a new `Activity` belonging to the given `Event`.
 
 ### Parameters
 
-<aside class="warning">FIXME: Add parameters table</aside>
+<%= partial "includes/shared/parameters", locals: { parameters: data.activities.attributes.reject { |name,attribute| attribute["read_only"] } } %>
 
 ## Update an Activity
 
@@ -91,7 +90,7 @@ Update an `Activity` belonging to the given `Event`.
 
 ### Parameters
 
-<aside class="warning">FIXME: Add parameters table</aside>
+<%= partial "includes/shared/parameters", locals: { parameters: data.activities.attributes.reject { |name,attribute| attribute["read_only"] } } %>
 
 ## Delete an Activity
 
