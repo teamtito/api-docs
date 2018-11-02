@@ -1,13 +1,13 @@
 {
   "attributes": {
     "title": {
-      "description": null,
+      "description": "The name of the event",
       "type": "string",
       "read_only": false,
       "required": true
     },
     "description": {
-      "description": null,
+      "description": "A statement or tag line describing the event",
       "type": "markdown",
       "read_only": false,
       "required": false
@@ -73,7 +73,7 @@
       "required": false
     },
     "slug": {
-      "description": null,
+      "description": "A human friendly string used in the Event URL",
       "type": "string",
       "read_only": false,
       "required": false
@@ -85,13 +85,13 @@
       "required": false
     },
     "start_date": {
-      "description": null,
+      "description": "The date the event is going to start",
       "type": "date",
       "read_only": false,
       "required": false
     },
     "end_date": {
-      "description": null,
+      "description": "The date the event is going to end",
       "type": "date",
       "read_only": false,
       "required": false
@@ -109,8 +109,8 @@
       "required": false
     },
     "metadata": {
-      "description": null,
-      "type": "object",
+      "description": "JSON that will appear in API requests for integration with external systems",
+      "type": "json",
       "read_only": false,
       "required": false
     },
