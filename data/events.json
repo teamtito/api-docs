@@ -81,7 +81,7 @@
     "account_id": {
       "description": null,
       "type": "integer",
-      "read_only": false,
+      "read_only": true,
       "required": false
     },
     "start_date": {
@@ -99,13 +99,13 @@
     "date_or_range": {
       "description": null,
       "type": "string",
-      "read_only": false,
+      "read_only": true,
       "required": false
     },
     "security_token": {
       "description": null,
       "type": "string",
-      "read_only": false,
+      "read_only": true,
       "required": false
     },
     "metadata": {
@@ -123,13 +123,13 @@
     "setup": {
       "description": null,
       "type": "boolean",
-      "read_only": false,
+      "read_only": true,
       "required": false
     },
     "show_discount_code_field": {
       "description": null,
       "type": "boolean",
-      "read_only": false,
+      "read_only": true,
       "required": false
     },
     "discount_codes_count": {
