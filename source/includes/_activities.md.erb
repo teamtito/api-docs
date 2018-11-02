@@ -1,0 +1,112 @@
+# Activities
+
+<aside class="warning">FIXME: Add introduction to activities</aside>
+
+## Attributes
+
+<aside class="warning">FIXME: Add attributes table</aside>
+
+
+## Get all Activities
+
+<%= partial "includes/requests/get",
+  locals: {
+    url: "#{config[:api_endpoint]}/:account_slug/:event_slug/activities"
+  }
+%>
+<%= partial "includes/activities/index.json" %>
+
+
+Retrieves all `Activities` for the given `Event`.
+
+`<%= "GET #{config[:api_endpoint]}/:account_slug/:event_slug/activities" %>`
+
+* `account_slug` - The `slug` attribute of an `Account`.
+* `event_slug` - The `slug` attribute of an `Event`.
+
+## Get an Activity
+
+<%= partial "includes/requests/get",
+  locals: {
+    url: "#{config[:api_endpoint]}/:account_slug/:event_slug/activities/:activity_id"
+  }
+%>
+<%= partial "includes/activities/show.json" %>
+
+Retrieves an `Activity` for the given `Event`.
+
+`GET <%= "#{config[:api_endpoint]}/:account_slug/:event_slug/activities/:activity_id" %>`
+
+* `account_slug` - The `slug` attribute of an `Account`.
+* `event_slug` - The `slug` attribute of an `Event`.
+* `activity_id` - The `id` attribute of an `Activity`.
+
+
+## Create an Activity
+
+<%= partial "includes/requests/post",
+  locals: {
+    url: "#{config[:api_endpoint]}/:account_slug/:event_slug/activities",
+    parameters: {
+      activity: {
+        capacity: 100,
+        name: "Day 2 Dinner",
+        release_ids: ["conf-ticket", "workshop-ticket"]
+      }
+    }
+  }
+%>
+<%= partial "includes/activities/create.json" %>
+
+Create a new `Activity` belonging to the given `Event`.
+
+`POST <%= "#{config[:api_endpoint]}/:account_slug/:event_slug/activities" %>`
+
+* `account_slug` - The `slug` attribute of an `Account`.
+* `event_slug` - The `slug` attribute of an `Event`.
+
+### Parameters
+
+<aside class="warning">FIXME: Add parameters table</aside>
+
+## Update an Activity
+
+<%= partial "includes/requests/patch",
+  locals: {
+    url: "#{config[:api_endpoint]}/:account_slug/:event_slug/activities/:activity_id",
+    parameters: {
+      activity: {
+        capacity: 100
+      }
+    }
+  }
+%>
+<%= partial "includes/activities/update.json" %>
+
+Update an `Activity` belonging to the given `Event`.
+
+`PATCH <%= "#{config[:api_endpoint]}/:account_slug/:event_slug/activities/:activity_id" %>`
+
+* `account_slug` - The `slug` attribute of an `Account`.
+* `event_slug` - The `slug` attribute of an `Event`.
+* `activity_id` - The `id` attribute of an `Activity`.
+
+### Parameters
+
+<aside class="warning">FIXME: Add parameters table</aside>
+
+## Delete an Activity
+
+<%= partial "includes/requests/delete",
+  locals: {
+    url: "#{config[:api_endpoint]}/:account_slug/:event_slug/activities/:activity_id",
+  }
+%>
+
+Delete an `Activity` belonging to the given `Event`.
+
+`DELETE <%= "#{config[:api_endpoint]}/:account_slug/:event_slug/activities/:activity_id" %>`
+
+* `account_slug` - The `slug` attribute of an `Account`.
+* `event_slug` - The `slug` attribute of an `Event`.
+* `activity_id` - The `id` attribute of an `Activity`.
