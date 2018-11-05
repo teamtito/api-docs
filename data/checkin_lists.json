@@ -43,7 +43,7 @@
       "required": false
     },
     "title": {
-      "description": null,
+      "description": "The name of the check-in list.",
       "type": "string",
       "read_only": false,
       "required": true
