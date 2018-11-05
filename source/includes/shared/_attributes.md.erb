@@ -1,5 +1,5 @@
 Attribute | Type | Description
 --------- | ---- | -----------
-<%- attributes.each do |name, attribute| -%>
+<%- attributes.sort_by { |name, attribute| name }.each do |name, attribute| -%>
 <%= name %> | `<%= attribute["type"] %>` | <%= attribute["description"].presence || "&mdash;" %> <%= "*Readonly*" if attribute["read_only"] %>
 <%- end -%>
