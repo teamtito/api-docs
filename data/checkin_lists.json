@@ -1,0 +1,52 @@
+{
+  "attributes": {
+    "activity_ids": {
+      "description": "The `Activities` the check-in list is for. Format: An array of `Activity` IDs.",
+      "type": "array",
+      "read_only": false,
+      "required": false
+    },
+    "expires_at": {
+      "description": "The time at which the check-in list should no longer be accessible or null for no expiry.",
+      "type": "datetime",
+      "read_only": false,
+      "required": false
+    },
+    "question_ids": {
+      "description": "The `Questions` to show attendees' answers to on the check-in list. Format: An array of `Question` IDs.",
+      "type": "array",
+      "read_only": false,
+      "required": false
+    },
+    "release_ids": {
+      "description": "The `Releases` the check-in list is for. Format: An array of `Release` IDs.",
+      "type": "array",
+      "read_only": false,
+      "required": false
+    },
+    "show_company_name": {
+      "description": "Show the attendees' company name on the check-in list.",
+      "type": "boolean",
+      "read_only": false,
+      "required": false
+    },
+    "show_email": {
+      "description": "Show the attendees' email address on the check-in list.",
+      "type": "boolean",
+      "read_only": false,
+      "required": false
+    },
+    "show_phone_number": {
+      "description": "Show the attendees' phone number on the check-in list.",
+      "type": "boolean",
+      "read_only": false,
+      "required": false
+    },
+    "title": {
+      "description": null,
+      "type": "string",
+      "read_only": false,
+      "required": true
+    }
+  }
+}

@@ -7,7 +7,7 @@ Create a master check-in list for all attendees or create special lists just for
 
 ## Attributes
 
-<aside class="warning">Add attribute table</aside>
+<%= partial "includes/shared/attributes", locals: { attributes: data.checkin_lists.attributes } %>
 
 ## Get all Check-in Lists
 
@@ -67,7 +67,7 @@ Create a new `CheckinList` belonging to the given `Event`.
 
 ### Parameters
 
-<aside class="warning">Add parameter table</aside>
+<%= partial "includes/shared/parameters", locals: { parameters: data.checkin_lists.attributes.reject { |name,attribute| attribute["read_only"] } } %>
 
 
 ## Update a Check-in List
@@ -94,7 +94,7 @@ Update a `CheckinList` belonging to the given `Event`.
 
 ### Parameters
 
-<aside class="warning">Add parameter table</aside>
+<%= partial "includes/shared/parameters", locals: { parameters: data.checkin_lists.attributes.reject { |name,attribute| attribute["read_only"] } } %>
 
 ## Delete a Check-in List
 
