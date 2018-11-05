@@ -31,8 +31,8 @@
       "read_only": false,
       "required": true
     },
-    "private": {
-      "description": "Is it to be hidden on the event homepage and tickets or not. Default: `false`",
+    "show_to_attendee": {
+      "description": "You can choose to show this activity to attendees. If shown, it will be listed on their ticket. Default: `false`",
       "type": "boolean",
       "read_only": false,
       "required": false
