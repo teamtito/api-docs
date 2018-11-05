@@ -1,0 +1,5 @@
+Parameter | Type | Description
+--------- | ------- | -----------
+<%- parameters.sort_by { |name, parameter| parameter.required ? 0 : 1 }.each do |name, parameter| -%>
+<%= name %> <%= "<span class='required'>Required</span>" if parameter.required %> | `<%= parameter["type"] %>` | <%= parameter["description"].presence || "&mdash;" %>
+<%- end -%>

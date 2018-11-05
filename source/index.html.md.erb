@@ -1,5 +1,5 @@
 ---
-title: Tito API Documentation
+title: Tito API Explorer
 
 language_tabs: # must be one of https://git.io/vQNgJ
   - shell
@@ -9,6 +9,7 @@ toc_footers:
 
 includes:
   - pagination
+  - events
   - errors
 
 search: true
@@ -19,7 +20,7 @@ search: true
 > **API endpoint**
 
 ```
-<%= config[:api_endpoint] %>
+<%= config[:api_endpoint] %>/
 ```
 
 > Examples in this documentation are written using curl.
@@ -34,8 +35,8 @@ We hope by providing an API it will allow developers to build cool and useful to
 
 ```shell
 curl --request GET \
-  --url '<%= config[:api_endpoint] %>...' \
-  --header 'Authorization: Token token=YOUR-API-TOKEN' \
+  --url '<%= config[:api_endpoint] %>/...' \
+  --header 'Authorization: Token token=<%= config[:api_token] %>' \
   --header 'Accept: application/json' \
 ```
 

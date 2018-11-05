@@ -38,7 +38,8 @@ end
 activate :relative_assets
 set :relative_links, true
 
-config[:api_endpoint] = "https://api.tito.io/v3/"
+config[:api_endpoint] = "https://api.tito.io/v3"
+config[:api_token] = "YOUR-API-TOKEN"
 
 # Build Configuration
 configure :build do
