@@ -13,7 +13,7 @@ Create a master check-in list for all attendees or create special lists just for
 
 <%= partial "includes/requests/get",
   locals: {
-    url: "#{config[:api_endpoint]}/:account_slug/checkin_lists"
+    url: "#{config[:api_endpoint]}/:account_slug/:event_slug/checkin_lists"
   }
 %>
 <%= partial "includes/checkin_lists/index.json" %>
