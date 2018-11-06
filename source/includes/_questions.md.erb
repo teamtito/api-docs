@@ -1,0 +1,105 @@
+# Questions
+
+## Attributes
+
+<%= partial "includes/shared/attributes", locals: { attributes: data.questions.attributes } %>
+
+## Get all Questions
+
+<%= partial "includes/requests/get",
+  locals: {
+    url: "#{config[:api_endpoint]}/:account_slug/:event_slug/questions"
+  }
+%>
+<%= partial "includes/questions/index.json" %>
+
+Retrieves all `Questions` for the given `Event`.
+
+`<%= "GET #{config[:api_endpoint]}/:account_slug/:event_slug/questions" %>`
+
+* `account_slug` - The `slug` attribute of an `Account`.
+* `event_slug` - The `slug` attribute of an `Event`.
+
+
+## Get a Question
+
+<%= partial "includes/requests/get",
+  locals: {
+    url: "#{config[:api_endpoint]}/:account_slug/:event_slug/questions/:question_slug"
+  }
+%>
+<%= partial "includes/questions/show.json" %>
+
+Retrieves a `Question` for the given `Event`.
+
+`GET <%= "#{config[:api_endpoint]}/:account_slug/:event_slug/questions/:question_slug" %>`
+
+* `account_slug` - The `slug` attribute of an `Account`.
+* `event_slug` - The `slug` attribute of an `Event`.
+* `question_slug` - The `slug` attribute of a `Question`.
+
+
+## Create a Question
+
+<%= partial "includes/requests/post",
+  locals: {
+    url: "#{config[:api_endpoint]}/:account_slug/:event_slug/questions",
+    parameters: {
+      question: {
+      }
+    }
+  }
+%>
+<%= partial "includes/questions/create.json" %>
+
+Create a new `Question` belonging to the given `Event`.
+
+`POST <%= "#{config[:api_endpoint]}/:account_slug/:event_slug/questions" %>`
+
+* `account_slug` - The `slug` attribute of an `Account`.
+* `event_slug` - The `slug` attribute of an `Event`.
+
+### Parameters
+
+<%= partial "includes/shared/parameters", locals: { parameters: data.questions.attributes.reject { |name,attribute| attribute["read_only"] } } %>
+
+## Update a Question
+
+<%= partial "includes/requests/patch",
+  locals: {
+    url: "#{config[:api_endpoint]}/:account_slug/:event_slug/questions/:question_slug",
+    parameters: {
+      question: {
+      }
+    }
+  }
+%>
+<%= partial "includes/questions/update.json" %>
+
+Update a `Question` belonging to the given `Event`.
+
+`PATCH <%= "#{config[:api_endpoint]}/:account_slug/:event_slug/questions/:question_slug" %>`
+
+* `account_slug` - The `slug` attribute of an `Account`.
+* `event_slug` - The `slug` attribute of an `Event`.
+* `question_slug` - The `slug` attribute of a `Question`.
+
+### Parameters
+
+<%= partial "includes/shared/parameters", locals: { parameters: data.questions.attributes.reject { |name,attribute| attribute["read_only"] } } %>
+
+## Delete a Question
+
+<%= partial "includes/requests/delete",
+  locals: {
+    url: "#{config[:api_endpoint]}/:account_slug/:event_slug/questions/:question_slug",
+  }
+%>
+
+Delete a `Question` belonging to the given `Event`.
+
+`DELETE <%= "#{config[:api_endpoint]}/:account_slug/:event_slug/questions/:question_slug" %>`
+
+* `account_slug` - The `slug` attribute of an `Account`.
+* `event_slug` - The `slug` attribute of an `Event`.
+* `question_slug` - The `slug` attribute of a `Question`.
