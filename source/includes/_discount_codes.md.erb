@@ -45,7 +45,9 @@ Retrieves a `DiscountCode` for the given `Event`.
     url: "#{config[:api_endpoint]}/:account_slug/:event_slug/discount_codes",
     parameters: {
       discount_code: {
-        name: "Coffee Workshop"
+        code: "SAVE50",
+        type: "PercentOffDiscountCode",
+        value: "50.0"
       }
     }
   }
@@ -70,7 +72,7 @@ Create a new `DiscountCode` belonging to the given `Event`.
     url: "#{config[:api_endpoint]}/:account_slug/:event_slug/discount_codes/:discount_code_id",
     parameters: {
       discount_code: {
-        capacity: 100
+        code: "SUPERSAVER"
       }
     }
   }
