@@ -46,6 +46,8 @@ Retrieves a `Question` for the given `Event`.
     url: "#{config[:api_endpoint]}/:account_slug/:event_slug/questions",
     parameters: {
       question: {
+        title: "What is your industry?",
+        field_type: "Text"
       }
     }
   }
@@ -70,6 +72,7 @@ Create a new `Question` belonging to the given `Event`.
     url: "#{config[:api_endpoint]}/:account_slug/:event_slug/questions/:question_slug",
     parameters: {
       question: {
+        required: true
       }
     }
   }

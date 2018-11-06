@@ -1,5 +1,52 @@
 {
   "attributes": {
-
+    "description": {
+      "description": "A statement or tag line describing the question",
+      "type": "string",
+      "read_only": false,
+      "required": false
+    },
+    "field_type": {
+      "description": "`Checkboxes`, `Country`, `File`, `Select`, `Text` or `Textarea`.",
+      "type": "string",
+      "read_only": false,
+      "required": true
+    },
+    "include_free_text_field": {
+      "description": "Should an 'Other' text field be included alongside this question or not. Only applies to `Checkboxes` or `Select` field questions. Default `false`",
+      "type": "boolean",
+      "read_only": false,
+      "required": false
+    },
+    "options": {
+      "description": "A line separated list of options for this question e.g. `A\\nB\\nC`. Only applies to `Checkboxes` or `Select` field questions.",
+      "type": "text",
+      "read_only": false,
+      "required": false
+    },
+    "options_free_text_field": {
+      "description": "A custom label for the 'Other' text field option if it's enabled. Only applies to `Checkboxes` or `Select` field questions.",
+      "type": "string",
+      "read_only": false,
+      "required": false
+    },
+    "required": {
+      "description": "Does this question require a response or not. Default `false`",
+      "type": "boolean",
+      "read_only": false,
+      "required": false
+    },
+    "slug": {
+      "description": "A human friendly string used in the Question URL",
+      "type": "string",
+      "read_only": true,
+      "required": false
+    },
+    "title": {
+      "description": "The question you would like to ask.",
+      "type": "string",
+      "read_only": false,
+      "required": true
+    }
   }
 }
