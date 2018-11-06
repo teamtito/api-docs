@@ -40,6 +40,8 @@ set :relative_links, true
 
 config[:api_endpoint] = "https://api.tito.io/v3"
 config[:api_token] = "YOUR-API-TOKEN"
+config[:url_substitutions] = {
+}
 
 # Build Configuration
 configure :build do
@@ -58,4 +60,8 @@ set :port, 4567
 
 helpers do
   require './lib/toc_data.rb'
+
+  def apply_api_subsititions(url)
+    config[:url_substitutions].reduce(url) { |url, (name, value)| url.gsub(":#{name}", value) }
+  end
 end
