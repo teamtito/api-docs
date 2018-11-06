@@ -49,7 +49,7 @@
       "required": false
     },
     "quantity_used": {
-      "description": "The number of tickets this discount code has been applied to. *Readonly*.",
+      "description": "The number of tickets this discount code has been applied to.",
       "type": "integer",
       "read_only": true,
       "required": false
