@@ -1,0 +1,82 @@
+{
+  "attributes": {
+    "code": {
+      "description": "The code that will be distributed to provide a discount.",
+      "type": "string",
+      "read_only": false,
+      "required": true
+    },
+    "type": {
+      "description": "The kind of discount to apply. `MoneyOffDiscountCode` applies a flat discount. `PercentOffDiscountCode` applies a percentage discount.",
+      "type": "string",
+      "read_only": false,
+      "required": true
+    },
+    "discount_code_type": {
+      "description": "The kind of discount to apply. `MoneyOffDiscountCode` applies a flat discount. `PercentOffDiscountCode` applies a percentage discount.",
+      "type": "string",
+      "read_only": true,
+      "required": false
+    },
+    "end_at": {
+      "description": "The time when the discount code becomes unavailable.",
+      "type": "datetime",
+      "read_only": false,
+      "required": false
+    },
+    "max_quantity_per_release": {
+      "description": "Discount only applies to a maxium of this number.",
+      "type": "integer",
+      "read_only": false,
+      "required": false
+    },
+    "min_quantity_per_release": {
+      "description": "Discount only applies if this many tickets are selected.",
+      "type": "integer",
+      "read_only": false,
+      "required": false
+    },
+    "only_show_attached": {
+      "description": "Only display tickets attached to this discount code when it is displayed or not e.g. display all publicly visible tickets. Default `false`",
+      "type": "boolean",
+      "read_only": false,
+      "required": false
+    },
+    "quantity": {
+      "description": "The number of tickets that can avail of this discount code.",
+      "type": "integer",
+      "read_only": false,
+      "required": false
+    },
+    "quantity_used": {
+      "description": "The number of tickets this discount code has been applied to. *Readonly*.",
+      "type": "integer",
+      "read_only": true,
+      "required": false
+    },
+    "release_ids": {
+      "description": "An array of the IDs of `Releases` the discount code can be applied to.",
+      "type": "array",
+      "read_only": false,
+      "required": false
+    },
+    "reveal_secret": {
+      "description": "Should secret tickets be revealed if this discount code is applied or not. Default `false`",
+      "type": "boolean",
+      "read_only": false,
+      "required": false
+    },
+    "start_at": {
+      "description": "The time when the discount code becomes available.",
+      "type": "datetime",
+      "read_only": false,
+      "required": false
+    },
+    "value": {
+      "description": "The amount off per ticket. A percentage or flat amount depending on the discount code type.",
+      "type": "decimal",
+      "read_only": false,
+      "required": true
+    }
+  }
+}

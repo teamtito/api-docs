@@ -1,0 +1,110 @@
+# Discount Codes
+
+## Attributes
+
+<%= partial "includes/shared/attributes", locals: { attributes: data.discount_codes.attributes } %>
+
+
+## Get all Discount Codes
+
+<%= partial "includes/requests/get",
+  locals: {
+    url: "#{config[:api_endpoint]}/:account_slug/:event_slug/discount_codes"
+  }
+%>
+<%= partial "includes/discount_codes/index.json" %>
+
+
+Retrieves all `DiscountCodes` for the given `Event`.
+
+`<%= "GET #{config[:api_endpoint]}/:account_slug/:event_slug/discount_codes" %>`
+
+* `account_slug` - The `slug` attribute of an `Account`.
+* `event_slug` - The `slug` attribute of an `Event`.
+
+## Get a Discount Code
+
+<%= partial "includes/requests/get",
+  locals: {
+    url: "#{config[:api_endpoint]}/:account_slug/:event_slug/discount_codes/:discount_code_id"
+  }
+%>
+<%= partial "includes/discount_codes/show.json" %>
+
+Retrieves a `DiscountCode` for the given `Event`.
+
+`GET <%= "#{config[:api_endpoint]}/:account_slug/:event_slug/discount_codes/:discount_code_id" %>`
+
+* `account_slug` - The `slug` attribute of an `Account`.
+* `event_slug` - The `slug` attribute of an `Event`.
+* `discount_code_id` - The `id` attribute of a `DiscountCode`.
+
+
+## Create a Discount Code
+
+<%= partial "includes/requests/post",
+  locals: {
+    url: "#{config[:api_endpoint]}/:account_slug/:event_slug/discount_codes",
+    parameters: {
+      discount_code: {
+        code: "SAVE50",
+        type: "PercentOffDiscountCode",
+        value: "50.0"
+      }
+    }
+  }
+%>
+<%= partial "includes/discount_codes/create.json" %>
+
+Create a new `DiscountCode` belonging to the given `Event`.
+
+`POST <%= "#{config[:api_endpoint]}/:account_slug/:event_slug/discount_codes" %>`
+
+* `account_slug` - The `slug` attribute of an `Account`.
+* `event_slug` - The `slug` attribute of an `Event`.
+
+### Parameters
+
+<%= partial "includes/shared/parameters", locals: { parameters: data.discount_codes.attributes.reject { |name,attribute| attribute["read_only"] } } %>
+
+## Update a Discount Code
+
+<%= partial "includes/requests/patch",
+  locals: {
+    url: "#{config[:api_endpoint]}/:account_slug/:event_slug/discount_codes/:discount_code_id",
+    parameters: {
+      discount_code: {
+        code: "SUPERSAVER"
+      }
+    }
+  }
+%>
+<%= partial "includes/discount_codes/update.json" %>
+
+Update an `DiscountCode` belonging to the given `Event`.
+
+`PATCH <%= "#{config[:api_endpoint]}/:account_slug/:event_slug/discount_codes/:discount_code_id" %>`
+
+* `account_slug` - The `slug` attribute of an `Account`.
+* `event_slug` - The `slug` attribute of an `Event`.
+* `discount_code_id` - The `id` attribute of an `DiscountCode`.
+
+### Parameters
+
+<%= partial "includes/shared/parameters", locals: { parameters: data.discount_codes.attributes.reject { |name,attribute| attribute["read_only"] } } %>
+
+## Delete a Discount Code
+
+<%= partial "includes/requests/delete",
+  locals: {
+    url: "#{config[:api_endpoint]}/:account_slug/:event_slug/discount_codes/:discount_code_id",
+  }
+%>
+
+Delete an `DiscountCode` belonging to the given `Event`.
+
+`DELETE <%= "#{config[:api_endpoint]}/:account_slug/:event_slug/discount_codes/:discount_code_id" %>`
+
+* `account_slug` - The `slug` attribute of an `Account`.
+* `event_slug` - The `slug` attribute of an `Event`.
+* `discount_code_id` - The `id` attribute of an `DiscountCode`.
