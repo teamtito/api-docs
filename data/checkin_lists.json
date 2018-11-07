@@ -47,6 +47,12 @@
       "type": "string",
       "read_only": false,
       "required": true
+    },
+    "slug": {
+      "description": "A human friendly string used in the URL.",
+      "type": "string",
+      "read_only": true,
+      "required": false
     }
   }
 }
