@@ -1,6 +1,6 @@
 ```shell
 curl --request PATCH \
-  --url '<%= url %>' \
+  --url '<%= apply_api_subsititions(url) %>' \
   --header 'Authorization: Token token=<%= config[:api_token] %>' \
   --header 'Accept: application/json' \
   --header 'Content-type: application/json' \

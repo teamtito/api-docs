@@ -81,13 +81,13 @@ Create a new `DiscountCode` belonging to the given `Event`.
 %>
 <%= partial "includes/discount_codes/update.json" %>
 
-Update an `DiscountCode` belonging to the given `Event`.
+Update a `DiscountCode` belonging to the given `Event`.
 
 `PATCH <%= "#{config[:api_endpoint]}/:account_slug/:event_slug/discount_codes/:discount_code_id" %>`
 
 * `account_slug` - The `slug` attribute of an `Account`.
 * `event_slug` - The `slug` attribute of an `Event`.
-* `discount_code_id` - The `id` attribute of an `DiscountCode`.
+* `discount_code_id` - The `id` attribute of a `DiscountCode`.
 
 ### Parameters
 
@@ -101,10 +101,10 @@ Update an `DiscountCode` belonging to the given `Event`.
   }
 %>
 
-Delete an `DiscountCode` belonging to the given `Event`.
+Delete a `DiscountCode` belonging to the given `Event`.
 
 `DELETE <%= "#{config[:api_endpoint]}/:account_slug/:event_slug/discount_codes/:discount_code_id" %>`
 
 * `account_slug` - The `slug` attribute of an `Account`.
 * `event_slug` - The `slug` attribute of an `Event`.
-* `discount_code_id` - The `id` attribute of an `DiscountCode`.
+* `discount_code_id` - The `id` attribute of a `DiscountCode`.
