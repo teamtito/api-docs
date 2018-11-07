@@ -3,6 +3,7 @@
   "checkin_lists": [
     {
       "_type": "checkin_list",
+      "slug": "chk_d90KqwJIp9rfgkVzOCCTdMQ",
       "activity_ids": [],
       "expires_at": null,
       "question_ids": [],
