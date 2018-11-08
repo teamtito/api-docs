@@ -1,0 +1,28 @@
+{
+  "attributes": {
+    "id": {
+      "description": "The identifer of the refund",
+      "type": "integer",
+      "read_only": true,
+      "required": false
+    },
+    "amount": {
+      "description": "The monetary amount of the refund.",
+      "type": "decimal",
+      "read_only": false,
+      "required": false
+    },
+    "created_at": {
+      "description": "When the refund was recorded.",
+      "type": "datetime",
+      "read_only": false,
+      "required": false
+    },
+    "manual": {
+      "description": "`true` if it was logged in Tito after it was already processed. Default `false`",
+      "type": "boolean",
+      "read_only": false,
+      "required": false
+    }
+  }
+}
