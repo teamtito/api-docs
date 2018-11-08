@@ -10,5 +10,6 @@ gem 'redcarpet', '~> 3.4.0'
 gem 'nokogiri', '~> 1.8.2'
 
 
+gem "rake"
 gem 'puma'
 gem 'rack-contrib'
