@@ -45,7 +45,7 @@
     "start_at": null,
     "waiting_list_enabled_during_locked": false,
     "waiting_list_enabled_during_sold_out": false,
-    "share_url": "https://checkout.tito.dev/biscuit-box/2018/with/coffee-brewing",
+    "share_url": "https://ti.to/biscuit-box/2018/with/coffee-brewing",
     "tickets_count": 0,
     "locked": false,
     "waiting_list": false,
