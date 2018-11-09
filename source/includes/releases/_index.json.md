@@ -1,4 +1,187 @@
 ```json
-
-{}
-```
+{
+  "releases": [
+    {
+      "_type": "release",
+      "id": 1105525,
+      "created_at": "2018-11-08T22:40:45.000+00:00",
+      "updated_at": "2018-11-09T09:57:08.000+00:00",
+      "slug": "coffee-brewing",
+      "title": "Coffee Brewing",
+      "description": null,
+      "archived": false,
+      "card_payments": true,
+      "default_quantity": null,
+      "donation": false,
+      "enable_super_combo_summary": true,
+      "end_at": null,
+      "has_success_message": false,
+      "has_fail_message": false,
+      "invoice": null,
+      "max_donation": null,
+      "max_tickets_per_person": null,
+      "metadata": "",
+      "min_tickets_per_person": null,
+      "min_donation": null,
+      "not_a_ticket": false,
+      "payment_type": "paid",
+      "position": 0,
+      "price": "100.0",
+      "price_ex_tax": "100.0",
+      "tax_exclusive": false,
+      "price_degressive": null,
+      "quantity": null,
+      "request_company_name": false,
+      "request_vat_number": true,
+      "require_vat_number": false,
+      "require_billing_address": null,
+      "require_credit_card_for_sold_out_waiting_list": false,
+      "require_email": false,
+      "require_name": false,
+      "secret": false,
+      "show_price": null,
+      "suggested_donation": "100.0",
+      "lock_changes": false,
+      "state_name": null,
+      "start_at": null,
+      "waiting_list_enabled_during_locked": false,
+      "waiting_list_enabled_during_sold_out": false,
+      "share_url": "https://ti.to/biscuit-box/2018/with/coffee-brewing",
+      "tickets_count": 0,
+      "locked": false,
+      "waiting_list": false,
+      "sold_out": false,
+      "off_sale": false,
+      "expired": false,
+      "upcoming": false,
+      "allocatable": true,
+      "question_ids": [],
+      "gross_income": null,
+      "full_price_tickets_count": 0,
+      "free_tickets_count": 0,
+      "discounted_tickets_count": 0,
+      "voided_tickets_count": 0,
+      "show_company_name": false,
+      "require_company_name": false,
+      "show_vat_number": true,
+      "show_discount_code_field_here": false,
+      "show_phone_number": false,
+      "tax_description": null,
+      "translations": {
+        "en": {
+          "description": "",
+          "fail_message": null,
+          "success_message": "",
+          "title": "Coffee Brewing"
+        }
+      },
+      "termset_id": null,
+      "ticket_group_id": null,
+      "activities": [],
+      "combo_releases": [],
+      "questions": [],
+      "tax_types": [],
+      "tax_components": [],
+      "termset": null,
+      "ticket_group": null
+    }
+  ],
+  "meta": {
+    "current_page": 1,
+    "next_page": null,
+    "prev_page": null,
+    "total_pages": 1,
+    "total_count": 1,
+    "per_page": 100,
+    "overall_total": 1,
+    "resources_hidden_by_default_count": 0,
+    "search_states_hidden_by_default": [
+      "archived"
+    ],
+    "sort_options": {
+      "Position on event homepage": {
+        "attr": "position",
+        "direction": "asc",
+        "default": true
+      },
+      "On sale date, earliest first": {
+        "attr": "start_at",
+        "direction": "desc"
+      },
+      "On sale date, latest first": {
+        "attr": "start_at",
+        "direction": "asc"
+      },
+      "Title A-Z": {
+        "attr": "title",
+        "direction": "asc"
+      },
+      "Title Z-A": {
+        "attr": "title",
+        "direction": "desc"
+      }
+    },
+    "filter_options": {
+      "sections": {
+        "states": {
+          "label": "Status",
+          "open": false
+        }
+      },
+      "collection": false,
+      "states": [
+        {
+          "label": "On Sale",
+          "value": "on_sale"
+        },
+        {
+          "label": "Off Sale",
+          "value": "off_sale"
+        },
+        {
+          "label": "Not Sold Out",
+          "value": "not_sold_out"
+        },
+        {
+          "label": "Sold Out",
+          "value": "sold_out"
+        },
+        {
+          "label": "Public",
+          "value": "public"
+        },
+        {
+          "label": "Secret",
+          "value": "secret"
+        },
+        {
+          "label": "Active",
+          "value": "active"
+        },
+        {
+          "label": "Archived",
+          "value": "archived"
+        },
+        {
+          "label": "Changes Locked",
+          "value": "changes_locked"
+        },
+        {
+          "label": "Changes Allowed",
+          "value": "changes_allowed"
+        }
+      ],
+      "selected_states": [
+        "on_sale",
+        "off_sale",
+        "not_sold_out",
+        "sold_out",
+        "public",
+        "secret",
+        "active",
+        "changes_locked",
+        "changes_allowed"
+      ]
+    }
+  }
+}```
