@@ -1,0 +1,112 @@
+# Releases
+
+## Attributes
+
+<%= partial "includes/shared/attributes", locals: { attributes: data.releases.attributes } %>
+
+
+## Get all Releases
+
+<%= partial "includes/requests/get",
+  locals: {
+    url: "#{config[:api_endpoint]}/:account_slug/:event_slug/releases"
+  }
+%>
+<%= partial "includes/releases/index.json" %>
+
+Retrieves all `Releases` for the given `Event`.
+
+`<%= "GET #{config[:api_endpoint]}/:account_slug/:event_slug/releases" %>`
+
+* `account_slug` - The `slug` attribute of an `Account`.
+* `event_slug` - The `slug` attribute of an `Event`.
+
+## Get a Release
+
+<%= partial "includes/requests/get",
+  locals: {
+    url: "#{config[:api_endpoint]}/:account_slug/:event_slug/releases/:release_slug"
+  }
+%>
+<%= partial "includes/releases/show.json" %>
+
+Retrieves a `Release` for the given `Event`.
+
+`GET <%= "#{config[:api_endpoint]}/:account_slug/:event_slug/releases/:release_slug" %>`
+
+* `account_slug` - The `slug` attribute of an `Account`.
+* `event_slug` - The `slug` attribute of an `Event`.
+* `release_slug` - The `slug` attribute of a `Release`.
+
+## Create a Release
+
+<%= partial "includes/requests/post",
+  locals: {
+    url: "#{config[:api_endpoint]}/:account_slug/:event_slug/releases",
+    parameters: {
+      release: {
+      }
+    }
+  }
+%>
+<%= partial "includes/releases/create.json" %>
+
+Create a new `Release` belonging to the given `Event`.
+
+`POST <%= "#{config[:api_endpoint]}/:account_slug/:event_slug/releases" %>`
+
+* `account_slug` - The `slug` attribute of an `Account`.
+* `event_slug` - The `slug` attribute of an `Event`.
+
+### Parameters
+
+<%= partial "includes/shared/parameters",
+  locals: {
+    parameters: data.releases.attributes.reject { |name, attribute| attribute["read_only"] }
+  }
+%>
+
+## Update a Release
+
+<%= partial "includes/requests/patch",
+  locals: {
+    url: "#{config[:api_endpoint]}/:account_slug/:event_slug/releases/:release_slug",
+    parameters: {
+      release: {
+      }
+    }
+  }
+%>
+<%= partial "includes/releases/update.json" %>
+
+Update a `Release` belonging to the given `Event`.
+
+`PATCH <%= "#{config[:api_endpoint]}/:account_slug/:event_slug/releases/:release_slug" %>`
+
+* `account_slug` - The `slug` attribute of an `Account`.
+* `event_slug` - The `slug` attribute of an `Event`.
+* `release_slug` - The `slug` attribute of a `Release`.
+
+### Parameters
+
+<%= partial "includes/shared/parameters",
+  locals: {
+    parameters: data.releases.attributes.reject { |name, attribute| attribute["read_only"] }
+  }
+%>
+
+## Delete a Release
+
+<%= partial "includes/requests/delete",
+  locals: {
+    url: "#{config[:api_endpoint]}/:account_slug/:event_slug/releases/:release_slug",
+  }
+%>
+
+Delete a `Release` belonging to the given `Event`.
+
+`DELETE <%= "#{config[:api_endpoint]}/:account_slug/:event_slug/releases/:release_slug" %>`
+
+* `account_slug` - The `slug` attribute of an `Account`.
+* `event_slug` - The `slug` attribute of an `Event`.
+* `release_slug` - The `slug` attribute of a `Release`.
