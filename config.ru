@@ -13,7 +13,7 @@ end
 
 # Attempt to serve static HTML files
 use Rack::TryStatic,
-    :root => "build",
+    :root => "docs/api/v3",
     :urls => %w[/],
     :try => ['.html', 'index.html', '/index.html']
 
