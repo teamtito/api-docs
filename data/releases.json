@@ -1,5 +1,143 @@
 {
   "attributes": {
+    "id": {
+      "description": "",
+      "type": "integer",
+      "read_only": false,
+      "required": false
+    },
+    "created_at": {
+      "description": "",
+      "type": "datetime",
+      "read_only": false,
+      "required": false
+    },
+    "updated_at": {
+      "description": "",
+      "type": "datetime",
+      "read_only": false,
+      "required": false
+    },
+    "slug": {
+      "description": "",
+      "type": "string",
+      "read_only": false,
+      "required": false
+    },
+    "card_payments": {
+      "description": "",
+      "type": "boolean",
+      "read_only": false,
+      "required": false
+    },
+    "donation": {
+      "description": "",
+      "type": "boolean",
+      "read_only": false,
+      "required": false
+    },
+    "invoice": {
+      "description": "",
+      "type": "boolean",
+      "read_only": false,
+      "required": false
+    },
+    "max_donation": {
+      "description": "",
+      "type": "decimal",
+      "read_only": false,
+      "required": false
+    },
+    "min_donation": {
+      "description": "",
+      "type": "decimal",
+      "read_only": false,
+      "required": false
+    },
+
+    "metadata": {
+      "description": "",
+      "type": "JSON",
+      "read_only": false,
+      "required": false
+    },
+    "payment_type": {
+      "description": "",
+      "type": "string",
+      "read_only": false,
+      "required": false
+    },
+    "price_ex_tax": {
+      "description": null,
+      "type": "decimal",
+      "read_only": false,
+      "required": false
+    },
+    "tax_exclusive": {
+      "description": null,
+      "type": "boolean",
+      "read_only": false,
+      "required": false
+    },
+    "price_degressive": {
+      "description": null,
+      "type": "string",
+      "read_only": false,
+      "required": false
+    },
+    "require_vat_number": {
+      "description": null,
+      "type": "boolean",
+      "read_only": false,
+      "required": false
+    },
+    "require_credit_card_for_sold_out_waiting_list": {
+      "description": null,
+      "type": "boolean",
+      "read_only": false,
+      "required": false
+    },
+
+    "show_price": {
+      "description": null,
+      "type": "boolean",
+      "read_only": false,
+      "required": false
+    },
+    "suggested_donation": {
+      "description": null,
+      "type": "decimal",
+      "read_only": false,
+      "required": false
+    },
+    "lock_changes": {
+      "description": null,
+      "type": "boolean",
+      "read_only": false,
+      "required": false
+    },
+    "state_name": {
+      "description": null,
+      "type": "string",
+      "read_only": false,
+      "required": false
+    },
+
+    "waiting_list_enabled_during_locked" : {
+      "description": "",
+      "type": "boolean",
+      "read_only": false,
+      "required": false
+    },
+    "share_url": {
+      "description": null,
+      "type": "string",
+      "read_only": false,
+      "required": false
+    },
+
+
+
     "archived": {
       "description": "Is the release archived or not. Default: `false`",
       "type": "boolean",
@@ -32,6 +170,12 @@
     },
     "has_success_message": {
       "description": "Display the custom success message or not. Default: `false`",
+      "type": "boolean",
+      "read_only": false,
+      "required": false
+    },
+    "has_fail_message": {
+      "description": "",
       "type": "boolean",
       "read_only": false,
       "required": false
