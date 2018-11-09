@@ -1,5 +1,154 @@
 {
   "attributes": {
-
+    "archived": {
+      "description": "Is the release archived or not. Default: `false`",
+      "type": "boolean",
+      "read_only": false,
+      "required": false
+    },
+    "default_quantity": {
+      "description": "The default number of tickets selected for this release on the event page. Default: `0`",
+      "type": "integer",
+      "read_only": false,
+      "required": false
+    },
+    "description": {
+      "description": "A statement or tag line describing the event",
+      "type": "text",
+      "read_only": false,
+      "required": false
+    },
+    "enable_super_combo_summary": {
+      "description": "For combo releases only. Include a summary of a combo in the order summary or not. Default: `true`",
+      "type": "boolean",
+      "read_only": false,
+      "required": false
+    },
+    "end_at": {
+      "description": "The time when the release will go off sale.",
+      "type": "datetime",
+      "read_only": false,
+      "required": false
+    },
+    "has_success_message": {
+      "description": "Display the custom success message or not. Default: `false`",
+      "type": "boolean",
+      "read_only": false,
+      "required": false
+    },
+    "max_tickets_per_person": {
+      "description": "The maximum number of tickets per registration.",
+      "type": "integer",
+      "read_only": false,
+      "required": false
+    },
+    "min_tickets_per_person": {
+      "description": "The minimum number of tickets per registration.",
+      "type": "integer",
+      "read_only": false,
+      "required": false
+    },
+    "not_a_ticket": {
+      "description": "Disable issuing of PDF/Apple Wallet tickets or not. For example if this release is for merchandise rather than an actual ticket. Default `false`",
+      "type": "boolean",
+      "read_only": false,
+      "required": false
+    },
+    "position": {
+      "description": "The position of the release in the list of all releases for the event.",
+      "type": "integer",
+      "read_only": false,
+      "required": false
+    },
+    "price": {
+      "description": null,
+      "type": "decimal",
+      "read_only": false,
+      "required": false
+    },
+    "quantity": {
+      "description": "The number of tickets available.",
+      "type": "integer",
+      "read_only": false,
+      "required": false
+    },
+    "quantity_sold": {
+      "description": "The number of tickets registered.",
+      "type": "integer",
+      "read_only": false,
+      "required": false
+    },
+    "question_ids": {
+      "description": "An array of the IDs of `Questions` attached to the release. The order of the IDs represents the order in which the questions will be asked.",
+      "type": "array",
+      "read_only": false,
+      "required": false
+    },
+    "request_company_name": {
+      "description": "Do registrations which include this release require a company name.",
+      "type": "boolean",
+      "read_only": false,
+      "required": false
+    },
+    "request_vat_number": {
+      "description": "Do registrations which include this release require a VAT number.",
+      "type": "boolean",
+      "read_only": false,
+      "required": false
+    },
+    "require_billing_address": {
+      "description": " Do registrations which include this release require a billing address.",
+      "type": "boolean",
+      "read_only": false,
+      "required": false
+    },
+    "require_email": {
+      "description": "Do tickets for this release require an email. Default: `true`",
+      "type": "boolean",
+      "read_only": false,
+      "required": false
+    },
+    "require_name": {
+      "description": "Do tickets for this release require a name. Default: `false`",
+      "type": "boolean",
+      "read_only": false,
+      "required": false
+    },
+    "secret": {
+      "description": "Is it only accessible via a secret link or is it visible to everyone on the event page. Default: `false`",
+      "type": "boolean",
+      "read_only": false,
+      "required": false
+    },
+    "state": {
+      "description": "`100` : On sale<br /> `404` : Off sale. Default: `100`",
+      "type": "integer",
+      "read_only": false,
+      "required": false
+    },
+    "start_at": {
+      "description": "The time when the release will go on sale.",
+      "type": "datetime",
+      "read_only": false,
+      "required": false
+    },
+    "success_message": {
+      "description": "A custom message to be displayed to customers after a successful order of this release.",
+      "type": "text",
+      "read_only": false,
+      "required": false
+    },
+    "title": {
+      "description": "The name of the release.",
+      "type": "string",
+      "read_only": false,
+      "required": true
+    },
+    "waiting_list_enabled_during_sold_out" : {
+      "description": "Enable waiting list when this release sells out or not. Default: `false`",
+      "type": "boolean",
+      "read_only": false,
+      "required": false
+    }
   }
 }
