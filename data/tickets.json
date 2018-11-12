@@ -1,5 +1,76 @@
 {
   "attributes": {
-  
+    "answers": {
+      "description": "The answer to each `Question` attached to the ticket. Format: A hash of answers, keyed by `Question` slug e.g.<br>`{ \"t-shirt-size\": \"Medium\", \"skills\": [\"HTML\", \"JavaScript\"] }`",
+      "type": "object",
+      "read_only": false,
+      "required": false
+    },
+    "company_name": {
+      "description": null,
+      "type": "string",
+      "read_only": false,
+      "required": false
+    },
+    "email": {
+      "description": null,
+      "type": "string",
+      "read_only": false,
+      "required": false
+    },
+    "name": {
+      "description": null,
+      "type": "string",
+      "read_only": false,
+      "required": false
+    },
+    "number": {
+      "description": "Default: Starts at 1 and counts up with each ticket registered.",
+      "type": "integer",
+      "read_only": true,
+      "required": false
+    },
+    "phone_number": {
+      "description": null,
+      "type": "string",
+      "read_only": false,
+      "required": false
+    },
+    "price": {
+      "description": null,
+      "type": "decimal",
+      "read_only": false,
+      "required": false
+    },
+    "reference": {
+      "description": "Default: The order reference plus the index of the ticket in that order e.g. `AXBY-1`.",
+      "type": "string",
+      "read_only": true,
+      "required": false
+    },
+    "state": {
+      "description": "`new`, `complete`, `incomplete`, `reminder`, `void`. Default: `new`.",
+      "type": "integer",
+      "read_only": true,
+      "required": false
+    },
+    "tags": {
+      "description": "A comma separated list of tags for the ticket.",
+      "type": "string",
+      "read_only": false,
+      "required": false
+    },
+    "temporary": {
+      "description": "Is the ticket temporary or not. For example if a ticket needs to be assigned but is not yet confirmed e.g. a payment is pending. Default: `false`.",
+      "type": "boolean",
+      "read_only": true,
+      "required": false
+    },
+    "test_mode": {
+      "description": "Default: `true` if test mode is enabled for you or for your entire event, otherwise `false`.",
+      "type": "boolean",
+      "read_only": false,
+      "required": false
+    }
   }
 }
