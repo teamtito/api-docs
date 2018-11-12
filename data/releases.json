@@ -3,25 +3,25 @@
     "id": {
       "description": "",
       "type": "integer",
-      "read_only": false,
+      "read_only": true,
       "required": false
     },
     "created_at": {
       "description": "",
       "type": "datetime",
-      "read_only": false,
+      "read_only": true,
       "required": false
     },
     "updated_at": {
       "description": "",
       "type": "datetime",
-      "read_only": false,
+      "read_only": true,
       "required": false
     },
     "slug": {
       "description": "",
       "type": "string",
-      "read_only": false,
+      "read_only": true,
       "required": false
     },
     "card_payments": {
@@ -33,7 +33,7 @@
     "donation": {
       "description": "",
       "type": "boolean",
-      "read_only": false,
+      "read_only": true,
       "required": false
     },
     "invoice": {
@@ -54,29 +54,28 @@
       "read_only": false,
       "required": false
     },
-
     "metadata": {
       "description": "",
-      "type": "JSON",
+      "type": "object",
       "read_only": false,
       "required": false
     },
     "payment_type": {
       "description": "",
       "type": "string",
-      "read_only": false,
+      "read_only": true,
       "required": false
     },
     "price_ex_tax": {
       "description": null,
       "type": "decimal",
-      "read_only": false,
+      "read_only": true,
       "required": false
     },
     "tax_exclusive": {
       "description": null,
       "type": "boolean",
-      "read_only": false,
+      "read_only": true,
       "required": false
     },
     "price_degressive": {
@@ -119,7 +118,7 @@
     "state_name": {
       "description": null,
       "type": "string",
-      "read_only": false,
+      "read_only": true,
       "required": false
     },
 
@@ -132,16 +131,189 @@
     "share_url": {
       "description": null,
       "type": "string",
-      "read_only": false,
+      "read_only": true,
       "required": false
     },
 
+    "tickets_count": {
+      "description": null,
+      "type": "integer",
+      "read_only": true,
+      "required": false
+    },
 
-
+    "locked": {
+      "description": null,
+      "type": "boolean",
+      "read_only": true,
+      "required": false
+    },
+    "waiting_list": {
+      "description": null,
+      "type": "boolean",
+      "read_only": true,
+      "required": false
+    },
+    "sold_out": {
+      "description": null,
+      "type": "boolean",
+      "read_only": true,
+      "required": false
+    },
+    "off_sale": {
+      "description": null,
+      "type": "boolean",
+      "read_only": true,
+      "required": false
+    },
+    "expired": {
+      "description": null,
+      "type": "boolean",
+      "read_only": true,
+      "required": false
+    },
+    "upcoming": {
+      "description": null,
+      "type": "boolean",
+      "read_only": true,
+      "required": false
+    },
+    "allocatable": {
+      "description": null,
+      "type": "boolean",
+      "read_only": true,
+      "required": false
+    },
+    "gross_income": {
+      "description": null,
+      "type": "decimal",
+      "read_only": true,
+      "required": false
+    },
+    "full_price_tickets_count": {
+      "description": null,
+      "type": "integer",
+      "read_only": true,
+      "required": false
+    },
+    "free_tickets_count": {
+      "description": null,
+      "type": "integer",
+      "read_only": true,
+      "required": false
+    },
+    "discounted_tickets_count": {
+      "description": null,
+      "type": "integer",
+      "read_only": true,
+      "required": false
+    },
+    "voided_tickets_count": {
+      "description": null,
+      "type": "integer",
+      "read_only": true,
+      "required": false
+    },
+    "show_company_name": {
+      "description": null,
+      "type": "boolean",
+      "read_only": true,
+      "required": false
+    },
+    "require_company_name": {
+      "description": null,
+      "type": "boolean",
+      "read_only": false,
+      "required": false
+    },
+    "show_vat_number": {
+      "description": null,
+      "type": "boolean",
+      "read_only": true,
+      "required": false
+    },
+    "show_discount_code_field_here": {
+      "description": null,
+      "type": "boolean",
+      "read_only": true,
+      "required": false
+    },
+    "show_phone_number": {
+      "description": null,
+      "type": "boolean",
+      "read_only": true,
+      "required": false
+    },
+    "tax_description": {
+      "description": null,
+      "type": "string",
+      "read_only": true,
+      "required": false
+    },
+    "translations": {
+      "description": null,
+      "type": "object",
+      "read_only": false,
+      "required": false
+    },
+    "termset_id": {
+      "description": null,
+      "type": "integer",
+      "read_only": false,
+      "required": false
+    },
+    "ticket_group_id": {
+      "description": null,
+      "type": "integer",
+      "read_only": false,
+      "required": false
+    },
+    "activities": {
+      "description": null,
+      "type": "array",
+      "read_only": true,
+      "required": false
+    },
+    "combo_releases": {
+      "description": null,
+      "type": "array",
+      "read_only": true,
+      "required": false
+    },
+    "questions": {
+      "description": null,
+      "type": "array",
+      "read_only": true,
+      "required": false
+    },
+    "tax_types": {
+      "description": null,
+      "type": "array",
+      "read_only": true,
+      "required": false
+    },
+    "tax_components": {
+      "description": null,
+      "type": "array",
+      "read_only": true,
+      "required": false
+    },
+    "termset": {
+      "description": null,
+      "type": "object",
+      "read_only": true,
+      "required": false
+    },
+    "ticket_group": {
+      "description": null,
+      "type": "object",
+      "read_only": true,
+      "required": false
+    },
     "archived": {
       "description": "Is the release archived or not. Default: `false`",
       "type": "boolean",
-      "read_only": false,
+      "read_only": true,
       "required": false
     },
     "default_quantity": {
@@ -171,13 +343,13 @@
     "has_success_message": {
       "description": "Display the custom success message or not. Default: `false`",
       "type": "boolean",
-      "read_only": false,
+      "read_only": true,
       "required": false
     },
     "has_fail_message": {
       "description": "",
       "type": "boolean",
-      "read_only": false,
+      "read_only": true,
       "required": false
     },
     "max_tickets_per_person": {
@@ -201,7 +373,7 @@
     "position": {
       "description": "The position of the release in the list of all releases for the event.",
       "type": "integer",
-      "read_only": false,
+      "read_only": true,
       "required": false
     },
     "price": {
@@ -219,7 +391,7 @@
     "quantity_sold": {
       "description": "The number of tickets registered.",
       "type": "integer",
-      "read_only": false,
+      "read_only": true,
       "required": false
     },
     "question_ids": {
