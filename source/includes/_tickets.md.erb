@@ -1,0 +1,88 @@
+# Tickets
+
+## Attributes
+
+<%= partial "includes/shared/attributes", locals: { attributes: data.tickets.attributes } %>
+
+## Get all Tickets
+
+<%= partial "includes/requests/get",
+  locals: {
+    url: "#{config[:api_endpoint]}/:account_slug/:event_slug/tickets"
+  }
+%>
+<%= partial "includes/tickets/index.json" %>
+
+
+Retrieves all `Tickets` for the given `Event`.
+
+`<%= "GET #{config[:api_endpoint]}/:account_slug/:event_slug/tickets" %>`
+
+* `account_slug` - The `slug` attribute of an `Account`.
+* `event_slug` - The `slug` attribute of an `Event`.
+
+## Get a Ticket
+
+<%= partial "includes/requests/get",
+  locals: {
+    url: "#{config[:api_endpoint]}/:account_slug/:event_slug/tickets/:ticket_slug"
+  }
+%>
+<%= partial "includes/tickets/show.json" %>
+
+Retrieves a `Ticket` for the given `Event`.
+
+`GET <%= "#{config[:api_endpoint]}/:account_slug/:event_slug/tickets/:ticket_slug" %>`
+
+* `account_slug` - The `slug` attribute of an `Account`.
+* `event_slug` - The `slug` attribute of an `Event`.
+* `ticket_slug` - The `slug` attribute of a `Ticket`.
+
+## Create a Ticket
+
+<%= partial "includes/requests/post",
+  locals: {
+    url: "#{config[:api_endpoint]}/:account_slug/:event_slug/tickets",
+    parameters: {
+      ticket: {
+      }
+    }
+  }
+%>
+<%= partial "includes/tickets/create.json" %>
+
+Create a new `Ticket` belonging to the given `Event`.
+
+`POST <%= "#{config[:api_endpoint]}/:account_slug/:event_slug/tickets" %>`
+
+* `account_slug` - The `slug` attribute of an `Account`.
+* `event_slug` - The `slug` attribute of an `Event`.
+
+### Parameters
+
+<%= partial "includes/shared/parameters", locals: { parameters: data.tickets.attributes.reject { |name,attribute| attribute["read_only"] } } %>
+
+## Update a Ticket
+
+<%= partial "includes/requests/patch",
+  locals: {
+    url: "#{config[:api_endpoint]}/:account_slug/:event_slug/tickets/:ticket_slug",
+    parameters: {
+      ticket: {
+      }
+    }
+  }
+%>
+<%= partial "includes/tickets/update.json" %>
+
+Update a `Ticket` belonging to the given `Event`.
+
+`PATCH <%= "#{config[:api_endpoint]}/:account_slug/:event_slug/tickets/:ticket_slug" %>`
+
+* `account_slug` - The `slug` attribute of an `Account`.
+* `event_slug` - The `slug` attribute of an `Event`.
+* `ticket_slug` - The `slug` attribute of a `Ticket`.
+
+### Parameters
+
+<%= partial "includes/shared/parameters", locals: { parameters: data.tickets.attributes.reject { |name,attribute| attribute["read_only"] } } %>
