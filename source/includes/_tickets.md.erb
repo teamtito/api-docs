@@ -45,6 +45,9 @@ Retrieves a `Ticket` for the given `Event`.
     url: "#{config[:api_endpoint]}/:account_slug/:event_slug/tickets",
     parameters: {
       ticket: {
+        release_id: "coffee-brewing",
+        first_name: "Jane",
+        last_name: "Doe"
       }
     }
   }
@@ -69,6 +72,7 @@ Create a new `Ticket` belonging to the given `Event`.
     url: "#{config[:api_endpoint]}/:account_slug/:event_slug/tickets/:ticket_slug",
     parameters: {
       ticket: {
+        last_name: "Smith"
       }
     }
   }
