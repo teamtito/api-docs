@@ -1,5 +1,5 @@
 Attribute | Type | Description
 --------- | ---- | -----------
 <%- attributes.sort_by { |name, attribute| name }.each do |name, attribute| -%>
-<%= name %> | `<%= attribute["type"] %>` | <%= attribute["description"].presence || "&mdash;" %> <%= "*Readonly*" if attribute["read_only"] %>
+<%= name %> <%= "<span class='read_only'>Read only</span>" if attribute.read_only %> | `<%= attribute["type"] %>` | <%= attribute["description"].presence || "&mdash;" %>
 <%- end -%>

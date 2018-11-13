@@ -1,0 +1,245 @@
+{
+  "attributes": {
+    "id": {
+      "description": "The identifier of the ticket.",
+      "type": "integer",
+      "read_only": true,
+      "required": false
+    },
+    "slug": {
+      "description": "A human friendly string used in the URL.",
+      "type": "string",
+      "read_only": true,
+      "required": false
+    },
+    "metadata": {
+      "description": "Metadata about the attendee.",
+      "type": "object",
+      "read_only": false,
+      "required": false
+    },
+    "first_name": {
+      "description": "The first name of the attendee.",
+      "type": "string",
+      "read_only": false,
+      "required": false
+    },
+    "last_name": {
+      "description": "The last name of the attendee.",
+      "type": "string",
+      "read_only": false,
+      "required": false
+    },
+
+    "registration_id": {
+      "description": "The id of the `Registration` this ticket was created from.",
+      "type": "integer",
+      "read_only": true,
+      "required": false
+    },
+    "release_id": {
+      "description": "The id of the `Release`.",
+      "type": "integer",
+      "read_only": false,
+      "required": false
+    },
+    "consented_at": {
+      "description": "The date the attendee consented to providing their information.",
+      "type": "datetime",
+      "read_only": true,
+      "required": false
+    },
+
+    "discount_code_used": {
+      "description": "The code of `DiscountCode` used when purchasing.",
+      "type": "string",
+      "read_only": true,
+      "required": false
+    },
+    "created_at": {
+      "description": "The date the ticket was created.",
+      "type": "datetime",
+      "read_only": true,
+      "required": false
+    },
+    "updated_at": {
+      "description": "The date the ticket was last updated.",
+      "type": "datetime",
+      "read_only": true,
+      "required": false
+    },
+
+    "answers": {
+      "description": "A list of `Answers` to questions.",
+      "type": "array",
+      "read_only": true,
+      "required": false
+    },
+    "assigned": {
+      "description": "Whether the ticket has been assigned to an individual's email address",
+      "type": "boolean",
+      "read_only": true,
+      "required": false
+    },
+
+    "price_less_tax": {
+      "description": "The net price paid for this ticket minus any tax.",
+      "type": "decimal",
+      "read_only": true,
+      "required": false
+    },
+    "total_paid": {
+      "description": "The gross price paid for this ticket including any upgrades",
+      "type": "decimal",
+      "read_only": true,
+      "required": false
+    },
+
+    "total_tax_paid": {
+      "description": "The tax paid for this ticket.",
+      "type": "decimal",
+      "read_only": true,
+      "required": false
+    },
+
+    "total_paid_less_tax": {
+      "description": "The net price paid including upgrades.",
+      "type": "decimal",
+      "read_only": true,
+      "required": false
+    },
+
+    "upgrade_ids": {
+      "description": "An array of the IDs of `Upgrade` attached to the release.",
+      "type": "array",
+      "read_only": false,
+      "required": false
+    },
+
+    "upgrade_summary": {
+      "description": "",
+      "type": "object",
+      "read_only": true,
+      "required": false
+    },
+
+    "registration_slug": {
+      "description": "The `slug` attribute of the attached `Registration`",
+      "type": "string",
+      "read_only": true,
+      "required": false
+    },
+
+    "release_slug": {
+      "description": "The `slug` of the attached `Release`.",
+      "type": "string",
+      "read_only": true,
+      "required": false
+    },
+
+    "release_title": {
+      "description": "The title of the attached `Release`.",
+      "type": "string",
+      "read_only": true,
+      "required": false
+    },
+
+    "registration": {
+      "description": "The `Registration` attached to the ticket.",
+      "type": "object",
+      "read_only": true,
+      "required": false
+    },
+
+    "release": {
+      "description": "The `Release` attached to the ticket.",
+      "type": "object",
+      "read_only": true,
+      "required": false
+    },
+
+    "release_id": {
+      "description": "The `id` of the `Release` attached to the ticket.",
+      "type": "string",
+      "read_only": false,
+      "required": true
+    },
+
+
+    "responses": {
+      "description": "The answer to each `Question` attached to the ticket. Format: A hash of answers, keyed by `Question` slug e.g.<br>`{ \"t-shirt-size\": \"Medium\", \"skills\": [\"HTML\", \"JavaScript\"] }`",
+      "type": "object",
+      "read_only": true,
+      "required": false
+    },
+    "company_name": {
+      "description": "The company name of the attendee.",
+      "type": "string",
+      "read_only": false,
+      "required": false
+    },
+    "email": {
+      "description": "The email address of the attendee.",
+      "type": "string",
+      "read_only": false,
+      "required": false
+    },
+    "name": {
+      "description": "The full name of the attendee.",
+      "type": "string",
+      "read_only": true,
+      "required": false
+    },
+    "number": {
+      "description": "Default: Starts at 1 and counts up with each ticket registered.",
+      "type": "integer",
+      "read_only": true,
+      "required": false
+    },
+    "phone_number": {
+      "description": "The phone number of the attendee.",
+      "type": "string",
+      "read_only": false,
+      "required": false
+    },
+    "price": {
+      "description": "The price paid for this ticket without any upgrades.",
+      "type": "decimal",
+      "read_only": false,
+      "required": false
+    },
+    "reference": {
+      "description": "Default: The order reference plus the index of the ticket in that order e.g. `AXBY-1`.",
+      "type": "string",
+      "read_only": true,
+      "required": false
+    },
+    "state": {
+      "description": "`new`, `complete`, `incomplete`, `reminder`, `void`. Default: `new`.",
+      "type": "integer",
+      "read_only": true,
+      "required": false
+    },
+    /*  This should be tag_list??? */
+    "tags": {
+      "description": "A comma separated list of tags for the ticket.",
+      "type": "string",
+      "read_only": false,
+      "required": false
+    },
+
+    /* What is this */
+    "temporary": {
+      "description": "Is the ticket temporary or not. For example if a ticket needs to be assigned but is not yet confirmed e.g. a payment is pending. Default: `false`.",
+      "type": "boolean",
+      "read_only": true,
+      "required": false
+    },
+    "test_mode": {
+      "description": "Default: `true` if test mode is enabled for you or for your entire event, otherwise `false`.",
+      "type": "boolean",
+      "read_only": true,
+      "required": false
+    }
+  }
+}

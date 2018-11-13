@@ -60,6 +60,8 @@ html, body {
   font-size: 13px;
   font-weight: bold;
 
+  overflow-y: auto;
+
   // language selector for mobile devices
   .lang-selector {
     display: none;
@@ -643,6 +645,14 @@ html, body {
 
 .required {
   color: #EF5350;
+  display: block;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.read_only {
+  color: #0079ff;
   display: block;
   font-size: 12px;
   text-transform: uppercase;

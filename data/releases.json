@@ -1,0 +1,470 @@
+{
+  "attributes": {
+    "id": {
+      "description": "",
+      "type": "integer",
+      "read_only": true,
+      "required": false
+    },
+    "created_at": {
+      "description": "",
+      "type": "datetime",
+      "read_only": true,
+      "required": false
+    },
+    "updated_at": {
+      "description": "",
+      "type": "datetime",
+      "read_only": true,
+      "required": false
+    },
+    "slug": {
+      "description": "",
+      "type": "string",
+      "read_only": true,
+      "required": false
+    },
+    "card_payments": {
+      "description": "",
+      "type": "boolean",
+      "read_only": false,
+      "required": false
+    },
+    "donation": {
+      "description": "",
+      "type": "boolean",
+      "read_only": true,
+      "required": false
+    },
+    "invoice": {
+      "description": "",
+      "type": "boolean",
+      "read_only": false,
+      "required": false
+    },
+    "max_donation": {
+      "description": "",
+      "type": "decimal",
+      "read_only": false,
+      "required": false
+    },
+    "min_donation": {
+      "description": "",
+      "type": "decimal",
+      "read_only": false,
+      "required": false
+    },
+    "metadata": {
+      "description": "",
+      "type": "object",
+      "read_only": false,
+      "required": false
+    },
+    "payment_type": {
+      "description": "",
+      "type": "string",
+      "read_only": true,
+      "required": false
+    },
+    "price_ex_tax": {
+      "description": null,
+      "type": "decimal",
+      "read_only": true,
+      "required": false
+    },
+    "tax_exclusive": {
+      "description": null,
+      "type": "boolean",
+      "read_only": true,
+      "required": false
+    },
+    "price_degressive": {
+      "description": null,
+      "type": "string",
+      "read_only": false,
+      "required": false
+    },
+    "require_vat_number": {
+      "description": null,
+      "type": "boolean",
+      "read_only": false,
+      "required": false
+    },
+    "require_credit_card_for_sold_out_waiting_list": {
+      "description": null,
+      "type": "boolean",
+      "read_only": false,
+      "required": false
+    },
+
+    "show_price": {
+      "description": null,
+      "type": "boolean",
+      "read_only": false,
+      "required": false
+    },
+    "suggested_donation": {
+      "description": null,
+      "type": "decimal",
+      "read_only": false,
+      "required": false
+    },
+    "lock_changes": {
+      "description": null,
+      "type": "boolean",
+      "read_only": false,
+      "required": false
+    },
+    "state_name": {
+      "description": null,
+      "type": "string",
+      "read_only": true,
+      "required": false
+    },
+
+    "waiting_list_enabled_during_locked" : {
+      "description": "",
+      "type": "boolean",
+      "read_only": false,
+      "required": false
+    },
+    "share_url": {
+      "description": null,
+      "type": "string",
+      "read_only": true,
+      "required": false
+    },
+
+    "tickets_count": {
+      "description": null,
+      "type": "integer",
+      "read_only": true,
+      "required": false
+    },
+
+    "locked": {
+      "description": null,
+      "type": "boolean",
+      "read_only": true,
+      "required": false
+    },
+    "waiting_list": {
+      "description": null,
+      "type": "boolean",
+      "read_only": true,
+      "required": false
+    },
+    "sold_out": {
+      "description": null,
+      "type": "boolean",
+      "read_only": true,
+      "required": false
+    },
+    "off_sale": {
+      "description": null,
+      "type": "boolean",
+      "read_only": true,
+      "required": false
+    },
+    "expired": {
+      "description": null,
+      "type": "boolean",
+      "read_only": true,
+      "required": false
+    },
+    "upcoming": {
+      "description": null,
+      "type": "boolean",
+      "read_only": true,
+      "required": false
+    },
+    "allocatable": {
+      "description": null,
+      "type": "boolean",
+      "read_only": true,
+      "required": false
+    },
+    "gross_income": {
+      "description": null,
+      "type": "decimal",
+      "read_only": true,
+      "required": false
+    },
+    "full_price_tickets_count": {
+      "description": null,
+      "type": "integer",
+      "read_only": true,
+      "required": false
+    },
+    "free_tickets_count": {
+      "description": null,
+      "type": "integer",
+      "read_only": true,
+      "required": false
+    },
+    "discounted_tickets_count": {
+      "description": null,
+      "type": "integer",
+      "read_only": true,
+      "required": false
+    },
+    "voided_tickets_count": {
+      "description": null,
+      "type": "integer",
+      "read_only": true,
+      "required": false
+    },
+    "show_company_name": {
+      "description": null,
+      "type": "boolean",
+      "read_only": true,
+      "required": false
+    },
+    "require_company_name": {
+      "description": null,
+      "type": "boolean",
+      "read_only": false,
+      "required": false
+    },
+    "show_vat_number": {
+      "description": null,
+      "type": "boolean",
+      "read_only": true,
+      "required": false
+    },
+    "show_discount_code_field_here": {
+      "description": null,
+      "type": "boolean",
+      "read_only": true,
+      "required": false
+    },
+    "show_phone_number": {
+      "description": null,
+      "type": "boolean",
+      "read_only": true,
+      "required": false
+    },
+    "tax_description": {
+      "description": null,
+      "type": "string",
+      "read_only": true,
+      "required": false
+    },
+    "translations": {
+      "description": null,
+      "type": "object",
+      "read_only": false,
+      "required": false
+    },
+    "termset_id": {
+      "description": null,
+      "type": "integer",
+      "read_only": false,
+      "required": false
+    },
+    "ticket_group_id": {
+      "description": null,
+      "type": "integer",
+      "read_only": false,
+      "required": false
+    },
+    "activities": {
+      "description": null,
+      "type": "array",
+      "read_only": true,
+      "required": false
+    },
+    "combo_releases": {
+      "description": null,
+      "type": "array",
+      "read_only": true,
+      "required": false
+    },
+    "questions": {
+      "description": null,
+      "type": "array",
+      "read_only": true,
+      "required": false
+    },
+    "tax_types": {
+      "description": null,
+      "type": "array",
+      "read_only": true,
+      "required": false
+    },
+    "tax_components": {
+      "description": null,
+      "type": "array",
+      "read_only": true,
+      "required": false
+    },
+    "termset": {
+      "description": null,
+      "type": "object",
+      "read_only": true,
+      "required": false
+    },
+    "ticket_group": {
+      "description": null,
+      "type": "object",
+      "read_only": true,
+      "required": false
+    },
+    "archived": {
+      "description": "Is the release archived or not. Default: `false`",
+      "type": "boolean",
+      "read_only": true,
+      "required": false
+    },
+    "default_quantity": {
+      "description": "The default number of tickets selected for this release on the event page. Default: `0`",
+      "type": "integer",
+      "read_only": false,
+      "required": false
+    },
+    "description": {
+      "description": "A statement or tag line describing the event",
+      "type": "text",
+      "read_only": false,
+      "required": false
+    },
+    "enable_super_combo_summary": {
+      "description": "For combo releases only. Include a summary of a combo in the order summary or not. Default: `true`",
+      "type": "boolean",
+      "read_only": false,
+      "required": false
+    },
+    "end_at": {
+      "description": "The time when the release will go off sale.",
+      "type": "datetime",
+      "read_only": false,
+      "required": false
+    },
+    "has_success_message": {
+      "description": "Display the custom success message or not. Default: `false`",
+      "type": "boolean",
+      "read_only": true,
+      "required": false
+    },
+    "has_fail_message": {
+      "description": "",
+      "type": "boolean",
+      "read_only": true,
+      "required": false
+    },
+    "max_tickets_per_person": {
+      "description": "The maximum number of tickets per registration.",
+      "type": "integer",
+      "read_only": false,
+      "required": false
+    },
+    "min_tickets_per_person": {
+      "description": "The minimum number of tickets per registration.",
+      "type": "integer",
+      "read_only": false,
+      "required": false
+    },
+    "not_a_ticket": {
+      "description": "Disable issuing of PDF/Apple Wallet tickets or not. For example if this release is for merchandise rather than an actual ticket. Default `false`",
+      "type": "boolean",
+      "read_only": false,
+      "required": false
+    },
+    "position": {
+      "description": "The position of the release in the list of all releases for the event.",
+      "type": "integer",
+      "read_only": true,
+      "required": false
+    },
+    "price": {
+      "description": null,
+      "type": "decimal",
+      "read_only": false,
+      "required": false
+    },
+    "quantity": {
+      "description": "The number of tickets available.",
+      "type": "integer",
+      "read_only": false,
+      "required": false
+    },
+    "quantity_sold": {
+      "description": "The number of tickets registered.",
+      "type": "integer",
+      "read_only": true,
+      "required": false
+    },
+    "question_ids": {
+      "description": "An array of the IDs of `Questions` attached to the release. The order of the IDs represents the order in which the questions will be asked.",
+      "type": "array",
+      "read_only": false,
+      "required": false
+    },
+    "request_company_name": {
+      "description": "Do registrations which include this release require a company name.",
+      "type": "boolean",
+      "read_only": false,
+      "required": false
+    },
+    "request_vat_number": {
+      "description": "Do registrations which include this release require a VAT number.",
+      "type": "boolean",
+      "read_only": false,
+      "required": false
+    },
+    "require_billing_address": {
+      "description": " Do registrations which include this release require a billing address.",
+      "type": "boolean",
+      "read_only": false,
+      "required": false
+    },
+    "require_email": {
+      "description": "Do tickets for this release require an email. Default: `true`",
+      "type": "boolean",
+      "read_only": false,
+      "required": false
+    },
+    "require_name": {
+      "description": "Do tickets for this release require a name. Default: `false`",
+      "type": "boolean",
+      "read_only": false,
+      "required": false
+    },
+    "secret": {
+      "description": "Is it only accessible via a secret link or is it visible to everyone on the event page. Default: `false`",
+      "type": "boolean",
+      "read_only": false,
+      "required": false
+    },
+    "state": {
+      "description": "`100` : On sale<br /> `404` : Off sale. Default: `100`",
+      "type": "integer",
+      "read_only": false,
+      "required": false
+    },
+    "start_at": {
+      "description": "The time when the release will go on sale.",
+      "type": "datetime",
+      "read_only": false,
+      "required": false
+    },
+    "success_message": {
+      "description": "A custom message to be displayed to customers after a successful order of this release.",
+      "type": "text",
+      "read_only": false,
+      "required": false
+    },
+    "title": {
+      "description": "The name of the release.",
+      "type": "string",
+      "read_only": false,
+      "required": true
+    },
+    "waiting_list_enabled_during_sold_out" : {
+      "description": "Enable waiting list when this release sells out or not. Default: `false`",
+      "type": "boolean",
+      "read_only": false,
+      "required": false
+    }
+  }
+}
