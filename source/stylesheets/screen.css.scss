@@ -60,6 +60,8 @@ html, body {
   font-size: 13px;
   font-weight: bold;
 
+  overflow-y: auto;
+
   // language selector for mobile devices
   .lang-selector {
     display: none;
