@@ -9,20 +9,27 @@
     "amount": {
       "description": "The monetary amount of the refund.",
       "type": "decimal",
-      "read_only": false,
+      "read_only": true,
       "required": false
     },
     "created_at": {
       "description": "When the refund was recorded.",
       "type": "datetime",
-      "read_only": false,
+      "read_only": true,
       "required": false
     },
     "manual": {
       "description": "`true` if it was logged in Tito after it was already processed. Default `false`",
       "type": "boolean",
-      "read_only": false,
+      "read_only": true,
+      "required": false
+    },
+    "registration": {
+      "description": "The `Registration` attached to the refund.",
+      "type": "object",
+      "read_only": true,
       "required": false
     }
+
   }
 }
