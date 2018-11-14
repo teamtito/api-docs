@@ -1,0 +1,33 @@
+# Webhooks
+
+Webhooks allow data to be passed to an external system in real time. Webhooks
+will `POST` a `JSON` payload to the endpoint you specify, with a `X-Webhook-Name`
+header.
+
+## Types
+
+Name              | Description
+----------------- | ---------------------------
+<% data.webhooks.types.each do |webhook| %>
+`<%= webhook.name %>` | <%= webhook.description %>
+<% end %>
+
+## Verifying the payload
+
+```ruby
+key = 'YOUR EVENT SECURITY TOKEN'
+hash = OpenSSL::Digest.new('sha256')
+data = 'THE WEBHOOK REQUEST'
+
+Base64.encode64(OpenSSL::HMAC.digest(hash, key, data)).strip
+```
+
+Each payload comes with a signed HMAC signature so that you can verify the origin of the webhook request.
+
+In Customize / Webhooks, you’ll find a shared security token. You can use this to sign the payload.
+
+The security token is used as a key to sign the payload data with an HMAC key.
+
+The HMAC key is your security token, the HMAC digest is SHA2, and the data is the raw payload JSON that is sent. The key is sent Base64 encoded via the Tito-Signature HTTP header.
+
+If you’re using Ruby, for example, you can verify the authenticity of your payload with the code opposite.
