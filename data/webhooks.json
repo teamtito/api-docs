@@ -1,0 +1,60 @@
+{
+  "types": [
+    {
+      "name": "checkin.created",
+      "description": "Fired when an attendee is checked-in via one of the Tito apps (web, iOS or Android)."
+    },
+    {
+      "name": "ticket.created",
+      "description": "Fired when tickets are created immediately after a registration is confirmed. Tickets can be unassigned, incomplete or complete at this stage depending on whether it is a single or multiple ticket registration or whether the ticket has required fields or not."
+    },
+    {
+      "name": "ticket.completed",
+      "description": "Fired when all required fields like name, email, etc and required questions have been answered."
+    },
+    {
+      "name": "ticket.reassigned",
+      "description": "Fired specifically when a ticket is reassigned to someone else."
+    },
+    {
+      "name": "ticket.updated",
+      "description": "Fired anytime ticket details are changed, including changes to the email address."
+    },
+    {
+      "name": "ticket.unsnoozed",
+      "description": "Fired when a “snoozed” ticket is assigned to someone. When people register tickets but do not want to or can’t assign them straight away they can be “snoozed”."
+    },
+    {
+      "name": "ticket.unvoided",
+      "description": "Fired when a voided ticket is returned to a valid state."
+    },
+    {
+      "name": "ticket.voided",
+      "description": "Fired when a ticket is changed to a voided state. Free tickets that are cancelled by the attendee will also cause this webhook to fire."
+    },
+    {
+      "name": "registration.started",
+      "description": "Fired when a registration is started e.g. after they have selected tickets but before they have filled in any details."
+    },
+    {
+      "name": "registration.filling",
+      "description": "Fired as soon as the person registering starts to filling in details like name, email, etc."
+    },
+    {
+      "name": "registration.updated",
+      "description": "Fired when the registration is updated in the Tito admin area or via the API."
+    },
+    {
+      "name": "registration.finished",
+      "description": "Fired as soon as the registration is confirmed, e.g when payment is complete."
+    },
+    {
+      "name": "registration.completed",
+      "description": "Fired when all tickets on a registration have either been assigned or “snoozed”."
+    },
+    {
+      "name": "registration.cancelled",
+      "description": "Fired when the registration is cancelled in the Tito admin area or via the API. Free tickets that are cancelled by the attendee will also cause this webhook to fire."
+    }
+  ]
+}
