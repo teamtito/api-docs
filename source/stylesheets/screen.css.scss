@@ -59,8 +59,10 @@ html, body {
   background-color: $nav-bg;
   font-size: 13px;
   font-weight: bold;
-
+  overflow-x: hidden;
   overflow-y: auto;
+
+
 
   // language selector for mobile devices
   .lang-selector {
@@ -584,6 +586,31 @@ html, body {
 ////////////////////////////////////////////////////////////////////////////////
 // These are the styles for phones and tablets
 // There are also a couple styles disperesed
+
+@media (max-width: 1400px) {
+  #nav-button.open {
+    left: 250px;
+  }
+  .toc-wrapper {
+    width: 250px;
+    .logo {
+      padding: 16px 16px 0;
+    }
+    > .search input {
+      margin: 10px 16px;
+      width: 216px;
+    }
+    > .search:before {
+      left: 16px;
+    }
+    .toc-link {
+      padding: 6px 16px;
+    }
+    .toc-h2 {
+      padding-left: 32px;
+    }
+  }
+}
 
 @media (max-width: $tablet-width) {
   .toc-wrapper {
