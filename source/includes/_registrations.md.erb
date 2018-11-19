@@ -69,6 +69,7 @@ Create a new `Registration` belonging to the given `Event`.
     url: "#{config[:api_endpoint]}/:account_slug/:event_slug/registrations/:registration_slug",
     parameters: {
       registration: {
+        email: "john@example.com"
       }
     }
   }
