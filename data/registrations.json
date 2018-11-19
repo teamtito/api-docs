@@ -1,5 +1,198 @@
 {
   "attributes": {
+    "id": {
+      "description": "The identifer of the Registration",
+      "type": "integer",
+      "read_only": true,
+      "required": false
+    },
+    "slug": {
+      "description": "A human friendly string used in the URL",
+      "type": "string",
+      "read_only": true,
+      "required": false
+    },
+    "billing_address": {
+      "description": "The address given for billing.",
+      "type": "object",
+      "read_only": true,
+      "required": false
+    },
+    "created_at": {
+      "description": "The date the registration was created.",
+      "type": "datetime",
+      "read_only": true,
+      "required": false
+    },
+    "updated_at": {
+      "description": "The date the registration was last updated.",
+      "type": "datetime",
+      "read_only": true,
+      "required": false
+    },
+    "completed_at": {
+      "description": "The time at which the registration was completed and tickets were created for it.",
+      "type": "datetime",
+      "read_only": true,
+      "required": false
+    },
+    "discount_code": {
+      "description": "",
+      "type": "string",
+      "read_only": true,
+      "required": false
+    },
+    "email": {
+      "description": "The email address of the registration.",
+      "type": "string",
+      "read_only": true,
+      "required": false
+    },
+    "expires_at": {
+      "description": "The time at which the registration will expire if it has not been completed. Only registrations containing tickets for *locked* releases can expire. A release is *locked* when all of its available tickets are in the process of being registered.",
+      "type": "datetime",
+      "read_only": true,
+      "required": false
+    },
+    "ip_address": {
+      "description": "The IP address when the registration was created.",
+      "type": "string",
+      "read_only": true,
+      "required": false
+    },
+    "locale": {
+      "description": "",
+      "type": "string",
+      "read_only": true,
+      "required": false
+    },
+    "metadata": {
+      "description": "Metadata about the attendee.",
+      "type": "object",
+      "read_only": true,
+      "required": false
+    },
+    "name": {
+      "description": "",
+      "type": "string",
+      "read_only": true,
+      "required": false
+    },
+    "payment_reference": {
+      "description": "",
+      "type": "string",
+      "read_only": true,
+      "required": false
+    },
+    "phone_number": {
+      "description": "",
+      "type": "string",
+      "read_only": true,
+      "required": false
+    },
+    "registration_type": {
+      "description": "",
+      "type": "integer",
+      "read_only": true,
+      "required": false
+    },
+    "reference": {
+      "description": "A randomly generated 4 character string unique to the event.",
+      "type": "string",
+      "read_only": true,
+      "required": false
+    },
+    "source": {
+      "description": "",
+      "type": "string",
+      "read_only": true,
+      "required": false
+    },
+    "state": {
+      "description": "",
+      "type": "integer",
+      "read_only": true,
+      "required": false
+    },
+    "test_mode": {
+      "description": "Default: `true` if test mode is enabled for you or for your entire event, otherwise `false`.",
+      "type": "boolean",
+      "read_only": true,
+      "required": false
+    },
+    "total": {
+      "description": "",
+      "type": "decimal",
+      "read_only": true,
+      "required": false
+    },
+    "consented_at": {
+      "description": "",
+      "type": "datetime",
+      "read_only": true,
+      "required": false
+    },
 
+    "paid": {
+      "description": "",
+      "type": "boolean",
+      "read_only": true,
+      "required": false
+    },
+    "payment": {
+      "description": "",
+      "type": "object",
+      "read_only": true,
+      "required": false
+    },
+
+    "refunded": {
+      "description": "",
+      "type": "boolean",
+      "read_only": true,
+      "required": false
+    },
+    "total_less_tax": {
+      "description": "",
+      "type": "decimal",
+      "read_only": true,
+      "required": false
+    },
+    "tickets_count": {
+      "description": "",
+      "type": "integer",
+      "read_only": true,
+      "required": false
+    },
+    "quantities": {
+      "description": "",
+      "type": "array",
+      "read_only": true,
+      "required": false
+    },
+    "receipts": {
+      "description": "",
+      "type": "array",
+      "read_only": true,
+      "required": false
+    },
+    "refunds": {
+      "description": "",
+      "type": "array",
+      "read_only": true,
+      "required": false
+    },
+    "tickets": {
+      "description": "",
+      "type": "array",
+      "read_only": true,
+      "required": false
+    },
+    "line_items": {
+      "description": "",
+      "type": "array",
+      "read_only": true,
+      "required": false
+    }
   }
 }
