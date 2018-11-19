@@ -37,7 +37,7 @@
       "required": false
     },
     "discount_code": {
-      "description": "",
+      "description": "The discount code used when registering.",
       "type": "string",
       "read_only": true,
       "required": false
@@ -61,7 +61,7 @@
       "required": false
     },
     "locale": {
-      "description": "",
+      "description": "The locale of the registration.",
       "type": "string",
       "read_only": true,
       "required": false
@@ -73,25 +73,25 @@
       "required": false
     },
     "name": {
-      "description": "",
+      "description": "The full name of the person who registered",
       "type": "string",
       "read_only": true,
       "required": false
     },
     "payment_reference": {
-      "description": "",
+      "description": "The payment reference number.",
       "type": "string",
       "read_only": true,
       "required": false
     },
     "phone_number": {
-      "description": "",
+      "description": "The phone number of the person who registered",
       "type": "string",
       "read_only": true,
       "required": false
     },
     "registration_type": {
-      "description": "",
+      "description": "`standard`, `manual` or `imported`.",
       "type": "integer",
       "read_only": true,
       "required": false
@@ -103,14 +103,14 @@
       "required": false
     },
     "source": {
-      "description": "",
+      "description": "The `Source` Tracking code that the person registered under.",
       "type": "string",
       "read_only": true,
       "required": false
     },
     "state": {
-      "description": "",
-      "type": "integer",
+      "description": "*It's new&hellip;*<br />`new`<br />`ready`<br />`filling`<br />`redirected`<br /><br />*It's being processed&hellip;*<br />`ready_to_process`<br />`processing`<br />`payment_details_stored`<br />`payment_charged`<br /><br />*It's finished&hellip;*<br />`complete`<br />`incomplete`<br />`cancelled`<br />`confirmed`<br />`customer_cancelled`<br /><br />*Something went wrong&hellip;*<br />`errored`<br />`payment_declined`<br />`not_fulfilled`",
+      "type": "string",
       "read_only": true,
       "required": false
     },
@@ -121,75 +121,75 @@
       "required": false
     },
     "total": {
-      "description": "",
+      "description": "The gross monetary amount.",
       "type": "decimal",
       "read_only": true,
       "required": false
     },
     "consented_at": {
-      "description": "",
+      "description": "The date the person consented to providing their information during registration.",
       "type": "datetime",
       "read_only": true,
       "required": false
     },
 
     "paid": {
-      "description": "",
+      "description": "Whether the registration has been paid.",
       "type": "boolean",
       "read_only": true,
       "required": false
     },
     "payment": {
-      "description": "",
+      "description": "Payment information",
       "type": "object",
       "read_only": true,
       "required": false
     },
 
     "refunded": {
-      "description": "",
+      "description": "Whether the registration has been refunded.",
       "type": "boolean",
       "read_only": true,
       "required": false
     },
     "total_less_tax": {
-      "description": "",
+      "description": "The net monetary amount.",
       "type": "decimal",
       "read_only": true,
       "required": false
     },
     "tickets_count": {
-      "description": "",
+      "description": "The number of tickets purchased when registering.",
       "type": "integer",
       "read_only": true,
       "required": false
     },
     "quantities": {
-      "description": "",
-      "type": "array",
+      "description": "The number of `Tickets` for each `Release` that were registered.",
+      "type": "object",
       "read_only": true,
       "required": false
     },
     "receipts": {
-      "description": "",
+      "description": "A list of `Receipts` for this registration.",
       "type": "array",
       "read_only": true,
       "required": false
     },
     "refunds": {
-      "description": "",
+      "description": "A list of `Refunds` for this registration.",
       "type": "array",
       "read_only": true,
       "required": false
     },
     "tickets": {
-      "description": "",
+      "description": "A list of `Tickets` for this registration.",
       "type": "array",
       "read_only": true,
       "required": false
     },
     "line_items": {
-      "description": "",
+      "description": "A list of `LineItems` for this registration.",
       "type": "array",
       "read_only": true,
       "required": false
