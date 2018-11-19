@@ -58,6 +58,8 @@ Create a new `Registration` belonging to the given `Event`.
 * `account_slug` - The `slug` attribute of an `Account`.
 * `event_slug` - The `slug` attribute of an `Event`.
 
+<aside class="warning">This is missing</aside>
+
 ### Parameters
 
 <%= partial "includes/shared/parameters", locals: { parameters: data.registrations.attributes.reject { |name,attribute| attribute["read_only"] } } %>
