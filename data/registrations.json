@@ -45,7 +45,7 @@
     "email": {
       "description": "The email address of the registration.",
       "type": "string",
-      "read_only": true,
+      "read_only": false,
       "required": false
     },
     "expires_at": {
@@ -69,25 +69,25 @@
     "metadata": {
       "description": "Metadata about the attendee.",
       "type": "object",
-      "read_only": true,
+      "read_only": false,
       "required": false
     },
     "name": {
       "description": "The full name of the person who registered",
       "type": "string",
-      "read_only": true,
+      "read_only": false,
       "required": false
     },
     "payment_reference": {
-      "description": "The payment reference number.",
+      "description": "The purchase order number of the registration.",
       "type": "string",
-      "read_only": true,
+      "read_only": false,
       "required": false
     },
     "phone_number": {
       "description": "The phone number of the person who registered",
       "type": "string",
-      "read_only": true,
+      "read_only": false,
       "required": false
     },
     "registration_type": {
@@ -105,7 +105,7 @@
     "source": {
       "description": "The `Source` Tracking code that the person registered under.",
       "type": "string",
-      "read_only": true,
+      "read_only": false,
       "required": false
     },
     "state": {
@@ -123,7 +123,7 @@
     "total": {
       "description": "The gross monetary amount.",
       "type": "decimal",
-      "read_only": true,
+      "read_only": false,
       "required": false
     },
     "consented_at": {
