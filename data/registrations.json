@@ -67,7 +67,7 @@
       "required": false
     },
     "metadata": {
-      "description": "Metadata about the attendee.",
+      "description": "Metadata about the registration.",
       "type": "object",
       "read_only": false,
       "required": false
