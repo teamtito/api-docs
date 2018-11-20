@@ -1,0 +1,91 @@
+# Registrations
+
+## Attributes
+
+<%= partial "includes/shared/attributes", locals: { attributes: data.registrations.attributes } %>
+
+## Get all Registrations
+
+<%= partial "includes/requests/get",
+  locals: {
+    url: "#{config[:api_endpoint]}/:account_slug/:event_slug/registrations"
+  }
+%>
+<%= partial "includes/registrations/index.json" %>
+
+
+Retrieves all `Registrations` for the given `Event`.
+
+`<%= "GET #{config[:api_endpoint]}/:account_slug/:event_slug/registrations" %>`
+
+* `account_slug` - The `slug` attribute of an `Account`.
+* `event_slug` - The `slug` attribute of an `Event`.
+
+## Get a Registration
+
+<%= partial "includes/requests/get",
+  locals: {
+    url: "#{config[:api_endpoint]}/:account_slug/:event_slug/registrations/:registration_slug"
+  }
+%>
+<%= partial "includes/registrations/show.json" %>
+
+Retrieves a `Registration` for the given `Event`.
+
+`GET <%= "#{config[:api_endpoint]}/:account_slug/:event_slug/registrations/:registration_slug" %>`
+
+* `account_slug` - The `slug` attribute of an `Account`.
+* `event_slug` - The `slug` attribute of an `Event`.
+* `registration_slug` - The `slug` attribute of a `Registration`.
+
+## Create a Registration
+
+<%= partial "includes/requests/post",
+  locals: {
+    url: "#{config[:api_endpoint]}/:account_slug/:event_slug/registrations",
+    parameters: {
+      registration: {
+      }
+    }
+  }
+%>
+<%= partial "includes/registrations/create.json" %>
+
+Create a new `Registration` belonging to the given `Event`.
+
+`POST <%= "#{config[:api_endpoint]}/:account_slug/:event_slug/registrations" %>`
+
+* `account_slug` - The `slug` attribute of an `Account`.
+* `event_slug` - The `slug` attribute of an `Event`.
+
+<aside class="warning">This is missing</aside>
+
+### Parameters
+
+<%= partial "includes/shared/parameters", locals: { parameters: data.registrations.attributes.reject { |name,attribute| attribute["read_only"] } } %>
+
+## Update a Registration
+
+<%= partial "includes/requests/patch",
+  locals: {
+    url: "#{config[:api_endpoint]}/:account_slug/:event_slug/registrations/:registration_slug",
+    parameters: {
+      registration: {
+        email: "john@example.com"
+      }
+    }
+  }
+%>
+<%= partial "includes/registrations/update.json" %>
+
+Update a `Registration` belonging to the given `Event`.
+
+`PATCH <%= "#{config[:api_endpoint]}/:account_slug/:event_slug/registrations/:registration_slug" %>`
+
+* `account_slug` - The `slug` attribute of an `Account`.
+* `event_slug` - The `slug` attribute of an `Event`.
+* `registration_slug` - The `slug` attribute of a `Registration`.
+
+### Parameters
+
+<%= partial "includes/shared/parameters", locals: { parameters: data.registrations.attributes.reject { |name,attribute| attribute["read_only"] } } %>

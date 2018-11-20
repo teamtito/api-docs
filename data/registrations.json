@@ -1,0 +1,204 @@
+{
+  "attributes": {
+    "id": {
+      "description": "The identifer of the Registration",
+      "type": "integer",
+      "read_only": true,
+      "required": false
+    },
+    "slug": {
+      "description": "A human friendly string used in the URL",
+      "type": "string",
+      "read_only": true,
+      "required": false
+    },
+    "billing_address": {
+      "description": "The address given for billing.",
+      "type": "object",
+      "read_only": true,
+      "required": false
+    },
+    "created_at": {
+      "description": "The date the registration was created.",
+      "type": "datetime",
+      "read_only": true,
+      "required": false
+    },
+    "updated_at": {
+      "description": "The date the registration was last updated.",
+      "type": "datetime",
+      "read_only": true,
+      "required": false
+    },
+    "completed_at": {
+      "description": "The time at which the registration was completed and tickets were created for it.",
+      "type": "datetime",
+      "read_only": true,
+      "required": false
+    },
+    "discount_code": {
+      "description": "The discount code used when registering.",
+      "type": "string",
+      "read_only": true,
+      "required": false
+    },
+    "email": {
+      "description": "The email address of the registration.",
+      "type": "string",
+      "read_only": false,
+      "required": false
+    },
+    "expires_at": {
+      "description": "The time at which the registration will expire if it has not been completed. Only registrations containing tickets for *locked* releases can expire. A release is *locked* when all of its available tickets are in the process of being registered.",
+      "type": "datetime",
+      "read_only": true,
+      "required": false
+    },
+    "ip_address": {
+      "description": "The IP address when the registration was created.",
+      "type": "string",
+      "read_only": true,
+      "required": false
+    },
+    "locale": {
+      "description": "The locale of the registration.",
+      "type": "string",
+      "read_only": true,
+      "required": false
+    },
+    "metadata": {
+      "description": "Metadata about the registration.",
+      "type": "object",
+      "read_only": false,
+      "required": false
+    },
+    "name": {
+      "description": "The full name of the person who registered",
+      "type": "string",
+      "read_only": false,
+      "required": false
+    },
+    "payment_reference": {
+      "description": "The purchase order number of the registration.",
+      "type": "string",
+      "read_only": false,
+      "required": false
+    },
+    "phone_number": {
+      "description": "The phone number of the person who registered",
+      "type": "string",
+      "read_only": false,
+      "required": false
+    },
+    "registration_type": {
+      "description": "`standard`, `manual` or `imported`.",
+      "type": "integer",
+      "read_only": true,
+      "required": false
+    },
+    "reference": {
+      "description": "A randomly generated 4 character string unique to the event.",
+      "type": "string",
+      "read_only": true,
+      "required": false
+    },
+    "source": {
+      "description": "The `Source` Tracking code that the person registered under.",
+      "type": "string",
+      "read_only": false,
+      "required": false
+    },
+    "state": {
+      "description": "*It's new&hellip;*<br />`new`<br />`ready`<br />`filling`<br />`redirected`<br /><br />*It's being processed&hellip;*<br />`ready_to_process`<br />`processing`<br />`payment_details_stored`<br />`payment_charged`<br /><br />*It's finished&hellip;*<br />`complete`<br />`incomplete`<br />`cancelled`<br />`confirmed`<br />`customer_cancelled`<br /><br />*Something went wrong&hellip;*<br />`errored`<br />`payment_declined`<br />`not_fulfilled`",
+      "type": "string",
+      "read_only": true,
+      "required": false
+    },
+    "test_mode": {
+      "description": "Default: `true` if test mode is enabled for you or for your entire event, otherwise `false`.",
+      "type": "boolean",
+      "read_only": true,
+      "required": false
+    },
+    "total": {
+      "description": "The gross monetary amount.",
+      "type": "decimal",
+      "read_only": false,
+      "required": false
+    },
+    "consented_at": {
+      "description": "The date the person consented to providing their information during registration.",
+      "type": "datetime",
+      "read_only": true,
+      "required": false
+    },
+
+    "paid": {
+      "description": "Whether the registration has been paid.",
+      "type": "boolean",
+      "read_only": true,
+      "required": false
+    },
+    "payment": {
+      "description": "Payment information",
+      "type": "object",
+      "read_only": true,
+      "required": false
+    },
+
+    "refunded": {
+      "description": "Whether the registration has been refunded.",
+      "type": "boolean",
+      "read_only": true,
+      "required": false
+    },
+    "total_less_tax": {
+      "description": "The net monetary amount.",
+      "type": "decimal",
+      "read_only": true,
+      "required": false
+    },
+    "tickets_count": {
+      "description": "The number of tickets purchased when registering.",
+      "type": "integer",
+      "read_only": true,
+      "required": false
+    },
+    "quantities": {
+      "description": "The number of `Tickets` for each `Release` that were registered.",
+      "type": "object",
+      "read_only": true,
+      "required": false
+    },
+    "receipts": {
+      "description": "A list of `Receipts` for this registration.",
+      "type": "array",
+      "read_only": true,
+      "required": false
+    },
+    "refunds": {
+      "description": "A list of `Refunds` for this registration.",
+      "type": "array",
+      "read_only": true,
+      "required": false
+    },
+    "tickets": {
+      "description": "A list of `Tickets` for this registration.",
+      "type": "array",
+      "read_only": true,
+      "required": false
+    },
+    "line_items": {
+      "description": "A list of `LineItems` for this registration.",
+      "type": "array",
+      "read_only": true,
+      "required": false
+    },
+    "billing_address_attributes": {
+      "description": "A hash of billing address attributes used to update `address`, `city`, `company_name`, `country`, `state_province_region`, `vat_number` and `zip_postal_code`",
+      "type": "object",
+      "read_only": false,
+      "required": false
+    }
+  }
+}
