@@ -38,32 +38,6 @@ Retrieves a `Registration` for the given `Event`.
 * `event_slug` - The `slug` attribute of an `Event`.
 * `registration_slug` - The `slug` attribute of a `Registration`.
 
-## Create a Registration
-
-<%= partial "includes/requests/post",
-  locals: {
-    url: "#{config[:api_endpoint]}/:account_slug/:event_slug/registrations",
-    parameters: {
-      registration: {
-      }
-    }
-  }
-%>
-<%= partial "includes/registrations/create.json" %>
-
-Create a new `Registration` belonging to the given `Event`.
-
-`POST <%= "#{config[:api_endpoint]}/:account_slug/:event_slug/registrations" %>`
-
-* `account_slug` - The `slug` attribute of an `Account`.
-* `event_slug` - The `slug` attribute of an `Event`.
-
-<aside class="warning">This is missing</aside>
-
-### Parameters
-
-<%= partial "includes/shared/parameters", locals: { parameters: data.registrations.attributes.reject { |name,attribute| attribute["read_only"] } } %>
-
 ## Update a Registration
 
 <%= partial "includes/requests/patch",
