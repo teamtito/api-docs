@@ -25,7 +25,7 @@
       "required": false
     },
     "max_quantity_per_release": {
-      "description": "Discount only applies to a maxium of this number.",
+      "description": "Discount only applies to a maximum of this number.",
       "type": "integer",
       "read_only": false,
       "required": false
