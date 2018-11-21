@@ -1,25 +1,25 @@
 {
   "attributes": {
     "id": {
-      "description": "",
+      "description": "The identifier of the release.",
       "type": "integer",
       "read_only": true,
       "required": false
     },
     "created_at": {
-      "description": "",
+      "description": "The date the release was created.",
       "type": "datetime",
       "read_only": true,
       "required": false
     },
     "updated_at": {
-      "description": "",
+      "description": "The date the release was last updated.",
       "type": "datetime",
       "read_only": true,
       "required": false
     },
     "slug": {
-      "description": "",
+      "description": "A human friendly string used in the URL.",
       "type": "string",
       "read_only": true,
       "required": false
@@ -37,7 +37,7 @@
       "required": false
     },
     "invoice": {
-      "description": "",
+      "description": "Allow customers to pay by requesting an invoice rather than using a card. Customers will be able to request to *pay-by-invoice* when purchasing this ticket.",
       "type": "boolean",
       "read_only": false,
       "required": false
@@ -49,25 +49,25 @@
       "required": false
     },
     "min_donation": {
-      "description": "",
+      "description": "The minimum monetary amount that can be donated when purchasing this release.",
       "type": "decimal",
       "read_only": false,
       "required": false
     },
     "metadata": {
-      "description": "",
+      "description": "Metadata about the release.",
       "type": "object",
       "read_only": false,
       "required": false
     },
     "payment_type": {
-      "description": "",
+      "description": "The type of pricing for this releases e.g. `free`, `paid`, `donation` and `degressive`.",
       "type": "string",
       "read_only": true,
       "required": false
     },
     "price_ex_tax": {
-      "description": null,
+      "description": "The net price of the release.",
       "type": "decimal",
       "read_only": true,
       "required": false
@@ -79,7 +79,7 @@
       "required": false
     },
     "price_degressive": {
-      "description": null,
+      "description": "The degressive pricing structure e.g. `100, 75, 25`",
       "type": "string",
       "read_only": false,
       "required": false
@@ -98,19 +98,19 @@
     },
 
     "show_price": {
-      "description": null,
+      "description": "Whether to show the price on the event homepage.",
       "type": "boolean",
       "read_only": false,
       "required": false
     },
     "suggested_donation": {
-      "description": null,
+      "description": "The suggested monetary amount that can be donated when purchasing this release.",
       "type": "decimal",
       "read_only": false,
       "required": false
     },
     "lock_changes": {
-      "description": null,
+      "description": "Whether attendees can make changes to their tickets.",
       "type": "boolean",
       "read_only": false,
       "required": false
@@ -129,14 +129,14 @@
       "required": false
     },
     "share_url": {
-      "description": null,
+      "description": "A sharable URL of a direct link to purchasing this release.",
       "type": "string",
       "read_only": true,
       "required": false
     },
 
     "tickets_count": {
-      "description": null,
+      "description": "The number of tickets sold for this release.",
       "type": "integer",
       "read_only": true,
       "required": false
@@ -155,31 +155,31 @@
       "required": false
     },
     "sold_out": {
-      "description": null,
+      "description": "Whether the release is sold out.",
       "type": "boolean",
       "read_only": true,
       "required": false
     },
     "off_sale": {
-      "description": null,
+      "description": "Whether the release is on sale or not.",
       "type": "boolean",
       "read_only": true,
       "required": false
     },
     "expired": {
-      "description": null,
+      "description": "Whether the release is no longer on sale as the `end_at` has passed.",
       "type": "boolean",
       "read_only": true,
       "required": false
     },
     "upcoming": {
-      "description": null,
+      "description": "Whether the release is not on sale yet as the `start_at` has not passed.",
       "type": "boolean",
       "read_only": true,
       "required": false
     },
     "allocatable": {
-      "description": null,
+      "description": "Whether there is still sufficient quantity to be sold.",
       "type": "boolean",
       "read_only": true,
       "required": false
@@ -191,25 +191,25 @@
       "required": false
     },
     "full_price_tickets_count": {
-      "description": null,
+      "description": "The number of full price tickets.",
       "type": "integer",
       "read_only": true,
       "required": false
     },
     "free_tickets_count": {
-      "description": null,
+      "description": "The number of free tickets.",
       "type": "integer",
       "read_only": true,
       "required": false
     },
     "discounted_tickets_count": {
-      "description": null,
+      "description": "The number of discounted tickets.",
       "type": "integer",
       "read_only": true,
       "required": false
     },
     "voided_tickets_count": {
-      "description": null,
+      "description": "The number of voided tickets.",
       "type": "integer",
       "read_only": true,
       "required": false
@@ -269,7 +269,7 @@
       "required": false
     },
     "activities": {
-      "description": null,
+      "description": "A list of activities associated with this `Release`.",
       "type": "array",
       "read_only": true,
       "required": false
@@ -281,7 +281,7 @@
       "required": false
     },
     "questions": {
-      "description": null,
+      "description": "A list of questions that ticketholders should be asked.",
       "type": "array",
       "read_only": true,
       "required": false
