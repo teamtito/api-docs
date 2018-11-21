@@ -167,7 +167,7 @@
 
 
     "responses": {
-      "description": "The answer to each `Question` attached to the ticket. Format: A hash of answers, keyed by `Question` slug e.g.<br>`{ \"t-shirt-size\": \"Medium\", \"skills\": [\"HTML\", \"JavaScript\"] }`",
+      "description": "The answer to each `Question` attached to the ticket. Format: A hash of answers, keyed by `Question` slug e.g.<br>`{ \"t-shirt-size\": \"Medium\" }`",
       "type": "object",
       "read_only": true,
       "required": false
