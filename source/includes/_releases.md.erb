@@ -147,3 +147,21 @@ Unarchive a `Release` belonging to the given `Event`.
 * `account_slug` - The `slug` attribute of an `Account`.
 * `event_slug` - The `slug` attribute of an `Event`.
 * `release_slug` - The `slug` attribute of a `Release`.
+
+## Duplicate a Release
+
+<%= partial "includes/requests/post",
+  locals: {
+    url: "#{config[:api_endpoint]}/:account_slug/:event_slug/releases/:release_slug/duplication",
+    parameters: {
+    }
+  }
+%>
+
+Duplicate a `Release` belonging to the given `Event`.
+
+`POST <%= "#{config[:api_endpoint]}/:account_slug/:event_slug/releases/:release_slug/duplication" %>`
+
+* `account_slug` - The `slug` attribute of an `Account`.
+* `event_slug` - The `slug` attribute of an `Event`.
+* `release_slug` - The `slug` attribute of a `Release` that should be duplicated.
