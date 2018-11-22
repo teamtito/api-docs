@@ -165,3 +165,39 @@ Duplicate a `Release` belonging to the given `Event`.
 * `account_slug` - The `slug` attribute of an `Account`.
 * `event_slug` - The `slug` attribute of an `Event`.
 * `release_slug` - The `slug` attribute of a `Release` that should be duplicated.
+
+## Put a Release on sale
+
+<%= partial "includes/requests/patch",
+  locals: {
+    url: "#{config[:api_endpoint]}/:account_slug/:event_slug/releases/:release_slug/activation",
+    parameters: {
+    }
+  }
+%>
+
+Put a `Release` belonging to the given `Event` on sale.
+
+`PATCH <%= "#{config[:api_endpoint]}/:account_slug/:event_slug/releases/:release_slug/activation" %>`
+
+* `account_slug` - The `slug` attribute of an `Account`.
+* `event_slug` - The `slug` attribute of an `Event`.
+* `release_slug` - The `slug` attribute of a `Release`.
+
+## Pause the sale of a Release
+
+<%= partial "includes/requests/patch",
+  locals: {
+    url: "#{config[:api_endpoint]}/:account_slug/:event_slug/releases/:release_slug/deactivation",
+    parameters: {
+    }
+  }
+%>
+
+Pause the sale of a `Release` belonging to the given `Event`.
+
+`PATCH <%= "#{config[:api_endpoint]}/:account_slug/:event_slug/releases/:release_slug/deactivation" %>`
+
+* `account_slug` - The `slug` attribute of an `Account`.
+* `event_slug` - The `slug` attribute of an `Event`.
+* `release_slug` - The `slug` attribute of a `Release`.
