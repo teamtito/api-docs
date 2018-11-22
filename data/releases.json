@@ -73,7 +73,7 @@
       "required": false
     },
     "tax_exclusive": {
-      "description": null,
+      "description": "Whether the price is exclusive of tax.",
       "type": "boolean",
       "read_only": true,
       "required": false
@@ -85,7 +85,7 @@
       "required": false
     },
     "require_vat_number": {
-      "description": null,
+      "description": "",
       "type": "boolean",
       "read_only": false,
       "required": false
@@ -245,7 +245,7 @@
       "required": false
     },
     "tax_description": {
-      "description": null,
+      "description": "A formatted description of the tax for this release.",
       "type": "string",
       "read_only": true,
       "required": false
@@ -257,13 +257,13 @@
       "required": false
     },
     "termset_id": {
-      "description": null,
+      "description": "The identifier of the `Termset` that is associated with this release.",
       "type": "integer",
       "read_only": false,
       "required": false
     },
     "ticket_group_id": {
-      "description": null,
+      "description": "The identifier of the `TicketGroup` that is associated with this release.",
       "type": "integer",
       "read_only": false,
       "required": false
@@ -287,7 +287,7 @@
       "required": false
     },
     "tax_types": {
-      "description": null,
+      "description": "A list of tax types that apply to this release.",
       "type": "array",
       "read_only": true,
       "required": false
@@ -299,13 +299,13 @@
       "required": false
     },
     "termset": {
-      "description": null,
+      "description": "The `Termset` that needs to be consented to for this release.",
       "type": "object",
       "read_only": true,
       "required": false
     },
     "ticket_group": {
-      "description": null,
+      "description": "Similar types of releases can be grouped together with a `TicketGroup`",
       "type": "object",
       "read_only": true,
       "required": false
@@ -377,7 +377,7 @@
       "required": false
     },
     "price": {
-      "description": null,
+      "description": "The monetary amount the release should be sold for.",
       "type": "decimal",
       "read_only": false,
       "required": false
