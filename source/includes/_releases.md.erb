@@ -112,3 +112,38 @@ Delete a `Release` belonging to the given `Event`.
 * `account_slug` - The `slug` attribute of an `Account`.
 * `event_slug` - The `slug` attribute of an `Event`.
 * `release_slug` - The `slug` attribute of a `Release`.
+
+## Archive a Release
+
+<%= partial "includes/requests/post",
+  locals: {
+    url: "#{config[:api_endpoint]}/:account_slug/:event_slug/releases/:release_slug/archival",
+    parameters: {
+    }
+  }
+%>
+
+Archive a `Release` belonging to the given `Event`.
+
+`POST <%= "#{config[:api_endpoint]}/:account_slug/:event_slug/releases/:release_slug/archival" %>`
+
+* `account_slug` - The `slug` attribute of an `Account`.
+* `event_slug` - The `slug` attribute of an `Event`.
+* `release_slug` - The `slug` attribute of a `Release`.
+
+
+## Unarchive a Release
+
+<%= partial "includes/requests/delete",
+  locals: {
+    url: "#{config[:api_endpoint]}/:account_slug/:event_slug/releases/:release_slug/archival",
+  }
+%>
+
+Unarchive a `Release` belonging to the given `Event`.
+
+`DELETE <%= "#{config[:api_endpoint]}/:account_slug/:event_slug/releases/:release_slug/archival" %>`
+
+* `account_slug` - The `slug` attribute of an `Account`.
+* `event_slug` - The `slug` attribute of an `Event`.
+* `release_slug` - The `slug` attribute of a `Release`.
