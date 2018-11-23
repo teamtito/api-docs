@@ -17,6 +17,12 @@
       "type": "string",
       "read_only": false,
       "required": false
+    },
+    "delete_answers": {
+      "description": "Whether to delete the answers made by the original attendee. Defaults to false.",
+      "type": "boolean",
+      "read_only": false,
+      "required": false
     }
   }
 }

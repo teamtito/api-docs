@@ -100,14 +100,15 @@ Update a `Ticket` belonging to the given `Event`.
       reassignment: {
         email: "jane@example.com",
         first_name: "Jane",
-        last_name: "Smith"
+        last_name: "Smith",
+        delete_answers: true
       }
     }
   }
 %>
 <%= partial "includes/reassignments/create.json" %>
 
-Reassign a `Ticket` to a new attendee.
+Reassign a `Ticket` to a new attendee. It's different from just updating the email and name for a ticket: reassigning a ticket also sends out an email to the new attendee and (optionally) deletes all the answers made by the original attendee.
 
 `POST <%= "#{config[:api_endpoint]}/:account_slug/:event_slug/tickets/:ticket_slug/reassignments" %>`
 
