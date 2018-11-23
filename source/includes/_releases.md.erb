@@ -201,3 +201,39 @@ Pause the sale of a `Release` belonging to the given `Event`.
 * `account_slug` - The `slug` attribute of an `Account`.
 * `event_slug` - The `slug` attribute of an `Event`.
 * `release_slug` - The `slug` attribute of a `Release`.
+
+## Make a Release public.
+
+<%= partial "includes/requests/post",
+  locals: {
+    url: "#{config[:api_endpoint]}/:account_slug/:event_slug/releases/:release_slug/publication",
+    parameters: {
+    }
+  }
+%>
+
+Make an on sale `Release` publicily available for purchase on your event page.
+
+`POST <%= "#{config[:api_endpoint]}/:account_slug/:event_slug/releases/:release_slug/publication" %>`
+
+* `account_slug` - The `slug` attribute of an `Account`.
+* `event_slug` - The `slug` attribute of an `Event`.
+* `release_slug` - The `slug` attribute of a `Release`.
+
+
+## Make a Release secret.
+
+<%= partial "includes/requests/delete",
+  locals: {
+    url: "#{config[:api_endpoint]}/:account_slug/:event_slug/releases/:release_slug/publication",
+  }
+%>
+
+Make an on sale `Release` secret. A secret `Release` won't appear on your event page
+and can only be purchased through the sharable URL.
+
+`DELETE <%= "#{config[:api_endpoint]}/:account_slug/:event_slug/releases/:release_slug/publication" %>`
+
+* `account_slug` - The `slug` attribute of an `Account`.
+* `event_slug` - The `slug` attribute of an `Event`.
+* `release_slug` - The `slug` attribute of a `Release`.
