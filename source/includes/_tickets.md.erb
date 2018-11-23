@@ -90,3 +90,39 @@ Update a `Ticket` belonging to the given `Event`.
 ### Parameters
 
 <%= partial "includes/shared/parameters", locals: { parameters: data.tickets.attributes.reject { |name,attribute| attribute["read_only"] } } %>
+
+## Reassign a Ticket
+
+<%= partial "includes/requests/post",
+  locals: {
+    url: "#{config[:api_endpoint]}/:account_slug/:event_slug/tickets/:ticket_slug/reassignments",
+    parameters: {
+      reassignment: {
+        email: "jane@example.com",
+        first_name: "Jane",
+        last_name: "Smith"
+      }
+    }
+  }
+%>
+<%= partial "includes/reassignments/create.json" %>
+
+Reassign a `Ticket` to a new attendee.
+
+`POST <%= "#{config[:api_endpoint]}/:account_slug/:event_slug/tickets/:ticket_slug/reassignments" %>`
+
+* `account_slug` - The `slug` attribute of an `Account`.
+* `event_slug` - The `slug` attribute of an `Event`.
+* `ticket_slug` - The `slug` attribute of a `Ticket`.
+
+### Parameters
+
+<%= partial "includes/shared/parameters", locals: { parameters: data.reassignments.attributes.reject { |name,attribute| attribute["read_only"] } } %>
+
+### Emails Sent
+
+The following people receive an email after a reassignment:
+
+* the new attendee
+* the orderer (if their email is different to the original email for this ticket)
+* the organisers (if they have chosen to receive notifications)
