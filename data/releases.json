@@ -25,7 +25,7 @@
       "required": false
     },
     "card_payments": {
-      "description": "",
+      "description": "Whether to allow customers to pay by card.",
       "type": "boolean",
       "read_only": false,
       "required": false
@@ -143,13 +143,13 @@
     },
 
     "locked": {
-      "description": null,
+      "description": "Whether the release is locked.",
       "type": "boolean",
       "read_only": true,
       "required": false
     },
     "waiting_list": {
-      "description": null,
+      "description": "Whether there is a waiting list.",
       "type": "boolean",
       "read_only": true,
       "required": false
@@ -185,7 +185,7 @@
       "required": false
     },
     "gross_income": {
-      "description": null,
+      "description": "The gross income for this release.",
       "type": "decimal",
       "read_only": true,
       "required": false
@@ -251,7 +251,7 @@
       "required": false
     },
     "translations": {
-      "description": null,
+      "description": "The values of translated attributes.",
       "type": "object",
       "read_only": false,
       "required": false
@@ -275,7 +275,7 @@
       "required": false
     },
     "combo_releases": {
-      "description": null,
+      "description": "A list of combo releases.",
       "type": "array",
       "read_only": true,
       "required": false
@@ -293,7 +293,7 @@
       "required": false
     },
     "tax_components": {
-      "description": null,
+      "description": "A list of tax components that apply to this release.",
       "type": "array",
       "read_only": true,
       "required": false
