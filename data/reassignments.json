@@ -1,0 +1,28 @@
+{
+  "attributes": {
+    "email": {
+      "description": "The email of the attendee.",
+      "type": "string",
+      "read_only": false,
+      "required": true
+    },
+    "first_name": {
+      "description": "The first name of the attendee.",
+      "type": "string",
+      "read_only": false,
+      "required": false
+    },
+    "last_name": {
+      "description": "The last name of the attendee.",
+      "type": "string",
+      "read_only": false,
+      "required": false
+    },
+    "delete_answers": {
+      "description": "Whether to delete the answers made by the original attendee. Defaults to false.",
+      "type": "boolean",
+      "read_only": false,
+      "required": false
+    }
+  }
+}
