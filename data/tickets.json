@@ -240,6 +240,12 @@
       "type": "boolean",
       "read_only": true,
       "required": false
+    },
+    "answers_attributes": {
+      "description": "An array of updated answers to questions for this ticket. The attributes `id`, `question_id`, `primary_response`, `file`, `alternate_response` and an array of `responses` should be given.",
+      "type": "array",
+      "read_only": false,
+      "required": false
     }
   }
 }
