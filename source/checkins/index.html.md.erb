@@ -1,0 +1,43 @@
+---
+title: Tito API Explorer
+
+language_tabs: # must be one of https://git.io/vQNgJ
+  - shell
+
+toc_footers:
+  -
+
+includes:
+  - checkins/checkin_lists
+  - checkins/checkins
+  - checkins/tickets
+  - checkins/questions
+  - checkins/answers
+
+search: true
+---
+
+# Introduction
+
+> **API endpoint**
+
+```
+<%= config[:checkin_api_endpoint] %>/
+```
+
+> Examples in this documentation are written using curl.
+
+The Tito API is designed to be a predictable and intuitive interface for secure programmatic access to Tito.
+
+The Tito API is a REST API and returns JSON responses.
+
+We hope by providing an API it will allow developers to build cool and useful tools on top of Tito.
+
+# Authentication
+
+```shell
+curl --request GET \
+  --url '<%= config[:checkin_api_endpoint] %>/...' \
+  --header 'Authorization: Token token=<%= config[:api_token] %>' \
+  --header 'Accept: application/json' \
+```
