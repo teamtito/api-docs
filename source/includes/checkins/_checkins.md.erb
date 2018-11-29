@@ -2,8 +2,63 @@
 
 ## Get all Checkins
 
+<%= partial "includes/requests/get",
+  locals: {
+    url: "#{config[:checkin_api_endpoint]}/checkin_lists/:checkin_list_slug/checkins"
+  }
+%>
+
+Retrieves all `Checkins` for the given `CheckinList`.
+
+`<%= "GET #{config[:checkin_api_endpoint]}/checkin_lists/:checkin_list_slug/checkins" %>`
+
+* `checkin_list_slug` - The `slug` attribute of a `CheckinList`.
+
 ## Create a Checkin
+
+<%= partial "includes/requests/post",
+  locals: {
+    url: "#{config[:checkin_api_endpoint]}/checkin_lists/:checkin_lists_slug/checkins",
+    parameters: {
+    }
+  }
+%>
+
+Create a new `Checkin` belonging to the given `CheckinList`.
+
+`POST <%= "#{config[:checkin_api_endpoint]}/checkin_lists/:checkin_lists_slug/checkins" %>`
+
+* `checkin_list_slug` - The `slug` attribute of a `CheckinList`.
+
+### Parameters
 
 ## Create many Checkins
 
+<%= partial "includes/requests/post",
+  locals: {
+    url: "#{config[:checkin_api_endpoint]}/checkin_lists/:checkin_lists_slug/checkins",
+    parameters: {
+    }
+  }
+%>
+
+Create many new `Checkins` belonging to the given `CheckinList`.
+
+`POST <%= "#{config[:checkin_api_endpoint]}/checkin_lists/:checkin_lists_slug/checkins" %>`
+
+* `checkin_list_slug` - The `slug` attribute of a `CheckinList`.
+
 ## Delete a Checkin
+
+<%= partial "includes/requests/delete",
+  locals: {
+    url: "#{config[:checkin_api_endpoint]}/checkin_lists/:checkin_list_slug/checkins/:checkin_uuid",
+  }
+%>
+
+Delete a `Checkin` belonging to the given `CheckinList`.
+
+`DELETE <%= "#{config[:checkin_api_endpoint]}/checkin_lists/:checkin_list_slug/checkins/:checkin_uuid" %>`
+
+* `checkin_list_slug` - The `slug` attribute of a `CheckinList`.
+* `checkin_uuid` - The `uuid` attribute of a `Checkin`.

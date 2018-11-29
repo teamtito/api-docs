@@ -8,6 +8,8 @@ toc_footers:
   -
 
 includes:
+  - checkins/pagination
+  - checkins/since
   - checkins/checkin_lists
   - checkins/checkins
   - checkins/tickets
@@ -37,7 +39,23 @@ We hope by providing an API it will allow developers to build cool and useful to
 
 ```shell
 curl --request GET \
-  --url '<%= config[:checkin_api_endpoint] %>/...' \
-  --header 'Authorization: Token token=<%= config[:api_token] %>' \
-  --header 'Accept: application/json' \
+  --url '<%= config[:checkin_api_endpoint] %>/checkin_lists/...' \
+  --header 'Accept: application/json'
 ```
+
+Unlike other Tito APIs the Tito Check-in API is not authenticated. Instead
+each request to the Tito Check-In API must include the Check-In List `slug` in the URL.
+
+To find the Check-In List `slug`:
+
+1. Go to your event dashboard.
+2. Select **Check-In Lists**.
+3. Select the check-in list you want to use.
+5. Click **Check-in Apps**.
+6. Click **Web Check-in**.
+
+A URL will be shown e.g.
+
+`https://checkin.tito.io/checkin_lists/chk_xxxx`.
+
+In this case the Check-in List slug is `chk_xxxx`.

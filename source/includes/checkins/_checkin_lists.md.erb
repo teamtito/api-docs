@@ -2,6 +2,12 @@
 
 ## Get a Checkin-List
 
+<%= partial "includes/requests/get",
+  locals: {
+    url: "#{config[:checkin_api_endpoint]}/checkin_lists/:checkin_list_slug"
+  }
+%>
+
 Retrieves a Check-in List.
 
 `<%= "GET #{config[:checkin_api_endpoint]}/checkin_lists/:checkin_list_slug" %>`
