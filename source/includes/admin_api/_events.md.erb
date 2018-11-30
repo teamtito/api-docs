@@ -27,7 +27,7 @@ The equivalent event can be looked up using a similar URL structure with the API
     url: "#{config[:api_endpoint]}/:account_slug/events"
   }
 %>
-<%= partial "includes/events/index.json" %>
+<%= partial "includes/admin_api/events/index.json" %>
 
 Retrieves all `Events` for the given `Account`.
 
@@ -43,7 +43,7 @@ Retrieves all `Events` for the given `Account`.
     url: "#{config[:api_endpoint]}/:account_slug/:event_slug"
   }
 %>
-<%= partial "includes/events/show.json" %>
+<%= partial "includes/admin_api/events/show.json" %>
 
 Retrieve an `Event` for the given `Account`.
 
@@ -64,7 +64,7 @@ Retrieve an `Event` for the given `Account`.
     }
   }
 %>
-<%= partial "includes/events/create.json" %>
+<%= partial "includes/admin_api/events/create.json" %>
 
 
 Create a new `Event` belonging to the given `Account`.
@@ -123,7 +123,7 @@ Delete an `Event` belonging to the given `Account`.
     parameters: {}
   }
 %>
-<%= partial "includes/events/duplication.json" %>
+<%= partial "includes/admin_api/events/duplication.json" %>
 
 Duplicate an existing `Event` belonging to the given `Account`.
 
@@ -147,7 +147,7 @@ The latest status of the duplication can be then looked up.
     url: "#{config[:api_endpoint]}/:account_slug/:event_slug/duplication"
   }
 %>
-<%= partial "includes/events/duplication_complete.json" %>
+<%= partial "includes/admin_api/events/duplication_complete.json" %>
 
 The latest status of the `Event` duplication.
 

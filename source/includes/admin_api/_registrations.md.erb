@@ -11,7 +11,7 @@
     url: "#{config[:api_endpoint]}/:account_slug/:event_slug/registrations"
   }
 %>
-<%= partial "includes/registrations/index.json" %>
+<%= partial "includes/admin_api/registrations/index.json" %>
 
 
 Retrieves all `Registrations` for the given `Event`.
@@ -28,7 +28,7 @@ Retrieves all `Registrations` for the given `Event`.
     url: "#{config[:api_endpoint]}/:account_slug/:event_slug/registrations/:registration_slug"
   }
 %>
-<%= partial "includes/registrations/show.json" %>
+<%= partial "includes/admin_api/registrations/show.json" %>
 
 Retrieves a `Registration` for the given `Event`.
 
@@ -50,7 +50,7 @@ Retrieves a `Registration` for the given `Event`.
     }
   }
 %>
-<%= partial "includes/registrations/update.json" %>
+<%= partial "includes/admin_api/registrations/update.json" %>
 
 Update a `Registration` belonging to the given `Event`.
 

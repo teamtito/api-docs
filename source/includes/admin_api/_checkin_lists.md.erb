@@ -16,7 +16,7 @@ Create a master check-in list for all attendees or create special lists just for
     url: "#{config[:api_endpoint]}/:account_slug/:event_slug/checkin_lists"
   }
 %>
-<%= partial "includes/checkin_lists/index.json" %>
+<%= partial "includes/admin_api/checkin_lists/index.json" %>
 
 Retrieves all `CheckinLists` for the given `Event`.
 
@@ -33,7 +33,7 @@ Retrieves all `CheckinLists` for the given `Event`.
     url: "#{config[:api_endpoint]}/:account_slug/:event_slug/checkin_lists/:checkin_list_slug"
   }
 %>
-<%= partial "includes/checkin_lists/show.json" %>
+<%= partial "includes/admin_api/checkin_lists/show.json" %>
 
 Retrieves a `CheckinList` for the given `Event`.
 
@@ -56,7 +56,7 @@ Retrieves a `CheckinList` for the given `Event`.
     }
   }
 %>
-<%= partial "includes/checkin_lists/create.json" %>
+<%= partial "includes/admin_api/checkin_lists/create.json" %>
 
 Create a new `CheckinList` belonging to the given `Event`.
 
@@ -82,7 +82,7 @@ Create a new `CheckinList` belonging to the given `Event`.
     }
   }
 %>
-<%= partial "includes/checkin_lists/update.json" %>
+<%= partial "includes/admin_api/checkin_lists/update.json" %>
 
 Update a `CheckinList` belonging to the given `Event`.
 

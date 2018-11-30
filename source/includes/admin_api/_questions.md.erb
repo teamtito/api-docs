@@ -11,7 +11,7 @@
     url: "#{config[:api_endpoint]}/:account_slug/:event_slug/questions"
   }
 %>
-<%= partial "includes/questions/index.json" %>
+<%= partial "includes/admin_api/questions/index.json" %>
 
 Retrieves all `Questions` for the given `Event`.
 
@@ -28,7 +28,7 @@ Retrieves all `Questions` for the given `Event`.
     url: "#{config[:api_endpoint]}/:account_slug/:event_slug/questions/:question_slug"
   }
 %>
-<%= partial "includes/questions/show.json" %>
+<%= partial "includes/admin_api/questions/show.json" %>
 
 Retrieves a `Question` for the given `Event`.
 
@@ -52,7 +52,7 @@ Retrieves a `Question` for the given `Event`.
     }
   }
 %>
-<%= partial "includes/questions/create.json" %>
+<%= partial "includes/admin_api/questions/create.json" %>
 
 Create a new `Question` belonging to the given `Event`.
 
@@ -77,7 +77,7 @@ Create a new `Question` belonging to the given `Event`.
     }
   }
 %>
-<%= partial "includes/questions/update.json" %>
+<%= partial "includes/admin_api/questions/update.json" %>
 
 Update a `Question` belonging to the given `Event`.
 

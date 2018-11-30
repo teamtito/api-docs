@@ -12,7 +12,7 @@
     url: "#{config[:api_endpoint]}/:account_slug/:event_slug/discount_codes"
   }
 %>
-<%= partial "includes/discount_codes/index.json" %>
+<%= partial "includes/admin_api/discount_codes/index.json" %>
 
 
 Retrieves all `DiscountCodes` for the given `Event`.
@@ -29,7 +29,7 @@ Retrieves all `DiscountCodes` for the given `Event`.
     url: "#{config[:api_endpoint]}/:account_slug/:event_slug/discount_codes/:discount_code_id"
   }
 %>
-<%= partial "includes/discount_codes/show.json" %>
+<%= partial "includes/admin_api/discount_codes/show.json" %>
 
 Retrieves a `DiscountCode` for the given `Event`.
 
@@ -54,7 +54,7 @@ Retrieves a `DiscountCode` for the given `Event`.
     }
   }
 %>
-<%= partial "includes/discount_codes/create.json" %>
+<%= partial "includes/admin_api/discount_codes/create.json" %>
 
 Create a new `DiscountCode` belonging to the given `Event`.
 
@@ -79,7 +79,7 @@ Create a new `DiscountCode` belonging to the given `Event`.
     }
   }
 %>
-<%= partial "includes/discount_codes/update.json" %>
+<%= partial "includes/admin_api/discount_codes/update.json" %>
 
 Update a `DiscountCode` belonging to the given `Event`.
 
