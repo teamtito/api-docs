@@ -8,13 +8,13 @@ toc_footers:
   -
 
 includes:
-  - checkins/pagination
-  - checkins/since
-  - checkins/checkin_lists
-  - checkins/checkins
-  - checkins/tickets
-  - checkins/questions
-  - checkins/answers
+  - checkin_api/pagination
+  - checkin_api/since
+  - checkin_api/checkin_lists
+  - checkin_api/checkins
+  - checkin_api/tickets
+  - checkin_api/questions
+  - checkin_api/answers
 
 search: true
 ---
@@ -29,9 +29,11 @@ search: true
 
 > Examples in this documentation are written using curl.
 
-The Tito API is designed to be a predictable and intuitive interface for secure programmatic access to Tito.
+The Checkin API is designed to be a predictable and intuitive interface for
+programmatic access to check-in workflow within Tito. This API can be used to manage and customize
+the check-in process for your events.
 
-The Tito API is a REST API and returns JSON responses.
+The Checkin Tito API is a REST API and returns JSON responses.
 
 We hope by providing an API it will allow developers to build cool and useful tools on top of Tito.
 

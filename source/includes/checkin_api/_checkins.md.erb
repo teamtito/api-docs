@@ -15,7 +15,7 @@ like to record their attendence.
     url: "#{config[:checkin_api_endpoint]}/checkin_lists/:checkin_list_slug/checkins"
   }
 %>
-<%= partial "includes/checkins/checkins/index.json" %>
+<%= partial "includes/checkin_api/checkins/index.json" %>
 
 Retrieves all `Checkins` for the given `CheckinList`.
 
@@ -35,7 +35,7 @@ Retrieves all `Checkins` for the given `CheckinList`.
     }
   }
 %>
-<%= partial "includes/checkins/checkins/create.json" %>
+<%= partial "includes/checkin_api/checkins/create.json" %>
 
 Create a new `Checkin` belonging to the given `CheckinList`.
 
@@ -63,7 +63,7 @@ Create a new `Checkin` belonging to the given `CheckinList`.
     }
   }
 %>
-<%= partial "includes/checkins/checkins/create_many.json" %>
+<%= partial "includes/checkin_api/checkins/create_many.json" %>
 
 Create many new `Checkins` belonging to the given `CheckinList`.
 
@@ -78,7 +78,7 @@ Create many new `Checkins` belonging to the given `CheckinList`.
     url: "#{config[:checkin_api_endpoint]}/checkin_lists/:checkin_list_slug/checkins/:checkin_uuid",
   }
 %>
-<%= partial "includes/checkins/checkins/destroy.json" %>
+<%= partial "includes/checkin_api/checkins/destroy.json" %>
 
 Delete a `Checkin` belonging to the given `CheckinList`.
 
