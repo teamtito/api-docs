@@ -1,5 +1,13 @@
 # Checkins
 
+A `Checkin` is when an attendee with a ticket arrives at your venue and you would
+like to record their attendence.
+
+## Attributes
+
+<%= partial "includes/shared/attributes", locals: { attributes: data.checkins.attributes } %>
+
+
 ## Get all Checkins
 
 <%= partial "includes/requests/get",
@@ -36,6 +44,9 @@ Create a new `Checkin` belonging to the given `CheckinList`.
 * `checkin_list_slug` - The `slug` attribute of a `CheckinList`.
 
 ### Parameters
+
+<%= partial "includes/shared/parameters", locals: { parameters: data.checkins.attributes.select { |name,attribute| attribute["parameter"] } } %>
+
 
 ## Create many Checkins
 
