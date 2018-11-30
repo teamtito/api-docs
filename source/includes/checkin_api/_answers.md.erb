@@ -1,0 +1,16 @@
+# Answers
+
+## Get all Answers
+
+<%= partial "includes/requests/get",
+  locals: {
+    url: "#{config[:checkin_api_endpoint]}/checkin_lists/:checkin_list_slug/answers",
+    authenticated: false
+  }
+%>
+
+Retrieves all `Answers` for questions asked when purchasing a Ticket.
+
+`<%= "GET #{config[:checkin_api_endpoint]}/checkin_lists/:checkin_list_slug/answers" %>`
+
+* `checkin_list_slug` - The `slug` attribute of a `Check-in List`.

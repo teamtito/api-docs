@@ -1,0 +1,33 @@
+# Tickets
+
+## Get all Tickets
+
+<%= partial "includes/requests/get",
+  locals: {
+    url: "#{config[:checkin_api_endpoint]}/checkin_lists/:checkin_list_slug/tickets",
+    authenticated: false
+  }
+%>
+
+Retrieves all `Tickets` for the given `CheckinList`.
+
+`<%= "GET #{config[:checkin_api_endpoint]}/checkin_lists/:checkin_list_slug/tickets" %>`
+
+* `checkin_list_slug` - The `slug` attribute of a `Check-in List`.
+
+
+## Get a Ticket
+
+<%= partial "includes/requests/get",
+  locals: {
+    url: "#{config[:checkin_api_endpoint]}/checkin_lists/:checkin_list_slug/tickets/:ticket_slug",
+    authenticated: false
+  }
+%>
+
+Retrieves a `Ticket` for the given `CheckinList`.
+
+`<%= "GET #{config[:checkin_api_endpoint]}/checkin_lists/:checkin_list_slug/tickets/:ticket_slug" %>`
+
+* `checkin_list_slug` - The `slug` attribute of a `Check-in List`.
+* `ticket_slug` - The `slug` attribute of a `Ticket`.

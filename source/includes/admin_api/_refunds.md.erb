@@ -11,7 +11,7 @@
     url: "#{config[:api_endpoint]}/:account_slug/:event_slug/refunds"
   }
 %>
-<%= partial "includes/refunds/index.json" %>
+<%= partial "includes/admin_api/refunds/index.json" %>
 
 Retrieves all `Refunds` for the given `Event`.
 
@@ -28,7 +28,7 @@ Retrieves all `Refunds` for the given `Event`.
     url: "#{config[:api_endpoint]}/:account_slug/:event_slug/refunds/:refund_id"
   }
 %>
-<%= partial "includes/refunds/show.json" %>
+<%= partial "includes/admin_api/refunds/show.json" %>
 
 Retrieves a `Refund` for the given `Event`.
 

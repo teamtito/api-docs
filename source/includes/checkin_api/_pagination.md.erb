@@ -1,0 +1,17 @@
+# Pagination
+
+Pass `?page=N` to `tickets`, `answers` and `checkins` for pagination.
+
+The following returns a JSON of all tickets on page one:
+
+`GET <%= config[:checkin_api_endpoint] %>/checkin_lists/:checkin_list_slug/tickets?page=1`
+
+
+Pagination information for `tickets`, `answers` and `checkins` can be retrieved by fetching the check-in list. The total number of pages for each paginated resource is specified by the following attributes:
+
+* `total_pages` (deprecated) - the total number of pages of tickets.
+* `total_ticket_pages` - the total number of pages of tickets.
+* `total_checkin_pages` - the total number of pages of check-ins.
+* `total_answer_pages` - the total number of pages of answers.
+
+Each page is limited to a maximum of 1000 items.

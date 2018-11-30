@@ -1,0 +1,63 @@
+---
+title: Tito API Explorer
+
+language_tabs: # must be one of https://git.io/vQNgJ
+  - shell
+
+toc_footers:
+  -
+
+includes:
+  - checkin_api/pagination
+  - checkin_api/since
+  - checkin_api/checkin_lists
+  - checkin_api/checkins
+  - checkin_api/tickets
+  - checkin_api/questions
+  - checkin_api/answers
+
+search: true
+---
+
+# Introduction
+
+> **API endpoint**
+
+```
+<%= config[:checkin_api_endpoint] %>/
+```
+
+> Examples in this documentation are written using curl.
+
+The Checkin API is designed to be a predictable and intuitive interface for
+programmatic access to check-in workflow within Tito. This API can be used to manage and customize
+the check-in process for your events.
+
+The Checkin Tito API is a REST API and returns JSON responses.
+
+We hope by providing an API it will allow developers to build cool and useful tools on top of Tito.
+
+# Authentication
+
+```shell
+curl --request GET \
+  --url '<%= config[:checkin_api_endpoint] %>/checkin_lists/...' \
+  --header 'Accept: application/json'
+```
+
+Unlike other Tito APIs the Tito Check-in API is not authenticated. Instead
+each request to the Tito Check-In API must include the Check-In List `slug` in the URL.
+
+To find the Check-In List `slug`:
+
+1. Go to your event dashboard.
+2. Select **Check-In Lists**.
+3. Select the check-in list you want to use.
+5. Click **Check-in Apps**.
+6. Click **Web Check-in**.
+
+A URL will be shown e.g.
+
+`https://checkin.tito.io/checkin_lists/chk_xxxx`.
+
+In this case the Check-in List slug is `chk_xxxx`.

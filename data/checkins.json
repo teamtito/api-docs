@@ -1,0 +1,46 @@
+{
+  "attributes": {
+    "id": {
+      "description": "The identifier of the `Checkin`",
+      "type": "integer",
+      "read_only": false,
+      "required": false,
+      "parameter": false
+    },
+    "uuid": {
+      "description": "The universally unique identifier of the `Checkin`.",
+      "type": "string",
+      "read_only": false,
+      "required": false,
+      "parameter": false
+    },
+    "created_at": {
+      "description": "The date the `Checkin` was created",
+      "type": "datetime",
+      "read_only": false,
+      "required": false,
+      "parameter": false
+    },
+    "updated_at": {
+      "description": "The date the `Checkin` was last updated.",
+      "type": "datetime",
+      "read_only": false,
+      "required": false,
+      "parameter": false
+    },
+    "ticket_id": {
+      "description": "The `id` of the ticket that was checked-in.",
+      "type": "integer",
+      "read_only": false,
+      "required": true,
+      "parameter": true
+    },
+    "deleted_at": {
+      "description": "The date the checkin was deleted.",
+      "type": "datetime",
+      "read_only": false,
+      "required": false,
+      "parameter": false
+    }
+  }
+}
