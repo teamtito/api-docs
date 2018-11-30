@@ -4,7 +4,8 @@
 
 <%= partial "includes/requests/get",
   locals: {
-    url: "#{config[:checkin_api_endpoint]}/checkin_lists/:checkin_list_slug/tickets"
+    url: "#{config[:checkin_api_endpoint]}/checkin_lists/:checkin_list_slug/tickets",
+    authenticated: false
   }
 %>
 
@@ -19,7 +20,8 @@ Retrieves all `Tickets` for the given `CheckinList`.
 
 <%= partial "includes/requests/get",
   locals: {
-    url: "#{config[:checkin_api_endpoint]}/checkin_lists/:checkin_list_slug/tickets/:ticket_slug"
+    url: "#{config[:checkin_api_endpoint]}/checkin_lists/:checkin_list_slug/tickets/:ticket_slug",
+    authenticated: false
   }
 %>
 

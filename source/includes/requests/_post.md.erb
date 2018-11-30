@@ -1,7 +1,11 @@
+<% authenticated = true if !locals.key?(:authenticated) %>
+
 ```shell
 curl --request POST \
   --url '<%= apply_api_subsititions(url) %>' \
+  <% if authenticated %>
   --header 'Authorization: Token token=<%= config[:api_token] %>' \
+  <% end %>
   --header 'Accept: application/json' \
   --header 'Content-Type: application/json' \
   --data '<%= parameters.to_json %>'

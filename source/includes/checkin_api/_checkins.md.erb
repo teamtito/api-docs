@@ -12,7 +12,8 @@ like to record their attendence.
 
 <%= partial "includes/requests/get",
   locals: {
-    url: "#{config[:checkin_api_endpoint]}/checkin_lists/:checkin_list_slug/checkins"
+    url: "#{config[:checkin_api_endpoint]}/checkin_lists/:checkin_list_slug/checkins",
+    authenticated: false
   }
 %>
 <%= partial "includes/checkin_api/checkins/index.json" %>
@@ -28,6 +29,7 @@ Retrieves all `Checkins` for the given `CheckinList`.
 <%= partial "includes/requests/post",
   locals: {
     url: "#{config[:checkin_api_endpoint]}/checkin_lists/:checkin_list_slug/checkins",
+    authenticated: false,
     parameters: {
       checkin: {
         ticket_id: 111111
@@ -53,6 +55,7 @@ Create a new `Checkin` belonging to the given `CheckinList`.
 <%= partial "includes/requests/post",
   locals: {
     url: "#{config[:checkin_api_endpoint]}/checkin_lists/:checkin_list_slug/checkins",
+    authenticated: false,
     parameters: {
       batch: {
         checkins: {
@@ -76,6 +79,7 @@ Create many new `Checkins` belonging to the given `CheckinList`.
 <%= partial "includes/requests/delete",
   locals: {
     url: "#{config[:checkin_api_endpoint]}/checkin_lists/:checkin_list_slug/checkins/:checkin_uuid",
+    authenticated: false
   }
 %>
 <%= partial "includes/checkin_api/checkins/destroy.json" %>

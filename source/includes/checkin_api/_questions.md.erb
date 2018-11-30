@@ -4,7 +4,8 @@
 
 <%= partial "includes/requests/get",
   locals: {
-    url: "#{config[:checkin_api_endpoint]}/checkin_lists/:checkin_list_slug/questions"
+    url: "#{config[:checkin_api_endpoint]}/checkin_lists/:checkin_list_slug/questions",
+    authenticated: false
   }
 %>
 
