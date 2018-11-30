@@ -1,0 +1,12 @@
+```json
+{
+  "id":12345,
+  "checkin_list_id":12345,
+  "ticket_id":111111,
+  "created_at":"2018-11-30T12:03:51.000Z",
+  "updated_at":"2018-11-30T12:03:51.000Z",
+  "uuid_bin":null,
+  "deleted_at":null,
+  "uuid":"e169x65x-ca51-4e9f-9d48-32e5819eb2b3"
+}
+```

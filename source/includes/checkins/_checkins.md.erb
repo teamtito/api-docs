@@ -7,6 +7,7 @@
     url: "#{config[:checkin_api_endpoint]}/checkin_lists/:checkin_list_slug/checkins"
   }
 %>
+<%= partial "includes/checkins/checkins/index.json" %>
 
 Retrieves all `Checkins` for the given `CheckinList`.
 
@@ -18,7 +19,7 @@ Retrieves all `Checkins` for the given `CheckinList`.
 
 <%= partial "includes/requests/post",
   locals: {
-    url: "#{config[:checkin_api_endpoint]}/checkin_lists/:checkin_lists_slug/checkins",
+    url: "#{config[:checkin_api_endpoint]}/checkin_lists/:checkin_list_slug/checkins",
     parameters: {
       checkin: {
         ticket_id: 111111
@@ -26,10 +27,11 @@ Retrieves all `Checkins` for the given `CheckinList`.
     }
   }
 %>
+<%= partial "includes/checkins/checkins/create.json" %>
 
 Create a new `Checkin` belonging to the given `CheckinList`.
 
-`POST <%= "#{config[:checkin_api_endpoint]}/checkin_lists/:checkin_lists_slug/checkins" %>`
+`POST <%= "#{config[:checkin_api_endpoint]}/checkin_lists/:checkin_list_slug/checkins" %>`
 
 * `checkin_list_slug` - The `slug` attribute of a `CheckinList`.
 
@@ -39,7 +41,7 @@ Create a new `Checkin` belonging to the given `CheckinList`.
 
 <%= partial "includes/requests/post",
   locals: {
-    url: "#{config[:checkin_api_endpoint]}/checkin_lists/:checkin_lists_slug/checkins",
+    url: "#{config[:checkin_api_endpoint]}/checkin_lists/:checkin_list_slug/checkins",
     parameters: {
       batch: {
         checkins: {
@@ -50,10 +52,11 @@ Create a new `Checkin` belonging to the given `CheckinList`.
     }
   }
 %>
+<%= partial "includes/checkins/checkins/create_many.json" %>
 
 Create many new `Checkins` belonging to the given `CheckinList`.
 
-`POST <%= "#{config[:checkin_api_endpoint]}/checkin_lists/:checkin_lists_slug/checkins" %>`
+`POST <%= "#{config[:checkin_api_endpoint]}/checkin_lists/:checkin_list_slug/checkins" %>`
 
 * `checkin_list_slug` - The `slug` attribute of a `CheckinList`.
 
@@ -64,6 +67,7 @@ Create many new `Checkins` belonging to the given `CheckinList`.
     url: "#{config[:checkin_api_endpoint]}/checkin_lists/:checkin_list_slug/checkins/:checkin_uuid",
   }
 %>
+<%= partial "includes/checkins/checkins/destroy.json" %>
 
 Delete a `Checkin` belonging to the given `CheckinList`.
 
