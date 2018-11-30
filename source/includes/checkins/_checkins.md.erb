@@ -20,6 +20,9 @@ Retrieves all `Checkins` for the given `CheckinList`.
   locals: {
     url: "#{config[:checkin_api_endpoint]}/checkin_lists/:checkin_lists_slug/checkins",
     parameters: {
+      checkin: {
+        ticket_id: 111111
+      }
     }
   }
 %>
@@ -38,6 +41,12 @@ Create a new `Checkin` belonging to the given `CheckinList`.
   locals: {
     url: "#{config[:checkin_api_endpoint]}/checkin_lists/:checkin_lists_slug/checkins",
     parameters: {
+      batch: {
+        checkins: {
+          "0" => { ticket_id: 111111 },
+          "1" => { ticket_id: 222222 }
+        }
+      }
     }
   }
 %>
