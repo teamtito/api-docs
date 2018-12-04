@@ -15,10 +15,10 @@ set :markdown,
     renderer: NestingUniqueHeadCounter
 
 # Assets
-set :css_dir, 'stylesheets'
-set :js_dir, 'javascripts'
-set :images_dir, 'images'
-set :fonts_dir, 'fonts'
+set :css_dir, 'docs/api/stylesheets'
+set :js_dir, 'docs/api/javascripts'
+set :images_dir, 'docs/api/images'
+set :fonts_dir, 'docs/api/fonts'
 
 # Activate the syntax highlighter
 activate :syntax
@@ -35,8 +35,8 @@ activate :autoprefixer do |config|
 end
 
 # Github pages require relative links
-activate :relative_assets
-set :relative_links, true
+# activate :relative_assets
+# set :relative_links, true
 
 config[:api_endpoint] = "https://api.tito.io/v3"
 config[:api_token] = "YOUR-API-TOKEN"
