@@ -688,3 +688,10 @@ html, body {
   text-transform: uppercase;
   font-weight: 400;
 }
+
+.api-name {
+  padding-left: 32px;
+  font-size: 1.5em;
+  color: $nav-text;
+  margin-bottom: 0em;
+}
