@@ -1,6 +1,6 @@
-# Checkins
+# Check-ins
 
-A `Checkin` is when an attendee with a ticket arrives at your venue and you would
+A `Check-in` is when an attendee with a ticket arrives at your venue and you would
 like to record their attendence.
 
 ## Attributes
@@ -8,7 +8,7 @@ like to record their attendence.
 <%= partial "includes/shared/attributes", locals: { attributes: data.checkins.attributes } %>
 
 
-## Get all Checkins
+## Get all Check-ins
 
 <%= partial "includes/requests/get",
   locals: {
@@ -24,7 +24,7 @@ Retrieves all `Checkins` for the given `CheckinList`.
 
 * `checkin_list_slug` - The `slug` attribute of a `CheckinList`.
 
-## Create a Checkin
+## Create a Check-in
 
 <%= partial "includes/requests/post",
   locals: {
@@ -50,7 +50,7 @@ Create a new `Checkin` belonging to the given `CheckinList`.
 <%= partial "includes/shared/parameters", locals: { parameters: data.checkins.attributes.select { |name,attribute| attribute["parameter"] } } %>
 
 
-## Create many Checkins
+## Create many Check-ins
 
 <%= partial "includes/requests/post",
   locals: {
@@ -74,7 +74,7 @@ Create many new `Checkins` belonging to the given `CheckinList`.
 
 * `checkin_list_slug` - The `slug` attribute of a `CheckinList`.
 
-## Delete a Checkin
+## Delete a Check-in
 
 <%= partial "includes/requests/delete",
   locals: {
