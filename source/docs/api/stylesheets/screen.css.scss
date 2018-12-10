@@ -567,6 +567,17 @@ html, body {
   }
 }
 
+// Allow the content to go full width when there are no code examples.
+.content.full_width {
+  &>h1, &>h2, &>h3, &>h4, &>h5, &>h6, &>p, &>table, &>ul, &>ol, &>aside, &>dl {
+    margin-right: 0px;
+  }
+
+  h3 {
+    margin-top: 0;
+  }
+}
+
 ////////////////////////////////////////////////////////////////////////////////
 // CODE SAMPLE STYLES
 ////////////////////////////////////////////////////////////////////////////////
@@ -643,9 +654,6 @@ html, body {
     .toc-h2 {
       padding-left: 32px;
     }
-    .api-name {
-      padding-left: 16px;
-    }
   }
 }
 
@@ -721,11 +729,4 @@ html, body {
   font-size: 12px;
   text-transform: uppercase;
   font-weight: 400;
-}
-
-.api-name {
-  padding-left: 32px;
-  font-size: 1.5em;
-  color: $nav-text;
-  margin-bottom: 0em;
 }
