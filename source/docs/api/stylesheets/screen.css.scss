@@ -36,6 +36,36 @@ html, body {
   -webkit-text-size-adjust: none; /* Never autoresize text */
 }
 
+.api-warning {
+  align-items: center;
+  background: $link-blue;
+  color: #fff;
+  display: flex;
+  /* height: 60px; */
+  justify-content: center;
+  line-height: 1.4;
+  position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  width: 100%;
+  z-index: 99;
+  p {
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+  }
+  a {
+    color: #fff;
+  }
+  @media (min-width: 365px) {
+    /* height: 40px; */
+  }
+  @media (min-width: 700px) {
+    /* height: 20px; */
+  }
+}
+
 ////////////////////////////////////////////////////////////////////////////////
 // TABLE OF CONTENTS
 ////////////////////////////////////////////////////////////////////////////////
