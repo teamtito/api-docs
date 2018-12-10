@@ -13,15 +13,6 @@ WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
 License for the specific language governing permissions and limitations
 under the License.
 %>
-<% page_content = yield %>
-<%
-  if current_page.data.includes
-    current_page.data.includes.each do |include|
-      page_content += partial("includes/#{include}")
-    end
-  end
-%>
-
 <!doctype html>
 <html>
   <head>
@@ -66,7 +57,7 @@ under the License.
     </div>
     <div class="page-wrapper">
       <div class="content full_width">
-        <%= page_content %>
+        <%= yield %>
       </div>
     </div>
   </body>
