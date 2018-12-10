@@ -567,6 +567,17 @@ html, body {
   }
 }
 
+// Allow the content to go full width when there are no code examples.
+.content.full_width {
+  &>h1, &>h2, &>h3, &>h4, &>h5, &>h6, &>p, &>table, &>ul, &>ol, &>aside, &>dl {
+    margin-right: 0px;
+  }
+
+  h3 {
+    margin-top: 0;
+  }
+}
+
 ////////////////////////////////////////////////////////////////////////////////
 // CODE SAMPLE STYLES
 ////////////////////////////////////////////////////////////////////////////////
