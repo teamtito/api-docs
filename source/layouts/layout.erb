@@ -50,15 +50,17 @@ under the License.
         <%= image_tag('navbar.png') %>
       </span>
     </a>
+    <div class="api-warning">
+      <p><b>API Early Access</b> Please note this API is under active development &mdash; view our <a href="/changelog">Changelog</a>&nbsp;for&nbsp;updates</p>
+    </div>
     <div class="toc-wrapper">
       <div class="logo">
-        <%= image_tag "tito.svg" %>
-        API Docs
+        <%= image_tag "tito.svg" %> <%= current_page.data.api_name %>
       </div>
 
-      <% if current_page.data.api_name %>
-        <h1 class="api-name"><%= current_page.data.api_name %></h1>
-      <% end %>
+      <%# if current_page.data.api_name %>
+        <!-- <h1 class="api-name"><%#= current_page.data.api_name %></h1> -->
+      <%# end %>
 
       <% if language_tabs.any? %>
         <div class="lang-selector">
