@@ -20,7 +20,7 @@ The equivalent event can be looked up using a similar URL structure with the API
 
 <%= partial "includes/shared/attributes", locals: { attributes: data.events.attributes } %>
 
-## Get all Events
+## Get all upcoming Events
 
 <%= partial "includes/requests/get",
   locals: {
@@ -29,7 +29,7 @@ The equivalent event can be looked up using a similar URL structure with the API
 %>
 <%= partial "includes/admin_api/events/index.json" %>
 
-Retrieves all `Events` for the given `Account`.
+Retrieves all upcoming `Events` for the given `Account`.
 
 `<%= "GET #{config[:api_endpoint]}/:account_slug/events" %>`
 
