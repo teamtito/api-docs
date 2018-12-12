@@ -49,6 +49,19 @@ Retrieves all past `Events` for the given `Account`.
 
 * `account_slug` - The `slug` attribute of an `Account`.
 
+## Get all archived Events
+
+<%= partial "includes/requests/get",
+  locals: {
+    url: "#{config[:api_endpoint]}/:account_slug/events/archived"
+  }
+%>
+
+Retrieves all archived `Events` for the given `Account`.
+
+`<%= "GET #{config[:api_endpoint]}/:account_slug/events/archived" %>`
+
+* `account_slug` - The `slug` attribute of an `Account`.
 
 ## Get an Event
 
