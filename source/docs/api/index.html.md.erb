@@ -4,11 +4,6 @@ title: Tito API Docs
 language_tabs: # must be one of https://git.io/vQNgJ
   - shell
 
-toc_footers:
-  - <a href='/docs/api/admin/'>Admin Tito API Docs</a>
-  - <a href='/docs/api/checkin/'>Check-in Tito API Docs</a>
-  - <a href='/docs/api/checkout/'>Checkout Tito API Docs (coming soon)</a>
-
 includes:
 
 search: true
@@ -16,78 +11,14 @@ search: true
 
 # Welcome
 
+<div class="warning">Please note this API is under active development.</div>
+
 The Tito API is divided into the following components:
 
-- <a href='/docs/api/admin/'>Admin Tito API Docs</a>
-- <a href='/docs/api/checkin/'>Check-in Tito API Docs</a>
-- <a href='/docs/api/checkout/'>Checkout Tito API Docs</a> (coming soon)
+The **<a href='/docs/api/admin/'>Admin API</a>** is the API that powers our admin dashboard.
 
-**The Admin API** is the API that powers our admin dashboard, which lives at https://dashboard.tito.io.
+The **<a href='/docs/api/checkout/'>Checkout API</a> (coming soon)** is what powers our event registration, via our widget.
 
-**The Checkout API** is what powers our event registration, via our widget.
-
-**The Check-in API** powers our mobile and web-based check-in apps.
+The **<a href='/docs/api/checkin/'>Check-in API</a>** powers our mobile and web-based check-in apps.
 
 Using any combination of the three APIs, you can leverage and build on the entire feature-set of Tito in your own apps.
-
-## Conventions
-
-  - All endpoints are REST and return JSON
-  - For endpoints that return lists:
-    - The collection name will be returned in the root e.g. `events` for a collection of events
-    - A `meta` attribute will include pagination data, such as total entries and total pages
-    - `limit` can be passed to choose fewer items than the default
-    - `search` can be passed to filter items, with some standard options
-    - `page` can be passed to page through entries
-    - `shortform` can be passed to return root elements only (not associations), which can vastly improve retrieval times
-
-# Tutorial
-
-In this two-part tutorial we'll cover some core Tito features before moving on to using the check-in to manage guests at an event.
-
-## Tito Admin API
-
-The Admin API is where we manage accounts, events, tickets, etc. In this part of the tutorial we'll create a new account, add an event to it, add tickets to the event, and then put those tickets on sale.
-
-### Authentication
-
-```shell
-export TITO_TOKEN=sdfhsSHRss86w33weFGF
-```
-
-For the purpose of this tutorial, get your API token from the <a href="https://id.tito.io" target="_blank">Tito ID</a> page, and export it in your `.bashrc`:
-
-### Create Account
-
-```shell
-curl --request POST \
-  --url 'https://api-v2.tito.io/my/accounts' \
-  --header "Authorization: Token token=$TITO_TOKEN" \
-  --header 'Accept: application/vnd.api+json' \
-  --header 'Content-Type: application/json' \
-  --data '{"account": {"name": "TEST ACCOUNT", "country": "DE"}}'
-
-{
-  "data": {
-    "id": "1010186",
-    "type": "accounts",
-    "attributes": {
-      "-type": "account",
-      "name": "TEST ACCOUNT",
-      "description": null,
-      "slug": "test-account-c93286a0-ebf8-4a88-8279-0a5f9615cd10",
-      "targetted-features": []
-    }
-  }
-}
-```
-
-To create an account you need to supply an account name ("TEST ACCOUNT") and an ISO 3166 county code ("DE").
-
-### Verify Account
-
-```shell
-curl https://api-v2.tito.io/test-account-6084d14e-ed7f-46e4-b2e2-93c964836954/events?api_key=$TITO_TOKEN
-```
-
-Verify the account was created using the events endpoint with the slug returned in the response:

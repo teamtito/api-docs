@@ -46,13 +46,11 @@ under the License.
         <%= image_tag "tito.svg" %> <%= current_page.data.api_name || "API Docs" %>
       </div>
 
-      <ul id="toc" class="toc-list-h1">
-        <!-- <li>
-          <a href="/docs/api/admin" class="toc-h1 toc-link">Admin API</a>
-        </li>
-        <li>
-          <a href="/docs/api/checkin" class="toc-h1 toc-link">Check-in API</a>
-        </li> -->
+      <ul class="toc-well">
+        <li><a href="/docs/api">API Home</a></li>
+        <li><a href="/docs/api/admin">Admin API</a></li>
+        <li><a href="/docs/api/checkout">Checkout API</a> <span>(coming soon)</span></li>
+        <li><a href="/docs/api/checkin">Check-in API</a></li>
       </ul>
       <% if current_page.data.toc_footers %>
         <ul class="toc-footer">
