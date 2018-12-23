@@ -42,16 +42,10 @@ under the License.
     </a>
     <%= partial "includes/shared/api_warning" %>
     <div class="toc-wrapper">
-      <div class="logo">
+      <a class="logo" href="/docs/api">
         <%= image_tag "tito.svg" %> <%= current_page.data.api_name || "API Docs" %>
-      </div>
-
-      <ul class="toc-well">
-        <li><a href="/docs/api">API Home</a></li>
-        <li><a href="/docs/api/admin">Admin API</a></li>
-        <li><a href="/docs/api/checkout">Checkout API</a> <span>(coming soon)</span></li>
-        <li><a href="/docs/api/checkin">Check-in API</a></li>
-      </ul>
+      </a>
+      <%= partial "includes/shared/nav" %>
       <% if current_page.data.toc_footers %>
         <ul class="toc-footer">
           <% current_page.data.toc_footers.each do |footer| %>
@@ -60,8 +54,8 @@ under the License.
         </ul>
       <% end %>
     </div>
-    <div class="page-wrapper">
-      <div class="content full_width">
+    <div class="page-wrapper full_width">
+      <div class="content">
         <%= yield %>
       </div>
     </div>

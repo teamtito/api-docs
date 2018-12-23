@@ -52,21 +52,10 @@ under the License.
     </a>
     <%= partial "includes/shared/api_warning" %>
     <div class="toc-wrapper">
-      <div class="logo">
+      <a class="logo" href="/docs/api">
         <%= image_tag "tito.svg" %> <%= current_page.data.api_name || "API Docs" %>
-      </div>
+      </a>
 
-      <% if language_tabs.any? %>
-        <div class="lang-selector">
-          <% language_tabs.each do |lang| %>
-            <% if lang.is_a? Hash %>
-              <a href="#" data-language-name="<%= lang.keys.first %>"><%= lang.values.first %></a>
-            <% else %>
-              <a href="#" data-language-name="<%= lang %>"><%= lang %></a>
-            <% end %>
-          <% end %>
-        </div>
-      <% end %>
       <% if current_page.data.search %>
         <div class="search">
           <input type="text" class="search" id="input-search" placeholder="Search">
@@ -89,12 +78,7 @@ under the License.
           </li>
         <% end %>
       </ul>
-      <ul class="toc-well">
-        <li><a href="/docs/api">API Home</a></li>
-        <li><a href="/docs/api/admin">Admin API</a></li>
-        <li><a href="/docs/api/checkout">Checkout API</a> <span>(coming soon)</span></li>
-        <li><a href="/docs/api/checkin">Check-in API</a></li>
-      </ul>
+      <%= partial "includes/shared/nav" %>
       <% if current_page.data.toc_footers %>
         <ul class="toc-footer">
           <% current_page.data.toc_footers.each do |footer| %>
@@ -103,8 +87,8 @@ under the License.
         </ul>
       <% end %>
     </div>
-    <div class="page-wrapper">
-      <div class="content full_width">
+    <div class="page-wrapper full_width">
+      <div class="content">
         <%= page_content %>
       </div>
     </div>
