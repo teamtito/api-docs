@@ -12,12 +12,6 @@
       "read_only": false,
       "required": true
     },
-    "discount_code_type": {
-      "description": "The kind of discount to apply. `MoneyOffDiscountCode` applies a flat discount. `PercentOffDiscountCode` applies a percentage discount.",
-      "type": "string",
-      "read_only": true,
-      "required": false
-    },
     "end_at": {
       "description": "The time when the discount code becomes unavailable.",
       "type": "datetime",

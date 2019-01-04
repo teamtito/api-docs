@@ -13,7 +13,7 @@
     "release_ids": [],
     "reveal_secret": null,
     "start_at": null,
-    "discount_code_type": "PercentOffDiscountCode",
+    "type": "PercentOffDiscountCode",
     "value": "10.0",
     "source": null
   }
