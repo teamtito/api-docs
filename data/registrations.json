@@ -189,7 +189,7 @@
       "required": false
     },
     "line_items": {
-      "description": "A list of `LineItems` for this registration.",
+      "description": "A list of `LineItems` for this registration: `release_id` and `quantity`.",
       "type": "array",
       "read_only": true,
       "required": false
