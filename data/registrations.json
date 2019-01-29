@@ -199,6 +199,12 @@
       "type": "object",
       "read_only": false,
       "required": false
+    },
+    "notify": {
+      "description": "Set this to true to send emails to the person registering and the organisers (if they have chosen to receive notifications). Default is false (no emails).",
+      "type": "boolean",
+      "read_only": false,
+      "required": false
     }
   }
 }

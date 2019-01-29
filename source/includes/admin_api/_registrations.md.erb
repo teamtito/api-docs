@@ -70,7 +70,7 @@ Create a registration with one or more tickets.
 
 ### Parameters
 
-<%= partial "includes/shared/parameters", locals: { parameters: data.registrations.attributes.select { |name, attribute| %w[email name discount_code source line_items].include?(name) } }
+<%= partial "includes/shared/parameters", locals: { parameters: data.registrations.attributes.select { |name, attribute| %w[email name discount_code source notify line_items].include?(name) } }
 %>
 
 ## Update a Registration
@@ -97,4 +97,4 @@ Update a `Registration` belonging to the given `Event`.
 
 ### Parameters
 
-<%= partial "includes/shared/parameters", locals: { parameters: data.registrations.attributes.reject { |name,attribute| attribute["read_only"] } } %>
+<%= partial "includes/shared/parameters", locals: { parameters: data.registrations.attributes.reject { |name, attribute| attribute["read_only"] || %w[notify].include?(name) } } %>
