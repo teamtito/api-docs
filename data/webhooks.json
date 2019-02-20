@@ -50,7 +50,7 @@
     },
     {
       "name": "registration.completed",
-      "description": "Fired when all tickets on a registration have either been assigned or “snoozed”."
+      "description": "Fired when all tickets on a registration have been completed (see the ticket.completed webhook)."
     },
     {
       "name": "registration.cancelled",
