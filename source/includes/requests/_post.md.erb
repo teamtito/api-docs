@@ -1,4 +1,6 @@
 <% authenticated = true if !locals.key?(:authenticated) %>
+<% with_content_type = true if !locals.key?(:with_content_type) %>
+<% parameters = nil if !locals.key?(:parameters) %>
 
 ```shell
 curl --request POST \
@@ -7,6 +9,10 @@ curl --request POST \
   --header 'Authorization: Token token=<%= config[:api_token] %>' \
   <% end %>
   --header 'Accept: application/json' \
+  <% if with_content_type %>
   --header 'Content-Type: application/json' \
+  <% end %>
+  <% if parameters.present? %>
   --data '<%= parameters.to_json %>'
+  <% end %>
 ```

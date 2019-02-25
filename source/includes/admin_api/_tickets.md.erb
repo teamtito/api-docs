@@ -127,3 +127,21 @@ The following people receive an email after a reassignment:
 * the new attendee
 * the orderer (if their email is different to the original email for this ticket)
 * the organisers (if they have chosen to receive notifications)
+
+## Void a Ticket
+
+<%= partial "includes/requests/post",
+  locals: {
+    url: "#{config[:api_endpoint]}/:account_slug/:event_slug/tickets/:ticket_slug/void",
+    with_content_type: false
+  }
+%>
+<%= partial "includes/admin_api/voids/create.json" %>
+
+Void a `Ticket` so that it is no longer able to be used to [checkin](/docs/api/checkin) to an event.
+
+`POST <%= "#{config[:api_endpoint]}/:account_slug/:event_slug/tickets/:ticket_slug/void" %>`
+
+* `account_slug` - The `slug` attribute of an `Account`.
+* `event_slug` - The `slug` attribute of an `Event`.
+* `ticket_slug` - The `slug` attribute of a `Ticket`.
