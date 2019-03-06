@@ -20,7 +20,7 @@
       "invoice": null,
       "max_donation": null,
       "max_tickets_per_person": null,
-      "metadata": "",
+      "metadata": {},
       "min_tickets_per_person": null,
       "min_donation": null,
       "not_a_ticket": false,

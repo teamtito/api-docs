@@ -6,7 +6,7 @@
     "slug": "ti_dPkq1HwyzQjJdF1dvhHjzEg",
     "company_name": null,
     "email": null,
-    "metadata": null,
+    "metadata": {},
     "first_name": "Jane",
     "last_name": "Doe",
     "name": "Jane Doe",

@@ -14,7 +14,7 @@
       "expires_at": "2018-11-12 13:50:44 +0000",
       "ip_address": "127.0.0.1",
       "locale": "en",
-      "metadata": null,
+      "metadata": {},
       "name": "John Smith",
       "payment_reference": null,
       "phone_number": "",

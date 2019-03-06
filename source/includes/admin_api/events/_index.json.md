@@ -39,7 +39,7 @@
       "end_date": null,
       "date_or_range": "",
       "security_token": null,
-      "metadata": null,
+      "metadata": {},
       "url": "https://ti.to/biscuit-box/2018",
       "setup": true,
       "show_discount_code_field": false,

@@ -7,7 +7,7 @@
       "slug": "ti_dhlR2CSzh59ZLht5ELPkxjg",
       "company_name": "",
       "email": "john@example.com",
-      "metadata": null,
+      "metadata": {},
       "first_name": "John",
       "last_name": "Smith",
       "name": "John Smith",

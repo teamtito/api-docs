@@ -7,6 +7,12 @@ layout: "changelog"
 
 # Changelog
 
+## 6th March 2019
+
+### Modified
+
+When we return the `metadata` for an [event](https://ti.to/docs/api/admin/#events-get-an-event), [release](https://ti.to/docs/api/admin/#releases-get-a-release) or [ticket](https://ti.to/docs/api/admin/#tickets-get-a-ticket) we now return an object rather than a JSON string. So instead of seeing `"metadata": "{\"foo\":\"bar\"}"` you will see `"metadata":{"foo":"bar"}"`.
+
 ## 29th January 2019
 
 ### Modified
