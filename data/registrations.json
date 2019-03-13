@@ -84,6 +84,12 @@
       "read_only": false,
       "required": false
     },
+    "company_name": {
+      "description": "The company name of the person who registered",
+      "type": "string",
+      "read_only": false,
+      "required": false
+    },
     "phone_number": {
       "description": "The phone number of the person who registered",
       "type": "string",
@@ -195,7 +201,7 @@
       "required": false
     },
     "billing_address_attributes": {
-      "description": "A hash of billing address attributes used to update `address`, `city`, `company_name`, `country`, `state_province_region`, `vat_number` and `zip_postal_code`",
+      "description": "A hash of billing address attributes used to update `address`, `city`, `country`, `state_province_region`, `vat_number` and `zip_postal_code`",
       "type": "object",
       "read_only": false,
       "required": false

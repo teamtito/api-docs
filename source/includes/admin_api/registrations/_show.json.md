@@ -7,6 +7,7 @@
     "billing_address": null,
     "created_at": "2018-11-12T13:35:44.000+00:00",
     "updated_at": "2018-11-12T13:35:44.000+00:00",
+    "company_name": "",
     "completed_at": "2018-11-12T13:35:44.000+00:00",
     "discount_code": null,
     "email": "john@example.com",
