@@ -1,0 +1,139 @@
+---
+title: Tito Widget V2 Docs
+
+language_tabs: # must be one of https://git.io/vQNgJ
+  - html
+
+includes:
+
+search: false
+---
+
+# Tito Widget V2
+
+The Tito widget V2 has the following goals in mind:
+
+- Extremely simple to use. One JavaScript include, one `<tito-widget>` element
+- Straightforward defaults, easily configurable
+- Easy to integrate with other tools
+- Use latest payment provider APIs
+- Fast and efficient. Should only load event details once, even for multiple elements
+
+## Basic usage
+
+Tito widget basic usage is identical to v1:
+
+```html
+<!-- place this in your head tag -->
+<script src='https://js.tito.io/v2' async></script>
+
+<!-- Place this where you want the widget to appear -->
+<tito-widget event="ultimateconf/2013"></tito-widget>
+```
+
+<script>window.tito = window.tito || function() { (tito.q = tito.q || []).push(arguments);};</script>
+<script src='https://js.staging.tito.io/v2' async></script>
+
+<!-- Place this where you want the widget to appear -->
+<tito-widget event="ultimateconf/2013"></tito-widget>
+
+## Form Styles
+
+```html
+<script src='https://js.tito.io/v2/without/widget-css' async></script>
+```
+
+Form styles are loaded automatically. If you wish to load the widget unstyled, you can add `without/widget-css` in the `src` attribute.
+
+## Buttons
+
+```html
+<tito-button event="ultimateconf/2013"></tito-button>
+```
+
+If you just want a button, you can use `tito-button`. The button renders a `button` element with the `tito-widget-button` class. You can style this however you wish using CSS.
+
+<tito-button event="ultimateconf/2013"></tito-button>
+
+You can set the button label as you would ordinary html:
+
+```html
+<tito-button event="ultimateconf/2013">My custom label</tito-button>
+```
+
+<tito-button event="ultimateconf/2013">My custom label</tito-button>
+
+## Showing Specific tickets
+
+You can pass a specific ticket or set of tickets to a widget, with the releases attribute:
+
+### A single ticket
+
+```html
+<tito-button event="ultimateconf/2013" releases="3elajg6qcxu"></tito-button>
+```
+
+<tito-button event="ultimateconf/2013" releases="3elajg6qcxu">I only show one ticket</tito-button>
+
+### Multiple tickets
+
+Show multiple tickets with a comma separated list:
+
+```html
+<tito-button event="ultimateconf/2013" releases="3elajg6qcxu,6qiiw4socs4"></tito-button>
+```
+
+<tito-button event="ultimateconf/2013" releases="3elajg6qcxu,6qiiw4socs4">I only show two tickets</tito-button>
+
+### Widget
+
+This works for the widget too:
+
+```html
+<tito-widget event="ultimateconf/2013" releases="3elajg6qcxu"></tito-widget>
+```
+
+<tito-widget event="ultimateconf/2013" releases="3elajg6qcxu"></tito-widget>
+
+### Secret tickets
+
+If you reference a secret ticket in the list of releases to show then it will be shown (the release is shown regardless of its secret status).
+
+## Passing in a discount code
+
+```html
+<tito-button event="ultimateconf/2013" discount-code="half-off"></tito-button>
+```
+
+<tito-button event="ultimateconf/2013" discount-code="half-off">I apply a discount code</tito-button>
+
+This works for the widget too:
+
+```html
+<tito-widget event="ultimateconf/2013" discount-code="half-off"></tito-widget>
+```
+
+<tito-widget event="ultimateconf/2013" discount-code="half-off">I apply a discount code</tito-widget>
+
+
+## JavaScript API
+
+You can use JavaScript to load a widget without using the `tito-widget` or `tito-button` custom elements.
+
+To mount a widget:
+
+```html
+<script>
+  window.tito = window.tito || function() { (tito.q = tito.q || []).push(arguments);};
+  tito("widget.mount", {el: "#tito-widget", event: "ultimateconf/2013"})
+</script>
+
+<div id="tito-widget"></div>
+```
+<script>
+  tito("widget.mount", {el: "#tito-widget", event: "ultimateconf/2013"})
+</script>
+
+<div id="tito-widget"></div>
+
+Here's some other text
