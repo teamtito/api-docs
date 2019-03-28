@@ -246,3 +246,42 @@ This happens when the purchase/registration form is displayed. It comes with a d
 ```
 
 This happens when the order is finished but not necessarily complete. It might not be complete if tickets have required questions that have yet to be filled in. It comes with full data about the order.
+
+### Plugins
+
+```html
+<script src='https://js.tito.io/v2/with/gtm' async></script>
+```
+
+Various plugins are available that have pre-defined integrations with third-party tools. To load plugins, you can append `with/<pluginname>` to the end of the `src` attribute of the `script` tag.
+
+#### Google Tag Manager
+
+The `gtm` plugin sends data to a `dataLayer` for use with Google Tag Manager. To use this plugin, the following must be set up:
+
+1. Google Tag Manager should already be loaded on the page you're embedding the widget
+2. Enhanced eCommerce must be set up on your tag
+3. You can track the folowing events:
+  - tito:checkout
+  - tito:purchase
+
+#### Facebook
+
+The `facebook` plugin sends data via Facebook's `fbq` function. Make sure that you have loaded the facebook `script` to use this plugin.
+
+### Test Mode
+
+```html
+<script src='https://js.tito.io/v2?key=xyz' async></script>
+```
+
+You can load the widget in test mode by using a test mode publishable key.
+
+To get a test mode public key:
+
+1. Go to id.tito.io
+2. Click on "API Access"
+3. Click on "Generate New Token"
+4. Choose "Test" and "Publishable Key" and click "Create"
+
+Now you can add `key=` to your `script` `src` attributes and all requests and purchases will be in test mode.
