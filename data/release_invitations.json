@@ -1,0 +1,64 @@
+{
+  "attributes": {
+    "email": {
+      "description": "The email of the person invited",
+      "type": "email",
+      "read_only": false,
+      "required": true
+    },
+    "first_name": {
+      "description": "The first name of the person invited (optional)",
+      "type": "string",
+      "read_only": false,
+      "required": false
+    },
+    "last_name": {
+      "description": "The last name of the person invited (optional)",
+      "type": "string",
+      "read_only": false,
+      "required": false
+    },
+    "release_ids": {
+      "description": "An array of IDs representing the releases that are offered",
+      "type": "array",
+      "read_only": false,
+      "required": true
+    },
+    "discount_code": {
+      "description": "Auto-apply this discount code when the invitee orders the ticket (optional)",
+      "type": "string",
+      "read_only": false,
+      "required": false
+    },
+    "expires_at": {
+      "description": "When this invitation should expire (optional)",
+      "type": "datetime",
+      "read_only": false,
+      "required": false
+    },
+    "created_at": {
+      "description": "The date this invitation was created.",
+      "type": "datetime",
+      "read_only": true,
+      "required": false
+    },
+    "updated_at": {
+      "description": "The date this invitation was last updated.",
+      "type": "datetime",
+      "read_only": true,
+      "required": false
+    },
+    "redirect": {
+      "description": "What happens if the customer clicks the invitation link after they've ordered. True means they will be redirected to their order, false means they will be shown a \"link expired\" message. Defaults to false.",
+      "type": "boolean",
+      "read_only": false,
+      "required": false
+    },
+    "slug": {
+      "description": "A human friendly string used in the URL.",
+      "type": "string",
+      "read_only": true,
+      "required": false
+    }
+  }
+}
