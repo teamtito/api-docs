@@ -1,0 +1,52 @@
+```json
+  {
+    "email":"john@example.com",
+    "metadata":null,
+    "name":"John Smith",
+    "payment_reference":null,
+    "phone_number":"",
+    "source":"",
+    "registration":{
+      "event_id":1058586,
+      "id":3509397,
+      "name":"John Smith",
+      "email":"john@example.com",
+      "slug":"reg_test_ds7qNqJ4s4doDMeh1VogTrw",
+      "created_at":"2018-11-12T13:35:44.000+00:00",
+      "updated_at":"2018-11-19T14:28:11.000+00:00",
+      "discount_code":null,
+      "user_id":null,
+      "ip_address":"127.0.0.1",
+      "payment_option_id":null,
+      "expires_at":"2018-11-12T13:50:44.000+00:00",
+      "reference":"ZBRE",
+      "payment_reference":null,
+      "cached_total":"0.0",
+      "processing_job_id":null,
+      "completed_at":"2018-11-12T13:35:44.000+00:00",
+      "state":"complete",
+      "registration_type":"manual",
+      "billing_address_id":null,
+      "company_name":null,
+      "source":"",
+      "receipt_paid":false,
+      "payment_option_name":null,
+      "locale":"en",
+      "phone_number":"",
+      "metadata":null,
+      "prefill_id":null,
+      "test_mode":true,
+      "consented_at":null,
+      "data_security_consent_id":null,
+      "data_security_terms_and_condition_id":null
+    },
+    "total":"0.0",
+    "update_receipt":true,
+    "billing_address_attributes":{
+
+    },
+    "receipt_lines_attributes":[
+
+    ]
+  }
+```
