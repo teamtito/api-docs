@@ -129,7 +129,7 @@ Changes the `receipt_paid` attribute to true.
     url: "#{config[:api_endpoint]}/:account_slug/:event_slug/registrations/:registration_slug/confirmations"
   }
 %>
-<%= partial "includes/admin_api/registrations/update.json" %>
+<%= partial "includes/admin_api/registrations/update_not_paid.json" %>
 
 <p class="beta-feature">
   Pay by Invoice is a beta feature. <a href="mailto:support@tito.io">Contact us</a> to get it enabled.
