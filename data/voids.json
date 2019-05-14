@@ -1,0 +1,10 @@
+{
+  "attributes": {
+    "resell": {
+      "description": "Whether the ticket will become available for sale after it is voided",
+      "type": "boolean",
+      "read_only": false,
+      "required": false
+    }
+  }
+}

@@ -133,7 +133,11 @@ The following people receive an email after a reassignment:
 <%= partial "includes/requests/post",
   locals: {
     url: "#{config[:api_endpoint]}/:account_slug/:event_slug/tickets/:ticket_slug/void",
-    with_content_type: false
+    parameters: {
+      void: {
+        resell: true
+      }
+    }
   }
 %>
 <%= partial "includes/admin_api/voids/create.json" %>
@@ -145,3 +149,15 @@ Void a `Ticket` so that it is no longer able to be used to [checkin](/docs/api/c
 * `account_slug` - The `slug` attribute of an `Account`.
 * `event_slug` - The `slug` attribute of an `Event`.
 * `ticket_slug` - The `slug` attribute of a `Ticket`.
+
+### Parameters
+
+<%= partial "includes/shared/parameters", locals: { parameters: data.voids.attributes.reject { |name,attribute| attribute["read_only"] } } %>
+
+If the `Release` `quantity` is defined (i.e. the number of tickets for that release is limited) then you also need to pass in the `resell` parameter.
+
+For instance, if you have 19/20 tickets sold and you void one and you pass `"resell":true` then it will show 18/20 tickets sold and two will now be available.
+
+If you pass `"resell":false` then it will show 18/19 tickets sold and only one will be available.
+
+If the `Release` `quantity` is not defined (i.e. the number of tickets available is infinite) then the `resell` parameter is optional.

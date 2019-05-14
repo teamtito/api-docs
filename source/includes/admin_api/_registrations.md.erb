@@ -98,3 +98,49 @@ Update a `Registration` belonging to the given `Event`.
 ### Parameters
 
 <%= partial "includes/shared/parameters", locals: { parameters: data.registrations.attributes.reject { |name, attribute| attribute["read_only"] || %w[notify].include?(name) } } %>
+
+## Mark a Registration as Paid
+
+<%= partial "includes/requests/post",
+  locals: {
+    url: "#{config[:api_endpoint]}/:account_slug/:event_slug/registrations/:registration_slug/confirmations"
+  }
+%>
+<%= partial "includes/admin_api/registrations/update.json" %>
+
+<p class="beta-feature">
+  Pay by Invoice is a beta feature. <a href="mailto:support@tito.io">Contact us</a> to get it enabled.
+</p>
+
+Show that a `Registration` has been paid. Useful if you are allowing your customers to pay by invoice.
+
+`POST <%= "#{config[:api_endpoint]}/:account_slug/:event_slug/registrations/:registration_slug/confirmations" %>`
+
+* `account_slug` - The `slug` attribute of an `Account`.
+* `event_slug` - The `slug` attribute of an `Event`.
+* `registration_slug` - The `slug` attribute of a `Registration`.
+
+Changes the `receipt_paid` attribute to true.
+
+## Mark a Registration as Unpaid
+
+<%= partial "includes/requests/post",
+  locals: {
+    url: "#{config[:api_endpoint]}/:account_slug/:event_slug/registrations/:registration_slug/confirmations"
+  }
+%>
+<%= partial "includes/admin_api/registrations/update_not_paid.json" %>
+
+<p class="beta-feature">
+  Pay by Invoice is a beta feature. <a href="mailto:support@tito.io">Contact us</a> to get it enabled.
+</p>
+
+Show that a `Registration` has NOT been paid. Useful if you are allowing your customers to pay by invoice. You wouldn't normally need to do this but might do if you [marked it as paid](/docs/api/admin/#registrations-mark-a-registration-as-paid) by mistake.
+
+`DELETE <%= "#{config[:api_endpoint]}/:account_slug/:event_slug/registrations/:registration_slug/confirmations" %>`
+
+* `account_slug` - The `slug` attribute of an `Account`.
+* `event_slug` - The `slug` attribute of an `Event`.
+* `registration_slug` - The `slug` attribute of a `Registration`.
+
+Changes the `receipt_paid` attribute to false.

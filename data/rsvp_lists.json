@@ -1,0 +1,34 @@
+{
+  "attributes": {
+    "id": {
+      "description": "The identifer of the RSVP List",
+      "type": "integer",
+      "read_only": true,
+      "required": false
+    },
+    "created_at": {
+      "description": "The date the list was created.",
+      "type": "datetime",
+      "read_only": true,
+      "required": false
+    },
+    "updated_at": {
+      "description": "The date the list was last updated.",
+      "type": "datetime",
+      "read_only": true,
+      "required": false
+    },
+    "slug": {
+      "description": "A human friendly string used in the URL.",
+      "type": "string",
+      "read_only": true,
+      "required": false
+    },
+    "title": {
+      "description": "a title for this list",
+      "type": "string",
+      "read_only": false,
+      "required": true
+    }
+  }
+}

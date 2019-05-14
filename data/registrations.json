@@ -96,6 +96,12 @@
       "read_only": false,
       "required": false
     },
+    "receipt_paid": {
+      "description": "Whether the registration has been paid or not. False would indicate that either this is a free ticket or the customer has been invoiced but that they haven't paid yet.",
+      "type": "integer",
+      "read_only": true,
+      "required": false
+    },
     "registration_type": {
       "description": "`standard`, `manual` or `imported`.",
       "type": "integer",
@@ -140,7 +146,7 @@
     },
 
     "paid": {
-      "description": "Whether the registration has been paid.",
+      "description": "Whether the registration is free (false) or paid (true). This doesn't indicate whether an registration paid by invoice is paid or not - see the receipt_paid attribute for that.",
       "type": "boolean",
       "read_only": true,
       "required": false
