@@ -1,0 +1,40 @@
+{
+  "attributes": {
+    "alternate_response": {
+      "description": "The response to the question's free text field if it's included e.g. 'If other, please specify'.",
+      "type": "string",
+      "read_only": false,
+      "required": false
+    },
+    "download_url": {
+      "description": "For file field questions, the URL where the uploaded file can be downloaded.",
+      "type": "url",
+      "read_only": false,
+      "required": false
+    },
+    "primary_response": {
+      "description": "The response to the question, Note, this can be a string but it also can be an array if it's for a checkboxes question with multiple responses.",
+      "type": "string/array",
+      "read_only": false,
+      "required": false
+    },
+    "question_id": {
+      "description": "The `id` of the `Question` the answer is attached to.",
+      "type": "integer",
+      "read_only": false,
+      "required": false
+    },
+    "response": {
+      "description": "A human friendly response to the question, a comma separated string containing the `primary_response` and `alternate_response` if present.",
+      "type": "string",
+      "read_only": true,
+      "required": false
+    },
+    "ticket_id": {
+      "description": "The `id` of the `Ticket` the answer is attached to.",
+      "type": "object",
+      "read_only": false,
+      "required": false
+    }
+  }
+}

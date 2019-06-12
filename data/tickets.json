@@ -70,9 +70,9 @@
     },
 
     "answers": {
-      "description": "A list of `Answers` to questions.",
+      "description": "An array of `Answers` to questions for this ticket.",
       "type": "array",
-      "read_only": true,
+      "read_only": false,
       "required": false
     },
     "assigned": {
@@ -239,12 +239,6 @@
       "description": "Default: `true` if test mode is enabled for you or for your entire event, otherwise `false`.",
       "type": "boolean",
       "read_only": true,
-      "required": false
-    },
-    "answers_attributes": {
-      "description": "An array of updated answers to questions for this ticket. The attributes `id`, `question_id`, `primary_response`, `file`, `alternate_response` and an array of `responses` should be given.",
-      "type": "array",
-      "read_only": false,
       "required": false
     }
   }
