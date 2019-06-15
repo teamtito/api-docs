@@ -21,6 +21,63 @@ Retrieves all `Registrations` for the given `Event`.
 * `account_slug` - The `slug` attribute of an `Account`.
 * `event_slug` - The `slug` attribute of an `Event`.
 
+### Sort Order
+
+The default order is by `created_at` with newest registrations first. You can change the order by appending some paramaters to the endpoint URL. This is the same as the default:
+
+`?search[sort]=created_at&search[direction]=desc`
+
+The direction can either be `asc` or `desc`.
+
+You can sort on the following attributes:
+
+* `name`
+* `created_at`
+* `updated_at`
+* `total`
+* `reference`
+* `payment_provider`
+
+### Filtering
+
+You can filter which registrations you get back too. For instance, to only get `unpaid` or `incomplete` registrations:
+
+`?search[states][]=unpaid&search[states][]=incomplete`
+
+Possible states are:
+
+* `cancelled`
+* `complete`
+* `confirmed`
+* `incomplete`
+* `paid`
+* `unpaid`
+
+Or by time. This will show all registrations created since 1 Jan 2019 at 9am UTC:
+
+`?search[created_at][gt]=2019-01-01T09:00:00+UTC`
+
+That operator can be:
+
+* `gt` - greater than
+* `gte` - greater than or equal to
+* `lt` - less than
+* `lte` - less than or equal to
+
+And you can do that on the following attributes
+
+* `created_at`
+* `updated_at`
+
+So, for instance, to find all registrations that have been updated in the last hour:
+
+`?search[updated_at][gt]=2019-01-01T09:00:00+UTC`
+
+(where you obviously change that timestamp to be one hour ago).
+
+ Note: if you don't use the `+UTC` suffix on those timestamps it will default to the time zone used by the event itself.
+
+
 ## Get a Registration
 
 <%= partial "includes/requests/get",
