@@ -21,6 +21,84 @@ Retrieves all `Tickets` for the given `Event`.
 * `account_slug` - The `slug` attribute of an `Account`.
 * `event_slug` - The `slug` attribute of an `Event`.
 
+### Sort Order
+
+The default order is by `created_at` with newest tickets first. You can change the order by appending some paramaters to the endpoint URL. This is the same as the default:
+
+`?search[sort]=created_at&search[direction]=desc`
+
+The direction can either be `asc` or `desc`.
+
+You can sort on the following attributes:
+
+* `first_name`
+* `last_name`
+* `created_at`
+* `updated_at`
+* `price`
+* `reference`
+* `number`
+
+### Filtering
+
+You can filter which tickets you get back too. For instance, to only get `incomplete` or `unassigned` tickets:
+
+`?search[states][]=incomplete&search[states][]=unassigned`
+
+Possible states are:
+
+* `changes_allowed`
+* `changes_locked`
+* `complete`
+* `incomplete`
+* `unassigned`
+* `void`
+
+Or by type of ticket:
+
+`?search[types][]=manual`
+
+Possible types are:
+
+* `manual` - added manually
+* `standard` - ordered by customer
+
+Or by [release](#releases):
+
+`?search[release_ids][]=early-bird`
+
+where "early-bird" is the release `slug`.
+
+Or by [activity](#activities):
+
+`?search[activity_ids][]=1025351`
+
+where "1025351" is the activity `id`.
+
+Or by time. This will show all tickets created since 1 Jan 2019 at 9am UTC:
+
+`?search[created_at][gt]=2019-01-01T09:00:00+UTC`
+
+That operator can be:
+
+* `gt` - greater than
+* `gte` - greater than or equal to
+* `lt` - less than
+* `lte` - less than or equal to
+
+And you can do that on the following attributes
+
+* `created_at`
+* `updated_at`
+
+So, for instance, to find all tickets that have been updated in the last hour:
+
+`?search[updated_at][gt]=2019-01-01T09:00:00+UTC`
+
+(where you obviously change that timestamp to be one hour ago).
+
+ Note: if you don't use the `+UTC` suffix on those timestamps it will default to the time zone used by the event itself.
+
 ## Get a Ticket
 
 <%= partial "includes/requests/get",
