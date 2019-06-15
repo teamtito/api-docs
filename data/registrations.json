@@ -19,7 +19,7 @@
       "required": false
     },
     "created_at": {
-      "description": "The date the registration was created.",
+      "description": "The date the registration was created. This is when the checkout process was started, not when payment was made.",
       "type": "datetime",
       "read_only": true,
       "required": false
