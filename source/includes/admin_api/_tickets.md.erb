@@ -47,14 +47,25 @@ You can filter which tickets you get back too. For instance, to only get `incomp
 
 Possible states are:
 
-* `changes_allowed`
-* `changes_locked`
 * `complete`
 * `incomplete`
 * `unassigned`
 * `void`
 
-Or by type of ticket:
+By default, the list will exclude `void` tickets. If you want void tickets then you have to explicitly ask for them.
+
+There are some other pseudo-states that behave a little differently.
+
+* `changes_allowed` (only show tickets that allow changes)
+* `changes_locked` (only show tickets that have changes locked)
+
+If you select both `changes_allowed` and `changes_locked` theb that's effectively the same as saying "those tickets that are either locked or not locked" which is the same as the default.
+
+* `archived` (tickets belonging to an archived release)
+
+The list excludes archived tickets by default. If you select this state then it also includes archived tickets _as well_ as non-archived tickets.
+
+Or you can filter by type of ticket:
 
 `?search[types][]=manual`
 
