@@ -12,6 +12,23 @@ Name              | Description
 `<%= webhook.name %>` | <%= webhook.description %>
 <% end %>
 
+## Payloads
+
+<h3 style="clear:both;">Ticket Payload</h3>
+<%= partial "includes/admin_api/webhooks/ticket.json" %>
+
+For webhooks that have the webhook type of `ticket.*` the following JSON payload
+will be sent.
+
+<h3 style="clear:both;">Registration Payload</h3>
+
+<%= partial "includes/admin_api/webhooks/registration.json" %>
+
+For webhooks that have the webhook type of `registration.*` the following JSON payload
+will be sent.
+
+
+
 ## Verifying the payload
 
 ```ruby
