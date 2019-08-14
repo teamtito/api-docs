@@ -1,0 +1,10 @@
+{
+  "attributes": {
+    "status": {
+      "description": "Either \"yes\", \"no\" or \"maybe\"",
+      "type": "string",
+      "read_only": false,
+      "required": true
+    }
+  }
+}

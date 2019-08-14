@@ -1,0 +1,39 @@
+# RSVP
+<p class="beta-feature">
+  RSVP is a beta feature. <a href="mailto:support@tito.io">Contact us</a> to get it enabled.
+</p>
+
+This allows you to react to an [RSVP](/docs/api/admin#rsvp-release-invitations).
+
+## Respond to invitation
+
+This will mark the status of the release invitation and if "yes" will create a registration according to what releases are associated with the release invitation.
+
+<%= partial "includes/requests/post",
+  locals: {
+    url: "#{config[:checkout_api_endpoint]}/rsvps/:release_invitation_slug/responses",
+    parameters: {
+      status: "yes"
+    },
+    authenticated: false
+  }
+%>
+<%= partial "includes/checkout_api_beta/rsvps/yes.json" %>
+
+`POST <%= "#{config[:checkout_api_endpoint]}/rsvps/:release_invitation_slug/responses" %>`
+
+* `release_invitation_slug` - The `slug` attribute of an `Release Invitation`.
+
+### Parameters
+
+<%= partial "includes/shared/parameters",
+  locals: {
+    parameters: data.release_invitation_responses.attributes.reject { |name, attribute| attribute["read_only"] }
+  }
+%>
+
+## Declining
+
+Setting the status to "no" or "maybe" will not create a registration and will set the status acccordingly.
+
+<%= partial "includes/checkout_api_beta/rsvps/no.json" %>

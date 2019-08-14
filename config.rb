@@ -37,6 +37,7 @@ end
 config[:api_endpoint] = "https://api.tito.io/v3"
 config[:api_token] = "YOUR-API-TOKEN"
 config[:checkin_api_endpoint] = "https://checkin.tito.io"
+config[:checkout_api_endpoint] = "https://checkout.tito.io"
 config[:url_substitutions] = {
 }
 
