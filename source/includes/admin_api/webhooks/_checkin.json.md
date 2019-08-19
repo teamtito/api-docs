@@ -24,7 +24,7 @@
   },
   "answers": [
     {
-      "question": "What is a your favourite coffee?",
+      "question": "What is your favourite coffee?",
       "response": "Latte"
     }
   ]
