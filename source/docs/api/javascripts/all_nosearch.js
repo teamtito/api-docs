@@ -9,6 +9,20 @@ $(function() {
     window.recacheHeights();
     window.refreshToc();
   });
+
+  window.tito =
+    window.tito ||
+    function() {
+      (tito.q = tito.q || []).push(arguments);
+    };
+
+  // For example:
+  tito('on:widget:loaded', function(data){
+    console.log("Heights have changed FFS");
+    window.recacheHeights();
+    window.refreshToc();
+  })
+
 });
 
 window.onpopstate = function() {
