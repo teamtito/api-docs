@@ -306,6 +306,23 @@ tito('on:registration:finished', function(data){
 
 This happens when the order is finished but not necessarily complete. It might not be complete if tickets have required questions that have yet to be filled in. It comes with full data about the order.
 
+<div></div>
+<h3 class="beta-feature">
+  Terms accepted -Beta feature
+</h3>
+
+```js
+tito('on:registration:terms_accepted', function(){
+  // code here will be fired when the customer accepts your terms and conditions
+})
+```
+
+`on:registration:terms_accepted`
+
+This is a beta feature to make your customers accept some terms and conditions before proceding with the registration. Get in contact if you want to use this feature.
+
+This will get fired as soon as the customer accepts your terms and conditions. We don't know anything about them at this stage so it sends no data.
+
 ## Prefill Data
 
 ```html
