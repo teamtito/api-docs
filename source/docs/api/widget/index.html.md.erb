@@ -244,6 +244,50 @@ This happens when the purchase/registration form is displayed. It comes with a d
 
 This happens when the order is finished but not necessarily complete. It might not be complete if tickets have required questions that have yet to be filled in. It comes with full data about the order.
 
+## Prefill Data
+
+```html
+<tito-widget
+  event="ultimateconf/2013"
+  prefill='{
+    "name": "Tony Soprano",
+    "email": "tony@sopranoinc.com"
+  }'
+  ></tito-widget>
+```
+
+You can pass in data to the widget that will prefill certain fields to save your attendees time. Valid fields are:
+
+* `name`
+* `email`
+* `company_name`
+* `vat_number`
+* `phone_number`
+* `address`
+* `city`
+* `state_province_region`
+* `zip_postal_code`
+* `country`
+* `metadata`
+
+You have to be a bit careful with quotes because the value is parsed as JSON and it expects double quotes. One solution is to wrap the attribute in single quotes like this:
+
+`prefill='{ "name": "Tony Soprano" }'`
+
+Or if you really want the attribute to use double-quotes then you need to escape the ones inside:
+
+`prefill="{ &quot;name&quot;: &quot;Tony Soprano&quot; }"`
+
+### Using the URL
+
+You can also pass data in using the `prefill` parameter in the URL:
+
+`https://mywebsite.com/#/?prefill=%7B%22company_name%22%3A%20%22My%20Company%22%7D`
+
+That's the equivalent of `prefill={"company_name":"My Company"}` but it's escaped for use in a URL.
+
+Note that the `?prefill=` bit comes **after** the `/#/` bit.
+
 ## Plugins
 
 ```html
