@@ -167,22 +167,73 @@ The syntax for listening for these events is very simple:
 
 ```html
 <script>
-  tito('on:registration:started', function(data){
+  // This copes with the javascript being loaded
+  // asycronously (recommended)
+  window.tito =
+    window.tito ||
+    function() {
+      (tito.q = tito.q || []).push(arguments);
+    };
+
+  // For example:
+  tito('on:widget:loaded', function(data){
     // code here will be fired when the purchase form loads
   })
 
-  tito('on:registration:finished', function(data){
-    // code here will be fired when payment / registration is complete
-  })
 </script>
 ```
 
-### registration:started
+<div></div>
+### Widget loaded
+
+```js
+tito('on:widget:loaded', function(data){
+  // code here will be fired when the purchase form loads
+})
+```
 
 ```json
-// registration:started data
+// Sample data
 {
-  "slug": "xyzdef123456",
+  "contact_email":    "hello@example.com",
+  "currency":         "USD",
+  "currency_symbol":  "$",
+  "default_locale":   "en",
+  "path":             "ultimateconf/2013",
+  "releases": [
+    {
+      "price":        "100.0",
+      "title":        "Early Bird",
+      ...
+    },
+    {
+      "price":        "120.0",
+      "title":        "Regular",
+      ...
+    }
+  ],
+  "title":            "UltimateConf 2013"
+}
+
+```
+
+`on:widget:loaded`
+
+Fires as soon as all the javascript has loaded and the widget has been displayed.
+
+<div></div>
+### Registration started
+
+```js
+tito('on:registration:started', function(data){
+  // code here will be fired when the purchase form loads
+})
+```
+
+```json
+// Sample data
+{
+  "slug":           "xyzdef123456",
   "line_items": [{
     "release_slug": "1234abcd",
     "price":        "4.00",
@@ -195,12 +246,21 @@ The syntax for listening for these events is very simple:
 
 ```
 
+`on:registration:started`
+
 This happens when the purchase/registration form is displayed. It comes with a data object that contains the unique slug of the order, along with an object containing info about the tickets that the customer chose. eg.
 
-### registration:finished
+<div></div>
+### Registration finished
+
+```js
+tito('on:registration:finished', function(data){
+  // code here will be fired when the purchase form loads
+})
+```
 
 ```json
-// registration:finished data
+// Sample data
 {
   "name":             "Joe Joe",
   "email":            "joe@joe.joe",
@@ -208,22 +268,22 @@ This happens when the purchase/registration form is displayed. It comes with a d
   "currency":         "USD",
   "slug":             "1234defg",
   "reference":        "ABCD",
-  "line_items":       [{
-    "release_slug": "1234abcd",
-    "price":        "4.00",
-    "title":        "Regular",
-    "quantity":     1,
-    "total":        "4.00",
-    "currency":     "USD"
+  "line_items": [{
+    "release_slug":   "1234abcd",
+    "price":          "4.00",
+    "title":          "Regular",
+    "quantity":       1,
+    "total":          "4.00",
+    "currency":       "USD"
   }],
-  "tickets":          [{
-    "reference":     "ABCD-1",
-    "slug":          "1234abcd",
-    "price":         "4.00",
-    "release_slug":  "1234abcd",
-    "release_title": "Regular",
-    "name":          "Joe joe",
-    "email":         "joe@joe.joe",
+  "tickets": [{
+    "reference":      "ABCD-1",
+    "slug":           "1234abcd",
+    "price":          "4.00",
+    "release_slug":   "1234abcd",
+    "release_title":  "Regular",
+    "name":           "Joe joe",
+    "email":          "joe@joe.joe",
     "answers": {
       "question_id":        123,
       "question":           "What is the flight speed of an unladen sparrow?",
@@ -231,16 +291,18 @@ This happens when the purchase/registration form is displayed. It comes with a d
       "response":           [1,2,3]
     }
   }],
-  "receipt_url":      "http://ti.to/receipts/12345abcdef",
-  "registration_url": "http://ti.to/registrations/12345abcdef",
-  "receipt":          {
+  "receipt_url":        "http://ti.to/receipts/12345abcdef",
+  "registration_url":   "http://ti.to/registrations/12345abcdef",
+  "receipt": {
     "total":            "4.00",
     "tax":              "0.00",
     "payment_provider": "Stripe"
   },
-  "discount_code":    ""
+  "discount_code":      ""
 }
 ```
+
+`on:registration:finished`
 
 This happens when the order is finished but not necessarily complete. It might not be complete if tickets have required questions that have yet to be filled in. It comes with full data about the order.
 
