@@ -112,7 +112,6 @@ This works for the widget too:
 
 <tito-widget event="ultimateconf/2013" discount-code="half-off">I apply a discount code</tito-widget>
 
-
 ## JavaScript API
 
 ### Async
@@ -136,13 +135,14 @@ You can use the JavaScript API to load a widget on-demand without using the `tit
   tito("widget.mount", {el: "#tito-widget", event: "ultimateconf/2013"})
 </script>
 
-<div id="tito-widget"></div>
+<div class="no-clear" id="tito-widget"></div>
+
 ```
 <script>
   tito("widget.mount", {el: "#tito-widget", event: "ultimateconf/2013"})
 </script>
 
-<div><div id="tito-widget"></div></div>
+<div class="no-clear"><div id="tito-widget"></div></div>
 
 ### Mounting a button
 
@@ -151,13 +151,14 @@ You can use the JavaScript API to load a widget on-demand without using the `tit
   tito("button.mount", {el: "#tito-button", event: "ultimateconf/2013"})
 </script>
 
-<div id="tito-button"></div>
+<div class="no-clear" id="tito-button"></div>
+
 ```
 <script>
   tito("button.mount", {el: "#tito-button", event: "ultimateconf/2013"})
 </script>
 
-<div><div id="tito-button"></div></div>
+<div class="no-clear"><div id="tito-button"></div></div>
 
 ## Callbacks
 
