@@ -17,8 +17,7 @@ $(function() {
     };
 
   // For example:
-  tito('on:widget:loaded', function(data){
-    console.log("Heights have changed FFS");
+  tito('on:widget:loaded', function(){
     window.recacheHeights();
     window.refreshToc();
   })
