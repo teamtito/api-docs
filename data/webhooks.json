@@ -1,5 +1,5 @@
 {
-  "types": [
+  "triggers": [
     {
       "name": "checkin.created",
       "description": "Fired when an attendee is checked-in via one of the Tito apps (web, iOS or Android)."

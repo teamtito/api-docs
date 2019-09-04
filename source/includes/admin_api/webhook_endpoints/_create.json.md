@@ -1,0 +1,14 @@
+```json
+{
+  "webhook_endpoint":{
+    "_type":"webhook_endpoint",
+    "id":1,
+    "url":"https://www.foobar.com",
+    "included_triggers":[
+      "ticket.created"
+    ],
+    "custom_data":null,
+    "deprecated":false
+  }
+}
+```

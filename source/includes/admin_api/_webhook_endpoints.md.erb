@@ -1,0 +1,108 @@
+# Webhook Endpoints
+
+## Attributes
+
+<%= partial "includes/shared/attributes", locals: { attributes: data.webhook_endpoints.attributes } %>
+
+
+## Get all Webhook Endpoints
+
+<%= partial "includes/requests/get",
+  locals: {
+    url: "#{config[:api_endpoint]}/:account_slug/:event_slug/webhook_endpoints"
+  }
+%>
+<%= partial "includes/admin_api/webhook_endpoints/index.json" %>
+
+
+Retrieves all `Webhook Endpoints` for the given `Event`.
+
+`<%= "GET #{config[:api_endpoint]}/:account_slug/:event_slug/webhook_endpoints" %>`
+
+* `account_slug` - The `slug` attribute of an `Account`.
+* `event_slug` - The `slug` attribute of an `Event`.
+
+## Get a Webhook Endpoint
+
+<%= partial "includes/requests/get",
+  locals: {
+    url: "#{config[:api_endpoint]}/:account_slug/:event_slug/webhook_endpoints/:id"
+  }
+%>
+<%= partial "includes/admin_api/webhook_endpoints/show.json" %>
+
+Retrieves an `Webhook Endpoint` for the given `Event`.
+
+* `account_slug` - The `slug` attribute of an `Account`.
+* `event_slug` - The `slug` attribute of an `Event`.
+* `id` - The `id` attribute of a `Webhook Endpoint`.
+
+## Create a Webhook Endpoint
+
+<%= partial "includes/requests/post",
+  locals: {
+    url: "#{config[:api_endpoint]}/:account_slug/:event_slug/webhook_endpoints",
+    parameters: {
+      webhook_endpoint: {
+        url: "https://www.example.com",
+        included_triggers: [
+          "ticket.created"
+        ]
+      }
+    }
+  }
+%>
+<%= partial "includes/admin_api/webhook_endpoints/create.json" %>
+
+Create a new `Webhook Endpoint` belonging to the given `Event`.
+
+`POST <%= "#{config[:api_endpoint]}/:account_slug/:event_slug/webhook_endpoints" %>`
+
+* `account_slug` - The `slug` attribute of an `Account`.
+* `event_slug` - The `slug` attribute of an `Event`.
+
+### Parameters
+
+<%= partial "includes/shared/parameters", locals: { parameters: data.webhook_endpoints.attributes.reject { |name,attribute| attribute["read_only"] } } %>
+
+## Update a Webhook Endpoint
+
+<%= partial "includes/requests/patch",
+  locals: {
+    url: "#{config[:api_endpoint]}/:account_slug/:event_slug/webhook_endpoints/:id",
+    parameters: {
+      webhook_endpoint: {
+        url: "https://www.foobar.com"
+      }
+    }
+  }
+%>
+<%= partial "includes/admin_api/webhook_endpoints/update.json" %>
+
+Update a `Webhook Endpoint` belonging to the given `Event`.
+
+`PATCH <%= "#{config[:api_endpoint]}/:account_slug/:event_slug/webhook_endpoints/:id" %>`
+
+* `account_slug` - The `slug` attribute of an `Account`.
+* `event_slug` - The `slug` attribute of an `Event`.
+* `id` - The `id` attribute of a `Webhook Endpoint`.
+
+### Parameters
+
+<%= partial "includes/shared/parameters", locals: { parameters: data.webhook_endpoints.attributes.reject { |name,attribute| attribute["read_only"] } } %>
+
+## Delete a Webhook Endpoint
+
+<%= partial "includes/requests/delete",
+  locals: {
+    url: "#{config[:api_endpoint]}/:account_slug/:event_slug/webhook_endpoints/:id",
+  }
+%>
+
+Delete a `Webhook Endpoint` belonging to the given `Event`.
+
+`DELETE <%= "#{config[:api_endpoint]}/:account_slug/:event_slug/webhook_endpoints/:id" %>`
+
+* `account_slug` - The `slug` attribute of an `Account`.
+* `event_slug` - The `slug` attribute of an `Event`.
+* `id` - The `id` attribute of a `Webhook Endpoint`.
