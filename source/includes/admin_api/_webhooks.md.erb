@@ -4,11 +4,11 @@ Webhooks allow data to be passed to an external system in real time. Webhooks
 will `POST` a `JSON` payload to the endpoint you specify, with a `X-Webhook-Name`
 header.
 
-## Types
+## Triggers
 
 Name              | Description
 ----------------- | ---------------------------
-<% data.webhooks.types.each do |webhook| %>
+<% data.webhooks.triggers.each do |webhook| %>
 `<%= webhook.name %>` | <%= webhook.description %>
 <% end %>
 

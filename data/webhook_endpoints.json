@@ -1,0 +1,28 @@
+{
+  "attributes": {
+    "id": {
+      "description": "The `id` of the `Webhook Endpoint`",
+      "type": "integer",
+      "read_only": true,
+      "required": false
+    },
+    "url": {
+      "description": "The URL where the webhook should be sent.",
+      "type": "string",
+      "read_only": false,
+      "required": true
+    },
+    "custom": {
+      "description": "Will be added to all webhook requests as `custom`",
+      "type": "string",
+      "read_only": false,
+      "required": false
+    },
+    "included_triggers": {
+      "description": "A list of triggers or actions that cause the webhook to be sent to the url. See Webhook triggers.",
+      "type": "array",
+      "read_only": false,
+      "required": true
+    }
+  }
+}

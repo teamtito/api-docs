@@ -1,0 +1,25 @@
+```json
+{
+  "webhook_endpoints":[
+    {
+      "_type":"webhook_endpoint",
+      "id":1,
+      "url":"https://www.example.com",
+      "included_triggers":[
+        "ticket.created"
+      ],
+      "custom_data":"",
+      "deprecated":false
+    }
+  ],
+  "meta":{
+    "current_page":1,
+    "next_page":null,
+    "prev_page":null,
+    "total_pages":1,
+    "total_count":1,
+    "per_page":100,
+    "overall_total":1
+  }
+}
+```
