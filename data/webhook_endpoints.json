@@ -12,7 +12,7 @@
       "read_only": false,
       "required": true
     },
-    "custom": {
+    "custom_data": {
       "description": "Will be added to all webhook requests as `custom`",
       "type": "string",
       "read_only": false,
