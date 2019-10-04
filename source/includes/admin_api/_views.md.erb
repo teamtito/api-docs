@@ -1,0 +1,22 @@
+# Views
+
+We have two views on the data we return:
+
+* Short
+* Extended
+
+### Short
+
+This is what you get if you ask for a list of records (e.g. [Get all Registrations](#registrations-get-all-registrations)) then we give you the "short" view of the data, so that we can make the response as quick as possible and you don't get a lot of data all at once.
+
+### Extended
+
+If you ask for a single record (e.g. [Get a Registration](#registrations-get-a-registration)) then we give you the "extended" view which gives you more detailed information and possible associated records.
+
+### Choosing the view
+
+You can override this by passing the `view` parameter. For example:
+
+`<%= "GET #{config[:api_endpoint]}/:account_slug/:event_slug/tickets?view=extended" %>`
+
+*Please note* — if you ask for the extended view of a large list of records it might take a long time and you might get a lot of data.
