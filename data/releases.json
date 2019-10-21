@@ -388,12 +388,6 @@
       "read_only": false,
       "required": false
     },
-    "quantity_sold": {
-      "description": "The number of tickets registered.",
-      "type": "integer",
-      "read_only": true,
-      "required": false
-    },
     "question_ids": {
       "description": "An array of the IDs of `Questions` attached to the release. The order of the IDs represents the order in which the questions will be asked.",
       "type": "array",
