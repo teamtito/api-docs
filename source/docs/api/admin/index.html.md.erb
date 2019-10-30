@@ -44,13 +44,6 @@ We hope by providing an API it will allow developers to build cool and useful to
 
 # Authentication
 
-```shell
-curl --request GET \
-  --url '<%= config[:api_endpoint] %>/...' \
-  --header 'Authorization: Token token=<%= config[:api_token] %>' \
-  --header 'Accept: application/json' \
-```
-
 The Admin API uses API tokens to allow users to authenticate without exposing their credentials.
 
 Developers can generate an API token by signing in at [https://id.tito.io](https://id.tito.io/api-access-tokens) and selecting
@@ -67,6 +60,33 @@ it will only read and write test data without affecting your live data. Note thi
 If you find your API token has been compromised it can be [revoked](https://id.tito.io/api-access-tokens) and a new one generated.
 
 Your API token needs to be included in the `Authorization` header so your requests can be authenticated.
+
+### Confirm you can connect
+
+```shell
+curl --request GET \
+  --url '<%= config[:api_endpoint] %>/hello' \
+  --header 'Authorization: Token token=<%= config[:api_token] %>' \
+  --header 'Accept: application/json' \
+```
+
+```json
+{
+    "authenticated": true,
+    "access_token": "*ab1C",
+    "lookup_mode": "live",
+    "accounts": [
+        "biscuit-box",
+        "demo"
+    ]
+}
+```
+
+This endpoint will confirm you are authenticated properly and tell you which accounts you have access to.
+
+`<%= "GET #{config[:api_endpoint]}/hello" %>`
+
+The `access_token` is the last four characters of whatever access token you have used.
 
 The Admin API also provides detailed information about [Authentication Errors](#errors-authentication-errors).
 
