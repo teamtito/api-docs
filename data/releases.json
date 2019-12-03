@@ -61,9 +61,15 @@
       "required": false
     },
     "payment_type": {
-      "description": "The type of pricing for this releases e.g. `free`, `paid`, `donation` and `degressive`.",
+      "description": "Deprecated. Please use pricing_type instead.",
       "type": "string",
-      "read_only": true,
+      "read_only": false,
+      "required": false
+    },
+    "pricing_type": {
+      "description": "The type of pricing for this releases e.g. `free`, `paid`, `donation` or `degressive`.",
+      "type": "string",
+      "read_only": false,
       "required": false
     },
     "price_ex_tax": {
