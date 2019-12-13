@@ -1,0 +1,21 @@
+# Interested Users
+
+## Attributes
+
+<%= partial "includes/shared/attributes", locals: { attributes: data.interested_users.attributes } %>
+
+## Get all Interested Users
+
+<%= partial "includes/requests/get",
+  locals: {
+    url: "#{config[:api_endpoint]}/:account_slug/:event_slug/interested_users"
+  }
+%>
+<%= partial "includes/admin_api/interested_users/index.json" %>
+
+Retrieves all interested users (or people) for the given `Event`.
+
+`<%= "GET #{config[:api_endpoint]}/:account_slug/:event_slug/interested_users" %>`
+
+* `account_slug` - The `slug` attribute of an `Account`.
+* `event_slug` - The `slug` attribute of an `Event`.
