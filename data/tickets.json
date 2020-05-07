@@ -116,13 +116,6 @@
       "required": false
     },
 
-    "upgrade_summary": {
-      "description": "",
-      "type": "object",
-      "read_only": true,
-      "required": false
-    },
-
     "registration_slug": {
       "description": "The `slug` attribute of the attached `Registration`",
       "type": "string",

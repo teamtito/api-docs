@@ -30,7 +30,6 @@
     "total_paid_less_tax": "0.0",
     "tags": null,
     "upgrade_ids": [],
-    "upgrade_summary": {},
     "registration_slug": "reg_test_dp729LA0bGxEFfgeyldOVuA",
     "release_slug": "coffee-brewing",
     "release_title": "Coffee Brewing",
