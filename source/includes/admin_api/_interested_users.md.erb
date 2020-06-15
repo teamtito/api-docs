@@ -19,3 +19,29 @@ Retrieves all interested users (or people) for the given `Event`.
 
 * `account_slug` - The `slug` attribute of an `Account`.
 * `event_slug` - The `slug` attribute of an `Event`.
+
+## Create an Interested User
+
+<%= partial "includes/requests/post",
+  locals: {
+    url: "#{config[:api_endpoint]}/:account_slug/:event_slug/interested_users",
+    parameters: {
+      interested_user: {
+        name: "John Smith",
+        email: "test@example.com"
+      }
+    }
+  }
+%>
+<%= partial "includes/admin_api/interested_users/create.json" %>
+
+Create a new `InterestedUser` belonging to the given `Event`.
+
+`POST <%= "#{config[:api_endpoint]}/:account_slug/:event_slug/interested_users" %>`
+
+* `account_slug` - The `slug` attribute of an `Account`.
+* `event_slug` - The `slug` attribute of an `Event`.
+
+### Parameters
+
+<%= partial "includes/shared/parameters", locals: { parameters: data.interested_users.attributes.reject { |name,attribute| attribute["read_only"] } } %>
