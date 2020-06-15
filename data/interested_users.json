@@ -21,7 +21,7 @@
     "email": {
       "description": "The email address of the user",
       "type": "string",
-      "read_only": true,
+      "read_only": false,
       "required": true
     },
     "name": {
