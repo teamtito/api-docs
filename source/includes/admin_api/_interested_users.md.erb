@@ -51,7 +51,7 @@ Create a new `InterestedUser` belonging to the given `Event`.
   locals: {
     url: "#{config[:api_endpoint]}/:account_slug/:event_slug/interested_users/:interested_user_id",
     parameters: {
-      interested_user_id: {
+      interested_user: {
         name: "Test Name"
       }
     }
