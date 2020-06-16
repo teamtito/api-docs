@@ -27,7 +27,7 @@
     "name": {
       "description": "The full name of the person who is interested",
       "type": "string",
-      "read_only": true,
+      "read_only": false,
       "required": false
     }
   }
