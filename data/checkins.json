@@ -32,7 +32,14 @@
       "description": "The `id` of the ticket that was checked-in.",
       "type": "integer",
       "read_only": false,
-      "required": true,
+      "required": false,
+      "parameter": true
+    },
+    "ticket_reference": {
+      "description": "The `reference` of the ticket that was checked-in.",
+      "type": "string",
+      "read_only": false,
+      "required": false,
       "parameter": true
     },
     "deleted_at": {
