@@ -37,10 +37,16 @@ Tito widget basic usage is identical to v1:
 ## Form Styles
 
 ```html
-<script src='https://js.tito.io/v2/without/widget-css' async></script>
+<script src='https://js.tito.io/v2/with/inline/without/widget-css' async></script>
 ```
 
-Form styles are loaded automatically. If you wish to load the widget unstyled, you can add `without/widget-css` in the `src` attribute.
+Form styles are loaded automatically. If you wish to load the widget unstyled, you can add `with/inline/without/widget-css` in the `src` attribute.
+
+If you also want the order form to be unstyled, you can add `with/inline/without/widget-css,checkout-css`.
+
+```html
+<script src='https://js.tito.io/v2/with/inline/without/widget-css,checkout-css' async></script>
+```
 
 ## Buttons
 
