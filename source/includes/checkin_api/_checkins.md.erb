@@ -47,6 +47,8 @@ Create a new `Checkin` belonging to the given `CheckinList`.
 
 ### Parameters
 
+You must pass in one of either `ticket_id` or `ticket_reference`.
+
 <%= partial "includes/shared/parameters", locals: { parameters: data.checkins.attributes.select { |name,attribute| attribute["parameter"] } } %>
 
 
