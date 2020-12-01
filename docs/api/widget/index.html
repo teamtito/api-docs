@@ -1,0 +1,606 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Tito Widget V2 Docs</title>
+
+    <style>
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .cd {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <link href="/docs/api/stylesheets/screen.css" rel="stylesheet" media="screen" />
+    <link href="/docs/api/stylesheets/print.css" rel="stylesheet" media="print" />
+      <script src="/docs/api/javascripts/all_nosearch.js"></script>
+  </head>
+
+  <body class="docs docs_api docs_api_widget docs_api_widget_index" data-languages="[]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="/docs/api/images/navbar.png" alt="Navbar" />
+      </span>
+    </a>
+    <div class="api-warning">
+  <p><b>API Early Access</b> Please note this API is under active development &mdash; view our <a href="/docs/api/changelog/">Changelog</a>&nbsp;for&nbsp;updates</p>
+</div>
+
+    <div class="toc-wrapper">
+      <a class="logo" href="/docs/api">
+        <img src="/docs/api/images/tito.svg" alt="Tito" /> API Docs
+      </a>
+
+      <ul id="toc" class="toc-list-h1">
+          <li>
+            <a href="#tito-widget-v2" class="toc-h1 toc-link" data-title="Tito Widget V2">Tito Widget V2</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#tito-widget-v2-basic-usage" class="toc-h2 toc-link" data-title="Basic usage">Basic usage</a>
+                  </li>
+                  <li>
+                    <a href="#tito-widget-v2-form-styles" class="toc-h2 toc-link" data-title="Form Styles">Form Styles</a>
+                  </li>
+                  <li>
+                    <a href="#tito-widget-v2-buttons" class="toc-h2 toc-link" data-title="Buttons">Buttons</a>
+                  </li>
+                  <li>
+                    <a href="#tito-widget-v2-showing-specific-tickets" class="toc-h2 toc-link" data-title="Showing Specific tickets">Showing Specific tickets</a>
+                  </li>
+                  <li>
+                    <a href="#tito-widget-v2-passing-in-a-discount-code" class="toc-h2 toc-link" data-title="Passing in a discount code">Passing in a discount code</a>
+                  </li>
+                  <li>
+                    <a href="#tito-widget-v2-javascript-api" class="toc-h2 toc-link" data-title="JavaScript API">JavaScript API</a>
+                  </li>
+                  <li>
+                    <a href="#tito-widget-v2-callbacks" class="toc-h2 toc-link" data-title="Callbacks">Callbacks</a>
+                  </li>
+                  <li>
+                    <a href="#tito-widget-v2-prefill-data" class="toc-h2 toc-link" data-title="Prefill Data">Prefill Data</a>
+                  </li>
+                  <li>
+                    <a href="#tito-widget-v2-plugins" class="toc-h2 toc-link" data-title="Plugins">Plugins</a>
+                  </li>
+                  <li>
+                    <a href="#tito-widget-v2-test-mode" class="toc-h2 toc-link" data-title="Test Mode">Test Mode</a>
+                  </li>
+              </ul>
+          </li>
+      </ul>
+      <ul class="toc-well">
+  <li><a href="/docs/api/admin">Admin API</a></li>
+  <li><a href="/docs/api/checkout">Checkout API</a> <span>Coming 2021</span></li>
+  <li><a href="/docs/api/checkin">Check-in API</a></li>
+  <li><a href="/docs/api/changelog">Changelog</a></li>
+</ul>
+
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id='tito-widget-v2'>Tito Widget V2</h1>
+<p>The Tito widget V2 has the following goals in mind:</p>
+
+<ul>
+<li>Extremely simple to use. One JavaScript include, one <code>&lt;tito-widget&gt;</code> element</li>
+<li>Straightforward defaults, easily configurable</li>
+<li>Easy to integrate with other tools</li>
+<li>Use latest payment provider APIs</li>
+<li>Fast and efficient. Should only load event details once, even for multiple elements</li>
+</ul>
+<h2 id='tito-widget-v2-basic-usage'>Basic usage</h2>
+<p>Tito widget basic usage is identical to v1:</p>
+<pre class="highlight html tab-html"><code><span class="c">&lt;!-- place this in your head tag --&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">'https://js.tito.io/v2'</span> <span class="na">async</span><span class="nt">&gt;&lt;/script&gt;</span>
+
+<span class="c">&lt;!-- Place this where you want the widget to appear --&gt;</span>
+<span class="nt">&lt;tito-widget</span> <span class="na">event=</span><span class="s">"ultimateconf/2013"</span><span class="nt">&gt;&lt;/tito-widget&gt;</span>
+</code></pre>
+<script>window.tito = window.tito || function() { (tito.q = tito.q || []).push(arguments);};</script>
+
+<script src='https://js.tito.io/v2?key=pk_YTb5e_xQyzVau1cjM' async></script>
+
+<!-- Place this where you want the widget to appear -->
+
+<p><tito-widget event="ultimateconf/2013"></tito-widget></p>
+<h2 id='tito-widget-v2-form-styles'>Form Styles</h2><pre class="highlight html tab-html"><code><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">'https://js.tito.io/v2/with/inline/without/widget-css'</span> <span class="na">async</span><span class="nt">&gt;&lt;/script&gt;</span>
+</code></pre>
+<p>Form styles are loaded automatically. If you wish to load the widget unstyled, you can add <code>with/inline/without/widget-css</code> in the <code>src</code> attribute.</p>
+
+<p>If you also want the order form to be unstyled, you can add <code>with/inline/without/widget-css,checkout-css</code>.</p>
+<pre class="highlight html tab-html"><code><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">'https://js.tito.io/v2/with/inline/without/widget-css,checkout-css'</span> <span class="na">async</span><span class="nt">&gt;&lt;/script&gt;</span>
+</code></pre><h2 id='tito-widget-v2-buttons'>Buttons</h2><pre class="highlight html tab-html"><code><span class="nt">&lt;tito-button</span> <span class="na">event=</span><span class="s">"ultimateconf/2013"</span><span class="nt">&gt;&lt;/tito-button&gt;</span>
+</code></pre>
+<p>If you just want a button, you can use <code>tito-button</code>. The button renders a <code>button</code> element with the <code>tito-widget-button</code> class. You can style this however you wish using CSS.</p>
+
+<p><tito-button event="ultimateconf/2013"></tito-button></p>
+
+<p>You can set the button label as you would ordinary html:</p>
+<pre class="highlight html tab-html"><code><span class="nt">&lt;tito-button</span> <span class="na">event=</span><span class="s">"ultimateconf/2013"</span><span class="nt">&gt;</span>My custom label<span class="nt">&lt;/tito-button&gt;</span>
+</code></pre>
+<p><tito-button event="ultimateconf/2013">My custom label</tito-button></p>
+<h2 id='tito-widget-v2-showing-specific-tickets'>Showing Specific tickets</h2>
+<p>You can pass a specific ticket or set of tickets to a widget, with the releases attribute:</p>
+<h3 id='tito-widget-v2-showing-specific-tickets-a-single-ticket'> A single ticket</h3><pre class="highlight html tab-html"><code><span class="nt">&lt;tito-button</span> <span class="na">event=</span><span class="s">"ultimateconf/2013"</span> <span class="na">releases=</span><span class="s">"3elajg6qcxu"</span><span class="nt">&gt;&lt;/tito-button&gt;</span>
+</code></pre>
+<p><tito-button event="ultimateconf/2013" releases="3elajg6qcxu">I only show one ticket</tito-button></p>
+<h3 id='tito-widget-v2-showing-specific-tickets-multiple-tickets'> Multiple tickets</h3>
+<p>Show multiple tickets with a comma separated list:</p>
+<pre class="highlight html tab-html"><code><span class="nt">&lt;tito-button</span> <span class="na">event=</span><span class="s">"ultimateconf/2013"</span> <span class="na">releases=</span><span class="s">"3elajg6qcxu,6qiiw4socs4"</span><span class="nt">&gt;&lt;/tito-button&gt;</span>
+</code></pre>
+<p><tito-button event="ultimateconf/2013" releases="3elajg6qcxu,6qiiw4socs4">I only show two tickets</tito-button></p>
+<h3 id='tito-widget-v2-showing-specific-tickets-widget'>Widget</h3>
+<p>This works for the widget too:</p>
+<pre class="highlight html tab-html"><code><span class="nt">&lt;tito-widget</span> <span class="na">event=</span><span class="s">"ultimateconf/2013"</span> <span class="na">releases=</span><span class="s">"3elajg6qcxu"</span><span class="nt">&gt;&lt;/tito-widget&gt;</span>
+</code></pre>
+<p><tito-widget event="ultimateconf/2013" releases="3elajg6qcxu"></tito-widget></p>
+<h3 id='tito-widget-v2-showing-specific-tickets-secret-tickets'>Secret tickets</h3>
+<p>If you reference a secret ticket in the list of releases to show then it will be shown (the release is shown regardless of its secret status).</p>
+<h2 id='tito-widget-v2-passing-in-a-discount-code'>Passing in a discount code</h2><pre class="highlight html tab-html"><code><span class="nt">&lt;tito-button</span> <span class="na">event=</span><span class="s">"ultimateconf/2013"</span> <span class="na">discount-code=</span><span class="s">"half-off"</span><span class="nt">&gt;&lt;/tito-button&gt;</span>
+</code></pre>
+<p><tito-button event="ultimateconf/2013" discount-code="half-off">I apply a discount code</tito-button></p>
+
+<p>This works for the widget too:</p>
+<pre class="highlight html tab-html"><code><span class="nt">&lt;tito-widget</span> <span class="na">event=</span><span class="s">"ultimateconf/2013"</span> <span class="na">discount-code=</span><span class="s">"half-off"</span><span class="nt">&gt;&lt;/tito-widget&gt;</span>
+</code></pre>
+<p><tito-widget event="ultimateconf/2013" discount-code="half-off">I apply a discount code</tito-widget></p>
+<h2 id='tito-widget-v2-javascript-api'>JavaScript API</h2><h3 id='tito-widget-v2-javascript-api-async'>Async</h3>
+<p>The widget loading code expects to be loaded async, so when using the API, you should not expect that the <code>tito</code> function will be defined when you call it. Like other embedded JavaScript widget APIs, the <code>tito</code> function simply adds actions to a queue and processes them later.</p>
+<pre class="highlight html tab-html"><code><span class="nt">&lt;script&gt;</span>
+<span class="nb">window</span><span class="p">.</span><span class="nx">tito</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">tito</span> <span class="o">||</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="p">(</span><span class="nx">tito</span><span class="p">.</span><span class="nx">q</span> <span class="o">=</span> <span class="nx">tito</span><span class="p">.</span><span class="nx">q</span> <span class="o">||</span> <span class="p">[]).</span><span class="nx">push</span><span class="p">(</span><span class="nx">arguments</span><span class="p">);};</span>
+<span class="nt">&lt;/script&gt;</span>
+</code></pre>
+<p>You should define <code>tito</code> before you make any calls.</p>
+<h3 id='tito-widget-v2-javascript-api-mounting-a-widget'>Mounting a widget</h3>
+<p>You can use the JavaScript API to load a widget on-demand without using the <code>tito-widget</code> or <code>tito-button</code> custom elements.</p>
+<pre class="highlight html tab-html"><code><span class="nt">&lt;script&gt;</span>
+  <span class="nx">tito</span><span class="p">(</span><span class="s2">"widget.mount"</span><span class="p">,</span> <span class="p">{</span><span class="na">el</span><span class="p">:</span> <span class="s2">"#tito-widget"</span><span class="p">,</span> <span class="na">event</span><span class="p">:</span> <span class="s2">"ultimateconf/2013"</span><span class="p">})</span>
+<span class="nt">&lt;/script&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"no-clear"</span> <span class="na">id=</span><span class="s">"tito-widget"</span><span class="nt">&gt;&lt;/div&gt;</span>
+
+</code></pre>
+<script>
+  tito("widget.mount", {el: "#tito-widget", event: "ultimateconf/2013"})
+</script>
+
+<div class="no-clear"><div id="tito-widget"></div></div>
+<h3 id='tito-widget-v2-javascript-api-mounting-a-button'> Mounting a button</h3><pre class="highlight html tab-html"><code><span class="nt">&lt;script&gt;</span>
+  <span class="nx">tito</span><span class="p">(</span><span class="s2">"button.mount"</span><span class="p">,</span> <span class="p">{</span><span class="na">el</span><span class="p">:</span> <span class="s2">"#tito-button"</span><span class="p">,</span> <span class="na">event</span><span class="p">:</span> <span class="s2">"ultimateconf/2013"</span><span class="p">})</span>
+<span class="nt">&lt;/script&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"no-clear"</span> <span class="na">id=</span><span class="s">"tito-button"</span><span class="nt">&gt;&lt;/div&gt;</span>
+
+</code></pre>
+<script>
+  tito("button.mount", {el: "#tito-button", event: "ultimateconf/2013"})
+</script>
+
+<div class="no-clear"><div id="tito-button"></div></div>
+<h2 id='tito-widget-v2-callbacks'>Callbacks</h2>
+<p>After you include the Tito JavaScript, you can create listeners to various events in the lifecycle of an order as it happens via the widget. Various data is also passed along with these lifecycle events.</p>
+
+<p>The syntax for listening for these events is very simple:</p>
+<pre class="highlight html tab-html"><code><span class="nt">&lt;script&gt;</span>
+  <span class="c1">// This copes with the javascript being loaded</span>
+  <span class="c1">// asycronously (recommended)</span>
+  <span class="nb">window</span><span class="p">.</span><span class="nx">tito</span> <span class="o">=</span>
+    <span class="nb">window</span><span class="p">.</span><span class="nx">tito</span> <span class="o">||</span>
+    <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+      <span class="p">(</span><span class="nx">tito</span><span class="p">.</span><span class="nx">q</span> <span class="o">=</span> <span class="nx">tito</span><span class="p">.</span><span class="nx">q</span> <span class="o">||</span> <span class="p">[]).</span><span class="nx">push</span><span class="p">(</span><span class="nx">arguments</span><span class="p">);</span>
+    <span class="p">};</span>
+
+  <span class="c1">// For example:</span>
+  <span class="nx">tito</span><span class="p">(</span><span class="s1">'on:widget:loaded'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">){</span>
+    <span class="c1">// code here will be fired when the purchase form loads</span>
+  <span class="p">})</span>
+
+<span class="nt">&lt;/script&gt;</span>
+</code></pre>
+<div></div>
+<h3 id='tito-widget-v2-callbacks-widget-loaded'>Widget loaded</h3><pre class="highlight javascript"><code><span class="nx">tito</span><span class="p">(</span><span class="s1">'on:widget:loaded'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">){</span>
+  <span class="c1">// code here will be fired when the purchase form loads</span>
+<span class="p">})</span>
+</code></pre><pre class="highlight json tab-json"><code><span class="err">//</span><span class="w"> </span><span class="err">Sample</span><span class="w"> </span><span class="err">data</span><span class="w">
+</span><span class="p">{</span><span class="w">
+  </span><span class="s2">"contact_email"</span><span class="p">:</span><span class="w">    </span><span class="s2">"hello@example.com"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"currency"</span><span class="p">:</span><span class="w">         </span><span class="s2">"USD"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"currency_symbol"</span><span class="p">:</span><span class="w">  </span><span class="s2">"$"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"default_locale"</span><span class="p">:</span><span class="w">   </span><span class="s2">"en"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"path"</span><span class="p">:</span><span class="w">             </span><span class="s2">"ultimateconf/2013"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"releases"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"price"</span><span class="p">:</span><span class="w">        </span><span class="s2">"100.0"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"title"</span><span class="p">:</span><span class="w">        </span><span class="s2">"Early Bird"</span><span class="p">,</span><span class="w">
+      </span><span class="err">...</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"price"</span><span class="p">:</span><span class="w">        </span><span class="s2">"120.0"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"title"</span><span class="p">:</span><span class="w">        </span><span class="s2">"Regular"</span><span class="p">,</span><span class="w">
+      </span><span class="err">...</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="s2">"title"</span><span class="p">:</span><span class="w">            </span><span class="s2">"UltimateConf 2013"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre>
+<p><code>on:widget:loaded</code></p>
+
+<p>Fires as soon as all the javascript has loaded and the widget has been displayed.</p>
+
+<div></div>
+<h3 id='tito-widget-v2-callbacks-registration-started'>Registration started</h3><pre class="highlight javascript"><code><span class="nx">tito</span><span class="p">(</span><span class="s1">'on:registration:started'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">){</span>
+  <span class="c1">// code here will be fired when the purchase form loads</span>
+<span class="p">})</span>
+</code></pre><pre class="highlight json tab-json"><code><span class="err">//</span><span class="w"> </span><span class="err">Sample</span><span class="w"> </span><span class="err">data</span><span class="w">
+</span><span class="p">{</span><span class="w">
+  </span><span class="s2">"slug"</span><span class="p">:</span><span class="w">           </span><span class="s2">"xyzdef123456"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"line_items"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+    </span><span class="s2">"release_slug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1234abcd"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"price"</span><span class="p">:</span><span class="w">        </span><span class="s2">"4.00"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"title"</span><span class="p">:</span><span class="w">        </span><span class="s2">"Regular"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"quantity"</span><span class="p">:</span><span class="w">     </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"total"</span><span class="p">:</span><span class="w">        </span><span class="s2">"4.00"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"currency"</span><span class="p">:</span><span class="w">     </span><span class="s2">"USD"</span><span class="w">
+  </span><span class="p">}]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre>
+<p><code>on:registration:started</code></p>
+
+<p>This happens when the purchase/registration form is displayed. It comes with a data object that contains the unique slug of the order, along with an object containing info about the tickets that the customer chose. eg.</p>
+
+<div></div>
+<h3 id='tito-widget-v2-callbacks-registration-finished'>Registration finished</h3><pre class="highlight javascript"><code><span class="nx">tito</span><span class="p">(</span><span class="s1">'on:registration:finished'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">){</span>
+  <span class="c1">// code here will be fired when the purchase form loads</span>
+<span class="p">})</span>
+</code></pre><pre class="highlight json tab-json"><code><span class="err">//</span><span class="w"> </span><span class="err">Sample</span><span class="w"> </span><span class="err">data</span><span class="w">
+</span><span class="p">{</span><span class="w">
+  </span><span class="s2">"name"</span><span class="p">:</span><span class="w">             </span><span class="s2">"Joe Joe"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"email"</span><span class="p">:</span><span class="w">            </span><span class="s2">"joe@joe.joe"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"total"</span><span class="p">:</span><span class="w">            </span><span class="s2">"4.00"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"currency"</span><span class="p">:</span><span class="w">         </span><span class="s2">"USD"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"slug"</span><span class="p">:</span><span class="w">             </span><span class="s2">"1234defg"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"reference"</span><span class="p">:</span><span class="w">        </span><span class="s2">"ABCD"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"line_items"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+    </span><span class="s2">"release_slug"</span><span class="p">:</span><span class="w">   </span><span class="s2">"1234abcd"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"price"</span><span class="p">:</span><span class="w">          </span><span class="s2">"4.00"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"title"</span><span class="p">:</span><span class="w">          </span><span class="s2">"Regular"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"quantity"</span><span class="p">:</span><span class="w">       </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"total"</span><span class="p">:</span><span class="w">          </span><span class="s2">"4.00"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"currency"</span><span class="p">:</span><span class="w">       </span><span class="s2">"USD"</span><span class="w">
+  </span><span class="p">}],</span><span class="w">
+  </span><span class="s2">"tickets"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+    </span><span class="s2">"reference"</span><span class="p">:</span><span class="w">      </span><span class="s2">"ABCD-1"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"slug"</span><span class="p">:</span><span class="w">           </span><span class="s2">"1234abcd"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"price"</span><span class="p">:</span><span class="w">          </span><span class="s2">"4.00"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"release_slug"</span><span class="p">:</span><span class="w">   </span><span class="s2">"1234abcd"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"release_title"</span><span class="p">:</span><span class="w">  </span><span class="s2">"Regular"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w">           </span><span class="s2">"Joe joe"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"email"</span><span class="p">:</span><span class="w">          </span><span class="s2">"joe@joe.joe"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"answers"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"question_id"</span><span class="p">:</span><span class="w">        </span><span class="mi">123</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"question"</span><span class="p">:</span><span class="w">           </span><span class="s2">"What is the flight speed of an unladen sparrow?"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"humanized_response"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1, 2 and 3"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"response"</span><span class="p">:</span><span class="w">           </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}],</span><span class="w">
+  </span><span class="s2">"receipt_url"</span><span class="p">:</span><span class="w">        </span><span class="s2">"http://ti.to/receipts/12345abcdef"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"registration_url"</span><span class="p">:</span><span class="w">   </span><span class="s2">"http://ti.to/registrations/12345abcdef"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"receipt"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"total"</span><span class="p">:</span><span class="w">            </span><span class="s2">"4.00"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"tax"</span><span class="p">:</span><span class="w">              </span><span class="s2">"0.00"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"payment_provider"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Stripe"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"discount_code"</span><span class="p">:</span><span class="w">      </span><span class="s2">""</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p><code>on:registration:finished</code></p>
+
+<p>This happens when the order is finished but not necessarily complete. It might not be complete if tickets have required questions that have yet to be filled in. It comes with full data about the order.</p>
+
+<div></div>
+
+<h3 class="beta-feature">
+  Terms accepted -Beta feature
+</h3>
+<pre class="highlight javascript"><code><span class="nx">tito</span><span class="p">(</span><span class="s1">'on:registration:terms_accepted'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span>
+  <span class="c1">// code here will be fired when the customer accepts your terms and conditions</span>
+<span class="p">})</span>
+</code></pre>
+<p><code>on:registration:terms_accepted</code></p>
+
+<p>This is a beta feature to make your customers accept some terms and conditions before proceding with the registration. Get in contact if you want to use this feature.</p>
+
+<p>This will get fired as soon as the customer accepts your terms and conditions. We don&#39;t know anything about them at this stage so it sends no data.</p>
+<h2 id='tito-widget-v2-prefill-data'>Prefill Data</h2><pre class="highlight html tab-html"><code><span class="nt">&lt;tito-widget</span>
+  <span class="na">event=</span><span class="s">"ultimateconf/2013"</span>
+  <span class="na">prefill=</span><span class="s">'{
+    "name": "Tony Soprano",
+    "email": "tony@sopranoinc.com"
+  }'</span>
+  <span class="nt">&gt;&lt;/tito-widget&gt;</span>
+</code></pre>
+<p>You can pass in data to the widget that will prefill certain fields to save your attendees time. Valid fields are:</p>
+
+<ul>
+<li><code>name</code></li>
+<li><code>email</code></li>
+<li><code>company_name</code></li>
+<li><code>vat_number</code></li>
+<li><code>phone_number</code></li>
+<li><code>address</code></li>
+<li><code>city</code></li>
+<li><code>state_province_region</code></li>
+<li><code>zip_postal_code</code></li>
+<li><code>country</code></li>
+<li><code>metadata</code></li>
+</ul>
+
+<p>You have to be a bit careful with quotes because the value is parsed as JSON and it expects double quotes. One solution is to wrap the attribute in single quotes like this:</p>
+
+<p><code>prefill=&#39;{ &quot;name&quot;: &quot;Tony Soprano&quot; }&#39;</code></p>
+
+<p>Or if you really want the attribute to use double-quotes then you need to escape the ones inside:</p>
+
+<p><code>prefill=&quot;{ &amp;quot;name&amp;quot;: &amp;quot;Tony Soprano&amp;quot; }&quot;</code></p>
+<h3 id='tito-widget-v2-prefill-data-using-the-url'>Using the URL</h3>
+<p>You can also pass data in using the <code>prefill</code> parameter in the URL:</p>
+
+<p><code>https://mywebsite.com/#/?prefill=%7B%22company_name%22%3A%20%22My%20Company%22%7D</code></p>
+
+<p>That&#39;s the equivalent of <code>prefill={&quot;company_name&quot;:&quot;My Company&quot;}</code> but it&#39;s escaped for use in a URL.</p>
+
+<p>Note that the <code>?prefill=</code> bit comes <strong>after</strong> the <code>/#/</code> bit.</p>
+<h2 id='tito-widget-v2-plugins'>Plugins</h2><pre class="highlight html tab-html"><code><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">'https://js.tito.io/v2/with/gtm'</span> <span class="na">async</span><span class="nt">&gt;&lt;/script&gt;</span>
+</code></pre>
+<p>Various plugins are available that have pre-defined integrations with third-party tools. To load plugins, you can append <code>with/&lt;pluginname&gt;</code> to the end of the <code>src</code> attribute of the <code>script</code> tag.</p>
+<h3 id='tito-widget-v2-plugins-google-tag-manager'> Google Tag Manager</h3>
+<p>The <code>gtm</code> plugin sends data to a <code>dataLayer</code> for use with Google Tag Manager. To use this plugin, the following must be set up:</p>
+
+<ol>
+<li>Google Tag Manager should already be loaded on the page you&#39;re embedding the widget</li>
+<li>Enhanced eCommerce must be set up on your tag</li>
+<li>You can track the folowing events:
+
+<ul>
+<li>tito:checkout</li>
+<li>tito:purchase</li>
+</ul></li>
+</ol>
+<h3 id='tito-widget-v2-plugins-facebook'>Facebook</h3>
+<p>The <code>facebook</code> plugin sends data via Facebook&#39;s <code>fbq</code> function. Make sure that you have loaded the facebook <code>script</code> to use this plugin.</p>
+<h2 id='tito-widget-v2-test-mode'>Test Mode</h2><pre class="highlight html tab-html"><code><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">'https://js.tito.io/v2?key=xyz'</span> <span class="na">async</span><span class="nt">&gt;&lt;/script&gt;</span>
+</code></pre>
+<p>You can load the widget in test mode by using a test mode publishable key.</p>
+
+<p>To get a test mode public key:</p>
+
+<ol>
+<li>Go to <a href="https://id.tito.io">https://id.tito.io</a></li>
+<li>Click on &quot;API Access&quot;</li>
+<li>Click on &quot;Generate New Token&quot;</li>
+<li>Choose &quot;Test&quot; and &quot;Publishable Key&quot; and click &quot;Create&quot;</li>
+</ol>
+
+<p>Now you can add <code>key=</code> to your <code>script</code> <code>src</code> attributes and all requests and purchases will be in test mode.</p>
+
+<p><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br></p>
+
+      </div>
+      <div class="dark-box">
+      </div>
+    </div>
+  </body>
+</html>
