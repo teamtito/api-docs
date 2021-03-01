@@ -53,6 +53,9 @@ If a request cannot be authenticated the Tito API returns the standard
 `401` unauthorized HTTP status code and includes more details of the
 authentication error in the HTTP response.
 
+The Tito API includes a machine readable `errors` key. It also has a `hint` key
+containing human friendly information on how to resolve your authentication error.
+
 ## Authorization Errors
 
 ```json
@@ -68,6 +71,3 @@ authentication error in the HTTP response.
 If a request cannot be authorized as a user has insufficient permissions
 the Tito API returns a `403` forbidden HTTP status code and includes more details of the
 authorization error in the HTTP response.
-
-The Tito API includes a machine readable `errors` key. It also has a `hint` key
-containing human friendly information on how to resolve your authentication error.
