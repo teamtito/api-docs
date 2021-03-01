@@ -28,11 +28,12 @@ Code | Meaning
 `201` Created | Your request has been fulfilled and has resulted in one or more new resources being created.
 `204` No Content | Your request has been fulfilled and that there is no additional content to send in the response payload body. e.g. deleting a resource.
 `401` Unauthorized | Your request is not authenticated. See the [Authentication Errors](#errors-authentication-errors) section for more information.
+`403` Forbidden | Your request is not authorized as the has user insufficient permissions. See the [Authorization Errors](#errors-authorization-errors) section for more information.
 `404` Page Not Found | The endpoint requested does not exist.
 `422` Unprocessable Entity | The resource couldn't be created or updated due to a validation error. Please see the response body for more information.
 `429` Too Many Requests | Your application is exceeding its rate limit. Slow down, pal!
 `500` Internal Server Error | Something is wrong on our end.
-`504` Gateway Timeout|Something has timed out on our end.
+`504` Gateway Timeout | Something has timed out on our end.
 
 
 ## Authentication Errors
@@ -49,9 +50,24 @@ Code | Meaning
 ```
 
 If a request cannot be authenticated the Tito API returns the standard
-`401` unauthorized HTTP status code and includes more detailed
-information on the exact nature of the authentication error in the HTTP
-response.
+`401` unauthorized HTTP status code and includes more details of the
+authentication error in the HTTP response.
+
+## Authorization Errors
+
+```json
+{
+  "errors": {
+    "status": 403,
+    "title": "Forbidden",
+    "detail": "You are not authorized to access refunds"
+  }
+}
+```
+
+If a request cannot be authorized as a user has insufficient permissions
+the Tito API returns a `403` forbidden HTTP status code and includes more details of the
+authorization error in the HTTP response.
 
 The Tito API includes a machine readable `errors` key. It also has a `hint` key
 containing human friendly information on how to resolve your authentication error.
