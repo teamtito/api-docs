@@ -229,7 +229,7 @@
             <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#authentication-declining-confirm-you-can-connect" class="toc-h2 toc-link" data-title="Confirm you can connect">Confirm you can connect</a>
+                    <a href="#authentication-20th-nov-2018-confirm-you-can-connect" class="toc-h2 toc-link" data-title="Confirm you can connect">Confirm you can connect</a>
                   </li>
               </ul>
           </li>
@@ -243,13 +243,13 @@
             <a href="#views" class="toc-h1 toc-link" data-title="Views">Views</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#views-declining-short" class="toc-h2 toc-link" data-title=" Short"> Short</a>
+                    <a href="#views-20th-nov-2018-short" class="toc-h2 toc-link" data-title=" Short"> Short</a>
                   </li>
                   <li>
-                    <a href="#views-declining-extended" class="toc-h2 toc-link" data-title="Extended">Extended</a>
+                    <a href="#views-20th-nov-2018-extended" class="toc-h2 toc-link" data-title="Extended">Extended</a>
                   </li>
                   <li>
-                    <a href="#views-declining-choosing-the-view" class="toc-h2 toc-link" data-title="Choosing the view">Choosing the view</a>
+                    <a href="#views-20th-nov-2018-choosing-the-view" class="toc-h2 toc-link" data-title="Choosing the view">Choosing the view</a>
                   </li>
               </ul>
           </li>
@@ -261,6 +261,9 @@
                   </li>
                   <li>
                     <a href="#errors-authentication-errors" class="toc-h2 toc-link" data-title="Authentication Errors">Authentication Errors</a>
+                  </li>
+                  <li>
+                    <a href="#errors-authorization-errors" class="toc-h2 toc-link" data-title="Authorization Errors">Authorization Errors</a>
                   </li>
               </ul>
           </li>
@@ -671,7 +674,7 @@ it will only read and write test data without affecting your live data. Note thi
 <p>If you find your API token has been compromised it can be <a href="https://id.tito.io/api-access-tokens">revoked</a> and a new one generated.</p>
 
 <p>Your API token needs to be included in the <code>Authorization</code> header so your requests can be authenticated.</p>
-<h3 id='authentication-declining-confirm-you-can-connect'>Confirm you can connect</h3><pre class="highlight shell tab-shell"><code>curl --request GET <span class="se">\</span>
+<h3 id='authentication-20th-nov-2018-confirm-you-can-connect'>Confirm you can connect</h3><pre class="highlight shell tab-shell"><code>curl --request GET <span class="se">\</span>
   --url <span class="s1">'https://api.tito.io/v3/hello'</span> <span class="se">\</span>
   --header <span class="s1">'Authorization: Token token=YOUR-API-TOKEN'</span> <span class="se">\</span>
   --header <span class="s1">'Accept: application/json'</span> <span class="se">\</span>
@@ -724,11 +727,11 @@ it will only read and write test data without affecting your live data. Note thi
 <li>Short</li>
 <li>Extended</li>
 </ul>
-<h3 id='views-declining-short'> Short</h3>
+<h3 id='views-20th-nov-2018-short'> Short</h3>
 <p>This is what you get if you ask for a list of records (e.g. <a href="#registrations-get-all-registrations">Get all Registrations</a>) then we give you the &quot;short&quot; view of the data, so that we can make the response as quick as possible and you don&#39;t get a lot of data all at once.</p>
-<h3 id='views-declining-extended'>Extended</h3>
+<h3 id='views-20th-nov-2018-extended'>Extended</h3>
 <p>If you ask for a single record (e.g. <a href="#registrations-get-a-registration">Get a Registration</a>) then we give you the &quot;extended&quot; view which gives you more detailed information and possible associated records.</p>
-<h3 id='views-declining-choosing-the-view'>Choosing the view</h3>
+<h3 id='views-20th-nov-2018-choosing-the-view'>Choosing the view</h3>
 <p>You can override this by passing the <code>view</code> parameter. For example:</p>
 
 <p><code>GET https://api.tito.io/v3/:account_slug/:event_slug/tickets?view=extended</code></p>
@@ -773,6 +776,10 @@ of errors.</p>
 <td>Your request is not authenticated. See the <a href="#errors-authentication-errors">Authentication Errors</a> section for more information.</td>
 </tr>
 <tr>
+<td><code>403</code> Forbidden</td>
+<td>Your request is not authorized as the user has insufficient permissions. See the <a href="#errors-authorization-errors">Authorization Errors</a> section for more information.</td>
+</tr>
+<tr>
 <td><code>404</code> Page Not Found</td>
 <td>The endpoint requested does not exist.</td>
 </tr>
@@ -803,12 +810,22 @@ of errors.</p>
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>If a request cannot be authenticated the Tito API returns the standard
-<code>401</code> unauthorized HTTP status code and includes more detailed
-information on the exact nature of the authentication error in the HTTP
-response.</p>
+<code>401</code> unauthorized HTTP status code and includes more details of the
+authentication error in the HTTP response.</p>
 
 <p>The Tito API includes a machine readable <code>errors</code> key. It also has a <code>hint</code> key
 containing human friendly information on how to resolve your authentication error.</p>
+<h2 id='errors-authorization-errors'>Authorization Errors</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"errors"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">403</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Forbidden"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"detail"</span><span class="p">:</span><span class="w"> </span><span class="s2">"You are not authorized to access refunds"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>If a request cannot be authorized as a user has insufficient permissions
+the Tito API returns a <code>403</code> forbidden HTTP status code and includes more details of the
+authorization error in the HTTP response.</p>
 <h1 id='activities'>Activities</h1>
 <p>Activities represent things that attendees can go to during your event
 that are not part of their ticket e.g. bowling or conference dinner.</p>
@@ -2074,17 +2091,17 @@ events, and show a schedule and itinerary to attendees.</p>
 
 <p>An event URL is comprised of the combination of the <code>account_slug</code> and the <code>event_slug</code>.</p>
 
-<p>For example <code>https://ti.to/ultimateconf/2020</code> is composed:</p>
+<p>For example <code>https://ti.to/ultimateconf/2021</code> is composed:</p>
 
 <ul>
 <li>The base <code>ti.to</code> URL</li>
 <li>The Ultimate Conf <code>Account</code> slug <code>ultimateconf</code></li>
-<li>The specific <code>Event</code> slug for the 2020 edition.</li>
+<li>The specific <code>Event</code> slug for the 2021 edition.</li>
 </ul>
 
 <p>The equivalent event can be looked up using a similar URL structure with the API base URL:</p>
 
-<p><code>https://api.tito.io/v3/ultimateconf/2020</code></p>
+<p><code>https://api.tito.io/v3/ultimateconf/2021</code></p>
 <h2 id='events-attributes'>Attributes</h2>
 <table><thead>
 <tr>
