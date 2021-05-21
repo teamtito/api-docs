@@ -37,10 +37,6 @@
       "description": "Fired when a registration is started e.g. after they have selected tickets but before they have filled in any details."
     },
     {
-      "name": "registration.filling",
-      "description": "Fired as soon as the person registering starts filling in details like name, email, etc."
-    },
-    {
       "name": "registration.updated",
       "description": "Fired when the registration is updated in the Tito admin area or via the API."
     },
