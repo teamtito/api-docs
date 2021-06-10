@@ -377,24 +377,41 @@ Note that the `?prefill=` bit comes **after** the `/#/` bit.
 ## Plugins
 
 ```html
-<script src='https://js.tito.io/v2/with/gtm' async></script>
+<script
+  src='https://js.tito.io/v2/with/plugin1,plugin2'
+  async
+  ></script>
 ```
 
-Various plugins are available that have pre-defined integrations with third-party tools. To load plugins, you can append `with/<pluginname>` to the end of the `src` attribute of the `script` tag.
-
-### Google Tag Manager
-
-The `gtm` plugin sends data to a `dataLayer` for use with Google Tag Manager. To use this plugin, the following must be set up:
-
-1. Google Tag Manager should already be loaded on the page you're embedding the widget
-2. Enhanced eCommerce must be set up on your tag
-3. You can track the folowing events:
-  - tito:checkout
-  - tito:purchase
+Various plugins are available that have pre-defined integrations with third-party tools. To load plugins, you can append `with/<pluginname>` to the end of the `src` attribute of the `script` tag. You can use multiple plugins by separating them with a comma.
 
 ### Facebook
 
 The `facebook` plugin sends data via Facebook's `fbq` function. Make sure that you have loaded the facebook `script` to use this plugin.
+
+### Inline
+
+By default, the widget is loaded inside an iframe. This makes it easy to isolate the CSS and make sure your website's design doesn't leak into the widget. However, if you want full control over how the widget looks then using the `inline` plugin will skip the iframe and embed it directly into your website. You can then use your own CSS to style the widget.
+
+Using the widget inline also allows you to listen to any of the javascript [callbacks](#tito-widget-v2-callbacks).
+
+### Google Analytics
+
+We have three different plugins for Google Analytics:
+
+* `google_analytics`
+* `gtag`
+* `gtm`
+
+Read more about which one to use and how to integrate it into your website [here](https://help.tito.io/en/articles/2006249-google-analytics).
+
+### Hits
+
+Use the `hits` plugin to record a page view every time someone loads the widget.
+
+### Trialfire
+
+Use the `trialfire` plugin to integrate with [Trialfire](https://trialfire.com/).
 
 ## Test Mode
 
