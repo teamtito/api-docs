@@ -1,7 +1,7 @@
 {
   "attributes": {
     "slug": {
-      "description": "A human friendly string used in the opt-in URL",
+      "description": "A human friendly string used in the opt-in URL. Automatically set from name.",
       "type": "string",
       "read_only": true,
       "required": false
