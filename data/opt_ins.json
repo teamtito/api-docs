@@ -1,0 +1,46 @@
+{
+  "attributes": {
+    "slug": {
+      "description": "A human friendly string used in the opt-in URL",
+      "type": "string",
+      "read_only": true,
+      "required": false
+    },
+    "name": {
+      "description": "The opt-in you would like to get consent for",
+      "type": "string",
+      "read_only": false,
+      "required": true
+    },
+    "description": {
+      "description": "A statement or tag line describing the opt-in",
+      "type": "string",
+      "read_only": false,
+      "required": false
+    },
+    "acceptance_count": {
+      "description": "The number of times the opt-in has been accepted",
+      "type": "integer",
+      "read_only": true,
+      "required": false
+    },
+    "release_ids": {
+      "description": "An array of IDs representing the releases that are associated with the opt-in",
+      "type": "array",
+      "read_only": false,
+      "required": false
+    },
+    "created_at": {
+      "description": "The date this opt-in was created",
+      "type": "datetime",
+      "read_only": true,
+      "required": false
+    },
+    "updated_at": {
+      "description": "The date this opt-in was last updated",
+      "type": "datetime",
+      "read_only": true,
+      "required": false
+    }
+  }
+}
