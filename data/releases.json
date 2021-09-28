@@ -128,7 +128,7 @@
       "required": false
     },
 
-    "waiting_list_enabled_during_locked" : {
+    "waiting_list_enabled_during_locked": {
       "description": "",
       "type": "boolean",
       "read_only": false,
@@ -437,8 +437,8 @@
       "required": false
     },
     "state": {
-      "description": "`100` : On sale<br /> `404` : Off sale. Default: `100`",
-      "type": "integer",
+      "description": "`100` (or the string \"on_sale\") or `404` (or the string \"off_sale\"). Default: `100` or "on_sale".
+      "type": "integer (or string)",
       "read_only": false,
       "required": false
     },
@@ -460,7 +460,7 @@
       "read_only": false,
       "required": true
     },
-    "waiting_list_enabled_during_sold_out" : {
+    "waiting_list_enabled_during_sold_out": {
       "description": "Enable waiting list when this release sells out or not. Default: `false`",
       "type": "boolean",
       "read_only": false,
