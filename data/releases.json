@@ -437,7 +437,7 @@
       "required": false
     },
     "state": {
-      "description": "`100` (or the string \"on_sale\") or `404` (or the string \"off_sale\"). Default: `100` or "on_sale".
+      "description": "`100` (or the string \"on_sale\") or `404` (or the string \"off_sale\"). Default: `100` or \"on_sale\"",
       "type": "integer (or string)",
       "read_only": false,
       "required": false
