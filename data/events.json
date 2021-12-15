@@ -36,6 +36,12 @@
       "read_only": false,
       "required": false
     },
+    "email": {
+      "description": "The contact email address so that attendees can get in touch.",
+      "type": "string",
+      "read_only": false,
+      "required": true
+    },
     "live": {
       "description": "Is it visible to the public or not.",
       "type": "boolean",
