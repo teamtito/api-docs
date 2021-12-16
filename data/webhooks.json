@@ -41,6 +41,10 @@
       "description": "Fired when the registration is updated in the Tito admin area or via the API."
     },
     {
+      "name": "registration.filling",
+      "description": "Fired as soon as the person registering starts to filling in details like name, email, etc."
+    },
+    {
       "name": "registration.finished",
       "description": "Fired as soon as the registration is confirmed, e.g. when payment is complete."
     },
