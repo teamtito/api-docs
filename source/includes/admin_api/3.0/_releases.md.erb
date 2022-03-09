@@ -12,7 +12,7 @@
     url: "#{config[:api_endpoint]}/:account_slug/:event_slug/releases"
   }
 %>
-<%= partial "includes/admin_api/releases/index.json" %>
+<%= partial "includes/admin_api/3.0/releases/index.json" %>
 
 Retrieves all `Releases` for the given `Event`.
 
@@ -28,7 +28,7 @@ Retrieves all `Releases` for the given `Event`.
     url: "#{config[:api_endpoint]}/:account_slug/:event_slug/releases/:release_slug"
   }
 %>
-<%= partial "includes/admin_api/releases/show.json" %>
+<%= partial "includes/admin_api/3.0/releases/show.json" %>
 
 Retrieves a `Release` for the given `Event`.
 
@@ -50,7 +50,7 @@ Retrieves a `Release` for the given `Event`.
     }
   }
 %>
-<%= partial "includes/admin_api/releases/create.json" %>
+<%= partial "includes/admin_api/3.0/releases/create.json" %>
 
 Create a new `Release` belonging to the given `Event`.
 
@@ -79,7 +79,7 @@ Create a new `Release` belonging to the given `Event`.
     }
   }
 %>
-<%= partial "includes/admin_api/releases/update.json" %>
+<%= partial "includes/admin_api/3.0/releases/update.json" %>
 
 Update a `Release` belonging to the given `Event`.
 

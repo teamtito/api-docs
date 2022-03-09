@@ -18,7 +18,7 @@ events, and show a schedule and itinerary to attendees.
     url: "#{config[:api_endpoint]}/:account_slug/:event_slug/activities"
   }
 %>
-<%= partial "includes/admin_api/activities/index.json" %>
+<%= partial "includes/admin_api/3.0/activities/index.json" %>
 
 
 Retrieves all `Activities` for the given `Event`.
@@ -35,7 +35,7 @@ Retrieves all `Activities` for the given `Event`.
     url: "#{config[:api_endpoint]}/:account_slug/:event_slug/activities/:activity_id"
   }
 %>
-<%= partial "includes/admin_api/activities/show.json" %>
+<%= partial "includes/admin_api/3.0/activities/show.json" %>
 
 Retrieves an `Activity` for the given `Event`.
 
@@ -58,7 +58,7 @@ Retrieves an `Activity` for the given `Event`.
     }
   }
 %>
-<%= partial "includes/admin_api/activities/create.json" %>
+<%= partial "includes/admin_api/3.0/activities/create.json" %>
 
 Create a new `Activity` belonging to the given `Event`.
 
@@ -83,7 +83,7 @@ Create a new `Activity` belonging to the given `Event`.
     }
   }
 %>
-<%= partial "includes/admin_api/activities/update.json" %>
+<%= partial "includes/admin_api/3.0/activities/update.json" %>
 
 Update an `Activity` belonging to the given `Event`.
 

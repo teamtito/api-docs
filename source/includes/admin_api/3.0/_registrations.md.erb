@@ -11,7 +11,7 @@
     url: "#{config[:api_endpoint]}/:account_slug/:event_slug/registrations"
   }
 %>
-<%= partial "includes/admin_api/registrations/index.json" %>
+<%= partial "includes/admin_api/3.0/registrations/index.json" %>
 
 
 Retrieves all `Registrations` for the given `Event`.
@@ -85,7 +85,7 @@ So, for instance, to find all registrations that have been updated in the last h
     url: "#{config[:api_endpoint]}/:account_slug/:event_slug/registrations/:registration_slug"
   }
 %>
-<%= partial "includes/admin_api/registrations/show.json" %>
+<%= partial "includes/admin_api/3.0/registrations/show.json" %>
 
 Retrieves a `Registration` for the given `Event`.
 
@@ -116,7 +116,7 @@ Retrieves a `Registration` for the given `Event`.
     }
   }
 %>
-<%= partial "includes/admin_api/registrations/show.json" %>
+<%= partial "includes/admin_api/3.0/registrations/show.json" %>
 
 Create a registration with one or more tickets.
 
@@ -142,7 +142,7 @@ Create a registration with one or more tickets.
     }
   }
 %>
-<%= partial "includes/admin_api/registrations/update.json" %>
+<%= partial "includes/admin_api/3.0/registrations/update.json" %>
 
 Update a `Registration` belonging to the given `Event`.
 
@@ -163,7 +163,7 @@ Update a `Registration` belonging to the given `Event`.
     url: "#{config[:api_endpoint]}/:account_slug/:event_slug/registrations/:registration_slug/confirmations"
   }
 %>
-<%= partial "includes/admin_api/registrations/update.json" %>
+<%= partial "includes/admin_api/3.0/registrations/update.json" %>
 
 <p class="beta-feature">
   Pay by Invoice is a beta feature. <a href="mailto:support@tito.io">Contact us</a> to get it enabled.
@@ -186,7 +186,7 @@ Changes the `receipt_paid` attribute to true.
     url: "#{config[:api_endpoint]}/:account_slug/:event_slug/registrations/:registration_slug/confirmations"
   }
 %>
-<%= partial "includes/admin_api/registrations/update_not_paid.json" %>
+<%= partial "includes/admin_api/3.0/registrations/update_not_paid.json" %>
 
 <p class="beta-feature">
   Pay by Invoice is a beta feature. <a href="mailto:support@tito.io">Contact us</a> to get it enabled.

@@ -17,7 +17,7 @@ Invite people to register and target specific releases. An `RSVP List` has many 
     url: "#{config[:api_endpoint]}/:account_slug/:event_slug/rsvp_lists"
   }
 %>
-<%= partial "includes/admin_api/rsvp_lists/index.json" %>
+<%= partial "includes/admin_api/3.0/rsvp_lists/index.json" %>
 
 Retrieves all `RSVP Lists` for the given `Event`.
 
@@ -33,7 +33,7 @@ Retrieves all `RSVP Lists` for the given `Event`.
     url: "#{config[:api_endpoint]}/:account_slug/:event_slug/rsvp_lists/:rsvp_list_slug"
   }
 %>
-<%= partial "includes/admin_api/rsvp_lists/show.json" %>
+<%= partial "includes/admin_api/3.0/rsvp_lists/show.json" %>
 
 Retrieves an `RSVP List` for the given `Event`.
 
@@ -55,7 +55,7 @@ Retrieves an `RSVP List` for the given `Event`.
     }
   }
 %>
-<%= partial "includes/admin_api/rsvp_lists/create.json" %>
+<%= partial "includes/admin_api/3.0/rsvp_lists/create.json" %>
 
 Create a new `RSVP List` belonging to the given `Event`.
 
@@ -84,7 +84,7 @@ Create a new `RSVP List` belonging to the given `Event`.
     }
   }
 %>
-<%= partial "includes/admin_api/rsvp_lists/update.json" %>
+<%= partial "includes/admin_api/3.0/rsvp_lists/update.json" %>
 
 Update an `RSVP List` belonging to the given `Event`.
 

@@ -12,7 +12,7 @@
     url: "#{config[:api_endpoint]}/:account_slug/:event_slug/webhook_endpoints"
   }
 %>
-<%= partial "includes/admin_api/webhook_endpoints/index.json" %>
+<%= partial "includes/admin_api/3.0/webhook_endpoints/index.json" %>
 
 
 Retrieves all `Webhook Endpoints` for the given `Event`.
@@ -29,7 +29,7 @@ Retrieves all `Webhook Endpoints` for the given `Event`.
     url: "#{config[:api_endpoint]}/:account_slug/:event_slug/webhook_endpoints/:id"
   }
 %>
-<%= partial "includes/admin_api/webhook_endpoints/show.json" %>
+<%= partial "includes/admin_api/3.0/webhook_endpoints/show.json" %>
 
 Retrieves an `Webhook Endpoint` for the given `Event`.
 
@@ -52,7 +52,7 @@ Retrieves an `Webhook Endpoint` for the given `Event`.
     }
   }
 %>
-<%= partial "includes/admin_api/webhook_endpoints/create.json" %>
+<%= partial "includes/admin_api/3.0/webhook_endpoints/create.json" %>
 
 Create a new `Webhook Endpoint` belonging to the given `Event`.
 
@@ -77,7 +77,7 @@ Create a new `Webhook Endpoint` belonging to the given `Event`.
     }
   }
 %>
-<%= partial "includes/admin_api/webhook_endpoints/update.json" %>
+<%= partial "includes/admin_api/3.0/webhook_endpoints/update.json" %>
 
 Update a `Webhook Endpoint` belonging to the given `Event`.
 

@@ -11,7 +11,7 @@
     url: "#{config[:api_endpoint]}/:account_slug/:event_slug/interested_users"
   }
 %>
-<%= partial "includes/admin_api/interested_users/index.json" %>
+<%= partial "includes/admin_api/3.0/interested_users/index.json" %>
 
 Retrieves all interested users (or people) for the given `Event`.
 
@@ -27,7 +27,7 @@ Retrieves all interested users (or people) for the given `Event`.
     url: "#{config[:api_endpoint]}/:account_slug/:event_slug/interested_users/:interested_user_id"
   }
 %>
-<%= partial "includes/admin_api/interested_users/show.json" %>
+<%= partial "includes/admin_api/3.0/interested_users/show.json" %>
 
 Retrieves an `InterestedUser` for the given `Event`.
 
@@ -51,7 +51,7 @@ Retrieves an `InterestedUser` for the given `Event`.
     }
   }
 %>
-<%= partial "includes/admin_api/interested_users/create.json" %>
+<%= partial "includes/admin_api/3.0/interested_users/create.json" %>
 
 Create a new `InterestedUser` belonging to the given `Event`.
 
@@ -76,7 +76,7 @@ Create a new `InterestedUser` belonging to the given `Event`.
     }
   }
 %>
-<%= partial "includes/admin_api/interested_users/update.json" %>
+<%= partial "includes/admin_api/3.0/interested_users/update.json" %>
 
 Update an `InterestedUser` belonging to the given `Event`.
 

@@ -11,7 +11,7 @@
     url: "#{config[:api_endpoint]}/:account_slug/:event_slug/tickets"
   }
 %>
-<%= partial "includes/admin_api/tickets/index.json" %>
+<%= partial "includes/admin_api/3.0/tickets/index.json" %>
 
 
 Retrieves all `Tickets` for the given `Event`.
@@ -117,7 +117,7 @@ So, for instance, to find all tickets that have been updated in the last hour:
     url: "#{config[:api_endpoint]}/:account_slug/:event_slug/tickets/:ticket_slug"
   }
 %>
-<%= partial "includes/admin_api/tickets/show.json" %>
+<%= partial "includes/admin_api/3.0/tickets/show.json" %>
 
 Retrieves a `Ticket` for the given `Event`.
 
@@ -141,7 +141,7 @@ Retrieves a `Ticket` for the given `Event`.
     }
   }
 %>
-<%= partial "includes/admin_api/tickets/create.json" %>
+<%= partial "includes/admin_api/3.0/tickets/create.json" %>
 
 Create a new `Ticket` belonging to the given `Event`.
 
@@ -166,7 +166,7 @@ Create a new `Ticket` belonging to the given `Event`.
     }
   }
 %>
-<%= partial "includes/admin_api/tickets/update.json" %>
+<%= partial "includes/admin_api/3.0/tickets/update.json" %>
 
 Update a `Ticket` belonging to the given `Event`.
 
@@ -195,7 +195,7 @@ Update a `Ticket` belonging to the given `Event`.
     }
   }
 %>
-<%= partial "includes/admin_api/reassignments/create.json" %>
+<%= partial "includes/admin_api/3.0/reassignments/create.json" %>
 
 Reassign a `Ticket` to a new attendee. It's different from just updating the email and name for a ticket: reassigning a ticket also sends out an email to the new attendee and (optionally) deletes all the answers made by the original attendee.
 
@@ -229,7 +229,7 @@ The following people receive an email after a reassignment:
     }
   }
 %>
-<%= partial "includes/admin_api/voids/create.json" %>
+<%= partial "includes/admin_api/3.0/voids/create.json" %>
 
 Void a `Ticket` so that it is no longer able to be used to [checkin](/docs/api/checkin) to an event.
 
