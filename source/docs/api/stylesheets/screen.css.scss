@@ -458,8 +458,7 @@ body {
   & > ul,
   & > ol,
   & > aside,
-  & > dl,
-  & > div {
+  & > dl {
     margin-right: $examples-width;
     padding: 0 $main-padding;
     box-sizing: border-box;
