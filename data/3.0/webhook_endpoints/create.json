@@ -1,0 +1,15 @@
+{
+  "webhook_endpoint": {
+    "_type": "webhook_endpoint",
+    "id": 2,
+    "url": "https://doesnotexist.tito.io/listen/456",
+    "included_triggers": [
+      "registration.finished"
+    ],
+    "custom_data": null,
+    "deprecated": false
+  },
+  "meta": {
+    "api_version": "3.0.0"
+  }
+}

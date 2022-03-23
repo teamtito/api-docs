@@ -1,0 +1,527 @@
+{
+  "registration": {
+    "_type": "registration",
+    "view": "extended",
+    "id": 1,
+    "slug": "reg_d4CgzKJD6jat8IzBd1BHG5Q",
+    "billing_address": null,
+    "created_at": "2022-03-23T11:35:12.000Z",
+    "updated_at": "2022-03-23T11:35:13.000Z",
+    "completed_at": "2022-03-23T11:35:12.000Z",
+    "discount_code": "FREE2U",
+    "email": "macie@example.org",
+    "job_title": null,
+    "expires_at": "2022-03-23 11:50:12 UTC",
+    "ip_address": null,
+    "locale": "en",
+    "metadata": null,
+    "name": "Darth Sidious",
+    "company_name": null,
+    "payment_reference": null,
+    "payment_option_name": null,
+    "phone_number": null,
+    "registration_type": "manual",
+    "reference": "ZZPZ",
+    "source": null,
+    "state": "incomplete",
+    "test_mode": false,
+    "cancelled": false,
+    "cancelled_at": null,
+    "cancelled_by": null,
+    "free": true,
+    "paid": false,
+    "invoice": true,
+    "manual": true,
+    "imported": false,
+    "refundable": false,
+    "refunded": false,
+    "partially_refunded": false,
+    "receipt_paid": true,
+    "receipt_number": "0000001",
+    "receipt_id": 1,
+    "payment_incomplete": false,
+    "payment_complete": false,
+    "total": 0.0,
+    "tickets_count": 4,
+    "consented_at": null,
+    "terms_accepted": false,
+    "termset_ids": [
+
+    ],
+    "editable_total_and_prices": true,
+    "payment": {
+      "reference": null,
+      "type": "invoice",
+      "refundable_amount": 0.0
+    },
+    "total_less_tax": 0.0,
+    "discount_code_id": 1,
+    "payment_option_provider_name": null,
+    "quantities": {
+      "standard": {
+        "release": "Standard",
+        "quantity": 1
+      },
+      "speaker": {
+        "release": "Speaker",
+        "quantity": 3
+      }
+    },
+    "receipt": {
+      "id": 1,
+      "slug": "rct_dWpiJsi1ADCEgdx1pWPIM5A",
+      "total": 0.0,
+      "receipt_lines": [
+        {
+          "id": 1,
+          "quantity": 1,
+          "description": "Standard",
+          "price": 0.0,
+          "total": 0.0,
+          "receipt_line_taxes": [
+
+          ]
+        },
+        {
+          "id": 2,
+          "quantity": 3,
+          "description": "Speaker",
+          "price": 0.0,
+          "total": 0.0,
+          "receipt_line_taxes": [
+
+          ]
+        }
+      ]
+    },
+    "receipts": [
+      {
+        "_type": "receipt",
+        "id": 1,
+        "total": 0.0,
+        "slug": "rct_dWpiJsi1ADCEgdx1pWPIM5A",
+        "created_at": "2022-03-23T11:35:12.000Z",
+        "updated_at": "2022-03-23T11:35:12.000Z",
+        "currency": "USD",
+        "paid": true,
+        "payment": null,
+        "refund": null,
+        "billing_address": null,
+        "number": 1,
+        "company_name": null,
+        "vat_number": null,
+        "test_mode": false,
+        "unique_url": "https://ti.to/receipts/rct_dWpiJsi1ADCEgdx1pWPIM5A",
+        "external_url": null
+      }
+    ],
+    "refunds": [
+
+    ],
+    "tickets": [
+      {
+        "_type": "ticket",
+        "view": "extended",
+        "id": 1,
+        "slug": "ti_dM3B8apXNkaCHacEc3Edmvg",
+        "unique_url": "https://ti.to/demo/awesomeconf/tickets/ti_dM3B8apXNkaCHacEc3Edmvg",
+        "company_name": null,
+        "email": null,
+        "metadata": null,
+        "first_name": null,
+        "last_name": null,
+        "name": "",
+        "number": 1,
+        "phone_number": null,
+        "price": 0.0,
+        "reference": "ZZPZ-1",
+        "state": "incomplete",
+        "test_mode": false,
+        "registration_id": 1,
+        "registration_name": "Darth Sidious",
+        "registration_email": "macie@example.org",
+        "release_id": 2,
+        "release_title": "Standard",
+        "release_archived": false,
+        "avatar_url": "https://secure.gravatar.com/avatar/d41d8cd98f00b204e9800998ecf8427e?default=https://starwavatars.global.ssl.fastly.net/avatars/d41d8cd98f00b204e9800998ecf8427e.png",
+        "void": false,
+        "changes_locked": false,
+        "consented_at": null,
+        "discount_code_used": "FREE2U",
+        "tag_names": [
+
+        ],
+        "created_at": "2022-03-23T11:35:12.000Z",
+        "updated_at": "2022-03-23T11:35:13.000Z",
+        "opt_ins": [
+
+        ],
+        "responses": {
+          "favorite-color": "Red"
+        },
+        "assigned": false,
+        "qr_url": "https://qr.tito.io/tickets/ti_dM3B8apXNkaCHacEc3Edmvg",
+        "show_qr_code": false,
+        "qr_code_disabled": false,
+        "price_less_tax": 0.0,
+        "total_paid": 0.0,
+        "total_tax_paid": 0.0,
+        "total_paid_less_tax": 0.0,
+        "tags": null,
+        "upgrade_ids": [
+
+        ],
+        "registration_slug": "reg_d4CgzKJD6jat8IzBd1BHG5Q",
+        "release_slug": "standard",
+        "lock_changes": false,
+        "activities": [
+          {
+            "id": 1,
+            "event_id": 1,
+            "name_before_translations": null,
+            "capacity": 100,
+            "created_at": "2022-03-23T11:35:12.000Z",
+            "updated_at": "2022-03-23T11:35:50.000Z",
+            "accommodation": null,
+            "importer_id": null,
+            "show_to_attendee": true,
+            "venue_id": 1,
+            "start_time": "2000-01-01T09:00:00.000Z",
+            "end_time": "2000-01-01T17:00:00.000Z",
+            "date": "2022-12-25",
+            "description": "An activity for Conference",
+            "name": "Conference"
+          },
+          {
+            "id": 5,
+            "event_id": 1,
+            "name_before_translations": null,
+            "capacity": 100,
+            "created_at": "2022-03-23T11:35:51.000Z",
+            "updated_at": "2022-03-23T11:35:51.000Z",
+            "accommodation": null,
+            "importer_id": null,
+            "show_to_attendee": true,
+            "venue_id": 1,
+            "start_time": "2000-01-01T09:00:00.000Z",
+            "end_time": "2000-01-01T17:00:00.000Z",
+            "date": "2022-12-25",
+            "description": "An activity for Conference",
+            "name": "Conference Copy"
+          }
+        ]
+      },
+      {
+        "_type": "ticket",
+        "view": "extended",
+        "id": 2,
+        "slug": "ti_dw7aMzB6Znqs3HahQDjt07g",
+        "unique_url": "https://ti.to/demo/awesomeconf/tickets/ti_dw7aMzB6Znqs3HahQDjt07g",
+        "company_name": null,
+        "email": "macie+2@example.org",
+        "metadata": null,
+        "first_name": "Darth",
+        "last_name": "Sidious",
+        "name": "Darth Sidious",
+        "number": 2,
+        "phone_number": null,
+        "price": 0.0,
+        "reference": "ZZPZ-2",
+        "state": "complete",
+        "test_mode": false,
+        "registration_id": 1,
+        "registration_name": "Darth Sidious",
+        "registration_email": "macie@example.org",
+        "release_id": 4,
+        "release_title": "Speaker",
+        "release_archived": false,
+        "avatar_url": "https://secure.gravatar.com/avatar/acb92296b829374f27c1a9c873917011?default=https://starwavatars.global.ssl.fastly.net/avatars/acb92296b829374f27c1a9c873917011.png",
+        "void": false,
+        "changes_locked": false,
+        "consented_at": null,
+        "discount_code_used": null,
+        "tag_names": [
+
+        ],
+        "created_at": "2022-03-23T11:35:12.000Z",
+        "updated_at": "2022-03-23T11:35:13.000Z",
+        "opt_ins": [
+
+        ],
+        "responses": {
+          "where-do-you-live": "France"
+        },
+        "assigned": true,
+        "qr_url": "https://qr.tito.io/tickets/ti_dw7aMzB6Znqs3HahQDjt07g",
+        "show_qr_code": true,
+        "qr_code_disabled": false,
+        "price_less_tax": 0.0,
+        "total_paid": 0.0,
+        "total_tax_paid": 0.0,
+        "total_paid_less_tax": 0.0,
+        "tags": null,
+        "upgrade_ids": [
+
+        ],
+        "registration_slug": "reg_d4CgzKJD6jat8IzBd1BHG5Q",
+        "release_slug": "speaker",
+        "lock_changes": false,
+        "activities": [
+          {
+            "id": 2,
+            "event_id": 1,
+            "name_before_translations": null,
+            "capacity": 197,
+            "created_at": "2022-03-23T11:35:12.000Z",
+            "updated_at": "2022-03-23T11:35:12.000Z",
+            "accommodation": null,
+            "importer_id": null,
+            "show_to_attendee": true,
+            "venue_id": 1,
+            "start_time": "2000-01-01T09:00:00.000Z",
+            "end_time": "2000-01-01T17:00:00.000Z",
+            "date": "2022-12-25",
+            "description": "An activity for Dinner",
+            "name": "Dinner"
+          },
+          {
+            "id": 3,
+            "event_id": 1,
+            "name_before_translations": null,
+            "capacity": 202,
+            "created_at": "2022-03-23T11:35:12.000Z",
+            "updated_at": "2022-03-23T11:35:12.000Z",
+            "accommodation": null,
+            "importer_id": null,
+            "show_to_attendee": true,
+            "venue_id": 1,
+            "start_time": "2000-01-01T09:00:00.000Z",
+            "end_time": "2000-01-01T17:00:00.000Z",
+            "date": "2022-12-25",
+            "description": "An activity for Workshop",
+            "name": "Workshop"
+          }
+        ]
+      },
+      {
+        "_type": "ticket",
+        "view": "extended",
+        "id": 3,
+        "slug": "ti_d8kXrneQVVf8ujOlBe1QNXA",
+        "unique_url": "https://ti.to/demo/awesomeconf/tickets/ti_d8kXrneQVVf8ujOlBe1QNXA",
+        "company_name": null,
+        "email": "macie+3@example.org",
+        "metadata": null,
+        "first_name": "Darth",
+        "last_name": "Sidious",
+        "name": "Darth Sidious",
+        "number": 3,
+        "phone_number": null,
+        "price": 0.0,
+        "reference": "ZZPZ-3",
+        "state": "complete",
+        "test_mode": false,
+        "registration_id": 1,
+        "registration_name": "Darth Sidious",
+        "registration_email": "macie@example.org",
+        "release_id": 4,
+        "release_title": "Speaker",
+        "release_archived": false,
+        "avatar_url": "https://secure.gravatar.com/avatar/a053c79a3dcb5976828f84bd623a4218?default=https://starwavatars.global.ssl.fastly.net/avatars/a053c79a3dcb5976828f84bd623a4218.png",
+        "void": false,
+        "changes_locked": false,
+        "consented_at": null,
+        "discount_code_used": null,
+        "tag_names": [
+
+        ],
+        "created_at": "2022-03-23T11:35:12.000Z",
+        "updated_at": "2022-03-23T11:35:13.000Z",
+        "opt_ins": [
+
+        ],
+        "responses": {
+          "where-do-you-live": "France"
+        },
+        "assigned": true,
+        "qr_url": "https://qr.tito.io/tickets/ti_d8kXrneQVVf8ujOlBe1QNXA",
+        "show_qr_code": true,
+        "qr_code_disabled": false,
+        "price_less_tax": 0.0,
+        "total_paid": 0.0,
+        "total_tax_paid": 0.0,
+        "total_paid_less_tax": 0.0,
+        "tags": null,
+        "upgrade_ids": [
+
+        ],
+        "registration_slug": "reg_d4CgzKJD6jat8IzBd1BHG5Q",
+        "release_slug": "speaker",
+        "lock_changes": false,
+        "activities": [
+          {
+            "id": 2,
+            "event_id": 1,
+            "name_before_translations": null,
+            "capacity": 197,
+            "created_at": "2022-03-23T11:35:12.000Z",
+            "updated_at": "2022-03-23T11:35:12.000Z",
+            "accommodation": null,
+            "importer_id": null,
+            "show_to_attendee": true,
+            "venue_id": 1,
+            "start_time": "2000-01-01T09:00:00.000Z",
+            "end_time": "2000-01-01T17:00:00.000Z",
+            "date": "2022-12-25",
+            "description": "An activity for Dinner",
+            "name": "Dinner"
+          },
+          {
+            "id": 3,
+            "event_id": 1,
+            "name_before_translations": null,
+            "capacity": 202,
+            "created_at": "2022-03-23T11:35:12.000Z",
+            "updated_at": "2022-03-23T11:35:12.000Z",
+            "accommodation": null,
+            "importer_id": null,
+            "show_to_attendee": true,
+            "venue_id": 1,
+            "start_time": "2000-01-01T09:00:00.000Z",
+            "end_time": "2000-01-01T17:00:00.000Z",
+            "date": "2022-12-25",
+            "description": "An activity for Workshop",
+            "name": "Workshop"
+          }
+        ]
+      },
+      {
+        "_type": "ticket",
+        "view": "extended",
+        "id": 4,
+        "slug": "ti_d6clZXJfi9SUNpWgYAgpFsQ",
+        "unique_url": "https://ti.to/demo/awesomeconf/tickets/ti_d6clZXJfi9SUNpWgYAgpFsQ",
+        "company_name": null,
+        "email": "macie+4@example.org",
+        "metadata": null,
+        "first_name": "Darth",
+        "last_name": "Sidious",
+        "name": "Darth Sidious",
+        "number": 4,
+        "phone_number": null,
+        "price": 0.0,
+        "reference": "ZZPZ-4",
+        "state": "complete",
+        "test_mode": false,
+        "registration_id": 1,
+        "registration_name": "Darth Sidious",
+        "registration_email": "macie@example.org",
+        "release_id": 4,
+        "release_title": "Speaker",
+        "release_archived": false,
+        "avatar_url": "https://secure.gravatar.com/avatar/7271f2d45e78a998e1b36f308815340e?default=https://starwavatars.global.ssl.fastly.net/avatars/7271f2d45e78a998e1b36f308815340e.png",
+        "void": false,
+        "changes_locked": false,
+        "consented_at": null,
+        "discount_code_used": null,
+        "tag_names": [
+
+        ],
+        "created_at": "2022-03-23T11:35:12.000Z",
+        "updated_at": "2022-03-23T11:35:13.000Z",
+        "opt_ins": [
+
+        ],
+        "responses": {
+          "where-do-you-live": "United Kingdom"
+        },
+        "assigned": true,
+        "qr_url": "https://qr.tito.io/tickets/ti_d6clZXJfi9SUNpWgYAgpFsQ",
+        "show_qr_code": true,
+        "qr_code_disabled": false,
+        "price_less_tax": 0.0,
+        "total_paid": 0.0,
+        "total_tax_paid": 0.0,
+        "total_paid_less_tax": 0.0,
+        "tags": null,
+        "upgrade_ids": [
+
+        ],
+        "registration_slug": "reg_d4CgzKJD6jat8IzBd1BHG5Q",
+        "release_slug": "speaker",
+        "lock_changes": false,
+        "activities": [
+          {
+            "id": 2,
+            "event_id": 1,
+            "name_before_translations": null,
+            "capacity": 197,
+            "created_at": "2022-03-23T11:35:12.000Z",
+            "updated_at": "2022-03-23T11:35:12.000Z",
+            "accommodation": null,
+            "importer_id": null,
+            "show_to_attendee": true,
+            "venue_id": 1,
+            "start_time": "2000-01-01T09:00:00.000Z",
+            "end_time": "2000-01-01T17:00:00.000Z",
+            "date": "2022-12-25",
+            "description": "An activity for Dinner",
+            "name": "Dinner"
+          },
+          {
+            "id": 3,
+            "event_id": 1,
+            "name_before_translations": null,
+            "capacity": 202,
+            "created_at": "2022-03-23T11:35:12.000Z",
+            "updated_at": "2022-03-23T11:35:12.000Z",
+            "accommodation": null,
+            "importer_id": null,
+            "show_to_attendee": true,
+            "venue_id": 1,
+            "start_time": "2000-01-01T09:00:00.000Z",
+            "end_time": "2000-01-01T17:00:00.000Z",
+            "date": "2022-12-25",
+            "description": "An activity for Workshop",
+            "name": "Workshop"
+          }
+        ]
+      }
+    ],
+    "line_items": [
+      {
+        "_type": "line_item",
+        "id": 1,
+        "title": "Standard",
+        "created_at": "2022-03-23T11:35:12.000Z",
+        "updated_at": "2022-03-23T11:35:12.000Z",
+        "quantity": 1,
+        "price": 0.0,
+        "price_inc_tax": 0.0,
+        "price_ex_tax": 0.0,
+        "test_mode": false,
+        "release_id": 2,
+        "release_slug": "standard",
+        "release_title": "Standard"
+      },
+      {
+        "_type": "line_item",
+        "id": 2,
+        "title": "Speaker",
+        "created_at": "2022-03-23T11:35:12.000Z",
+        "updated_at": "2022-03-23T11:35:12.000Z",
+        "quantity": 3,
+        "price": 0.0,
+        "price_inc_tax": 0.0,
+        "price_ex_tax": 0.0,
+        "test_mode": false,
+        "release_id": 4,
+        "release_slug": "speaker",
+        "release_title": "Speaker"
+      }
+    ]
+  },
+  "meta": {
+    "api_version": "3.0.0"
+  }
+}

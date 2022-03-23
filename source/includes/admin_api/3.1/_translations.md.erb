@@ -1,0 +1,27 @@
+# Translations
+
+Translated attributes will be shown for each `locale` for your event if you have provided them and you have more than one locale set up. You can force the translations to be shown even for one locale by using `?expand=translations`.
+
+## One locale
+
+In this example, the event only has one locale so the `translations` attribute is omited.
+
+<%= show_url "questions/:question_slug" %>
+<%= display_response :show, resource: :questions %>
+<%= show_url_key "questions/:question_slug" %>
+
+## Multiple locales
+
+In this example, the event only has two locales so the `translations` attribute is shown.
+
+<%= show_url "questions/:question_slug" %>
+<%= display_response :show_with_german, resource: :questions %>
+<%= show_url_key "questions/:question_slug" %>
+
+## Force
+
+If you need it, you can force the `translations` to be shown even if you only have one locale by expanding with "translations".
+
+<%= show_url "questions/:question_slug?expand=translations" %>
+<%= display_response :show_with_expanded, resource: :questions %>
+<%= show_url_key "questions/:question_slug?expand=translations" %>

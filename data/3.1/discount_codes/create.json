@@ -1,0 +1,27 @@
+{
+  "discount_code": {
+    "_type": "discount_code",
+    "id": 4,
+    "code": "rS0Y5fBuCA8HJw",
+    "description": "Sell for 50.0% less. Unlimited. Applies to 0 tickets. Not used yet.",
+    "description_for_organizer": null,
+    "end_at": null,
+    "max_quantity_per_release": null,
+    "min_quantity_per_release": null,
+    "only_show_attached": false,
+    "quantity": null,
+    "quantity_used": 0,
+    "registrations_count": 0,
+    "reveal_secret": false,
+    "share_url": "https://ti.to/demo/awesomeconf/discount/rS0Y5fBuCA8HJw",
+    "start_at": null,
+    "state": "current",
+    "tickets_count": 0,
+    "type": "PercentOffDiscountCode",
+    "value": "50.0",
+    "disable_for_degressive": false
+  },
+  "meta": {
+    "api_version": "3.1.0"
+  }
+}

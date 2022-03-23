@@ -1,0 +1,28 @@
+{
+  "release_invitation": {
+    "_type": "release_invitation",
+    "id": 12,
+    "slug": "rsvp_dFCz3ldlDhtid3GGRhx92yw",
+    "first_name": null,
+    "last_name": null,
+    "email": "mtbi4sHq924tEg@example.com",
+    "name": "",
+    "unique_url": "https://ti.to/demo/awesomeconf/rsvp/rsvp_dFCz3ldlDhtid3GGRhx92yw",
+    "status": null,
+    "redeemed": false,
+    "registration_id": null,
+    "created_at": "2022-03-23T11:36:15.000Z",
+    "updated_at": "2022-03-23T11:36:15.000Z",
+    "importer_id": null,
+    "expires_at": null,
+    "rsvp_list_id": 1,
+    "discount_code": null,
+    "message_delivery_id": null,
+    "auto": false,
+    "guest": false,
+    "redirect": false
+  },
+  "meta": {
+    "api_version": "3.1.0"
+  }
+}

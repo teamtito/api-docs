@@ -1,5 +1,5 @@
 # Unique header generation
-require './lib/nesting_unique_head.rb'
+require "./lib/nesting_unique_head.rb"
 
 # Markdown
 set :markdown_engine, :redcarpet
@@ -15,32 +15,31 @@ set :markdown,
     renderer: NestingUniqueHeadCounter
 
 # Assets
-set :css_dir, 'docs/api/stylesheets'
-set :js_dir, 'docs/api/javascripts'
-set :images_dir, 'docs/api/images'
-set :fonts_dir, 'docs/api/fonts'
+set :css_dir, "docs/api/stylesheets"
+set :js_dir, "docs/api/javascripts"
+set :images_dir, "docs/api/images"
+set :fonts_dir, "docs/api/fonts"
 
 # Activate the syntax highlighter
 activate :syntax
 ready do
-  require './lib/monokai_sublime_slate.rb'
-  require './lib/multilang.rb'
+  require "./lib/monokai_sublime_slate.rb"
+  require "./lib/multilang.rb"
 end
 
 activate :sprockets
 
 activate :autoprefixer do |config|
-  config.browsers = ['last 2 version', 'Firefox ESR']
-  config.cascade  = false
-  config.inline   = true
+  config.browsers = ["last 2 version", "Firefox ESR"]
+  config.cascade = false
+  config.inline = true
 end
 
 config[:api_endpoint] = "https://api.tito.io/v3"
 config[:api_token] = "YOUR-API-TOKEN"
 config[:checkin_api_endpoint] = "https://checkin.tito.io"
 config[:checkout_api_endpoint] = "https://checkout.tito.io"
-config[:url_substitutions] = {
-}
+config[:url_substitutions] = {}
 
 # Build Configuration
 configure :build do
@@ -62,7 +61,8 @@ end
 set :port, 4567
 
 helpers do
-  require './lib/toc_data.rb'
+  require "./lib/toc_data.rb"
+  require "./lib/doc_builder.rb"
 
   def apply_api_subsititions(url)
     config[:url_substitutions].reduce(url) { |url, (name, value)| url.gsub(":#{name}", value) }

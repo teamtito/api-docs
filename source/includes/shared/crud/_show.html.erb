@@ -1,0 +1,9 @@
+<%= show_url "#{resource_plural}/:#{resource_name}#{id_suffix}" %>
+<%= display_response :show %>
+<%= show_url_key "#{resource_plural}/:#{resource_name}#{id_suffix}" %>
+
+<% if expansions&.any? %>
+Use [expansions](#<%= resource %>-expansions) to return more data. For example:
+
+<%= show_expand_example "#{resource_plural}/:#{resource_name}#{id_suffix}", expansions %>
+<% end %>

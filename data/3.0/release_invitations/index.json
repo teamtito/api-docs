@@ -1,0 +1,71 @@
+{
+  "release_invitations": [
+    {
+      "_type": "release_invitation",
+      "id": 7,
+      "slug": "rsvp_dbddKn3Y3ujT1my8FnH5WPA",
+      "first_name": "Panaka",
+      "last_name": null,
+      "email": "woodrow_weber@example.org",
+      "name": "Panaka",
+      "unique_url": "https://ti.to/demo/awesomeconf/rsvp/rsvp_dbddKn3Y3ujT1my8FnH5WPA",
+      "status": "no",
+      "redeemed": false,
+      "registration_id": null,
+      "registration_slug": null,
+      "registration_url": null,
+      "registration_reference": null,
+      "releases": [
+
+      ]
+    },
+    {
+      "_type": "release_invitation",
+      "id": 8,
+      "slug": "rsvp_dUVbd8rlA3G7NfCkvrkElnQ",
+      "first_name": "Qui-Gon",
+      "last_name": "Jinn",
+      "email": "tyree@example.com",
+      "name": "Qui-Gon Jinn",
+      "unique_url": "https://ti.to/demo/awesomeconf/rsvp/rsvp_dUVbd8rlA3G7NfCkvrkElnQ",
+      "status": "maybe",
+      "redeemed": false,
+      "registration_id": null,
+      "registration_slug": null,
+      "registration_url": null,
+      "registration_reference": null,
+      "releases": [
+
+      ]
+    },
+    "..."
+  ],
+  "meta": {
+    "api_version": "3.0.0",
+    "current_page": 1,
+    "next_page": null,
+    "prev_page": null,
+    "total_pages": 1,
+    "total_count": 10,
+    "per_page": 100,
+    "overall_total": 10,
+    "filter_options": {
+      "sections": {
+        "states": {
+          "label": "Status",
+          "open": false
+        }
+      },
+      "collection": false,
+      "states": [
+        {
+          "label": "Redeemed",
+          "value": "redeemed"
+        }
+      ],
+      "selected_states": [
+
+      ]
+    }
+  }
+}

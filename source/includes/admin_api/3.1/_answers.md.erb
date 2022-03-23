@@ -1,0 +1,24 @@
+# Answers
+
+<% set_resource :answers %>
+
+Answers to [questions](#questions)
+
+## Attributes <%= icon_for :attributes %>
+
+<%= show_doc :attributes %>
+
+## Expansions <%= icon_for :expansions %>
+
+<%= show_doc :expansions %>
+
+## Get all answers <%= icon_for :index %>
+
+<%= show_doc(
+  :index,
+  overrides: {
+    path: "questions/:question_slug/answers",
+    description: "All the answers for a single [question](#questions)."
+  }
+)
+ %>

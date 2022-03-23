@@ -1,0 +1,28 @@
+{
+  "opt_in": {
+    "_type": "opt_in",
+    "view": "extended",
+    "id": 2,
+    "slug": "swag",
+    "name": "Swag",
+    "description": "Would you like SWAG?",
+    "release_ids": [
+
+    ],
+    "acceptance_count": 0,
+    "created_at": "2022-03-23T11:35:56.000Z",
+    "updated_at": "2022-03-23T11:35:56.000Z",
+    "translations": {
+      "en": {
+        "name": "Swag",
+        "description": "Would you like SWAG?"
+      }
+    },
+    "releases": [
+
+    ]
+  },
+  "meta": {
+    "api_version": "3.0.0"
+  }
+}

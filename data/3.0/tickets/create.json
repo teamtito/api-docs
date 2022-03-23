@@ -1,0 +1,278 @@
+{
+  "ticket": {
+    "_type": "ticket",
+    "view": "extended",
+    "id": 182,
+    "slug": "ti_dwZMXyfLzuTdJR6SJeX8H6A",
+    "unique_url": "https://ti.to/demo/awesomeconf/tickets/ti_dwZMXyfLzuTdJR6SJeX8H6A",
+    "company_name": null,
+    "email": null,
+    "metadata": null,
+    "first_name": null,
+    "last_name": null,
+    "name": "",
+    "number": 182,
+    "phone_number": null,
+    "price": 0.0,
+    "reference": "NTNX-1",
+    "state": "incomplete",
+    "test_mode": false,
+    "registration_id": 32,
+    "registration_name": "",
+    "registration_email": null,
+    "release_id": 1,
+    "release_title": "Early Bird",
+    "release_archived": false,
+    "avatar_url": "https://secure.gravatar.com/avatar/d41d8cd98f00b204e9800998ecf8427e?default=https://starwavatars.global.ssl.fastly.net/avatars/d41d8cd98f00b204e9800998ecf8427e.png",
+    "void": false,
+    "changes_locked": false,
+    "consented_at": null,
+    "discount_code_used": null,
+    "tag_names": [
+
+    ],
+    "created_at": "2022-03-23T11:36:03.000Z",
+    "updated_at": "2022-03-23T11:36:03.000Z",
+    "opt_ins": [
+
+    ],
+    "responses": {
+    },
+    "assigned": false,
+    "qr_url": "https://qr.tito.io/tickets/ti_dwZMXyfLzuTdJR6SJeX8H6A",
+    "show_qr_code": false,
+    "qr_code_disabled": false,
+    "price_less_tax": 0.0,
+    "total_paid": 0.0,
+    "total_tax_paid": 0.0,
+    "total_paid_less_tax": 0.0,
+    "tags": null,
+    "upgrade_ids": [
+
+    ],
+    "registration_slug": "reg_dsUdlkaWBbqG2u1DzIv1iLg",
+    "release_slug": "early-bird",
+    "lock_changes": false,
+    "activities": [
+      {
+        "id": 1,
+        "event_id": 1,
+        "name_before_translations": null,
+        "capacity": 100,
+        "created_at": "2022-03-23T11:35:12.000Z",
+        "updated_at": "2022-03-23T11:35:50.000Z",
+        "accommodation": null,
+        "importer_id": null,
+        "show_to_attendee": true,
+        "venue_id": 1,
+        "start_time": "2000-01-01T09:00:00.000Z",
+        "end_time": "2000-01-01T17:00:00.000Z",
+        "date": "2022-12-25",
+        "description": "An activity for Conference",
+        "name": "Conference"
+      },
+      {
+        "id": 5,
+        "event_id": 1,
+        "name_before_translations": null,
+        "capacity": 100,
+        "created_at": "2022-03-23T11:35:51.000Z",
+        "updated_at": "2022-03-23T11:35:51.000Z",
+        "accommodation": null,
+        "importer_id": null,
+        "show_to_attendee": true,
+        "venue_id": 1,
+        "start_time": "2000-01-01T09:00:00.000Z",
+        "end_time": "2000-01-01T17:00:00.000Z",
+        "date": "2022-12-25",
+        "description": "An activity for Conference",
+        "name": "Conference Copy"
+      }
+    ],
+    "registration": {
+      "_type": "registration",
+      "view": "extended",
+      "id": 32,
+      "slug": "reg_dsUdlkaWBbqG2u1DzIv1iLg",
+      "billing_address": null,
+      "created_at": "2022-03-23T11:36:03.000Z",
+      "updated_at": "2022-03-23T11:36:03.000Z",
+      "completed_at": "2022-03-23T11:36:03.000Z",
+      "discount_code": null,
+      "email": null,
+      "job_title": null,
+      "expires_at": "2022-03-23 11:51:03 UTC",
+      "ip_address": "172.19.0.8",
+      "locale": "en",
+      "metadata": null,
+      "name": "",
+      "company_name": null,
+      "payment_reference": null,
+      "payment_option_name": null,
+      "phone_number": null,
+      "registration_type": "manual",
+      "reference": "NTNX",
+      "source": null,
+      "state": "incomplete",
+      "test_mode": false,
+      "cancelled": false,
+      "cancelled_at": null,
+      "cancelled_by": null,
+      "free": true,
+      "paid": false,
+      "invoice": false,
+      "manual": true,
+      "imported": false,
+      "refundable": false,
+      "refunded": false,
+      "partially_refunded": false,
+      "receipt_paid": true,
+      "receipt_number": "0000064",
+      "receipt_id": 64,
+      "payment_incomplete": false,
+      "payment_complete": false,
+      "total": 0.0,
+      "tickets_count": 1,
+      "consented_at": null,
+      "terms_accepted": false,
+      "termset_ids": [
+
+      ],
+      "editable_total_and_prices": true,
+      "payment": {
+        "reference": null,
+        "type": "manual",
+        "refundable_amount": 0.0
+      },
+      "total_less_tax": 0.0,
+      "discount_code_id": null,
+      "payment_option_provider_name": null,
+      "quantities": {
+        "early-bird": {
+          "release": "Early Bird",
+          "quantity": 1
+        }
+      },
+      "receipt": {
+        "id": 64,
+        "slug": "rct_dNT6N1ZCO5CFCXcRyiCPElw",
+        "total": 0.0,
+        "receipt_lines": [
+          {
+            "id": 101,
+            "quantity": 1,
+            "description": "Early Bird",
+            "price": 0.0,
+            "total": 0.0,
+            "receipt_line_taxes": [
+
+            ]
+          }
+        ]
+      }
+    },
+    "release": {
+      "_type": "release",
+      "view": "extended",
+      "id": 1,
+      "event_id": 1,
+      "created_at": "2022-03-23T11:35:11.000Z",
+      "updated_at": "2022-03-23T11:35:59.000Z",
+      "slug": "early-bird",
+      "title": "Early Bird",
+      "description": null,
+      "archived": false,
+      "card_payments": true,
+      "default_quantity": 0,
+      "donation": false,
+      "enable_super_combo_summary": true,
+      "end_at": null,
+      "has_success_message": false,
+      "has_fail_message": false,
+      "invoice": false,
+      "max_donation": null,
+      "max_tickets_per_person": null,
+      "metadata": {
+        "my_release_variable": "else",
+        "another_release_variable": 456
+      },
+      "min_tickets_per_person": null,
+      "min_donation": null,
+      "not_a_ticket": false,
+      "show_qr_code": true,
+      "only_issue_combos": false,
+      "pricing_type": "paid",
+      "payment_type": "paid",
+      "position": 0,
+      "price": 90.0,
+      "price_ex_tax": 90.0,
+      "tax_exclusive": false,
+      "price_degressive": null,
+      "price_degressive_list": [
+
+      ],
+      "quantity": 300,
+      "request_company_name": null,
+      "request_vat_number": null,
+      "require_vat_number": false,
+      "require_billing_address": null,
+      "require_credit_card_for_sold_out_waiting_list": false,
+      "require_email": true,
+      "require_name": false,
+      "secret": false,
+      "show_price": true,
+      "suggested_donation": "90.0",
+      "lock_changes": null,
+      "state_name": "on_sale",
+      "start_at": null,
+      "waiting_list_enabled_during_locked": false,
+      "waiting_list_enabled_during_sold_out": false,
+      "share_url": "https://ti.to/demo/awesomeconf/with/early-bird",
+      "tickets_count": 50,
+      "locked": false,
+      "waiting_list": false,
+      "sold_out": false,
+      "off_sale": false,
+      "expired": false,
+      "upcoming": false,
+      "allocatable": true,
+      "changes_locked": false,
+      "deletable": false,
+      "question_ids": [
+        1
+      ],
+      "display_price": 90.0,
+      "gross_income": 0.0,
+      "full_price_tickets_count": 49,
+      "free_tickets_count": 0,
+      "discounted_tickets_count": 0,
+      "voided_tickets_count": 0,
+      "pending_waiting_list": false,
+      "show_company_name": false,
+      "require_company_name": false,
+      "show_vat_number": false,
+      "show_discount_code_field_here": null,
+      "show_phone_number": false,
+      "tax_description": null,
+      "translations": {
+        "en": {
+          "description": null,
+          "fail_message": null,
+          "success_message": null,
+          "title": "Early Bird"
+        }
+      },
+      "warnings": {
+        "quantity": "This ticket’s quantity is set to 300 but there are only 8 remaining because it is limited by the capacity of the Conference and Conference Copy activities."
+      },
+      "termset_id": null,
+      "ticket_group_id": null
+    },
+    "answers": [
+
+    ]
+  },
+  "meta": {
+    "api_version": "3.0.0"
+  }
+}

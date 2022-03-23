@@ -1,0 +1,36 @@
+{
+  "release_invitation": {
+    "_type": "release_invitation",
+    "view": "extended",
+    "id": 1,
+    "slug": "rsvp_dh1UpLoeCy6ENfeERbYcOqg",
+    "first_name": "Qui-Gon",
+    "last_name": "Jinn",
+    "email": "shaniya_ernser@example.org",
+    "name": "Qui-Gon Jinn",
+    "unique_url": "https://ti.to/demo/awesomeconf/rsvp/rsvp_dh1UpLoeCy6ENfeERbYcOqg",
+    "status": "yes",
+    "redeemed": true,
+    "registration_id": 24,
+    "registration_slug": "reg_deDNBDXcXXR1LJU0gdqp9lw",
+    "registration_url": "https://ti.to/registrations/reg_deDNBDXcXXR1LJU0gdqp9lw",
+    "registration_reference": "PVVD",
+    "releases": [
+
+    ],
+    "release_id": null,
+    "created_at": "2022-03-23T11:35:32.000Z",
+    "updated_at": "2022-03-23T11:35:32.000Z",
+    "importer_id": null,
+    "expires_at": null,
+    "rsvp_list_id": 1,
+    "discount_code": null,
+    "message_delivery_id": null,
+    "auto": false,
+    "guest": false,
+    "redirect": false
+  },
+  "meta": {
+    "api_version": "3.0.0"
+  }
+}

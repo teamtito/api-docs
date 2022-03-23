@@ -1,0 +1,51 @@
+{
+  "checkin_list": {
+    "_type": "checkin_list",
+    "view": "extended",
+    "id": 2,
+    "activity_ids": [
+
+    ],
+    "checked_in_count": 0,
+    "expires_at": null,
+    "expired": false,
+    "open": true,
+    "qr_code_url": "https://qr.tito.io/checkin_lists/chk_dBYGEdu8s7rELZkE64sjimA",
+    "question_ids": [
+
+    ],
+    "release_ids": [
+
+    ],
+    "show_company_name": true,
+    "show_email": true,
+    "show_phone_number": true,
+    "hide_unpaid": false,
+    "slug": "chk_dBYGEdu8s7rELZkE64sjimA",
+    "state": "open",
+    "title": "Back door",
+    "tickets_count": 180,
+    "created_at": "2022-03-23T11:35:52.000Z",
+    "updated_at": "2022-03-23T11:35:52.000Z",
+    "checked_in_percent": 0.0,
+    "web_checkin_url": "https://checkin.tito.io/checkin_lists/chk_dBYGEdu8s7rELZkE64sjimA",
+    "activities": [
+
+    ],
+    "checkins": [
+
+    ],
+    "questions": [
+
+    ],
+    "releases": [
+
+    ],
+    "tickets": [
+
+    ]
+  },
+  "meta": {
+    "api_version": "3.0.0"
+  }
+}

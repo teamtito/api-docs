@@ -1,0 +1,47 @@
+# RSVP Release Invitations
+<p class="beta-feature">
+  RSVP is a beta feature. <a href="mailto:support@tito.io">Contact us</a> to get it enabled.
+</p>
+
+An `RSVP Release Invitation` belongs to an [RSVP list](#rsvp-lists)
+
+<% set_resource :release_invitations %>
+
+## Attributes <%= icon_for :attributes %>
+
+<%= show_doc :attributes %>
+
+## Expansions <%= icon_for :expansions %>
+
+<%= show_doc :expansions %>
+
+## Get all release invitations <%= icon_for :index %>
+
+<%= show_doc(
+  :index,
+  overrides: {
+    path: "rsvp_lists/:rsvp_list_slug/release_invitations",
+    description: "All the release invitations for a single [RSVP list](#rsvp-lists)."
+  }
+) %>
+
+## Get a release invitation <%= icon_for :show %>
+
+<%= show_doc(
+  :show,
+  overrides: {
+    path: "rsvp_lists/:rsvp_list_slug/release_invitations/:release_invitation_id"
+  }
+) %>
+
+## Create a release invitation <%= icon_for :create %>
+
+<%= show_doc :create %>
+
+## Update a release invitation <%= icon_for :update %>
+
+<%= show_doc :update %>
+
+## Delete a release invitation <%= icon_for :delete %>
+
+<%= show_doc :delete %>

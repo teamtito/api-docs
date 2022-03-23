@@ -1,0 +1,45 @@
+{
+  "interested_users": [
+    {
+      "_type": "interested_user",
+      "id": 1,
+      "name": "Chewbacca",
+      "email": "OI92RcvEdqQA1g@example.com",
+      "created_at": "2022-03-23T11:35:12.000Z",
+      "updated_at": "2022-03-23T11:35:55.000Z"
+    },
+    {
+      "_type": "interested_user",
+      "id": 2,
+      "name": "Poe Dameron",
+      "email": "santiago.douglas@example.org",
+      "created_at": "2022-03-23T11:35:12.000Z",
+      "updated_at": "2022-03-23T11:35:12.000Z"
+    },
+    "..."
+  ],
+  "meta": {
+    "api_version": "3.1.0",
+    "expandable": {
+    },
+    "current_page": 1,
+    "next_page": null,
+    "prev_page": null,
+    "total_pages": 1,
+    "total_count": 3,
+    "per_page": 100,
+    "overall_total": 3,
+    "filter_options": {
+      "sections": {
+        "states": {
+          "label": "Status",
+          "open": false
+        }
+      },
+      "collection": false,
+      "states": [
+
+      ]
+    }
+  }
+}

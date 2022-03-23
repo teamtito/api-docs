@@ -1,0 +1,190 @@
+{
+  "registrations": [
+    {
+      "_type": "registration",
+      "id": 29,
+      "slug": "reg_dN6RCdDLiQuBj3ThAx7oXKg",
+      "billing_address": null,
+      "created_at": "2022-03-23T11:35:31.000Z",
+      "updated_at": "2022-03-23T11:35:31.000Z",
+      "completed_at": "2022-03-23T11:35:31.000Z",
+      "discount_code": null,
+      "email": "carli.mcdermott@example.net",
+      "job_title": null,
+      "expires_at": "2022-03-23 11:50:31 UTC",
+      "ip_address": null,
+      "locale": "en",
+      "metadata": null,
+      "name": "Poe Dameron",
+      "company_name": null,
+      "payment_reference": null,
+      "payment_option_name": null,
+      "phone_number": null,
+      "registration_type": "manual",
+      "reference": "TLLS",
+      "source": null,
+      "state": "incomplete",
+      "test_mode": false,
+      "cancelled": false,
+      "cancelled_at": null,
+      "cancelled_by": null,
+      "free": false,
+      "paid": true,
+      "invoice": true,
+      "manual": true,
+      "imported": false,
+      "refundable": true,
+      "refunded": false,
+      "partially_refunded": false,
+      "receipt_paid": true,
+      "receipt_number": "0000059",
+      "receipt_id": 59,
+      "payment_incomplete": false,
+      "payment_complete": true,
+      "total": 190.0,
+      "tickets_count": 4,
+      "consented_at": null
+    },
+    {
+      "_type": "registration",
+      "id": 30,
+      "slug": "reg_ddYOVFgISCd6R48JkK5XYzQ",
+      "billing_address": null,
+      "created_at": "2022-03-23T11:35:31.000Z",
+      "updated_at": "2022-03-23T11:35:32.000Z",
+      "completed_at": "2022-03-23T11:35:31.000Z",
+      "discount_code": null,
+      "email": "carley.grimes@example.net",
+      "job_title": null,
+      "expires_at": "2022-03-23 11:50:31 UTC",
+      "ip_address": null,
+      "locale": "en",
+      "metadata": null,
+      "name": "Yoda",
+      "company_name": null,
+      "payment_reference": null,
+      "payment_option_name": null,
+      "phone_number": null,
+      "registration_type": "manual",
+      "reference": "LDDW",
+      "source": null,
+      "state": "incomplete",
+      "test_mode": false,
+      "cancelled": false,
+      "cancelled_at": null,
+      "cancelled_by": null,
+      "free": false,
+      "paid": true,
+      "invoice": true,
+      "manual": true,
+      "imported": false,
+      "refundable": true,
+      "refunded": false,
+      "partially_refunded": false,
+      "receipt_paid": true,
+      "receipt_number": "0000061",
+      "receipt_id": 61,
+      "payment_incomplete": false,
+      "payment_complete": true,
+      "total": 90.0,
+      "tickets_count": 5,
+      "consented_at": null
+    },
+    "..."
+  ],
+  "meta": {
+    "api_version": "3.0.0",
+    "current_page": 1,
+    "next_page": null,
+    "prev_page": null,
+    "total_pages": 1,
+    "total_count": 30,
+    "per_page": 100,
+    "overall_total": 30,
+    "resources_hidden_by_default_count": 0,
+    "search_states_hidden_by_default": [
+      "cancelled"
+    ],
+    "sort_options": {
+      "Name A-Z": {
+        "attr": "name",
+        "direction": "asc"
+      },
+      "Name Z-A": {
+        "attr": "name",
+        "direction": "desc"
+      },
+      "Purchase date, earliest first": {
+        "attr": "created_at",
+        "direction": "asc"
+      },
+      "Purchase date, newest first": {
+        "attr": "created_at",
+        "direction": "desc"
+      },
+      "Total paid, least first": {
+        "attr": "total",
+        "direction": "asc"
+      },
+      "Total paid, most first": {
+        "attr": "total",
+        "direction": "desc",
+        "default": true
+      },
+      "Reference": {
+        "attr": "reference",
+        "direction": "asc"
+      },
+      "Payment provider": {
+        "attr": "payment_provider",
+        "direction": "asc"
+      },
+      "Last change": {
+        "attr": "updated_at",
+        "direction": "desc"
+      }
+    },
+    "filter_options": {
+      "sections": {
+        "states": {
+          "label": "Status",
+          "open": false
+        }
+      },
+      "collection": false,
+      "states": [
+        {
+          "label": "Paid",
+          "value": "paid"
+        },
+        {
+          "label": "Unpaid",
+          "value": "unpaid"
+        },
+        {
+          "label": "Complete",
+          "value": "complete"
+        },
+        {
+          "label": "Confirmed",
+          "value": "confirmed"
+        },
+        {
+          "label": "Incomplete",
+          "value": "incomplete"
+        },
+        {
+          "label": "Cancelled",
+          "value": "cancelled"
+        }
+      ],
+      "selected_states": [
+        "paid",
+        "unpaid",
+        "complete",
+        "confirmed",
+        "incomplete"
+      ]
+    }
+  }
+}

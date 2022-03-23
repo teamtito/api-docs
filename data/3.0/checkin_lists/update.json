@@ -1,0 +1,582 @@
+{
+  "checkin_list": {
+    "_type": "checkin_list",
+    "view": "extended",
+    "id": 1,
+    "activity_ids": [
+      1,
+      2,
+      3
+    ],
+    "checked_in_count": 0,
+    "expires_at": null,
+    "expired": false,
+    "open": true,
+    "qr_code_url": "https://qr.tito.io/checkin_lists/chk_ddMFpeUNJU5np8s1FuVd7UA",
+    "question_ids": [
+      "favorite-color",
+      "where-do-you-live"
+    ],
+    "release_ids": [
+      "early-bird",
+      "exhibitor",
+      "speaker",
+      "standard"
+    ],
+    "show_company_name": true,
+    "show_email": true,
+    "show_phone_number": true,
+    "hide_unpaid": false,
+    "slug": "chk_ddMFpeUNJU5np8s1FuVd7UA",
+    "state": "open",
+    "title": "Front door",
+    "tickets_count": 180,
+    "created_at": "2022-03-23T11:35:12.000Z",
+    "updated_at": "2022-03-23T11:35:52.000Z",
+    "checked_in_percent": 0.0,
+    "web_checkin_url": "https://checkin.tito.io/checkin_lists/chk_ddMFpeUNJU5np8s1FuVd7UA",
+    "activities": [
+      {
+        "_type": "activity",
+        "view": "extended",
+        "id": 1,
+        "capacity": 100,
+        "date": "2022-12-25",
+        "description": "An activity for Conference",
+        "start_time": "09:00",
+        "end_time": "17:00",
+        "start_at": "2022-12-25T09:00:00.000Z",
+        "end_at": "2022-12-25T17:00:00.000Z",
+        "name": "Conference",
+        "private": true,
+        "question_ids": [
+          2
+        ],
+        "venue_id": 1,
+        "accommodation": null,
+        "allocation_count": 90,
+        "sold_out": false,
+        "show_to_attendee": true,
+        "release_ids": [
+          "early-bird",
+          "standard"
+        ],
+        "translations": {
+          "en": {
+            "description": "An activity for Conference",
+            "name": "Conference"
+          }
+        }
+      },
+      {
+        "_type": "activity",
+        "view": "extended",
+        "id": 2,
+        "capacity": 197,
+        "date": "2022-12-25",
+        "description": "An activity for Dinner",
+        "start_time": "09:00",
+        "end_time": "17:00",
+        "start_at": "2022-12-25T09:00:00.000Z",
+        "end_at": "2022-12-25T17:00:00.000Z",
+        "name": "Dinner",
+        "private": true,
+        "question_ids": [
+
+        ],
+        "venue_id": 1,
+        "accommodation": null,
+        "allocation_count": 90,
+        "sold_out": false,
+        "show_to_attendee": true,
+        "release_ids": [
+          "exhibitor",
+          "speaker"
+        ],
+        "translations": {
+          "en": {
+            "description": "An activity for Dinner",
+            "name": "Dinner"
+          }
+        }
+      },
+      {
+        "_type": "activity",
+        "view": "extended",
+        "id": 3,
+        "capacity": 202,
+        "date": "2022-12-25",
+        "description": "An activity for Workshop",
+        "start_time": "09:00",
+        "end_time": "17:00",
+        "start_at": "2022-12-25T09:00:00.000Z",
+        "end_at": "2022-12-25T17:00:00.000Z",
+        "name": "Workshop",
+        "private": true,
+        "question_ids": [
+
+        ],
+        "venue_id": 1,
+        "accommodation": null,
+        "allocation_count": 40,
+        "sold_out": false,
+        "show_to_attendee": true,
+        "release_ids": [
+          "speaker"
+        ],
+        "translations": {
+          "en": {
+            "description": "An activity for Workshop",
+            "name": "Workshop"
+          }
+        }
+      }
+    ],
+    "checkins": [
+
+    ],
+    "questions": [
+      {
+        "_type": "question",
+        "view": "extended",
+        "id": 1,
+        "answers_count": 47,
+        "description": "What is your most favorite color of all?",
+        "title": "Favorite color?",
+        "field_type": "Text",
+        "include_free_text_field": false,
+        "required": false,
+        "slug": "favorite-color",
+        "tickets_count": 90,
+        "translations": {
+          "en": {
+            "description": "What is your most favorite color of all?",
+            "options": null,
+            "options_free_text_field": null,
+            "title": "Favorite color?"
+          }
+        },
+        "created_at": "2022-03-23T11:35:12.000Z",
+        "updated_at": "2022-03-23T11:35:12.000Z"
+      },
+      {
+        "_type": "question",
+        "view": "extended",
+        "id": 2,
+        "answers_count": 150,
+        "description": "To help us with travel arrangements",
+        "title": "Where do you live?",
+        "field_type": "Country",
+        "include_free_text_field": false,
+        "required": true,
+        "slug": "where-do-you-live",
+        "tickets_count": 0,
+        "translations": {
+          "en": {
+            "description": "To help us with travel arrangements",
+            "options": null,
+            "options_free_text_field": null,
+            "title": "Where do you live?"
+          }
+        },
+        "created_at": "2022-03-23T11:35:12.000Z",
+        "updated_at": "2022-03-23T11:35:12.000Z"
+      }
+    ],
+    "releases": [
+      {
+        "_type": "release",
+        "view": "extended",
+        "id": 1,
+        "event_id": 1,
+        "created_at": "2022-03-23T11:35:11.000Z",
+        "updated_at": "2022-03-23T11:35:11.000Z",
+        "slug": "early-bird",
+        "title": "Early Bird",
+        "description": null,
+        "archived": false,
+        "card_payments": true,
+        "default_quantity": 0,
+        "donation": false,
+        "enable_super_combo_summary": true,
+        "end_at": null,
+        "has_success_message": false,
+        "has_fail_message": false,
+        "invoice": false,
+        "max_donation": null,
+        "max_tickets_per_person": null,
+        "metadata": {
+          "my_release_variable": "else",
+          "another_release_variable": 456
+        },
+        "min_tickets_per_person": null,
+        "min_donation": null,
+        "not_a_ticket": false,
+        "show_qr_code": true,
+        "only_issue_combos": false,
+        "pricing_type": "paid",
+        "payment_type": "paid",
+        "position": 0,
+        "price": 90.0,
+        "price_ex_tax": 90.0,
+        "tax_exclusive": false,
+        "price_degressive": null,
+        "price_degressive_list": [
+
+        ],
+        "quantity": 100,
+        "request_company_name": null,
+        "request_vat_number": null,
+        "require_vat_number": false,
+        "require_billing_address": null,
+        "require_credit_card_for_sold_out_waiting_list": false,
+        "require_email": true,
+        "require_name": false,
+        "secret": false,
+        "show_price": true,
+        "suggested_donation": "90.0",
+        "lock_changes": null,
+        "state_name": "on_sale",
+        "start_at": null,
+        "waiting_list_enabled_during_locked": false,
+        "waiting_list_enabled_during_sold_out": false,
+        "share_url": "https://ti.to/demo/awesomeconf/with/early-bird",
+        "tickets_count": 48,
+        "locked": false,
+        "waiting_list": false,
+        "sold_out": false,
+        "off_sale": false,
+        "expired": false,
+        "upcoming": false,
+        "allocatable": true,
+        "changes_locked": false,
+        "deletable": false,
+        "question_ids": [
+          1
+        ],
+        "display_price": 90.0,
+        "gross_income": 0.0,
+        "full_price_tickets_count": 48,
+        "free_tickets_count": 0,
+        "discounted_tickets_count": 0,
+        "voided_tickets_count": 0,
+        "pending_waiting_list": false,
+        "show_company_name": false,
+        "require_company_name": false,
+        "show_vat_number": false,
+        "show_discount_code_field_here": null,
+        "show_phone_number": false,
+        "tax_description": null,
+        "translations": {
+          "en": {
+            "description": null,
+            "fail_message": null,
+            "success_message": null,
+            "title": "Early Bird"
+          }
+        },
+        "warnings": {
+        },
+        "termset_id": null,
+        "ticket_group_id": null
+      },
+      {
+        "_type": "release",
+        "view": "extended",
+        "id": 2,
+        "event_id": 1,
+        "created_at": "2022-03-23T11:35:11.000Z",
+        "updated_at": "2022-03-23T11:35:11.000Z",
+        "slug": "standard",
+        "title": "Standard",
+        "description": null,
+        "archived": false,
+        "card_payments": true,
+        "default_quantity": 0,
+        "donation": false,
+        "enable_super_combo_summary": true,
+        "end_at": null,
+        "has_success_message": false,
+        "has_fail_message": false,
+        "invoice": false,
+        "max_donation": null,
+        "max_tickets_per_person": null,
+        "metadata": {
+          "my_release_variable": "else",
+          "another_release_variable": 456
+        },
+        "min_tickets_per_person": null,
+        "min_donation": null,
+        "not_a_ticket": false,
+        "show_qr_code": true,
+        "only_issue_combos": false,
+        "pricing_type": "paid",
+        "payment_type": "paid",
+        "position": 0,
+        "price": 100.0,
+        "price_ex_tax": 100.0,
+        "tax_exclusive": false,
+        "price_degressive": null,
+        "price_degressive_list": [
+
+        ],
+        "quantity": null,
+        "request_company_name": null,
+        "request_vat_number": null,
+        "require_vat_number": false,
+        "require_billing_address": null,
+        "require_credit_card_for_sold_out_waiting_list": false,
+        "require_email": true,
+        "require_name": false,
+        "secret": false,
+        "show_price": true,
+        "suggested_donation": "100.0",
+        "lock_changes": null,
+        "state_name": "on_sale",
+        "start_at": null,
+        "waiting_list_enabled_during_locked": false,
+        "waiting_list_enabled_during_sold_out": false,
+        "share_url": "https://ti.to/demo/awesomeconf/with/standard",
+        "tickets_count": 42,
+        "locked": false,
+        "waiting_list": false,
+        "sold_out": false,
+        "off_sale": false,
+        "expired": false,
+        "upcoming": false,
+        "allocatable": true,
+        "changes_locked": false,
+        "deletable": false,
+        "question_ids": [
+          1
+        ],
+        "display_price": 100.0,
+        "gross_income": 0.0,
+        "full_price_tickets_count": 33,
+        "free_tickets_count": 3,
+        "discounted_tickets_count": 9,
+        "voided_tickets_count": 0,
+        "pending_waiting_list": false,
+        "show_company_name": false,
+        "require_company_name": false,
+        "show_vat_number": false,
+        "show_discount_code_field_here": null,
+        "show_phone_number": false,
+        "tax_description": null,
+        "translations": {
+          "en": {
+            "description": null,
+            "fail_message": null,
+            "success_message": null,
+            "title": "Standard"
+          }
+        },
+        "warnings": {
+          "quantity": "This ticket’s quantity is not limited but there are only 10 remaining because it is limited by the capacity of the Conference and Conference Copy activities."
+        },
+        "termset_id": null,
+        "ticket_group_id": null
+      },
+      {
+        "_type": "release",
+        "view": "extended",
+        "id": 3,
+        "event_id": 1,
+        "created_at": "2022-03-23T11:35:11.000Z",
+        "updated_at": "2022-03-23T11:35:12.000Z",
+        "slug": "exhibitor",
+        "title": "Exhibitor",
+        "description": null,
+        "archived": false,
+        "card_payments": true,
+        "default_quantity": 0,
+        "donation": false,
+        "enable_super_combo_summary": true,
+        "end_at": null,
+        "has_success_message": false,
+        "has_fail_message": false,
+        "invoice": false,
+        "max_donation": null,
+        "max_tickets_per_person": null,
+        "metadata": {
+          "my_release_variable": "else",
+          "another_release_variable": 456
+        },
+        "min_tickets_per_person": null,
+        "min_donation": null,
+        "not_a_ticket": false,
+        "show_qr_code": true,
+        "only_issue_combos": false,
+        "pricing_type": "free",
+        "payment_type": "free",
+        "position": 0,
+        "price": 0.0,
+        "price_ex_tax": 0.0,
+        "tax_exclusive": false,
+        "price_degressive": null,
+        "price_degressive_list": [
+
+        ],
+        "quantity": null,
+        "request_company_name": null,
+        "request_vat_number": null,
+        "require_vat_number": false,
+        "require_billing_address": null,
+        "require_credit_card_for_sold_out_waiting_list": false,
+        "require_email": true,
+        "require_name": false,
+        "secret": false,
+        "show_price": true,
+        "suggested_donation": "0.0",
+        "lock_changes": null,
+        "state_name": "on_sale",
+        "start_at": null,
+        "waiting_list_enabled_during_locked": false,
+        "waiting_list_enabled_during_sold_out": false,
+        "share_url": "https://ti.to/demo/awesomeconf/with/exhibitor",
+        "tickets_count": 50,
+        "locked": false,
+        "waiting_list": false,
+        "sold_out": false,
+        "off_sale": false,
+        "expired": false,
+        "upcoming": false,
+        "allocatable": true,
+        "changes_locked": false,
+        "deletable": false,
+        "question_ids": [
+
+        ],
+        "display_price": 0.0,
+        "gross_income": 0.0,
+        "full_price_tickets_count": 0,
+        "free_tickets_count": 50,
+        "discounted_tickets_count": 0,
+        "voided_tickets_count": 0,
+        "pending_waiting_list": false,
+        "show_company_name": false,
+        "require_company_name": false,
+        "show_vat_number": false,
+        "show_discount_code_field_here": null,
+        "show_phone_number": false,
+        "tax_description": null,
+        "translations": {
+          "en": {
+            "description": null,
+            "fail_message": null,
+            "success_message": null,
+            "title": "Exhibitor"
+          }
+        },
+        "warnings": {
+          "quantity": "This ticket’s quantity is not limited but there are only 107 remaining because it is limited by the capacity of the Dinner activity."
+        },
+        "termset_id": null,
+        "ticket_group_id": null
+      },
+      {
+        "_type": "release",
+        "view": "extended",
+        "id": 4,
+        "event_id": 1,
+        "created_at": "2022-03-23T11:35:12.000Z",
+        "updated_at": "2022-03-23T11:35:12.000Z",
+        "slug": "speaker",
+        "title": "Speaker",
+        "description": null,
+        "archived": false,
+        "card_payments": true,
+        "default_quantity": 0,
+        "donation": false,
+        "enable_super_combo_summary": true,
+        "end_at": null,
+        "has_success_message": false,
+        "has_fail_message": false,
+        "invoice": false,
+        "max_donation": null,
+        "max_tickets_per_person": null,
+        "metadata": {
+          "my_release_variable": "else",
+          "another_release_variable": 456
+        },
+        "min_tickets_per_person": null,
+        "min_donation": null,
+        "not_a_ticket": false,
+        "show_qr_code": true,
+        "only_issue_combos": false,
+        "pricing_type": "free",
+        "payment_type": "free",
+        "position": 0,
+        "price": 0.0,
+        "price_ex_tax": 0.0,
+        "tax_exclusive": false,
+        "price_degressive": null,
+        "price_degressive_list": [
+
+        ],
+        "quantity": null,
+        "request_company_name": null,
+        "request_vat_number": null,
+        "require_vat_number": false,
+        "require_billing_address": null,
+        "require_credit_card_for_sold_out_waiting_list": false,
+        "require_email": true,
+        "require_name": false,
+        "secret": false,
+        "show_price": true,
+        "suggested_donation": "0.0",
+        "lock_changes": null,
+        "state_name": "on_sale",
+        "start_at": null,
+        "waiting_list_enabled_during_locked": false,
+        "waiting_list_enabled_during_sold_out": false,
+        "share_url": "https://ti.to/demo/awesomeconf/with/speaker",
+        "tickets_count": 40,
+        "locked": false,
+        "waiting_list": false,
+        "sold_out": false,
+        "off_sale": false,
+        "expired": false,
+        "upcoming": false,
+        "allocatable": true,
+        "changes_locked": false,
+        "deletable": false,
+        "question_ids": [
+
+        ],
+        "display_price": 0.0,
+        "gross_income": 0.0,
+        "full_price_tickets_count": 0,
+        "free_tickets_count": 40,
+        "discounted_tickets_count": 0,
+        "voided_tickets_count": 0,
+        "pending_waiting_list": false,
+        "show_company_name": false,
+        "require_company_name": false,
+        "show_vat_number": false,
+        "show_discount_code_field_here": null,
+        "show_phone_number": false,
+        "tax_description": null,
+        "translations": {
+          "en": {
+            "description": null,
+            "fail_message": null,
+            "success_message": null,
+            "title": "Speaker"
+          }
+        },
+        "warnings": {
+          "quantity": "This ticket’s quantity is not limited but there are only 107 remaining because it is limited by the capacity of the Dinner and Workshop activities."
+        },
+        "termset_id": null,
+        "ticket_group_id": null
+      }
+    ],
+    "tickets": [
+
+    ]
+  },
+  "meta": {
+    "api_version": "3.0.0"
+  }
+}

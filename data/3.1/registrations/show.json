@@ -1,0 +1,70 @@
+{
+  "registration": {
+    "_type": "registration",
+    "id": 1,
+    "slug": "reg_d4CgzKJD6jat8IzBd1BHG5Q",
+    "created_at": "2022-03-23T11:35:12.000Z",
+    "updated_at": "2022-03-23T11:36:02.000Z",
+    "completed_at": "2022-03-23T11:35:12.000Z",
+    "discount_code": "FREE2U",
+    "email": "jYKxHcSQhhBp8A@example.com",
+    "job_title": null,
+    "expires_at": "2022-03-23 11:50:12 UTC",
+    "ip_address": null,
+    "locale": "en",
+    "metadata": null,
+    "name": "Darth Sidious",
+    "company_name": null,
+    "payment_reference": null,
+    "payment_option_name": null,
+    "phone_number": null,
+    "registration_type": "manual",
+    "reference": "ZZPZ",
+    "source": null,
+    "state": "incomplete",
+    "test_mode": false,
+    "cancelled": false,
+    "cancelled_at": null,
+    "cancelled_by": null,
+    "free": true,
+    "paid": false,
+    "invoice": true,
+    "manual": true,
+    "imported": false,
+    "refundable": false,
+    "refunded": false,
+    "partially_refunded": false,
+    "receipt_paid": true,
+    "receipt_number": "0000001",
+    "receipt_id": 1,
+    "payment_incomplete": false,
+    "payment_complete": false,
+    "total": 0.0,
+    "tickets_count": 4,
+    "consented_at": null,
+    "terms_accepted": false,
+    "termset_ids": [
+
+    ],
+    "editable_total_and_prices": true,
+    "total_less_tax": 0.0,
+    "discount_code_id": 1,
+    "payment_option_provider_name": null,
+    "quantities": {
+      "standard": {
+        "release": "Standard",
+        "quantity": 1
+      },
+      "speaker": {
+        "release": "Speaker",
+        "quantity": 3
+      }
+    }
+  },
+  "meta": {
+    "api_version": "3.1.0",
+    "expandable": {
+      "billing_address": false
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "rsvp_list": {
+    "_type": "rsvp_list",
+    "id": 2,
+    "slug": "rsvp_list_dmDwHZr1xHxihJUUaGIHPBg",
+    "created_at": "2022-03-23T11:36:01.000Z",
+    "updated_at": "2022-03-23T11:36:01.000Z",
+    "title": "Welcome Back",
+    "redeemed_count": 0,
+    "maybes_count": 0,
+    "nos_count": 0,
+    "release_invitations_count": 0,
+    "message_slug": null
+  },
+  "meta": {
+    "api_version": "3.0.0"
+  }
+}

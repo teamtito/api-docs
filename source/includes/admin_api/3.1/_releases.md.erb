@@ -1,0 +1,69 @@
+# Releases
+
+<% set_resource :releases, slug: true %>
+
+## Attributes <%= icon_for :attributes %>
+
+<%= show_doc :attributes %>
+
+## Expansions <%= icon_for :expansions %>
+
+<%= show_doc :expansions %>
+
+## Get all releases <%= icon_for :index %>
+
+<%= show_doc :index %>
+
+## Get a release <%= icon_for :show %>
+
+<%= show_doc :show %>
+
+## Create a release <%= icon_for :create %>
+
+<%= show_doc :create %>
+
+## Update a release <%= icon_for :update %>
+
+<%= show_doc :update %>
+
+## Delete a release <%= icon_for :delete %>
+
+<%= show_doc :delete %>
+
+## Archive a Release
+
+<%= show_url "releases/:release_slug/archival", method: :post %>
+<%= show_url_key "POST releases/:release_slug/archival" %>
+
+## Unarchive a Release
+
+<%= show_url "releases/:release_slug/archival", method: :delete %>
+<%= show_url_key "DELETE releases/:release_slug/archival" %>
+
+## Duplicate a Release
+
+<%= show_url "releases/:release_slug/duplication", method: :post %>
+<%= show_url_key "POST releases/:release_slug/duplication" %>
+
+## Put a Release on sale
+
+<%= show_url "releases/:release_slug/activation", method: :patch %>
+<%= show_url_key "PATCH releases/:release_slug/activation" %>
+
+## Pause the sale of a Release
+
+<%= show_url "releases/:release_slug/deactivation", method: :patch %>
+<%= show_url_key "PATCH releases/:release_slug/deactivation" %>
+
+## Make a Release public
+
+<%= show_url "releases/:release_slug/publication", method: :post %>
+<%= show_url_key "POST releases/:release_slug/publication" %>
+
+## Make a Release secret
+
+<%= show_url "releases/:release_slug/publication", method: :delete %>
+<%= show_url_key "DELETE releases/:release_slug/publication" %>
+
+Make an on-sale `release` secret. A secret `release` won't appear on your event page
+and can only be purchased through the sharable URL (`share_url`).

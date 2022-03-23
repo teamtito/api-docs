@@ -1,0 +1,268 @@
+{
+  "tickets": [
+    {
+      "_type": "ticket",
+      "id": 183,
+      "slug": "ti_djDLWljcddT8FAiXNeNGchg",
+      "unique_url": "https://ti.to/demo/awesomeconf/tickets/ti_djDLWljcddT8FAiXNeNGchg",
+      "company_name": null,
+      "email": null,
+      "metadata": null,
+      "first_name": null,
+      "last_name": null,
+      "name": "",
+      "number": 183,
+      "phone_number": null,
+      "price": 90.0,
+      "reference": "CUFL-1",
+      "state": "started",
+      "test_mode": false,
+      "registration_id": 33,
+      "release_id": 1,
+      "release_archived": false,
+      "avatar_url": "https://secure.gravatar.com/avatar/d41d8cd98f00b204e9800998ecf8427e?default=https://starwavatars.global.ssl.fastly.net/avatars/d41d8cd98f00b204e9800998ecf8427e.png",
+      "void": false,
+      "changes_locked": false,
+      "consented_at": null,
+      "discount_code_used": null,
+      "tag_names": [
+
+      ],
+      "created_at": "2022-03-23T11:36:12.000Z",
+      "updated_at": "2022-03-23T11:36:12.000Z",
+      "assigned": false,
+      "qr_url": "https://qr.tito.io/tickets/ti_djDLWljcddT8FAiXNeNGchg",
+      "show_qr_code": false,
+      "qr_code_disabled": false,
+      "price_less_tax": 90.0,
+      "total_paid": 90.0,
+      "total_tax_paid": 0.0,
+      "total_paid_less_tax": 90.0,
+      "tags": null,
+      "lock_changes": false
+    },
+    {
+      "_type": "ticket",
+      "id": 181,
+      "slug": "ti_dy9pk2xuoPDrPBzRKArfMjw",
+      "unique_url": "https://ti.to/demo/awesomeconf/tickets/ti_dy9pk2xuoPDrPBzRKArfMjw",
+      "company_name": null,
+      "email": null,
+      "metadata": null,
+      "first_name": null,
+      "last_name": null,
+      "name": "",
+      "number": 181,
+      "phone_number": null,
+      "price": 90.0,
+      "reference": "HSJV-1",
+      "state": "started",
+      "test_mode": false,
+      "registration_id": 31,
+      "release_id": 1,
+      "release_archived": false,
+      "avatar_url": "https://secure.gravatar.com/avatar/d41d8cd98f00b204e9800998ecf8427e?default=https://starwavatars.global.ssl.fastly.net/avatars/d41d8cd98f00b204e9800998ecf8427e.png",
+      "void": false,
+      "changes_locked": false,
+      "consented_at": null,
+      "discount_code_used": null,
+      "tag_names": [
+
+      ],
+      "created_at": "2022-03-23T11:35:58.000Z",
+      "updated_at": "2022-03-23T11:35:58.000Z",
+      "assigned": false,
+      "qr_url": "https://qr.tito.io/tickets/ti_dy9pk2xuoPDrPBzRKArfMjw",
+      "show_qr_code": false,
+      "qr_code_disabled": false,
+      "price_less_tax": 90.0,
+      "total_paid": 90.0,
+      "total_tax_paid": 0.0,
+      "total_paid_less_tax": 90.0,
+      "tags": null,
+      "lock_changes": false
+    },
+    "..."
+  ],
+  "meta": {
+    "api_version": "3.1.0",
+    "expandable": {
+      "activities": false,
+      "activity_ids": false,
+      "answers": false,
+      "answer_ids": false,
+      "opt_ins": false,
+      "registration": false,
+      "release": false,
+      "responses": false,
+      "upgrade_ids": false
+    },
+    "current_page": 1,
+    "next_page": 2,
+    "prev_page": null,
+    "total_pages": 2,
+    "total_count": 182,
+    "per_page": 100,
+    "overall_total": 182,
+    "resources_hidden_by_default_count": 0,
+    "search_states_hidden_by_default": [
+      "void",
+      "archived"
+    ],
+    "sort_options": {
+      "First name A-Z": {
+        "attr": "first_name",
+        "direction": "asc"
+      },
+      "First name Z-A": {
+        "attr": "first_name",
+        "direction": "desc"
+      },
+      "Last name A-Z": {
+        "attr": "last_name",
+        "direction": "asc"
+      },
+      "Last name Z-A": {
+        "attr": "last_name",
+        "direction": "desc"
+      },
+      "Ticket date, earliest first": {
+        "attr": "tickets.created_at",
+        "direction": "asc"
+      },
+      "Ticket date, newest first": {
+        "attr": "tickets.created_at",
+        "direction": "desc",
+        "default": true
+      },
+      "Price, least first": {
+        "attr": "price",
+        "direction": "asc"
+      },
+      "Price, most first": {
+        "attr": "price",
+        "direction": "desc"
+      },
+      "Reference": {
+        "attr": "reference",
+        "direction": "asc"
+      },
+      "Number": {
+        "attr": "number",
+        "direction": "asc"
+      },
+      "Last change": {
+        "attr": "updated_at",
+        "direction": "desc"
+      }
+    },
+    "filter_options": {
+      "types": [
+        {
+          "label": "Added manually",
+          "value": "manual"
+        },
+        {
+          "label": "Ordered by customer",
+          "value": "standard"
+        }
+      ],
+      "release_ids": [
+        {
+          "label": "Early Bird",
+          "value": "early-bird"
+        },
+        {
+          "label": "Standard",
+          "value": "standard"
+        },
+        {
+          "label": "Exhibitor",
+          "value": "exhibitor"
+        },
+        {
+          "label": "Speaker",
+          "value": "speaker"
+        }
+      ],
+      "activity_ids": [
+        {
+          "label": "Conference",
+          "value": "1"
+        },
+        {
+          "label": "Dinner",
+          "value": "2"
+        },
+        {
+          "label": "Workshop",
+          "value": "3"
+        },
+        {
+          "label": "Conference Copy",
+          "value": "5"
+        },
+        {
+          "label": "Conference Copy",
+          "value": "7"
+        }
+      ],
+      "sections": {
+        "states": {
+          "label": "Status",
+          "open": false
+        },
+        "types": {
+          "label": "Type",
+          "open": false
+        },
+        "release_ids": {
+          "label": "Tickets",
+          "open": false
+        },
+        "activity_ids": {
+          "label": "Activities",
+          "open": false
+        }
+      },
+      "collection": false,
+      "states": [
+        {
+          "label": "Complete",
+          "value": "complete"
+        },
+        {
+          "label": "Incomplete",
+          "value": "incomplete"
+        },
+        {
+          "label": "Unassigned",
+          "value": "unassigned"
+        },
+        {
+          "label": "Void",
+          "value": "void"
+        },
+        {
+          "label": "Changes Locked",
+          "value": "changes_locked"
+        },
+        {
+          "label": "Changes Allowed",
+          "value": "changes_allowed"
+        },
+        {
+          "label": "Archived",
+          "value": "archived"
+        }
+      ],
+      "selected_states": [
+        "complete",
+        "incomplete",
+        "unassigned",
+        "changes_locked",
+        "changes_allowed"
+      ]
+    }
+  }
+}

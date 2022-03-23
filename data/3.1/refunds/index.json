@@ -1,0 +1,44 @@
+{
+  "refunds": [
+    {
+      "_type": "refund",
+      "id": 7,
+      "amount": "-420.0",
+      "created_at": "2022-03-23T11:35:16.000Z",
+      "manual": null
+    },
+    {
+      "_type": "refund",
+      "id": 13,
+      "amount": "-320.0",
+      "created_at": "2022-03-23T11:35:19.000Z",
+      "manual": null
+    },
+    "..."
+  ],
+  "meta": {
+    "api_version": "3.1.0",
+    "expandable": {
+      "registration": false
+    },
+    "current_page": 1,
+    "next_page": null,
+    "prev_page": null,
+    "total_pages": 1,
+    "total_count": 4,
+    "per_page": 100,
+    "overall_total": 4,
+    "filter_options": {
+      "sections": {
+        "states": {
+          "label": "Status",
+          "open": false
+        }
+      },
+      "collection": false,
+      "states": [
+
+      ]
+    }
+  }
+}

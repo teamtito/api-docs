@@ -1,0 +1,275 @@
+{
+  "refunds": [
+    {
+      "_type": "refund",
+      "id": 7,
+      "amount": "-420.0",
+      "created_at": "2022-03-23T11:35:16.000Z",
+      "manual": null,
+      "registration": {
+        "_type": "registration",
+        "view": "extended",
+        "id": 6,
+        "slug": "reg_dLKEVd9QMu5KwwjQnXcs63w",
+        "billing_address": null,
+        "created_at": "2022-03-23T11:35:15.000Z",
+        "updated_at": "2022-03-23T11:35:16.000Z",
+        "completed_at": "2022-03-23T11:35:16.000Z",
+        "discount_code": "HALFPRICE",
+        "email": "weston_macejkovic@example.com",
+        "job_title": null,
+        "expires_at": "2022-03-23 11:50:15 UTC",
+        "ip_address": null,
+        "locale": "en",
+        "metadata": null,
+        "name": "Sheev Palpatine",
+        "company_name": null,
+        "payment_reference": null,
+        "payment_option_name": null,
+        "phone_number": null,
+        "registration_type": "manual",
+        "reference": "I59R",
+        "source": null,
+        "state": "incomplete",
+        "test_mode": false,
+        "cancelled": false,
+        "cancelled_at": null,
+        "cancelled_by": null,
+        "free": false,
+        "paid": true,
+        "invoice": true,
+        "manual": true,
+        "imported": false,
+        "refundable": false,
+        "refunded": true,
+        "partially_refunded": false,
+        "receipt_paid": true,
+        "receipt_number": "0000010",
+        "receipt_id": 10,
+        "payment_incomplete": false,
+        "payment_complete": true,
+        "total": 420.0,
+        "tickets_count": 9,
+        "consented_at": null,
+        "terms_accepted": false,
+        "termset_ids": [
+
+        ],
+        "editable_total_and_prices": true,
+        "payment": {
+          "reference": null,
+          "type": "invoice",
+          "refundable_amount": 0.0
+        },
+        "total_less_tax": 420.0,
+        "discount_code_id": 2,
+        "payment_option_provider_name": null,
+        "quantities": {
+          "early-bird": {
+            "release": "Early Bird",
+            "quantity": 3
+          },
+          "standard": {
+            "release": "Standard",
+            "quantity": 3
+          },
+          "exhibitor": {
+            "release": "Exhibitor",
+            "quantity": 2
+          },
+          "speaker": {
+            "release": "Speaker",
+            "quantity": 1
+          }
+        },
+        "receipt": {
+          "id": 10,
+          "slug": "rct_dqtKOyJ9CKl6i5yCfbOI27g",
+          "total": 420.0,
+          "receipt_lines": [
+            {
+              "id": 18,
+              "quantity": 3,
+              "description": "Standard",
+              "price": 50.0,
+              "total": 150.0,
+              "receipt_line_taxes": [
+
+              ]
+            },
+            {
+              "id": 19,
+              "quantity": 2,
+              "description": "Exhibitor",
+              "price": 0.0,
+              "total": 0.0,
+              "receipt_line_taxes": [
+
+              ]
+            },
+            {
+              "id": 20,
+              "quantity": 1,
+              "description": "Speaker",
+              "price": 0.0,
+              "total": 0.0,
+              "receipt_line_taxes": [
+
+              ]
+            },
+            {
+              "id": 21,
+              "quantity": 3,
+              "description": "Early Bird",
+              "price": 90.0,
+              "total": 270.0,
+              "receipt_line_taxes": [
+
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "_type": "refund",
+      "id": 13,
+      "amount": "-320.0",
+      "created_at": "2022-03-23T11:35:19.000Z",
+      "manual": null,
+      "registration": {
+        "_type": "registration",
+        "view": "extended",
+        "id": 11,
+        "slug": "reg_dNId0dlSDKHRRLTeDfvHsiA",
+        "billing_address": null,
+        "created_at": "2022-03-23T11:35:19.000Z",
+        "updated_at": "2022-03-23T11:35:19.000Z",
+        "completed_at": "2022-03-23T11:35:19.000Z",
+        "discount_code": "HALFPRICE",
+        "email": "garth@example.com",
+        "job_title": null,
+        "expires_at": "2022-03-23 11:50:19 UTC",
+        "ip_address": null,
+        "locale": "en",
+        "metadata": null,
+        "name": "Kylo Ren",
+        "company_name": null,
+        "payment_reference": null,
+        "payment_option_name": null,
+        "phone_number": null,
+        "registration_type": "manual",
+        "reference": "EK9R",
+        "source": null,
+        "state": "incomplete",
+        "test_mode": false,
+        "cancelled": false,
+        "cancelled_at": null,
+        "cancelled_by": null,
+        "free": false,
+        "paid": true,
+        "invoice": true,
+        "manual": true,
+        "imported": false,
+        "refundable": false,
+        "refunded": true,
+        "partially_refunded": false,
+        "receipt_paid": true,
+        "receipt_number": "0000021",
+        "receipt_id": 21,
+        "payment_incomplete": false,
+        "payment_complete": true,
+        "total": 320.0,
+        "tickets_count": 6,
+        "consented_at": null,
+        "terms_accepted": false,
+        "termset_ids": [
+
+        ],
+        "editable_total_and_prices": true,
+        "payment": {
+          "reference": null,
+          "type": "invoice",
+          "refundable_amount": 0.0
+        },
+        "total_less_tax": 320.0,
+        "discount_code_id": 2,
+        "payment_option_provider_name": null,
+        "quantities": {
+          "early-bird": {
+            "release": "Early Bird",
+            "quantity": 3
+          },
+          "standard": {
+            "release": "Standard",
+            "quantity": 1
+          },
+          "exhibitor": {
+            "release": "Exhibitor",
+            "quantity": 2
+          }
+        },
+        "receipt": {
+          "id": 21,
+          "slug": "rct_d9VtUYT86v6Z3orRl4uU5Eg",
+          "total": 320.0,
+          "receipt_lines": [
+            {
+              "id": 35,
+              "quantity": 1,
+              "description": "Standard",
+              "price": 50.0,
+              "total": 50.0,
+              "receipt_line_taxes": [
+
+              ]
+            },
+            {
+              "id": 36,
+              "quantity": 3,
+              "description": "Early Bird",
+              "price": 90.0,
+              "total": 270.0,
+              "receipt_line_taxes": [
+
+              ]
+            },
+            {
+              "id": 37,
+              "quantity": 2,
+              "description": "Exhibitor",
+              "price": 0.0,
+              "total": 0.0,
+              "receipt_line_taxes": [
+
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "..."
+  ],
+  "meta": {
+    "api_version": "3.0.0",
+    "current_page": 1,
+    "next_page": null,
+    "prev_page": null,
+    "total_pages": 1,
+    "total_count": 4,
+    "per_page": 100,
+    "overall_total": 4,
+    "filter_options": {
+      "sections": {
+        "states": {
+          "label": "Status",
+          "open": false
+        }
+      },
+      "collection": false,
+      "states": [
+
+      ]
+    }
+  }
+}

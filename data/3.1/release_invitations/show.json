@@ -1,0 +1,31 @@
+{
+  "release_invitation": {
+    "_type": "release_invitation",
+    "id": 2,
+    "slug": "rsvp_dswudoAjfr7dJ88FCxVfBpg",
+    "first_name": "Obi-Wan",
+    "last_name": "Kenobi",
+    "email": "golda_kunze@example.com",
+    "name": "Obi-Wan Kenobi",
+    "unique_url": "https://ti.to/demo/awesomeconf/rsvp/rsvp_dswudoAjfr7dJ88FCxVfBpg",
+    "status": "yes",
+    "redeemed": true,
+    "registration_id": 19,
+    "created_at": "2022-03-23T11:35:32.000Z",
+    "updated_at": "2022-03-23T11:35:32.000Z",
+    "importer_id": null,
+    "expires_at": null,
+    "rsvp_list_id": 1,
+    "discount_code": null,
+    "message_delivery_id": null,
+    "auto": false,
+    "guest": false,
+    "redirect": false
+  },
+  "meta": {
+    "api_version": "3.1.0",
+    "expandable": {
+      "registration": false
+    }
+  }
+}

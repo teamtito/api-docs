@@ -1,0 +1,39 @@
+# Expansions
+
+In version 3.0, if you asked for a `registration` then you got all its `tickets` too (as well `line_items`, `payment`, `receipt`, `receipts`, and `refunds`). But if you don't need all those other resources then it just makes the response bigger and slower. In version 3.1 you just get the resource you asked for unless you explicitly "expand" other resources.
+
+## Single resource
+
+By default, you just get the resource you asked for. For example, to get a single registration.
+
+<%= show_url "registrations/:registration_slug" %>
+<%= show_url_key "registration/:registration_slug", skip: :key %>
+
+## Add an expansion
+
+You can ask for more information. For example, to get the registration's tickets too.
+
+<%= show_url "registrations/:registration_slug?expand=tickets" %>
+<%= show_url_key "registration/:registration_slug?expand=tickets", skip: :key %>
+
+## Multiple expansions
+
+You can expand more than one resource by listing them separated by a comma.
+
+<%= show_url "registrations/:registration_slug?expand=tickets,receipts" %>
+<%= show_url_key "registration/:registration_slug?expand=tickets,receipts", skip: :key %>
+
+## Available expansions
+
+At the end of every response is a `meta` section which includes a list of all the possible expansions for this resource and whether they are currently expanded or not.
+
+```json
+{
+  "meta": {
+    "expandable": {
+      "tickets": true,
+      "receipts": false
+    }
+  }
+}
+```

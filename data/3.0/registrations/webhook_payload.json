@@ -1,0 +1,297 @@
+{
+  "_type": "registration",
+  "id": 1,
+  "test_mode": false,
+  "slug": "reg_d4CgzKJD6jat8IzBd1BHG5Q",
+  "reference": "ZZPZ",
+  "total": "0.0",
+  "total_less_tax": "0.0",
+  "name": "Darth Sidious",
+  "first_name": "Darth",
+  "last_name": "Sidious",
+  "email": "macie@example.org",
+  "phone_number": null,
+  "company_name": null,
+  "discount_code": "FREE2U",
+  "payment_reference": null,
+  "created_at": "2022-03-23 11:35:12 UTC",
+  "completed_at": "2022-03-23 11:35:12 UTC",
+  "completed_date": "2022-03-23",
+  "metadata": null,
+  "updated_at": "2022-03-23 11:35:13 UTC",
+  "locale": "en",
+  "created_date": "2022-03-23",
+  "currency": "USD",
+  "custom": {
+  },
+  "paid": true,
+  "line_items": [
+    {
+      "id": 1,
+      "release_slug": "standard",
+      "release_id": 2,
+      "release_title": "Standard",
+      "release_price": "100.0",
+      "release": {
+        "slug": "standard",
+        "title": "Standard",
+        "price": "100.0",
+        "metadata": {
+          "my_release_variable": "else",
+          "another_release_variable": 456
+        }
+      },
+      "price": "0.0",
+      "title": "Standard",
+      "quantity": 1,
+      "total": "0.0",
+      "currency": "USD"
+    },
+    {
+      "id": 2,
+      "release_slug": "speaker",
+      "release_id": 4,
+      "release_title": "Speaker",
+      "release_price": "0.0",
+      "release": {
+        "slug": "speaker",
+        "title": "Speaker",
+        "price": "0.0",
+        "metadata": {
+          "my_release_variable": "else",
+          "another_release_variable": 456
+        }
+      },
+      "price": "0.0",
+      "title": "Speaker",
+      "quantity": 3,
+      "total": "0.0",
+      "currency": "USD"
+    }
+  ],
+  "quantities": {
+    "standard": {
+      "release": "Standard",
+      "quantity": 1
+    },
+    "speaker": {
+      "release": "Speaker",
+      "quantity": 3
+    }
+  },
+  "tickets": [
+    {
+      "reference": "ZZPZ-1",
+      "slug": "ti_dM3B8apXNkaCHacEc3Edmvg",
+      "price": "0.0",
+      "price_less_tax": "0.0",
+      "total_paid": "0.0",
+      "total_paid_less_tax": "0.0",
+      "release_id": 2,
+      "release_slug": "standard",
+      "release_title": "Standard",
+      "release": {
+        "id": 2,
+        "slug": "standard",
+        "title": "Standard",
+        "price": "100.0",
+        "metadata": {
+          "my_release_variable": "else",
+          "another_release_variable": 456
+        }
+      },
+      "name": "",
+      "first_name": null,
+      "last_name": null,
+      "company_name": null,
+      "email": null,
+      "url": "https://ti.to/demo/awesomeconf/tickets/ti_dM3B8apXNkaCHacEc3Edmvg",
+      "admin_url": "https://dashboard.tito.io/demo/awesomeconf/tickets/ti_dM3B8apXNkaCHacEc3Edmvg",
+      "opt_ins": [
+
+      ],
+      "responses": {
+        "favorite-color": "Red"
+      },
+      "answers": [
+        {
+          "question": {
+            "id": 1,
+            "title": "Favorite color?",
+            "description": "What is your most favorite color of all?"
+          },
+          "humanized_response": "Red",
+          "response": "Red",
+          "file": null
+        }
+      ]
+    },
+    {
+      "reference": "ZZPZ-2",
+      "slug": "ti_dw7aMzB6Znqs3HahQDjt07g",
+      "price": "0.0",
+      "price_less_tax": "0.0",
+      "total_paid": "0.0",
+      "total_paid_less_tax": "0.0",
+      "release_id": 4,
+      "release_slug": "speaker",
+      "release_title": "Speaker",
+      "release": {
+        "id": 4,
+        "slug": "speaker",
+        "title": "Speaker",
+        "price": "0.0",
+        "metadata": {
+          "my_release_variable": "else",
+          "another_release_variable": 456
+        }
+      },
+      "name": "Darth Sidious",
+      "first_name": "Darth",
+      "last_name": "Sidious",
+      "company_name": null,
+      "email": "macie+2@example.org",
+      "url": "https://ti.to/demo/awesomeconf/tickets/ti_dw7aMzB6Znqs3HahQDjt07g",
+      "admin_url": "https://dashboard.tito.io/demo/awesomeconf/tickets/ti_dw7aMzB6Znqs3HahQDjt07g",
+      "opt_ins": [
+
+      ],
+      "responses": {
+        "where-do-you-live": "France"
+      },
+      "answers": [
+        {
+          "question": {
+            "id": 2,
+            "title": "Where do you live?",
+            "description": "To help us with travel arrangements"
+          },
+          "humanized_response": "France",
+          "response": "FR",
+          "file": null
+        }
+      ]
+    },
+    {
+      "reference": "ZZPZ-3",
+      "slug": "ti_d8kXrneQVVf8ujOlBe1QNXA",
+      "price": "0.0",
+      "price_less_tax": "0.0",
+      "total_paid": "0.0",
+      "total_paid_less_tax": "0.0",
+      "release_id": 4,
+      "release_slug": "speaker",
+      "release_title": "Speaker",
+      "release": {
+        "id": 4,
+        "slug": "speaker",
+        "title": "Speaker",
+        "price": "0.0",
+        "metadata": {
+          "my_release_variable": "else",
+          "another_release_variable": 456
+        }
+      },
+      "name": "Darth Sidious",
+      "first_name": "Darth",
+      "last_name": "Sidious",
+      "company_name": null,
+      "email": "macie+3@example.org",
+      "url": "https://ti.to/demo/awesomeconf/tickets/ti_d8kXrneQVVf8ujOlBe1QNXA",
+      "admin_url": "https://dashboard.tito.io/demo/awesomeconf/tickets/ti_d8kXrneQVVf8ujOlBe1QNXA",
+      "opt_ins": [
+
+      ],
+      "responses": {
+        "where-do-you-live": "France"
+      },
+      "answers": [
+        {
+          "question": {
+            "id": 2,
+            "title": "Where do you live?",
+            "description": "To help us with travel arrangements"
+          },
+          "humanized_response": "France",
+          "response": "FR",
+          "file": null
+        }
+      ]
+    },
+    {
+      "reference": "ZZPZ-4",
+      "slug": "ti_d6clZXJfi9SUNpWgYAgpFsQ",
+      "price": "0.0",
+      "price_less_tax": "0.0",
+      "total_paid": "0.0",
+      "total_paid_less_tax": "0.0",
+      "release_id": 4,
+      "release_slug": "speaker",
+      "release_title": "Speaker",
+      "release": {
+        "id": 4,
+        "slug": "speaker",
+        "title": "Speaker",
+        "price": "0.0",
+        "metadata": {
+          "my_release_variable": "else",
+          "another_release_variable": 456
+        }
+      },
+      "name": "Darth Sidious",
+      "first_name": "Darth",
+      "last_name": "Sidious",
+      "company_name": null,
+      "email": "macie+4@example.org",
+      "url": "https://ti.to/demo/awesomeconf/tickets/ti_d6clZXJfi9SUNpWgYAgpFsQ",
+      "admin_url": "https://dashboard.tito.io/demo/awesomeconf/tickets/ti_d6clZXJfi9SUNpWgYAgpFsQ",
+      "opt_ins": [
+
+      ],
+      "responses": {
+        "where-do-you-live": "United Kingdom"
+      },
+      "answers": [
+        {
+          "question": {
+            "id": 2,
+            "title": "Where do you live?",
+            "description": "To help us with travel arrangements"
+          },
+          "humanized_response": "United Kingdom",
+          "response": "UK",
+          "file": null
+        }
+      ]
+    }
+  ],
+  "source": null,
+  "payment": {
+    "reference": null,
+    "type": null
+  },
+  "receipt": {
+    "number": "0000001",
+    "total": "0.0",
+    "tax": 0,
+    "total_less_tax": "0.0",
+    "payment_provider": "",
+    "payment_reference": null,
+    "paid": true
+  },
+  "billing_address": null,
+  "event": {
+    "_type": "event",
+    "id": 1,
+    "title": "Awesomeconf",
+    "url": "https://ti.to/demo/awesomeconf",
+    "account_slug": "demo",
+    "slug": "awesomeconf",
+    "start_date": "2022-06-23",
+    "end_date": null,
+    "metadata": {
+      "my_event_variable": "something",
+      "another_event_variable": 123
+    }
+  }
+}

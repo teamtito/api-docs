@@ -1,0 +1,217 @@
+{
+  "registration": {
+    "_type": "registration",
+    "view": "extended",
+    "id": 31,
+    "slug": "reg_dc2KEP1tdj0T5PV2B2gEt8w",
+    "billing_address": null,
+    "created_at": "2022-03-23T11:35:58.000Z",
+    "updated_at": "2022-03-23T11:35:58.000Z",
+    "completed_at": "2022-03-23T11:35:58.000Z",
+    "discount_code": "",
+    "email": "9Gz8PT3yXhgoaQ@example.com",
+    "job_title": null,
+    "expires_at": "2022-03-23 11:50:58 UTC",
+    "ip_address": "172.19.0.8",
+    "locale": "en",
+    "metadata": null,
+    "name": "Jane Smith",
+    "company_name": null,
+    "payment_reference": null,
+    "payment_option_name": null,
+    "phone_number": null,
+    "registration_type": "manual",
+    "reference": "HSJV",
+    "source": null,
+    "state": "incomplete",
+    "test_mode": false,
+    "cancelled": false,
+    "cancelled_at": null,
+    "cancelled_by": null,
+    "free": false,
+    "paid": true,
+    "invoice": false,
+    "manual": true,
+    "imported": false,
+    "refundable": false,
+    "refunded": false,
+    "partially_refunded": false,
+    "receipt_paid": false,
+    "receipt_number": "0000063",
+    "receipt_id": 63,
+    "payment_incomplete": true,
+    "payment_complete": false,
+    "total": 90.0,
+    "tickets_count": 1,
+    "consented_at": null,
+    "terms_accepted": false,
+    "termset_ids": [
+
+    ],
+    "editable_total_and_prices": true,
+    "payment": null,
+    "total_less_tax": 90.0,
+    "discount_code_id": null,
+    "payment_option_provider_name": null,
+    "quantities": {
+      "early-bird": {
+        "release": "Early Bird",
+        "quantity": 1
+      }
+    },
+    "receipt": {
+      "id": 63,
+      "slug": "rct_da0TtFVgEAQ2VDr3JxNd2ZQ",
+      "total": 90.0,
+      "receipt_lines": [
+        {
+          "id": 100,
+          "quantity": 1,
+          "description": "Early Bird",
+          "price": 90.0,
+          "total": 90.0,
+          "receipt_line_taxes": [
+
+          ]
+        }
+      ]
+    },
+    "receipts": [
+      {
+        "_type": "receipt",
+        "id": 63,
+        "total": 90.0,
+        "slug": "rct_da0TtFVgEAQ2VDr3JxNd2ZQ",
+        "created_at": "2022-03-23T11:35:58.000Z",
+        "updated_at": "2022-03-23T11:35:58.000Z",
+        "currency": "USD",
+        "paid": false,
+        "payment": null,
+        "refund": null,
+        "billing_address": null,
+        "number": 63,
+        "company_name": null,
+        "vat_number": null,
+        "test_mode": false,
+        "unique_url": "https://ti.to/receipts/rct_da0TtFVgEAQ2VDr3JxNd2ZQ",
+        "external_url": null
+      }
+    ],
+    "refunds": [
+
+    ],
+    "tickets": [
+      {
+        "_type": "ticket",
+        "view": "extended",
+        "id": 181,
+        "slug": "ti_dy9pk2xuoPDrPBzRKArfMjw",
+        "unique_url": "https://ti.to/demo/awesomeconf/tickets/ti_dy9pk2xuoPDrPBzRKArfMjw",
+        "company_name": null,
+        "email": null,
+        "metadata": null,
+        "first_name": null,
+        "last_name": null,
+        "name": "",
+        "number": 181,
+        "phone_number": null,
+        "price": 90.0,
+        "reference": "HSJV-1",
+        "state": "started",
+        "test_mode": false,
+        "registration_id": 31,
+        "registration_name": "Jane Smith",
+        "registration_email": "9Gz8PT3yXhgoaQ@example.com",
+        "release_id": 1,
+        "release_title": "Early Bird",
+        "release_archived": false,
+        "avatar_url": "https://secure.gravatar.com/avatar/d41d8cd98f00b204e9800998ecf8427e?default=https://starwavatars.global.ssl.fastly.net/avatars/d41d8cd98f00b204e9800998ecf8427e.png",
+        "void": false,
+        "changes_locked": false,
+        "consented_at": null,
+        "discount_code_used": null,
+        "tag_names": [
+
+        ],
+        "created_at": "2022-03-23T11:35:58.000Z",
+        "updated_at": "2022-03-23T11:35:58.000Z",
+        "opt_ins": [
+
+        ],
+        "responses": {
+        },
+        "assigned": false,
+        "qr_url": "https://qr.tito.io/tickets/ti_dy9pk2xuoPDrPBzRKArfMjw",
+        "show_qr_code": false,
+        "qr_code_disabled": false,
+        "price_less_tax": 90.0,
+        "total_paid": 90.0,
+        "total_tax_paid": 0.0,
+        "total_paid_less_tax": 90.0,
+        "tags": null,
+        "upgrade_ids": [
+
+        ],
+        "registration_slug": "reg_dc2KEP1tdj0T5PV2B2gEt8w",
+        "release_slug": "early-bird",
+        "lock_changes": false,
+        "activities": [
+          {
+            "id": 1,
+            "event_id": 1,
+            "name_before_translations": null,
+            "capacity": 100,
+            "created_at": "2022-03-23T11:35:12.000Z",
+            "updated_at": "2022-03-23T11:35:50.000Z",
+            "accommodation": null,
+            "importer_id": null,
+            "show_to_attendee": true,
+            "venue_id": 1,
+            "start_time": "2000-01-01T09:00:00.000Z",
+            "end_time": "2000-01-01T17:00:00.000Z",
+            "date": "2022-12-25",
+            "description": "An activity for Conference",
+            "name": "Conference"
+          },
+          {
+            "id": 5,
+            "event_id": 1,
+            "name_before_translations": null,
+            "capacity": 100,
+            "created_at": "2022-03-23T11:35:51.000Z",
+            "updated_at": "2022-03-23T11:35:51.000Z",
+            "accommodation": null,
+            "importer_id": null,
+            "show_to_attendee": true,
+            "venue_id": 1,
+            "start_time": "2000-01-01T09:00:00.000Z",
+            "end_time": "2000-01-01T17:00:00.000Z",
+            "date": "2022-12-25",
+            "description": "An activity for Conference",
+            "name": "Conference Copy"
+          }
+        ]
+      }
+    ],
+    "line_items": [
+      {
+        "_type": "line_item",
+        "id": 96,
+        "title": "Early Bird",
+        "created_at": "2022-03-23T11:35:58.000Z",
+        "updated_at": "2022-03-23T11:35:58.000Z",
+        "quantity": 1,
+        "price": 90.0,
+        "price_inc_tax": 90.0,
+        "price_ex_tax": 90.0,
+        "test_mode": false,
+        "release_id": 1,
+        "release_slug": "early-bird",
+        "release_title": "Early Bird"
+      }
+    ]
+  },
+  "meta": {
+    "api_version": "3.0.0"
+  }
+}

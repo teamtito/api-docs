@@ -1,0 +1,308 @@
+{
+  "ticket": {
+    "_type": "ticket",
+    "view": "extended",
+    "id": 1,
+    "slug": "ti_dM3B8apXNkaCHacEc3Edmvg",
+    "unique_url": "https://ti.to/demo/awesomeconf/tickets/ti_dM3B8apXNkaCHacEc3Edmvg",
+    "company_name": null,
+    "email": "Ylk6gzY6WNm1Rw@example.com",
+    "metadata": null,
+    "first_name": null,
+    "last_name": null,
+    "name": "",
+    "number": 1,
+    "phone_number": null,
+    "price": 0.0,
+    "reference": "ZZPZ-1",
+    "state": "incomplete",
+    "test_mode": false,
+    "registration_id": 1,
+    "registration_name": "Darth Sidious",
+    "registration_email": "jYKxHcSQhhBp8A@example.com",
+    "release_id": 2,
+    "release_title": "Standard",
+    "release_archived": false,
+    "avatar_url": "https://secure.gravatar.com/avatar/097cb9fe7396f4d8a2fddca86cb6332c?default=https://starwavatars.global.ssl.fastly.net/avatars/097cb9fe7396f4d8a2fddca86cb6332c.png",
+    "void": false,
+    "changes_locked": false,
+    "consented_at": null,
+    "discount_code_used": "FREE2U",
+    "tag_names": [
+
+    ],
+    "created_at": "2022-03-23T11:35:12.000Z",
+    "updated_at": "2022-03-23T11:36:02.000Z",
+    "opt_ins": [
+
+    ],
+    "responses": {
+      "favorite-color": "Red"
+    },
+    "assigned": true,
+    "qr_url": "https://qr.tito.io/tickets/ti_dM3B8apXNkaCHacEc3Edmvg",
+    "show_qr_code": false,
+    "qr_code_disabled": false,
+    "price_less_tax": 0.0,
+    "total_paid": 0.0,
+    "total_tax_paid": 0.0,
+    "total_paid_less_tax": 0.0,
+    "tags": null,
+    "upgrade_ids": [
+
+    ],
+    "registration_slug": "reg_d4CgzKJD6jat8IzBd1BHG5Q",
+    "release_slug": "standard",
+    "lock_changes": false,
+    "activities": [
+      {
+        "id": 1,
+        "event_id": 1,
+        "name_before_translations": null,
+        "capacity": 100,
+        "created_at": "2022-03-23T11:35:12.000Z",
+        "updated_at": "2022-03-23T11:35:50.000Z",
+        "accommodation": null,
+        "importer_id": null,
+        "show_to_attendee": true,
+        "venue_id": 1,
+        "start_time": "2000-01-01T09:00:00.000Z",
+        "end_time": "2000-01-01T17:00:00.000Z",
+        "date": "2022-12-25",
+        "description": "An activity for Conference",
+        "name": "Conference"
+      },
+      {
+        "id": 5,
+        "event_id": 1,
+        "name_before_translations": null,
+        "capacity": 100,
+        "created_at": "2022-03-23T11:35:51.000Z",
+        "updated_at": "2022-03-23T11:35:51.000Z",
+        "accommodation": null,
+        "importer_id": null,
+        "show_to_attendee": true,
+        "venue_id": 1,
+        "start_time": "2000-01-01T09:00:00.000Z",
+        "end_time": "2000-01-01T17:00:00.000Z",
+        "date": "2022-12-25",
+        "description": "An activity for Conference",
+        "name": "Conference Copy"
+      }
+    ],
+    "registration": {
+      "_type": "registration",
+      "view": "extended",
+      "id": 1,
+      "slug": "reg_d4CgzKJD6jat8IzBd1BHG5Q",
+      "billing_address": null,
+      "created_at": "2022-03-23T11:35:12.000Z",
+      "updated_at": "2022-03-23T11:36:02.000Z",
+      "completed_at": "2022-03-23T11:35:12.000Z",
+      "discount_code": "FREE2U",
+      "email": "jYKxHcSQhhBp8A@example.com",
+      "job_title": null,
+      "expires_at": "2022-03-23 11:50:12 UTC",
+      "ip_address": null,
+      "locale": "en",
+      "metadata": null,
+      "name": "Darth Sidious",
+      "company_name": null,
+      "payment_reference": null,
+      "payment_option_name": null,
+      "phone_number": null,
+      "registration_type": "manual",
+      "reference": "ZZPZ",
+      "source": null,
+      "state": "incomplete",
+      "test_mode": false,
+      "cancelled": false,
+      "cancelled_at": null,
+      "cancelled_by": null,
+      "free": true,
+      "paid": false,
+      "invoice": true,
+      "manual": true,
+      "imported": false,
+      "refundable": false,
+      "refunded": false,
+      "partially_refunded": false,
+      "receipt_paid": true,
+      "receipt_number": "0000001",
+      "receipt_id": 1,
+      "payment_incomplete": false,
+      "payment_complete": false,
+      "total": 0.0,
+      "tickets_count": 4,
+      "consented_at": null,
+      "terms_accepted": false,
+      "termset_ids": [
+
+      ],
+      "editable_total_and_prices": true,
+      "payment": {
+        "reference": null,
+        "type": "invoice",
+        "refundable_amount": 0.0
+      },
+      "total_less_tax": 0.0,
+      "discount_code_id": 1,
+      "payment_option_provider_name": null,
+      "quantities": {
+        "standard": {
+          "release": "Standard",
+          "quantity": 1
+        },
+        "speaker": {
+          "release": "Speaker",
+          "quantity": 3
+        }
+      },
+      "receipt": {
+        "id": 1,
+        "slug": "rct_dWpiJsi1ADCEgdx1pWPIM5A",
+        "total": 0.0,
+        "receipt_lines": [
+          {
+            "id": 1,
+            "quantity": 1,
+            "description": "Standard",
+            "price": 0.0,
+            "total": 0.0,
+            "receipt_line_taxes": [
+
+            ]
+          },
+          {
+            "id": 2,
+            "quantity": 3,
+            "description": "Speaker",
+            "price": 0.0,
+            "total": 0.0,
+            "receipt_line_taxes": [
+
+            ]
+          }
+        ]
+      }
+    },
+    "release": {
+      "_type": "release",
+      "view": "extended",
+      "id": 2,
+      "event_id": 1,
+      "created_at": "2022-03-23T11:35:11.000Z",
+      "updated_at": "2022-03-23T11:35:11.000Z",
+      "slug": "standard",
+      "title": "Standard",
+      "description": null,
+      "archived": false,
+      "card_payments": true,
+      "default_quantity": 0,
+      "donation": false,
+      "enable_super_combo_summary": true,
+      "end_at": null,
+      "has_success_message": false,
+      "has_fail_message": false,
+      "invoice": false,
+      "max_donation": null,
+      "max_tickets_per_person": null,
+      "metadata": {
+        "my_release_variable": "else",
+        "another_release_variable": 456
+      },
+      "min_tickets_per_person": null,
+      "min_donation": null,
+      "not_a_ticket": false,
+      "show_qr_code": true,
+      "only_issue_combos": false,
+      "pricing_type": "paid",
+      "payment_type": "paid",
+      "position": 0,
+      "price": 100.0,
+      "price_ex_tax": 100.0,
+      "tax_exclusive": false,
+      "price_degressive": null,
+      "price_degressive_list": [
+
+      ],
+      "quantity": null,
+      "request_company_name": null,
+      "request_vat_number": null,
+      "require_vat_number": false,
+      "require_billing_address": null,
+      "require_credit_card_for_sold_out_waiting_list": false,
+      "require_email": true,
+      "require_name": false,
+      "secret": false,
+      "show_price": true,
+      "suggested_donation": "100.0",
+      "lock_changes": null,
+      "state_name": "on_sale",
+      "start_at": null,
+      "waiting_list_enabled_during_locked": false,
+      "waiting_list_enabled_during_sold_out": false,
+      "share_url": "https://ti.to/demo/awesomeconf/with/standard",
+      "tickets_count": 42,
+      "locked": false,
+      "waiting_list": false,
+      "sold_out": false,
+      "off_sale": false,
+      "expired": false,
+      "upcoming": false,
+      "allocatable": true,
+      "changes_locked": false,
+      "deletable": false,
+      "question_ids": [
+        1
+      ],
+      "display_price": 100.0,
+      "gross_income": 0.0,
+      "full_price_tickets_count": 33,
+      "free_tickets_count": 3,
+      "discounted_tickets_count": 9,
+      "voided_tickets_count": 0,
+      "pending_waiting_list": false,
+      "show_company_name": false,
+      "require_company_name": false,
+      "show_vat_number": false,
+      "show_discount_code_field_here": null,
+      "show_phone_number": false,
+      "tax_description": null,
+      "translations": {
+        "en": {
+          "description": null,
+          "fail_message": null,
+          "success_message": null,
+          "title": "Standard"
+        }
+      },
+      "warnings": {
+        "quantity": "This ticket’s quantity is not limited but there are only 9 remaining because it is limited by the capacity of the Conference and Conference Copy activities."
+      },
+      "termset_id": null,
+      "ticket_group_id": null
+    },
+    "answers": [
+      {
+        "_type": "answer",
+        "view": "extended",
+        "id": 1,
+        "download_url": null,
+        "question_id": 1,
+        "ticket_id": 1,
+        "ticket_reference": "ZZPZ-1",
+        "ticket_slug": "ti_dM3B8apXNkaCHacEc3Edmvg",
+        "ticket_email": null,
+        "ticket_name": "",
+        "response": "Red",
+        "primary_response": "Red",
+        "alternate_response": null,
+        "question_title": "Fave tree?"
+      }
+    ]
+  },
+  "meta": {
+    "api_version": "3.0.0"
+  }
+}

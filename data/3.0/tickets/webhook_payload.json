@@ -1,0 +1,107 @@
+{
+  "_type": "ticket",
+  "id": 2,
+  "test_mode": false,
+  "name": "Darth Sidious",
+  "first_name": "Darth",
+  "last_name": "Sidious",
+  "email": "macie+2@example.org",
+  "phone_number": null,
+  "company_name": null,
+  "reference": "ZZPZ-2",
+  "price": "0.0",
+  "tax": "0.0",
+  "price_less_tax": "0.0",
+  "slug": "ti_dw7aMzB6Znqs3HahQDjt07g",
+  "state_name": "complete",
+  "gender": null,
+  "total_paid": "0.0",
+  "total_paid_less_tax": "0.0",
+  "updated_at": "2022-03-23 11:35:13 UTC",
+  "release_price": "0.0",
+  "discount_code_used": "FREE2U",
+  "url": "https://ti.to/demo/awesomeconf/tickets/ti_dw7aMzB6Znqs3HahQDjt07g",
+  "admin_url": "https://dashboard.tito.io/demo/awesomeconf/tickets/ti_dw7aMzB6Znqs3HahQDjt07g",
+  "release_title": "Speaker",
+  "release_slug": "speaker",
+  "release_id": 4,
+  "release": {
+    "id": 4,
+    "title": "Speaker",
+    "slug": "speaker",
+    "metadata": {
+      "my_release_variable": "else",
+      "another_release_variable": 456
+    }
+  },
+  "custom": {
+  },
+  "registration_id": 1,
+  "registration_slug": "reg_d4CgzKJD6jat8IzBd1BHG5Q",
+  "metadata": null,
+  "answers": [
+    {
+      "question": {
+        "id": 2,
+        "title": "Where do you live?"
+      },
+      "response": "FR",
+      "humanized_response": "France"
+    }
+  ],
+  "opt_ins": [
+
+  ],
+  "responses": {
+    "where-do-you-live": "France"
+  },
+  "last_updated_by_type": "admin",
+  "upgrades": "#<Upgrade::ActiveRecord_Associations_CollectionProxy:0x0000aaaad4b223a0>",
+  "upgrade_ids": [
+
+  ],
+  "registration": {
+    "id": 1,
+    "slug": "reg_d4CgzKJD6jat8IzBd1BHG5Q",
+    "url": "https://ti.to/registrations/reg_d4CgzKJD6jat8IzBd1BHG5Q",
+    "admin_url": "https://dashboard.tito.io/demo/awesomeconf/registrations/reg_d4CgzKJD6jat8IzBd1BHG5Q",
+    "total": "0.0",
+    "currency": "USD",
+    "payment_reference": null,
+    "source": null,
+    "name": "Darth Sidious",
+    "email": "macie@example.org",
+    "receipt": {
+      "total": "0.0",
+      "tax": 0,
+      "payment_provider": "",
+      "paid": true,
+      "receipt_lines": [
+        {
+          "total": "0.0",
+          "quantity": 1,
+          "tax": 0
+        },
+        {
+          "total": "0.0",
+          "quantity": 3,
+          "tax": 0
+        }
+      ]
+    }
+  },
+  "event": {
+    "_type": "event",
+    "id": 1,
+    "title": "Awesomeconf",
+    "url": "https://ti.to/demo/awesomeconf",
+    "account_slug": "demo",
+    "slug": "awesomeconf",
+    "start_date": "2022-06-23",
+    "end_date": null,
+    "metadata": {
+      "my_event_variable": "something",
+      "another_event_variable": 123
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "discount_code": {
+    "_type": "discount_code",
+    "view": "extended",
+    "id": 3,
+    "code": "NeKfucgeWIA7tA",
+    "description": "Sell for 50.0% less. Unlimited. Applies to 0 tickets. Not used yet.",
+    "description_for_organizer": null,
+    "end_at": null,
+    "max_quantity_per_release": null,
+    "min_quantity_per_release": null,
+    "only_show_attached": false,
+    "quantity": null,
+    "quantity_used": 0,
+    "registrations_count": 0,
+    "reveal_secret": false,
+    "source_id": null,
+    "share_url": "https://ti.to/demo/awesomeconf/discount/NeKfucgeWIA7tA",
+    "start_at": null,
+    "state": "current",
+    "discount_code_type": "PercentOffDiscountCode",
+    "tickets_count": 0,
+    "type": "PercentOffDiscountCode",
+    "value": "50.0",
+    "disable_for_degressive": false,
+    "release_ids": [
+
+    ],
+    "releases": [
+
+    ],
+    "source": null
+  },
+  "meta": {
+    "api_version": "3.0.0"
+  }
+}

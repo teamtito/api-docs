@@ -1,0 +1,15 @@
+{
+  "webhook_endpoint": {
+    "_type": "webhook_endpoint",
+    "id": 1,
+    "url": "https://doesnotexist.tito.io/listen/123",
+    "included_triggers": [
+      "ticket.completed"
+    ],
+    "custom_data": "{\"my_webhook_variable\":\"there-i-go\"}",
+    "deprecated": false
+  },
+  "meta": {
+    "api_version": "3.1.0"
+  }
+}

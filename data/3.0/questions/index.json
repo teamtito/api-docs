@@ -1,0 +1,61 @@
+{
+  "questions": [
+    {
+      "_type": "question",
+      "id": 1,
+      "answers_count": 47,
+      "description": "What is your most favorite color of all?",
+      "title": "Favorite color?",
+      "field_type": "Text",
+      "include_free_text_field": false,
+      "required": false,
+      "slug": "favorite-color",
+      "tickets_count": 90
+    },
+    {
+      "_type": "question",
+      "id": 2,
+      "answers_count": 150,
+      "description": "To help us with travel arrangements",
+      "title": "Where do you live?",
+      "field_type": "Country",
+      "include_free_text_field": false,
+      "required": true,
+      "slug": "where-do-you-live",
+      "tickets_count": 0
+    }
+  ],
+  "meta": {
+    "api_version": "3.0.0",
+    "current_page": 1,
+    "next_page": null,
+    "prev_page": null,
+    "total_pages": 1,
+    "total_count": 2,
+    "per_page": 100,
+    "overall_total": 2,
+    "sort_options": {
+      "Question Title, A-Z": {
+        "attr": "title",
+        "direction": "asc",
+        "default": true
+      },
+      "Question Title, Z-A": {
+        "attr": "title",
+        "direction": "desc"
+      }
+    },
+    "filter_options": {
+      "sections": {
+        "states": {
+          "label": "Status",
+          "open": false
+        }
+      },
+      "collection": false,
+      "states": [
+
+      ]
+    }
+  }
+}
