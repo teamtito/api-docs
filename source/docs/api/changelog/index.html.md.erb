@@ -7,9 +7,94 @@ layout: "changelog"
 
 # Changelog
 
-## 8th March 2022
+## 23rd March 2022
 
 We've released [version 3.1 of our Admin API](/docs/api/admin/3.1) in beta.
+
+The aim of version 3.1 is simplicity and speed.
+
+### No nested resources by default
+
+In version 3.0, if you asked for a `registration` then you got all its `tickets` too (as well `line_items`, `payment`, `receipt`, `receipts`, and `refunds`). But if you don't need all those other resources then it just makes the response bigger and slower. In version 3.1 you just get the resource you asked for unless you explicitly "expand" other resources.
+
+For example, to get a single registration:
+
+```
+https://api.tito.io/v3/:account/:event/registrations/:slug
+```
+
+To get its tickets too:
+
+```
+https://api.tito.io/v3/:account/:event/registrations/:slug?expand=tickets
+```
+
+You can expand multiple resources:
+
+```
+https://api.tito.io/v3/:account/:event/registrations/:slug?expand=tickets,receipts
+```
+
+### Same view
+
+In version 3.0, you got an "extended" view of a resource if you asked for a single resource and a "short" view of a resource if you asked for a list. In version 3.1, you get the same view regardless. The `view` option has been replaced with the more flexible `expand` option.
+
+### Choosing a version
+
+You can choose which version you want to use in two ways:
+
+- Set your access token to a specific version (_not implemented yet_)
+- Send a `version` parameter in the URL
+
+For example:
+
+```
+https://api.tito.io/v3/:account/:event/registrations/:slug?version=3.1
+```
+
+The URL setting will override the access token setting.
+
+### Using `id` and `slug`
+
+In verison 3.0 we had attributes like `release_ids` that would actually return you an array of slugs. Now, if you ask for ids you get integers as you would expect. Where possible, we also offer the slugs too, e.g. `release_slugs`.
+
+### Meta data
+
+In version 3.0, we attached a `meta` attribute to every list. In verison 3.1, all responses include it. Some additional information is also added to it:
+
+- `api_version`
+- `expandable` — a list of possible expansions for this resource and whether they are expanded or not.
+
+If you try and use the `view` parameter or if you choose an expansion that is not available, then you will also see a `warning` attribute that tells you about that.
+
+For example:
+
+```json
+{
+    "ticket": {
+        "_type": "ticket",
+        "id": 123,
+        ...
+        "registration": {
+          "_type": "registration",
+          "id": 106,
+          ...
+        }
+      }
+    },
+    "meta": {
+        "api_version": "3.1.0",
+        "expandable": {
+            "activities": false,
+            "answers": false,
+            "opt_ins": false,
+            "registration": true,
+            "release": false,
+            "responses": false
+        }
+    }
+}
+```
 
 ## 17th September 2021
 

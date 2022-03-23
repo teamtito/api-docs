@@ -671,14 +671,14 @@ body {
 }
 
 // Allow the content to go full width when there are no code examples.
-.full_width {
+.full-width {
   @media (min-width: 700px) {
     border-right: 1px solid #ccc;
-    margin-right: calc(50% - 150px);
+    margin-right: 0;
   }
 }
 
-.full_width .content {
+.full-width .content {
   & > h1,
   & > h2,
   & > h3,
@@ -696,6 +696,12 @@ body {
 
   h3 {
     margin-top: 0;
+  }
+
+  pre, blockquote {
+    float: none;
+    margin-bottom: 1rem;
+    width: auto;
   }
 }
 
