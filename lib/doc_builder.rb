@@ -360,3 +360,7 @@ def show_expand_example(path, expansions)
   url = get_url(path, host: false)
   "`GET #{url}?expand=#{expansions.slice(0, 2).join(",")}`"
 end
+
+def beta_feature(title)
+  partial "includes/shared/beta_feature", locals: { title: title }
+end

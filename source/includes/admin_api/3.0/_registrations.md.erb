@@ -165,9 +165,7 @@ Update a `Registration` belonging to the given `Event`.
 %>
 <%= partial "includes/admin_api/3.0/registrations/update.json" %>
 
-<p class="beta-feature">
-  Pay by Invoice is a beta feature. <a href="mailto:support@tito.io">Contact us</a> to get it enabled.
-</p>
+<%= beta_feature "Pay by invoice" %>
 
 Show that a `Registration` has been paid. Useful if you are allowing your customers to pay by invoice.
 
@@ -188,9 +186,7 @@ Changes the `receipt_paid` attribute to true.
 %>
 <%= partial "includes/admin_api/3.0/registrations/update_not_paid.json" %>
 
-<p class="beta-feature">
-  Pay by Invoice is a beta feature. <a href="mailto:support@tito.io">Contact us</a> to get it enabled.
-</p>
+<%= beta_feature "Pay by invoice" %>
 
 Show that a `Registration` has NOT been paid. Useful if you are allowing your customers to pay by invoice. You wouldn't normally need to do this but might do if you [marked it as paid](/docs/api/admin/#registrations-mark-a-registration-as-paid) by mistake.
 

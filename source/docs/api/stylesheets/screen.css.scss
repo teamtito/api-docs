@@ -899,7 +899,13 @@ body {
   }
   p.beta-feature,
   p.new-in-version {
+    i {
+      margin-right: 0.3rem;
+    }
     padding: 1rem 28px;
+  }
+  h1 + p.beta-feature {
+    margin-top: -21px;
   }
   h3.beta-feature,
   p.new-in-version {

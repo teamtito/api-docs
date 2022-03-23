@@ -85,10 +85,7 @@ So, for instance, to find all registrations that have been updated in the last h
 
 <%= show_url "registrations/:registration_slug/confirmations", method: :post %>
 
-<p class="beta-feature">
-  <i class="fa-regular fa-flask"></i>
-  Pay by Invoice is a beta feature. <a href="mailto:support@tito.io">Contact us</a> to get it enabled.
-</p>
+<%= beta_feature "Pay by invoice" %>
 
 <%= show_url_key "POST registrations/:registration_slug/confirmations" %>
 
@@ -100,10 +97,7 @@ Changes the `receipt_paid` attribute to true.
 
 <%= show_url "registrations/:registration_slug/confirmations", method: :delete %>
 
-<p class="beta-feature">
-  <i class="fa-regular fa-flask"></i>
-  Pay by Invoice is a beta feature. <a href="mailto:support@tito.io">Contact us</a> to get it enabled.
-</p>
+<%= beta_feature "Pay by invoice" %>
 
 <%= show_url_key "DELETE registrations/:registration_slug/confirmations" %>
 
