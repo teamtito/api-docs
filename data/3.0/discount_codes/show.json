@@ -4,7 +4,7 @@
     "view": "extended",
     "id": 1,
     "code": "FREE2U",
-    "description": "Sell for 100.0% less. Unlimited. Applies to 1 ticket. Used 3 times.",
+    "description": "Sell for $1 less. Unlimited. Applies to 1 ticket. Used 3 times.",
     "description_for_organizer": null,
     "end_at": null,
     "max_quantity_per_release": null,
@@ -18,10 +18,10 @@
     "share_url": "https://ti.to/demo/awesomeconf/discount/FREE2U",
     "start_at": null,
     "state": "current",
-    "discount_code_type": "PercentOffDiscountCode",
+    "discount_code_type": "MoneyOffDiscountCode",
     "tickets_count": 3,
-    "type": "PercentOffDiscountCode",
-    "value": "100.0",
+    "type": "MoneyOffDiscountCode",
+    "value": "1.0",
     "disable_for_degressive": false,
     "release_ids": [
       "standard"
@@ -119,7 +119,7 @@
           }
         },
         "warnings": {
-          "quantity": "This ticket’s quantity is not limited but there are only 99 remaining because it is limited by the capacity of the Conference activity."
+          "quantity": "This ticket’s quantity is not limited but there are only 24 remaining because it is limited by the capacity of the Conference, Conference Copy, and Conference Copy activities."
         },
         "termset_id": null,
         "ticket_group_id": null

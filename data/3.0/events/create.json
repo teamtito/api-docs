@@ -3,9 +3,9 @@
     "discount_codes_count": 0,
     "_type": "event",
     "view": "extended",
-    "id": 2,
-    "created_at": "2022-03-25T09:23:21.000Z",
-    "updated_at": "2022-03-25T09:23:21.000Z",
+    "id": 4,
+    "created_at": "2022-03-25T11:50:37.000Z",
+    "updated_at": "2022-03-25T11:50:37.000Z",
     "title": "Very Cool Conf",
     "description": null,
     "banner": {
@@ -14,7 +14,7 @@
         "url": null
       }
     },
-    "banner_url": "/uploads/event/banner/2/",
+    "banner_url": "/uploads/event/banner/4/",
     "currency": "USD",
     "default_locale": "en",
     "from_email": "\"Very Cool Conf\" <support@tito.io>",
@@ -36,7 +36,7 @@
       }
     },
     "private": false,
-    "slug": "very-cool-conf",
+    "slug": "very-cool-conf-139e281c-2598-49f2-9954-fdcdcaf35cf7",
     "account_id": 1,
     "start_date": null,
     "end_date": null,
@@ -45,9 +45,9 @@
     "days_since": null,
     "happening_in": "unknown",
     "day_number": null,
-    "security_token": "j9JDuR2WcT2mdlZWFJXQsw",
+    "security_token": "pPeGJc4GnAFWtJbvEDdOZg",
     "metadata": null,
-    "url": "https://ti.to/demo/very-cool-conf",
+    "url": "https://ti.to/demo/very-cool-conf-139e281c-2598-49f2-9954-fdcdcaf35cf7",
     "setup": true,
     "show_discount_code_field": false,
     "releases_count": 0,
@@ -103,104 +103,552 @@
     "cors_domains": [
 
     ],
-    "credit_card_payment_option_id": null,
-    "credit_card_payment_option_gateway_type": null,
+    "credit_card_payment_option_id": 1,
+    "credit_card_payment_option_gateway_type": "stripe",
     "currency_options": [
-      {
-        "name": "AUD - Australian Dollar (A$)",
-        "code": "AUD"
-      },
-      {
-        "name": "CAD - Canadian Dollar (C$)",
-        "code": "CAD"
-      },
-      {
-        "name": "EUR - Euro (€)",
-        "code": "EUR"
-      },
-      {
-        "name": "GBP - British Pound (£)",
-        "code": "GBP"
-      },
-      {
-        "name": "JPY - Japanese Yen (¥)",
-        "code": "JPY"
-      },
       {
         "name": "USD - United States Dollar (US$)",
         "code": "USD"
       },
       {
-        "name": "NZD - New Zealand Dollar (NZ$)",
-        "code": "NZD"
+        "name": "AED - United Arab Emirates Dirham (د.إ)",
+        "code": "AED"
       },
       {
-        "name": "CHF - Swiss Franc (CHF)",
-        "code": "CHF"
+        "name": "AFN - Afghan Afghani (؋)",
+        "code": "AFN"
       },
       {
-        "name": "HKD - Hong Kong Dollar (HK$)",
-        "code": "HKD"
+        "name": "ALL - Albanian Lek (Lek)",
+        "code": "ALL"
       },
       {
-        "name": "SGD - Singapore Dollar (S$)",
-        "code": "SGD"
+        "name": "AMD - Armenian Dram (դր.)",
+        "code": "AMD"
       },
       {
-        "name": "SEK - Swedish Krona (SEK)",
-        "code": "SEK"
+        "name": "ANG - Netherlands Antillean Gulden (ƒ)",
+        "code": "ANG"
       },
       {
-        "name": "DKK - Danish Krone (DKK)",
-        "code": "DKK"
+        "name": "AOA - Angolan Kwanza (Kz)",
+        "code": "AOA"
       },
       {
-        "name": "PLN - Polish Złoty (zł)",
-        "code": "PLN"
+        "name": "ARS - Argentine Peso ($m/n)",
+        "code": "ARS"
       },
       {
-        "name": "NOK - Norwegian Krone (NOK)",
-        "code": "NOK"
+        "name": "AUD - Australian Dollar (A$)",
+        "code": "AUD"
       },
       {
-        "name": "HUF - Hungarian Forint (Ft)",
-        "code": "HUF"
+        "name": "AWG - Aruban Florin (ƒ)",
+        "code": "AWG"
       },
       {
-        "name": "CZK - Czech Koruna (Kč)",
-        "code": "CZK"
+        "name": "AZN - Azerbaijani Manat (₼)",
+        "code": "AZN"
       },
       {
-        "name": "ILS - Israeli New Sheqel (₪)",
-        "code": "ILS"
+        "name": "BAM - Bosnia and Herzegovina Convertible Mark (КМ)",
+        "code": "BAM"
       },
       {
-        "name": "MXN - Mexican Peso (MEX$)",
-        "code": "MXN"
+        "name": "BBD - Barbadian Dollar (Bds$)",
+        "code": "BBD"
+      },
+      {
+        "name": "BDT - Bangladeshi Taka (৳)",
+        "code": "BDT"
+      },
+      {
+        "name": "BGN - Bulgarian Lev (лв.)",
+        "code": "BGN"
+      },
+      {
+        "name": "BIF - Burundian Franc (FBu)",
+        "code": "BIF"
+      },
+      {
+        "name": "BMD - Bermudian Dollar (BD$)",
+        "code": "BMD"
+      },
+      {
+        "name": "BND - Brunei Dollar (BND)",
+        "code": "BND"
+      },
+      {
+        "name": "BOB - Bolivian Boliviano (Bs.)",
+        "code": "BOB"
       },
       {
         "name": "BRL - Brazilian Real (only for Brazilian members)",
         "code": "BRL"
       },
       {
+        "name": "BSD - Bahamian Dollar (BSD)",
+        "code": "BSD"
+      },
+      {
+        "name": "BWP - Botswana Pula (P)",
+        "code": "BWP"
+      },
+      {
+        "name": "BYN - Belarusian Ruble (BYN)",
+        "code": "BYN"
+      },
+      {
+        "name": "BZD - Belize Dollar (BZ$)",
+        "code": "BZD"
+      },
+      {
+        "name": "CAD - Canadian Dollar (C$)",
+        "code": "CAD"
+      },
+      {
+        "name": "CDF - Congolese Franc (FC)",
+        "code": "CDF"
+      },
+      {
+        "name": "CHF - Swiss Franc (CHF)",
+        "code": "CHF"
+      },
+      {
+        "name": "CLP - Chilean Peso (CLP)",
+        "code": "CLP"
+      },
+      {
+        "name": "CNY - Chinese Renminbi Yuan (¥)",
+        "code": "CNY"
+      },
+      {
+        "name": "COP - Colombian Peso (COL$)",
+        "code": "COP"
+      },
+      {
+        "name": "CRC - Costa Rican Colón (₡)",
+        "code": "CRC"
+      },
+      {
+        "name": "CVE - Cape Verdean Escudo (Esc)",
+        "code": "CVE"
+      },
+      {
+        "name": "CZK - Czech Koruna (Kč)",
+        "code": "CZK"
+      },
+      {
+        "name": "DJF - Djiboutian Franc (Fdj)",
+        "code": "DJF"
+      },
+      {
+        "name": "DKK - Danish Krone (DKK)",
+        "code": "DKK"
+      },
+      {
+        "name": "DOP - Dominican Peso (RD$)",
+        "code": "DOP"
+      },
+      {
+        "name": "DZD - Algerian Dinar (د.ج)",
+        "code": "DZD"
+      },
+      {
+        "name": "EGP - Egyptian Pound (ج.م)",
+        "code": "EGP"
+      },
+      {
+        "name": "ETB - Ethiopian Birr (ETB)",
+        "code": "ETB"
+      },
+      {
+        "name": "EUR - Euro (€)",
+        "code": "EUR"
+      },
+      {
+        "name": "FJD - Fijian Dollar (FJ$)",
+        "code": "FJD"
+      },
+      {
+        "name": "FKP - Falkland Pound (FK£)",
+        "code": "FKP"
+      },
+      {
+        "name": "GBP - British Pound (£)",
+        "code": "GBP"
+      },
+      {
+        "name": "GEL - Georgian Lari (ლ)",
+        "code": "GEL"
+      },
+      {
+        "name": "GIP - Gibraltar Pound (GIP)",
+        "code": "GIP"
+      },
+      {
+        "name": "GMD - Gambian Dalasi (D)",
+        "code": "GMD"
+      },
+      {
+        "name": "GNF - Guinean Franc (FG)",
+        "code": "GNF"
+      },
+      {
+        "name": "GTQ - Guatemalan Quetzal (Q)",
+        "code": "GTQ"
+      },
+      {
+        "name": "GYD - Guyanese Dollar (G$)",
+        "code": "GYD"
+      },
+      {
+        "name": "HKD - Hong Kong Dollar (HK$)",
+        "code": "HKD"
+      },
+      {
+        "name": "HNL - Honduran Lempira (HNL)",
+        "code": "HNL"
+      },
+      {
+        "name": "HRK - Croatian Kuna (kn)",
+        "code": "HRK"
+      },
+      {
+        "name": "HTG - Haitian Gourde (G)",
+        "code": "HTG"
+      },
+      {
+        "name": "HUF - Hungarian Forint (Ft)",
+        "code": "HUF"
+      },
+      {
+        "name": "IDR - Indonesian Rupiah (Rp)",
+        "code": "IDR"
+      },
+      {
+        "name": "ILS - Israeli New Sheqel (₪)",
+        "code": "ILS"
+      },
+      {
+        "name": "INR - Indian Rupee (₹)",
+        "code": "INR"
+      },
+      {
+        "name": "ISK - Icelandic Króna (kr)",
+        "code": "ISK"
+      },
+      {
+        "name": "JMD - Jamaican Dollar (J$)",
+        "code": "JMD"
+      },
+      {
+        "name": "JPY - Japanese Yen (¥)",
+        "code": "JPY"
+      },
+      {
+        "name": "KES - Kenyan Shilling (KSh)",
+        "code": "KES"
+      },
+      {
+        "name": "KGS - Kyrgyzstani Som (som)",
+        "code": "KGS"
+      },
+      {
+        "name": "KHR - Cambodian Riel (៛)",
+        "code": "KHR"
+      },
+      {
+        "name": "KMF - Comorian Franc (CF)",
+        "code": "KMF"
+      },
+      {
+        "name": "KRW - South Korean Won (₩)",
+        "code": "KRW"
+      },
+      {
+        "name": "KYD - Cayman Islands Dollar (CI$)",
+        "code": "KYD"
+      },
+      {
+        "name": "KZT - Kazakhstani Tenge (〒)",
+        "code": "KZT"
+      },
+      {
+        "name": "LAK - Lao Kip (₭)",
+        "code": "LAK"
+      },
+      {
+        "name": "LBP - Lebanese Pound (ل.ل)",
+        "code": "LBP"
+      },
+      {
+        "name": "LKR - Sri Lankan Rupee (SLRs)",
+        "code": "LKR"
+      },
+      {
+        "name": "LRD - Liberian Dollar (L$)",
+        "code": "LRD"
+      },
+      {
+        "name": "LSL - Lesotho Loti (M)",
+        "code": "LSL"
+      },
+      {
+        "name": "MAD - Moroccan Dirham (د.م.)",
+        "code": "MAD"
+      },
+      {
+        "name": "MDL - Moldovan Leu (L)",
+        "code": "MDL"
+      },
+      {
+        "name": "MGA - Malagasy Ariary (Ar)",
+        "code": "MGA"
+      },
+      {
+        "name": "MKD - Macedonian Denar (ден)",
+        "code": "MKD"
+      },
+      {
+        "name": "MMK - Myanmar Kyat (MMK)",
+        "code": "MMK"
+      },
+      {
+        "name": "MNT - Mongolian Tögrög (₮)",
+        "code": "MNT"
+      },
+      {
+        "name": "MOP - Macanese Pataca (P)",
+        "code": "MOP"
+      },
+      {
+        "name": "MRO - Mauritanian Ouguiya (UM)",
+        "code": "MRO"
+      },
+      {
+        "name": "MUR - Mauritian Rupee (₨)",
+        "code": "MUR"
+      },
+      {
+        "name": "MVR - Maldivian Rufiyaa (MVR)",
+        "code": "MVR"
+      },
+      {
+        "name": "MWK - Malawian Kwacha (MK)",
+        "code": "MWK"
+      },
+      {
+        "name": "MXN - Mexican Peso (MEX$)",
+        "code": "MXN"
+      },
+      {
         "name": "MYR - Malaysian Ringgit (only for Malaysian members)",
         "code": "MYR"
+      },
+      {
+        "name": "MZN - Mozambican Metical (MTn)",
+        "code": "MZN"
+      },
+      {
+        "name": "NAD - Namibian Dollar (N$)",
+        "code": "NAD"
+      },
+      {
+        "name": "NGN - Nigerian Naira (₦)",
+        "code": "NGN"
+      },
+      {
+        "name": "NIO - Nicaraguan Córdoba (NIO$)",
+        "code": "NIO"
+      },
+      {
+        "name": "NOK - Norwegian Krone (NOK)",
+        "code": "NOK"
+      },
+      {
+        "name": "NPR - Nepalese Rupee (NPR)",
+        "code": "NPR"
+      },
+      {
+        "name": "NZD - New Zealand Dollar (NZ$)",
+        "code": "NZD"
+      },
+      {
+        "name": "PAB - Panamanian Balboa (B/.)",
+        "code": "PAB"
+      },
+      {
+        "name": "PEN - Peruvian Sol (S/.)",
+        "code": "PEN"
+      },
+      {
+        "name": "PGK - Papua New Guinean Kina (PGK)",
+        "code": "PGK"
       },
       {
         "name": "PHP - Philippine Peso (₱)",
         "code": "PHP"
       },
       {
-        "name": "TWD - New Taiwan Dollar (NT$)",
-        "code": "TWD"
+        "name": "PKR - Pakistani Rupee (PKR)",
+        "code": "PKR"
+      },
+      {
+        "name": "PLN - Polish Złoty (zł)",
+        "code": "PLN"
+      },
+      {
+        "name": "PYG - Paraguayan Guaraní (₲)",
+        "code": "PYG"
+      },
+      {
+        "name": "QAR - Qatari Riyal (ر.ق)",
+        "code": "QAR"
+      },
+      {
+        "name": "RON - Romanian Leu (Lei)",
+        "code": "RON"
+      },
+      {
+        "name": "RSD - Serbian Dinar (РСД)",
+        "code": "RSD"
+      },
+      {
+        "name": "RUB - Russian Ruble (₽)",
+        "code": "RUB"
+      },
+      {
+        "name": "RWF - Rwandan Franc (FRw)",
+        "code": "RWF"
+      },
+      {
+        "name": "SAR - Saudi Riyal (ر.س)",
+        "code": "SAR"
+      },
+      {
+        "name": "SBD - Solomon Islands Dollar (SI$)",
+        "code": "SBD"
+      },
+      {
+        "name": "SCR - Seychellois Rupee (SRe)",
+        "code": "SCR"
+      },
+      {
+        "name": "SEK - Swedish Krona (SEK)",
+        "code": "SEK"
+      },
+      {
+        "name": "SGD - Singapore Dollar (S$)",
+        "code": "SGD"
+      },
+      {
+        "name": "SHP - Saint Helenian Pound (SHP)",
+        "code": "SHP"
+      },
+      {
+        "name": "SLL - Sierra Leonean Leone (Le)",
+        "code": "SLL"
+      },
+      {
+        "name": "SOS - Somali Shilling (Sh)",
+        "code": "SOS"
+      },
+      {
+        "name": "SRD - Surinamese Dollar (SRD)",
+        "code": "SRD"
+      },
+      {
+        "name": "STD - São Tomé and Príncipe Dobra (Db)",
+        "code": "STD"
+      },
+      {
+        "name": "SZL - Swazi Lilangeni (SZL)",
+        "code": "SZL"
       },
       {
         "name": "THB - Thai Baht (฿)",
         "code": "THB"
       },
       {
+        "name": "TJS - Tajikistani Somoni (ЅМ)",
+        "code": "TJS"
+      },
+      {
+        "name": "TOP - Tongan Paʻanga (T$)",
+        "code": "TOP"
+      },
+      {
         "name": "TRY - Turkish Lira (only for Turkish members)",
         "code": "TRY"
+      },
+      {
+        "name": "TTD - Trinidad and Tobago Dollar (TT$)",
+        "code": "TTD"
+      },
+      {
+        "name": "TWD - New Taiwan Dollar (NT$)",
+        "code": "TWD"
+      },
+      {
+        "name": "TZS - Tanzanian Shilling (Sh)",
+        "code": "TZS"
+      },
+      {
+        "name": "UAH - Ukrainian Hryvnia (₴)",
+        "code": "UAH"
+      },
+      {
+        "name": "UGX - Ugandan Shilling (USh)",
+        "code": "UGX"
+      },
+      {
+        "name": "UYU - Uruguayan Peso ($)",
+        "code": "UYU"
+      },
+      {
+        "name": "UZS - Uzbekistan Som ()",
+        "code": "UZS"
+      },
+      {
+        "name": "VND - Vietnamese Đồng (₫)",
+        "code": "VND"
+      },
+      {
+        "name": "VUV - Vanuatu Vatu (Vt)",
+        "code": "VUV"
+      },
+      {
+        "name": "WST - Samoan Tala (WS$)",
+        "code": "WST"
+      },
+      {
+        "name": "XAF - Central African Cfa Franc (FCFA)",
+        "code": "XAF"
+      },
+      {
+        "name": "XCD - East Caribbean Dollar (EX$)",
+        "code": "XCD"
+      },
+      {
+        "name": "XOF - West African Cfa Franc (CFA)",
+        "code": "XOF"
+      },
+      {
+        "name": "XPF - Cfp Franc (Fr)",
+        "code": "XPF"
+      },
+      {
+        "name": "YER - Yemeni Rial (﷼)",
+        "code": "YER"
+      },
+      {
+        "name": "ZAR - South African Rand (R)",
+        "code": "ZAR"
+      },
+      {
+        "name": "ZMW - Zambian Kwacha (ZMW)",
+        "code": "ZMW"
       }
     ],
     "custom_background_color": null,
@@ -310,7 +758,7 @@
     "snoozing_disabled": false,
     "social_sharing_description": null,
     "social_sharing_title": null,
-    "stripe": null,
+    "stripe": true,
     "stripe_statement_descriptor": null,
     "team_signoff": null,
     "theme": "mcdonagh",
@@ -338,7 +786,14 @@
 
     ],
     "credit_card_payment_options": [
-
+      {
+        "_type": "payment_option",
+        "id": 1,
+        "gateway_type": "stripe",
+        "name": "Stripe (test)",
+        "payment_method": "credit_card",
+        "charges_disabled": null
+      }
     ],
     "paypal_payment_options": [
 

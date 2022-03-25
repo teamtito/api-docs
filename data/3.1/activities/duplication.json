@@ -1,7 +1,7 @@
 {
   "activity": {
     "_type": "activity",
-    "id": 7,
+    "id": 11,
     "capacity": 100,
     "date": "2022-12-25",
     "description": "An activity for Conference",
@@ -10,7 +10,7 @@
     "start_at": "2022-12-25T09:00:00.000Z",
     "end_at": "2022-12-25T17:00:00.000Z",
     "name": "Conference Copy",
-    "allocation_count": 75,
+    "allocation_count": 77,
     "sold_out": false,
     "show_to_attendee": true
   },

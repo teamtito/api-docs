@@ -1,6 +1,7 @@
 {
   "status": 404,
   "message": "Resource not found",
-  "lookup_mode": "live",
+  "test_mode": false,
+  "hint": "Record not found with test mode off but it does exist with test mode on",
   "access_token": "*bill"
 }

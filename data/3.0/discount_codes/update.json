@@ -119,7 +119,7 @@
           }
         },
         "warnings": {
-          "quantity": "This ticket’s quantity is not limited but there are only 99 remaining because it is limited by the capacity of the Conference activity."
+          "quantity": "This ticket’s quantity is not limited but there are only 24 remaining because it is limited by the capacity of the Conference, Conference Copy, and Conference Copy activities."
         },
         "termset_id": null,
         "ticket_group_id": null

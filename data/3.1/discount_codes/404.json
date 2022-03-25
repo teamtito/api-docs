@@ -1,9 +1,9 @@
 {
   "discount_code": {
     "_type": "discount_code",
-    "id": 9,
-    "code": "SPsQ9C6o-MFnMw",
-    "description": "Sell for 50.0% less. Unlimited. Applies to 0 tickets. Not used yet.",
+    "id": 7,
+    "code": "ONLY-TEST-bYdcNfQd-1L8Uw",
+    "description": "Sell for $1 less. Unlimited. Applies to 0 tickets. Not used yet.",
     "description_for_organizer": null,
     "end_at": null,
     "max_quantity_per_release": null,
@@ -13,15 +13,20 @@
     "quantity_used": 0,
     "registrations_count": 0,
     "reveal_secret": false,
-    "share_url": "https://ti.to/demo/awesomeconf/discount/SPsQ9C6o-MFnMw",
+    "share_url": "https://ti.to/demo/awesomeconf/discount/ONLY-TEST-bYdcNfQd-1L8Uw",
     "start_at": null,
     "state": "current",
     "tickets_count": 0,
-    "type": "PercentOffDiscountCode",
-    "value": "50.0",
+    "type": "MoneyOffDiscountCode",
+    "value": "1.0",
     "disable_for_degressive": false
   },
   "meta": {
-    "api_version": "3.1.0"
+    "api_version": "3.1.0",
+    "expandable": {
+      "releases": false,
+      "release_ids": false,
+      "release_slugs": false
+    }
   }
 }

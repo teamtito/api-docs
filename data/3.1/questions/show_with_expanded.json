@@ -9,7 +9,7 @@
     "include_free_text_field": false,
     "required": false,
     "slug": "favorite-color",
-    "tickets_count": 74,
+    "tickets_count": 76,
     "translations": {
       "en": {
         "description": "What is your most favorite color of all?",

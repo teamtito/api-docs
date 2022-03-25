@@ -10,7 +10,7 @@
       "include_free_text_field": false,
       "required": false,
       "slug": "favorite-color",
-      "tickets_count": 74,
+      "tickets_count": 76,
       "created_at": "2022-03-25T09:21:56.000Z",
       "updated_at": "2022-03-25T09:23:26.000Z"
     },

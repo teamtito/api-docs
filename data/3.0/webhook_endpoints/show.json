@@ -6,7 +6,7 @@
     "included_triggers": [
       "ticket.completed"
     ],
-    "custom_data": "{:my_webhook_variable=>\"there-i-go\"}",
+    "custom_data": "{\"my_webhook_variable\":\"there-i-go\"}",
     "deprecated": false
   },
   "meta": {

@@ -11,13 +11,13 @@
       "start_at": "2022-12-25T09:00:00.000Z",
       "end_at": "2022-12-25T17:00:00.000Z",
       "name": "Conference",
-      "allocation_count": 76,
+      "allocation_count": 78,
       "sold_out": false,
       "show_to_attendee": true
     },
     {
       "_type": "activity",
-      "id": 5,
+      "id": 9,
       "capacity": 100,
       "date": "2022-12-25",
       "description": "An activity for Conference",
@@ -26,7 +26,7 @@
       "start_at": "2022-12-25T09:00:00.000Z",
       "end_at": "2022-12-25T17:00:00.000Z",
       "name": "Conference Copy",
-      "allocation_count": 76,
+      "allocation_count": 78,
       "sold_out": false,
       "show_to_attendee": true
     },
@@ -48,9 +48,9 @@
     "next_page": null,
     "prev_page": null,
     "total_pages": 1,
-    "total_count": 4,
+    "total_count": 6,
     "per_page": 100,
-    "overall_total": 4,
+    "overall_total": 6,
     "sort_options": {
       "Name A-Z": {
         "attr": "name",

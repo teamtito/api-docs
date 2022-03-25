@@ -2,7 +2,7 @@
   "checkin_list": {
     "_type": "checkin_list",
     "view": "extended",
-    "id": 2,
+    "id": 4,
     "activity_ids": [
 
     ],
@@ -10,7 +10,7 @@
     "expires_at": null,
     "expired": false,
     "open": true,
-    "qr_code_url": "https://qr.tito.io/checkin_lists/chk_dXPDp5HX7OrJ1GZb1yqChrg",
+    "qr_code_url": "https://qr.tito.io/checkin_lists/chk_dKtncf8bpyiIEN3FGcAdgCw",
     "question_ids": [
 
     ],
@@ -21,14 +21,14 @@
     "show_email": true,
     "show_phone_number": true,
     "hide_unpaid": false,
-    "slug": "chk_dXPDp5HX7OrJ1GZb1yqChrg",
+    "slug": "chk_dKtncf8bpyiIEN3FGcAdgCw",
     "state": "open",
     "title": "Back door",
-    "tickets_count": 173,
-    "created_at": "2022-03-25T09:23:23.000Z",
-    "updated_at": "2022-03-25T09:23:23.000Z",
+    "tickets_count": 175,
+    "created_at": "2022-03-25T11:50:39.000Z",
+    "updated_at": "2022-03-25T11:50:39.000Z",
     "checked_in_percent": 0.0,
-    "web_checkin_url": "https://checkin.tito.io/checkin_lists/chk_dXPDp5HX7OrJ1GZb1yqChrg",
+    "web_checkin_url": "https://checkin.tito.io/checkin_lists/chk_dKtncf8bpyiIEN3FGcAdgCw",
     "activities": [
 
     ],

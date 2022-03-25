@@ -56,7 +56,7 @@
       "waiting_list_enabled_during_locked": false,
       "waiting_list_enabled_during_sold_out": false,
       "share_url": "https://ti.to/demo/awesomeconf/with/early-bird",
-      "tickets_count": 37,
+      "tickets_count": 39,
       "locked": false,
       "waiting_list": false,
       "sold_out": false,
@@ -68,7 +68,7 @@
       "deletable": false,
       "display_price": 90.0,
       "gross_income": 0.0,
-      "full_price_tickets_count": 34,
+      "full_price_tickets_count": 36,
       "free_tickets_count": 0,
       "discounted_tickets_count": 0,
       "voided_tickets_count": 0,
@@ -80,7 +80,7 @@
       "show_phone_number": false,
       "tax_description": null,
       "warnings": {
-        "quantity": "This ticket’s quantity is set to 300 but there are only 23 remaining because it is limited by the capacity of the Conference, Conference Copy, and Conference Copy activities."
+        "quantity": "This ticket’s quantity is set to 300 but there are only 21 remaining because it is limited by the capacity of the Conference, Conference Copy, Conference Copy, Conference Copy, and Conference Copy activities."
       }
     },
     {
@@ -163,7 +163,7 @@
       "show_phone_number": false,
       "tax_description": null,
       "warnings": {
-        "quantity": "This ticket’s quantity is not limited but there are only 23 remaining because it is limited by the capacity of the Conference, Conference Copy, and Conference Copy activities."
+        "quantity": "This ticket’s quantity is not limited but there are only 21 remaining because it is limited by the capacity of the Conference, Conference Copy, Conference Copy, Conference Copy, and Conference Copy activities."
       }
     },
     "..."

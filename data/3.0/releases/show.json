@@ -5,7 +5,7 @@
     "id": 1,
     "event_id": 1,
     "created_at": "2022-03-25T09:21:55.000Z",
-    "updated_at": "2022-03-25T09:21:55.000Z",
+    "updated_at": "2022-03-25T09:23:30.000Z",
     "slug": "early-bird",
     "title": "Early Bird",
     "description": null,
@@ -39,7 +39,7 @@
     "price_degressive_list": [
 
     ],
-    "quantity": 100,
+    "quantity": 300,
     "request_company_name": null,
     "request_vat_number": null,
     "require_vat_number": false,
@@ -56,7 +56,7 @@
     "waiting_list_enabled_during_locked": false,
     "waiting_list_enabled_during_sold_out": false,
     "share_url": "https://ti.to/demo/awesomeconf/with/early-bird",
-    "tickets_count": 34,
+    "tickets_count": 36,
     "locked": false,
     "waiting_list": false,
     "sold_out": false,
@@ -71,7 +71,7 @@
     ],
     "display_price": 90.0,
     "gross_income": 0.0,
-    "full_price_tickets_count": 34,
+    "full_price_tickets_count": 36,
     "free_tickets_count": 0,
     "discounted_tickets_count": 0,
     "voided_tickets_count": 0,
@@ -91,6 +91,7 @@
       }
     },
     "warnings": {
+      "quantity": "This ticket’s quantity is set to 300 but there are only 24 remaining because it is limited by the capacity of the Conference, Conference Copy, and Conference Copy activities."
     },
     "termset_id": null,
     "ticket_group_id": null,
@@ -113,7 +114,7 @@
         ],
         "venue_id": 1,
         "accommodation": null,
-        "allocation_count": 75,
+        "allocation_count": 77,
         "sold_out": false,
         "show_to_attendee": true,
         "release_ids": [
@@ -145,7 +146,71 @@
         ],
         "venue_id": 1,
         "accommodation": null,
-        "allocation_count": 75,
+        "allocation_count": 77,
+        "sold_out": false,
+        "show_to_attendee": true,
+        "release_ids": [
+          "early-bird",
+          "standard"
+        ],
+        "translations": {
+          "en": {
+            "description": "An activity for Conference",
+            "name": "Conference Copy"
+          }
+        }
+      },
+      {
+        "_type": "activity",
+        "view": "extended",
+        "id": 7,
+        "capacity": 100,
+        "date": "2022-12-25",
+        "description": "An activity for Conference",
+        "start_time": "09:00",
+        "end_time": "17:00",
+        "start_at": "2022-12-25T09:00:00.000Z",
+        "end_at": "2022-12-25T17:00:00.000Z",
+        "name": "Conference Copy",
+        "private": true,
+        "question_ids": [
+          2
+        ],
+        "venue_id": 1,
+        "accommodation": null,
+        "allocation_count": 77,
+        "sold_out": false,
+        "show_to_attendee": true,
+        "release_ids": [
+          "early-bird",
+          "standard"
+        ],
+        "translations": {
+          "en": {
+            "description": "An activity for Conference",
+            "name": "Conference Copy"
+          }
+        }
+      },
+      {
+        "_type": "activity",
+        "view": "extended",
+        "id": 9,
+        "capacity": 100,
+        "date": "2022-12-25",
+        "description": "An activity for Conference",
+        "start_time": "09:00",
+        "end_time": "17:00",
+        "start_at": "2022-12-25T09:00:00.000Z",
+        "end_at": "2022-12-25T17:00:00.000Z",
+        "name": "Conference Copy",
+        "private": true,
+        "question_ids": [
+          2
+        ],
+        "venue_id": 1,
+        "accommodation": null,
+        "allocation_count": 77,
         "sold_out": false,
         "show_to_attendee": true,
         "release_ids": [
@@ -161,6 +226,52 @@
       }
     ],
     "activity_questions": [
+      {
+        "_type": "question",
+        "view": "extended",
+        "id": 2,
+        "answers_count": 143,
+        "description": "To help us with travel arrangements",
+        "title": "Where do you live?",
+        "field_type": "Country",
+        "include_free_text_field": false,
+        "required": true,
+        "slug": "where-do-you-live",
+        "tickets_count": 0,
+        "translations": {
+          "en": {
+            "description": "To help us with travel arrangements",
+            "options": null,
+            "options_free_text_field": null,
+            "title": "Where do you live?"
+          }
+        },
+        "created_at": "2022-03-25T09:21:56.000Z",
+        "updated_at": "2022-03-25T09:21:56.000Z"
+      },
+      {
+        "_type": "question",
+        "view": "extended",
+        "id": 2,
+        "answers_count": 143,
+        "description": "To help us with travel arrangements",
+        "title": "Where do you live?",
+        "field_type": "Country",
+        "include_free_text_field": false,
+        "required": true,
+        "slug": "where-do-you-live",
+        "tickets_count": 0,
+        "translations": {
+          "en": {
+            "description": "To help us with travel arrangements",
+            "options": null,
+            "options_free_text_field": null,
+            "title": "Where do you live?"
+          }
+        },
+        "created_at": "2022-03-25T09:21:56.000Z",
+        "updated_at": "2022-03-25T09:21:56.000Z"
+      },
       {
         "_type": "question",
         "view": "extended",
@@ -226,7 +337,7 @@
         "include_free_text_field": false,
         "required": false,
         "slug": "favorite-color",
-        "tickets_count": 74,
+        "tickets_count": 76,
         "translations": {
           "en": {
             "description": "What is your most favorite color of all?",

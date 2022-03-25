@@ -3,7 +3,7 @@
     {
       "_type": "activity",
       "id": 1,
-      "capacity": 173,
+      "capacity": 100,
       "date": "2022-12-25",
       "description": "An activity for Conference",
       "start_time": "09:00",
@@ -17,28 +17,28 @@
       ],
       "venue_id": 1,
       "accommodation": null,
-      "allocation_count": 74,
+      "allocation_count": 76,
       "sold_out": false,
       "show_to_attendee": true
     },
     {
       "_type": "activity",
-      "id": 2,
-      "capacity": 187,
+      "id": 5,
+      "capacity": 100,
       "date": "2022-12-25",
-      "description": "An activity for Dinner",
+      "description": "An activity for Conference",
       "start_time": "09:00",
       "end_time": "17:00",
       "start_at": "2022-12-25T09:00:00.000Z",
       "end_at": "2022-12-25T17:00:00.000Z",
-      "name": "Dinner",
+      "name": "Conference Copy",
       "private": true,
       "question_ids": [
-
+        2
       ],
       "venue_id": 1,
       "accommodation": null,
-      "allocation_count": 99,
+      "allocation_count": 76,
       "sold_out": false,
       "show_to_attendee": true
     },
@@ -50,9 +50,9 @@
     "next_page": null,
     "prev_page": null,
     "total_pages": 1,
-    "total_count": 3,
+    "total_count": 5,
     "per_page": 100,
-    "overall_total": 3,
+    "overall_total": 5,
     "sort_options": {
       "Name A-Z": {
         "attr": "name",

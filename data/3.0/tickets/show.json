@@ -6,7 +6,7 @@
     "slug": "ti_dWpRqdgtyfRnjuXFyVFCSdw",
     "unique_url": "https://ti.to/demo/awesomeconf/tickets/ti_dWpRqdgtyfRnjuXFyVFCSdw",
     "company_name": null,
-    "email": null,
+    "email": "HR-PVovceOkjHQ@example.com",
     "metadata": null,
     "first_name": null,
     "last_name": null,
@@ -19,11 +19,11 @@
     "test_mode": false,
     "registration_id": 1,
     "registration_name": "Leia Organa",
-    "registration_email": "BCwTLhvYy-Vz9g@example.com",
+    "registration_email": "BxdXxRIFGWU5Kg@example.com",
     "release_id": 2,
     "release_title": "Standard",
     "release_archived": false,
-    "avatar_url": "https://secure.gravatar.com/avatar/d41d8cd98f00b204e9800998ecf8427e?default=https://starwavatars.global.ssl.fastly.net/avatars/d41d8cd98f00b204e9800998ecf8427e.png",
+    "avatar_url": "https://secure.gravatar.com/avatar/2fa3581277e911b84da59cee93c6f6e4?default=https://starwavatars.global.ssl.fastly.net/avatars/2fa3581277e911b84da59cee93c6f6e4.png",
     "void": false,
     "changes_locked": false,
     "consented_at": null,
@@ -32,14 +32,14 @@
 
     ],
     "created_at": "2022-03-25T09:21:56.000Z",
-    "updated_at": "2022-03-25T09:21:56.000Z",
+    "updated_at": "2022-03-25T09:23:45.000Z",
     "opt_ins": [
 
     ],
     "responses": {
       "favorite-color": "Green"
     },
-    "assigned": false,
+    "assigned": true,
     "qr_url": "https://qr.tito.io/tickets/ti_dWpRqdgtyfRnjuXFyVFCSdw",
     "show_qr_code": false,
     "qr_code_disabled": false,
@@ -88,6 +88,40 @@
         "date": "2022-12-25",
         "description": "An activity for Conference",
         "name": "Conference Copy"
+      },
+      {
+        "id": 7,
+        "event_id": 1,
+        "name_before_translations": null,
+        "capacity": 100,
+        "created_at": "2022-03-25T09:23:36.000Z",
+        "updated_at": "2022-03-25T09:23:36.000Z",
+        "accommodation": null,
+        "importer_id": null,
+        "show_to_attendee": true,
+        "venue_id": 1,
+        "start_time": "2000-01-01T09:00:00.000Z",
+        "end_time": "2000-01-01T17:00:00.000Z",
+        "date": "2022-12-25",
+        "description": "An activity for Conference",
+        "name": "Conference Copy"
+      },
+      {
+        "id": 9,
+        "event_id": 1,
+        "name_before_translations": null,
+        "capacity": 100,
+        "created_at": "2022-03-25T11:50:38.000Z",
+        "updated_at": "2022-03-25T11:50:38.000Z",
+        "accommodation": null,
+        "importer_id": null,
+        "show_to_attendee": true,
+        "venue_id": 1,
+        "start_time": "2000-01-01T09:00:00.000Z",
+        "end_time": "2000-01-01T17:00:00.000Z",
+        "date": "2022-12-25",
+        "description": "An activity for Conference",
+        "name": "Conference Copy"
       }
     ],
     "registration": {
@@ -97,10 +131,10 @@
       "slug": "reg_dq1hb6rb6dzDucrmoBddAwg",
       "billing_address": null,
       "created_at": "2022-03-25T09:21:56.000Z",
-      "updated_at": "2022-03-25T09:23:29.000Z",
+      "updated_at": "2022-03-25T11:50:43.000Z",
       "completed_at": "2022-03-25T09:21:56.000Z",
       "discount_code": "HALFPRICE",
-      "email": "BCwTLhvYy-Vz9g@example.com",
+      "email": "BxdXxRIFGWU5Kg@example.com",
       "job_title": null,
       "expires_at": "2022-03-25 09:36:56 UTC",
       "ip_address": null,
@@ -278,7 +312,7 @@
         }
       },
       "warnings": {
-        "quantity": "This ticket’s quantity is not limited but there are only 99 remaining because it is limited by the capacity of the Conference activity."
+        "quantity": "This ticket’s quantity is not limited but there are only 24 remaining because it is limited by the capacity of the Conference, Conference Copy, and Conference Copy activities."
       },
       "termset_id": null,
       "ticket_group_id": null

@@ -30,7 +30,7 @@
     "slug": "chk_dTRQ33efJAxk11LCGXqitTA",
     "state": "open",
     "title": "Front door",
-    "tickets_count": 173,
+    "tickets_count": 175,
     "created_at": "2022-03-25T09:21:56.000Z",
     "updated_at": "2022-03-25T09:23:23.000Z",
     "checked_in_percent": 0.0,
@@ -54,7 +54,7 @@
         ],
         "venue_id": 1,
         "accommodation": null,
-        "allocation_count": 74,
+        "allocation_count": 76,
         "sold_out": false,
         "show_to_attendee": true,
         "release_ids": [
@@ -142,22 +142,22 @@
         "id": 1,
         "answers_count": 47,
         "description": "What is your most favorite color of all?",
-        "title": "Favorite color?",
+        "title": "Fave tree?",
         "field_type": "Text",
         "include_free_text_field": false,
         "required": false,
         "slug": "favorite-color",
-        "tickets_count": 74,
+        "tickets_count": 76,
         "translations": {
           "en": {
             "description": "What is your most favorite color of all?",
             "options": null,
             "options_free_text_field": null,
-            "title": "Favorite color?"
+            "title": "Fave tree?"
           }
         },
         "created_at": "2022-03-25T09:21:56.000Z",
-        "updated_at": "2022-03-25T09:21:56.000Z"
+        "updated_at": "2022-03-25T09:23:26.000Z"
       },
       {
         "_type": "question",
@@ -190,7 +190,7 @@
         "id": 1,
         "event_id": 1,
         "created_at": "2022-03-25T09:21:55.000Z",
-        "updated_at": "2022-03-25T09:21:55.000Z",
+        "updated_at": "2022-03-25T09:23:30.000Z",
         "slug": "early-bird",
         "title": "Early Bird",
         "description": null,
@@ -224,7 +224,7 @@
         "price_degressive_list": [
 
         ],
-        "quantity": 100,
+        "quantity": 300,
         "request_company_name": null,
         "request_vat_number": null,
         "require_vat_number": false,
@@ -241,7 +241,7 @@
         "waiting_list_enabled_during_locked": false,
         "waiting_list_enabled_during_sold_out": false,
         "share_url": "https://ti.to/demo/awesomeconf/with/early-bird",
-        "tickets_count": 34,
+        "tickets_count": 36,
         "locked": false,
         "waiting_list": false,
         "sold_out": false,
@@ -256,7 +256,7 @@
         ],
         "display_price": 90.0,
         "gross_income": 0.0,
-        "full_price_tickets_count": 34,
+        "full_price_tickets_count": 36,
         "free_tickets_count": 0,
         "discounted_tickets_count": 0,
         "voided_tickets_count": 0,
@@ -276,6 +276,7 @@
           }
         },
         "warnings": {
+          "quantity": "This ticket’s quantity is set to 300 but there are only 24 remaining because it is limited by the capacity of the Conference, Conference Copy, and Conference Copy activities."
         },
         "termset_id": null,
         "ticket_group_id": null
@@ -372,7 +373,7 @@
           }
         },
         "warnings": {
-          "quantity": "This ticket’s quantity is not limited but there are only 99 remaining because it is limited by the capacity of the Conference activity."
+          "quantity": "This ticket’s quantity is not limited but there are only 24 remaining because it is limited by the capacity of the Conference, Conference Copy, and Conference Copy activities."
         },
         "termset_id": null,
         "ticket_group_id": null

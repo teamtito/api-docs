@@ -1,5 +1,0 @@
-{
-  "status": 401,
-  "message": "The API token is missing.",
-  "hint": "You can retrieve your API token at https://id.tito.io. Please see the API docs for further information at https://ti.to/docs/api."
-}

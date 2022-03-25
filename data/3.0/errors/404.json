@@ -2,5 +2,6 @@
   "status": 404,
   "message": "Resource not found",
   "lookup_mode": "live",
+  "hint": "Record not found with test mode off but it does exist with test mode on",
   "access_token": "*bill"
 }

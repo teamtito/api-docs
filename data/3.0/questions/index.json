@@ -5,12 +5,12 @@
       "id": 1,
       "answers_count": 47,
       "description": "What is your most favorite color of all?",
-      "title": "Favorite color?",
+      "title": "Fave tree?",
       "field_type": "Text",
       "include_free_text_field": false,
       "required": false,
       "slug": "favorite-color",
-      "tickets_count": 74
+      "tickets_count": 76
     },
     {
       "_type": "question",
@@ -31,7 +31,7 @@
     "next_page": null,
     "prev_page": null,
     "total_pages": 1,
-    "total_count": 2,
+    "total_count": 3,
     "per_page": 100,
     "overall_total": 2,
     "sort_options": {

@@ -56,7 +56,7 @@
     "where-do-you-live": "France"
   },
   "last_updated_by_type": "admin",
-  "upgrades": "#<Upgrade::ActiveRecord_Associations_CollectionProxy:0x0000aaab12190ad8>",
+  "upgrades": "#<Upgrade::ActiveRecord_Associations_CollectionProxy:0x0000aaaae42aed30>",
   "upgrade_ids": [
 
   ],
@@ -70,7 +70,7 @@
     "payment_reference": null,
     "source": null,
     "name": "Leia Organa",
-    "email": "BCwTLhvYy-Vz9g@example.com",
+    "email": "BxdXxRIFGWU5Kg@example.com",
     "receipt": {
       "total": "50.0",
       "tax": 0,

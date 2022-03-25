@@ -2,6 +2,25 @@
   "release_invitations": [
     {
       "_type": "release_invitation",
+      "id": 11,
+      "slug": "rsvp_drBCAUOXQvhTDVuZN3OwbZw",
+      "first_name": null,
+      "last_name": null,
+      "email": "u5tV4orRRo9G5w@example.com",
+      "name": "",
+      "unique_url": "https://ti.to/demo/awesomeconf/rsvp/rsvp_drBCAUOXQvhTDVuZN3OwbZw",
+      "status": null,
+      "redeemed": false,
+      "registration_id": null,
+      "registration_slug": null,
+      "registration_url": null,
+      "registration_reference": null,
+      "releases": [
+
+      ]
+    },
+    {
+      "_type": "release_invitation",
       "id": 10,
       "slug": "rsvp_d4wXdp7yVSbx9ht30MpVDww",
       "first_name": "Yoda",
@@ -15,25 +34,6 @@
       "registration_slug": null,
       "registration_url": null,
       "registration_reference": null,
-      "releases": [
-
-      ]
-    },
-    {
-      "_type": "release_invitation",
-      "id": 4,
-      "slug": "rsvp_dm7SHwy56PHHZdPVupszPZg",
-      "first_name": "Sheev",
-      "last_name": "Palpatine",
-      "email": "savion_hudson@example.org",
-      "name": "Sheev Palpatine",
-      "unique_url": "https://ti.to/demo/awesomeconf/rsvp/rsvp_dm7SHwy56PHHZdPVupszPZg",
-      "status": "yes",
-      "redeemed": true,
-      "registration_id": 4,
-      "registration_slug": "reg_dgiZ29DrcfeFddnCFvqyR1g",
-      "registration_url": "https://ti.to/registrations/reg_dgiZ29DrcfeFddnCFvqyR1g",
-      "registration_reference": "6C2I",
       "releases": [
 
       ]

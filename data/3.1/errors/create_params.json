@@ -1,4 +1,0 @@
-{
-  "webhook_endpoint[included_triggers][]": "registration.finished",
-  "webhook_endpoint[url]": "https://doesnotexist.tito.io/listen/456"
-}
