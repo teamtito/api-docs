@@ -1,0 +1,6 @@
+{
+  "status": 404,
+  "message": "Resource not found",
+  "lookup_mode": "live",
+  "access_token": "*bill"
+}

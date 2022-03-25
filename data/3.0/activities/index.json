@@ -3,7 +3,7 @@
     {
       "_type": "activity",
       "id": 1,
-      "capacity": 186,
+      "capacity": 173,
       "date": "2022-12-25",
       "description": "An activity for Conference",
       "start_time": "09:00",
@@ -17,14 +17,14 @@
       ],
       "venue_id": 1,
       "accommodation": null,
-      "allocation_count": 90,
+      "allocation_count": 74,
       "sold_out": false,
       "show_to_attendee": true
     },
     {
       "_type": "activity",
       "id": 2,
-      "capacity": 197,
+      "capacity": 187,
       "date": "2022-12-25",
       "description": "An activity for Dinner",
       "start_time": "09:00",
@@ -38,7 +38,7 @@
       ],
       "venue_id": 1,
       "accommodation": null,
-      "allocation_count": 90,
+      "allocation_count": 99,
       "sold_out": false,
       "show_to_attendee": true
     },

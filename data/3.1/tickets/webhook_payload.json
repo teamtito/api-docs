@@ -2,26 +2,26 @@
   "_type": "ticket",
   "id": 2,
   "test_mode": false,
-  "name": "Darth Sidious",
-  "first_name": "Darth",
-  "last_name": "Sidious",
-  "email": "macie+2@example.org",
+  "name": "Leia Organa",
+  "first_name": "Leia",
+  "last_name": "Organa",
+  "email": "hallie.miller+2@example.net",
   "phone_number": null,
   "company_name": null,
-  "reference": "ZZPZ-2",
+  "reference": "QVYZ-2",
   "price": "0.0",
   "tax": "0.0",
   "price_less_tax": "0.0",
-  "slug": "ti_dw7aMzB6Znqs3HahQDjt07g",
+  "slug": "ti_dVxcB6ytnCqQpZOiwVKECHw",
   "state_name": "complete",
   "gender": null,
   "total_paid": "0.0",
   "total_paid_less_tax": "0.0",
-  "updated_at": "2022-03-23 11:35:13 UTC",
+  "updated_at": "2022-03-25 09:21:56 UTC",
   "release_price": "0.0",
-  "discount_code_used": "FREE2U",
-  "url": "https://ti.to/demo/awesomeconf/tickets/ti_dw7aMzB6Znqs3HahQDjt07g",
-  "admin_url": "https://dashboard.tito.io/demo/awesomeconf/tickets/ti_dw7aMzB6Znqs3HahQDjt07g",
+  "discount_code_used": "HALFPRICE",
+  "url": "https://ti.to/demo/awesomeconf/tickets/ti_dVxcB6ytnCqQpZOiwVKECHw",
+  "admin_url": "https://dashboard.tito.io/demo/awesomeconf/tickets/ti_dVxcB6ytnCqQpZOiwVKECHw",
   "release_title": "Speaker",
   "release_slug": "speaker",
   "release_id": 4,
@@ -37,7 +37,7 @@
   "custom": {
   },
   "registration_id": 1,
-  "registration_slug": "reg_d4CgzKJD6jat8IzBd1BHG5Q",
+  "registration_slug": "reg_dq1hb6rb6dzDucrmoBddAwg",
   "metadata": null,
   "answers": [
     {
@@ -56,35 +56,35 @@
     "where-do-you-live": "France"
   },
   "last_updated_by_type": "admin",
-  "upgrades": "#<Upgrade::ActiveRecord_Associations_CollectionProxy:0x0000aaaad4fce840>",
+  "upgrades": "#<Upgrade::ActiveRecord_Associations_CollectionProxy:0x0000aaab12190ad8>",
   "upgrade_ids": [
 
   ],
   "registration": {
     "id": 1,
-    "slug": "reg_d4CgzKJD6jat8IzBd1BHG5Q",
-    "url": "https://ti.to/registrations/reg_d4CgzKJD6jat8IzBd1BHG5Q",
-    "admin_url": "https://dashboard.tito.io/demo/awesomeconf/registrations/reg_d4CgzKJD6jat8IzBd1BHG5Q",
-    "total": "0.0",
+    "slug": "reg_dq1hb6rb6dzDucrmoBddAwg",
+    "url": "https://ti.to/registrations/reg_dq1hb6rb6dzDucrmoBddAwg",
+    "admin_url": "https://dashboard.tito.io/demo/awesomeconf/registrations/reg_dq1hb6rb6dzDucrmoBddAwg",
+    "total": "50.0",
     "currency": "USD",
     "payment_reference": null,
     "source": null,
-    "name": "Darth Sidious",
-    "email": "jYKxHcSQhhBp8A@example.com",
+    "name": "Leia Organa",
+    "email": "BCwTLhvYy-Vz9g@example.com",
     "receipt": {
-      "total": "0.0",
+      "total": "50.0",
       "tax": 0,
-      "payment_provider": "",
-      "paid": true,
+      "payment_provider": "Invoice",
+      "paid": false,
       "receipt_lines": [
         {
-          "total": "0.0",
+          "total": "50.0",
           "quantity": 1,
           "tax": 0
         },
         {
           "total": "0.0",
-          "quantity": 3,
+          "quantity": 2,
           "tax": 0
         }
       ]
@@ -97,7 +97,7 @@
     "url": "https://ti.to/demo/awesomeconf",
     "account_slug": "demo",
     "slug": "awesomeconf",
-    "start_date": "2022-06-23",
+    "start_date": "2022-06-25",
     "end_date": null,
     "metadata": {
       "my_event_variable": "something",

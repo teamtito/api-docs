@@ -10,7 +10,7 @@
     "include_free_text_field": false,
     "required": false,
     "slug": "favorite-color",
-    "tickets_count": 90,
+    "tickets_count": 74,
     "translations": {
       "en": {
         "description": "What is your most favorite color of all?",
@@ -19,8 +19,8 @@
         "title": "Favorite color?"
       }
     },
-    "created_at": "2022-03-23T11:35:12.000Z",
-    "updated_at": "2022-03-23T11:35:12.000Z",
+    "created_at": "2022-03-25T09:21:56.000Z",
+    "updated_at": "2022-03-25T09:21:56.000Z",
     "activities": [
 
     ],
@@ -30,8 +30,8 @@
         "view": "extended",
         "id": 1,
         "event_id": 1,
-        "created_at": "2022-03-23T11:35:11.000Z",
-        "updated_at": "2022-03-23T11:35:11.000Z",
+        "created_at": "2022-03-25T09:21:55.000Z",
+        "updated_at": "2022-03-25T09:21:55.000Z",
         "slug": "early-bird",
         "title": "Early Bird",
         "description": null,
@@ -82,7 +82,7 @@
         "waiting_list_enabled_during_locked": false,
         "waiting_list_enabled_during_sold_out": false,
         "share_url": "https://ti.to/demo/awesomeconf/with/early-bird",
-        "tickets_count": 48,
+        "tickets_count": 34,
         "locked": false,
         "waiting_list": false,
         "sold_out": false,
@@ -97,7 +97,7 @@
         ],
         "display_price": 90.0,
         "gross_income": 0.0,
-        "full_price_tickets_count": 48,
+        "full_price_tickets_count": 34,
         "free_tickets_count": 0,
         "discounted_tickets_count": 0,
         "voided_tickets_count": 0,
@@ -126,8 +126,8 @@
         "view": "extended",
         "id": 2,
         "event_id": 1,
-        "created_at": "2022-03-23T11:35:11.000Z",
-        "updated_at": "2022-03-23T11:35:11.000Z",
+        "created_at": "2022-03-25T09:21:55.000Z",
+        "updated_at": "2022-03-25T09:21:55.000Z",
         "slug": "standard",
         "title": "Standard",
         "description": null,
@@ -178,7 +178,7 @@
         "waiting_list_enabled_during_locked": false,
         "waiting_list_enabled_during_sold_out": false,
         "share_url": "https://ti.to/demo/awesomeconf/with/standard",
-        "tickets_count": 42,
+        "tickets_count": 40,
         "locked": false,
         "waiting_list": false,
         "sold_out": false,
@@ -193,9 +193,9 @@
         ],
         "display_price": 100.0,
         "gross_income": 0.0,
-        "full_price_tickets_count": 33,
+        "full_price_tickets_count": 32,
         "free_tickets_count": 3,
-        "discounted_tickets_count": 9,
+        "discounted_tickets_count": 8,
         "voided_tickets_count": 0,
         "pending_waiting_list": false,
         "show_company_name": false,
@@ -213,7 +213,7 @@
           }
         },
         "warnings": {
-          "quantity": "This ticket’s quantity is not limited but there are only 10 remaining because it is limited by the capacity of the Conference and Conference Copy activities."
+          "quantity": "This ticket’s quantity is not limited but there are only 99 remaining because it is limited by the capacity of the Conference activity."
         },
         "termset_id": null,
         "ticket_group_id": null

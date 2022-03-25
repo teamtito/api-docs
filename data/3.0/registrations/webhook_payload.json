@@ -2,29 +2,29 @@
   "_type": "registration",
   "id": 1,
   "test_mode": false,
-  "slug": "reg_d4CgzKJD6jat8IzBd1BHG5Q",
-  "reference": "ZZPZ",
-  "total": "0.0",
-  "total_less_tax": "0.0",
-  "name": "Darth Sidious",
-  "first_name": "Darth",
-  "last_name": "Sidious",
-  "email": "macie@example.org",
+  "slug": "reg_dq1hb6rb6dzDucrmoBddAwg",
+  "reference": "QVYZ",
+  "total": "50.0",
+  "total_less_tax": "50.0",
+  "name": "Leia Organa",
+  "first_name": "Leia",
+  "last_name": "Organa",
+  "email": "hallie.miller@example.net",
   "phone_number": null,
   "company_name": null,
-  "discount_code": "FREE2U",
+  "discount_code": "HALFPRICE",
   "payment_reference": null,
-  "created_at": "2022-03-23 11:35:12 UTC",
-  "completed_at": "2022-03-23 11:35:12 UTC",
-  "completed_date": "2022-03-23",
+  "created_at": "2022-03-25 09:21:56 UTC",
+  "completed_at": "2022-03-25 09:21:56 UTC",
+  "completed_date": "2022-03-25",
   "metadata": null,
-  "updated_at": "2022-03-23 11:35:13 UTC",
+  "updated_at": "2022-03-25 09:21:56 UTC",
   "locale": "en",
-  "created_date": "2022-03-23",
+  "created_date": "2022-03-25",
   "currency": "USD",
   "custom": {
   },
-  "paid": true,
+  "paid": false,
   "line_items": [
     {
       "id": 1,
@@ -41,10 +41,10 @@
           "another_release_variable": 456
         }
       },
-      "price": "0.0",
+      "price": "50.0",
       "title": "Standard",
       "quantity": 1,
-      "total": "0.0",
+      "total": "50.0",
       "currency": "USD"
     },
     {
@@ -64,7 +64,7 @@
       },
       "price": "0.0",
       "title": "Speaker",
-      "quantity": 3,
+      "quantity": 2,
       "total": "0.0",
       "currency": "USD"
     }
@@ -76,17 +76,17 @@
     },
     "speaker": {
       "release": "Speaker",
-      "quantity": 3
+      "quantity": 2
     }
   },
   "tickets": [
     {
-      "reference": "ZZPZ-1",
-      "slug": "ti_dM3B8apXNkaCHacEc3Edmvg",
-      "price": "0.0",
-      "price_less_tax": "0.0",
-      "total_paid": "0.0",
-      "total_paid_less_tax": "0.0",
+      "reference": "QVYZ-1",
+      "slug": "ti_dWpRqdgtyfRnjuXFyVFCSdw",
+      "price": "50.0",
+      "price_less_tax": "50.0",
+      "total_paid": "50.0",
+      "total_paid_less_tax": "50.0",
       "release_id": 2,
       "release_slug": "standard",
       "release_title": "Standard",
@@ -105,13 +105,13 @@
       "last_name": null,
       "company_name": null,
       "email": null,
-      "url": "https://ti.to/demo/awesomeconf/tickets/ti_dM3B8apXNkaCHacEc3Edmvg",
-      "admin_url": "https://dashboard.tito.io/demo/awesomeconf/tickets/ti_dM3B8apXNkaCHacEc3Edmvg",
+      "url": "https://ti.to/demo/awesomeconf/tickets/ti_dWpRqdgtyfRnjuXFyVFCSdw",
+      "admin_url": "https://dashboard.tito.io/demo/awesomeconf/tickets/ti_dWpRqdgtyfRnjuXFyVFCSdw",
       "opt_ins": [
 
       ],
       "responses": {
-        "favorite-color": "Red"
+        "favorite-color": "Green"
       },
       "answers": [
         {
@@ -120,15 +120,15 @@
             "title": "Favorite color?",
             "description": "What is your most favorite color of all?"
           },
-          "humanized_response": "Red",
-          "response": "Red",
+          "humanized_response": "Green",
+          "response": "Green",
           "file": null
         }
       ]
     },
     {
-      "reference": "ZZPZ-2",
-      "slug": "ti_dw7aMzB6Znqs3HahQDjt07g",
+      "reference": "QVYZ-2",
+      "slug": "ti_dVxcB6ytnCqQpZOiwVKECHw",
       "price": "0.0",
       "price_less_tax": "0.0",
       "total_paid": "0.0",
@@ -146,13 +146,13 @@
           "another_release_variable": 456
         }
       },
-      "name": "Darth Sidious",
-      "first_name": "Darth",
-      "last_name": "Sidious",
+      "name": "Leia Organa",
+      "first_name": "Leia",
+      "last_name": "Organa",
       "company_name": null,
-      "email": "macie+2@example.org",
-      "url": "https://ti.to/demo/awesomeconf/tickets/ti_dw7aMzB6Znqs3HahQDjt07g",
-      "admin_url": "https://dashboard.tito.io/demo/awesomeconf/tickets/ti_dw7aMzB6Znqs3HahQDjt07g",
+      "email": "hallie.miller+2@example.net",
+      "url": "https://ti.to/demo/awesomeconf/tickets/ti_dVxcB6ytnCqQpZOiwVKECHw",
+      "admin_url": "https://dashboard.tito.io/demo/awesomeconf/tickets/ti_dVxcB6ytnCqQpZOiwVKECHw",
       "opt_ins": [
 
       ],
@@ -173,8 +173,8 @@
       ]
     },
     {
-      "reference": "ZZPZ-3",
-      "slug": "ti_d8kXrneQVVf8ujOlBe1QNXA",
+      "reference": "QVYZ-3",
+      "slug": "ti_dxPER0rEDmmAN2Oxj7LqjDg",
       "price": "0.0",
       "price_less_tax": "0.0",
       "total_paid": "0.0",
@@ -192,18 +192,18 @@
           "another_release_variable": 456
         }
       },
-      "name": "Darth Sidious",
-      "first_name": "Darth",
-      "last_name": "Sidious",
+      "name": "Leia Organa",
+      "first_name": "Leia",
+      "last_name": "Organa",
       "company_name": null,
-      "email": "macie+3@example.org",
-      "url": "https://ti.to/demo/awesomeconf/tickets/ti_d8kXrneQVVf8ujOlBe1QNXA",
-      "admin_url": "https://dashboard.tito.io/demo/awesomeconf/tickets/ti_d8kXrneQVVf8ujOlBe1QNXA",
+      "email": "hallie.miller+3@example.net",
+      "url": "https://ti.to/demo/awesomeconf/tickets/ti_dxPER0rEDmmAN2Oxj7LqjDg",
+      "admin_url": "https://dashboard.tito.io/demo/awesomeconf/tickets/ti_dxPER0rEDmmAN2Oxj7LqjDg",
       "opt_ins": [
 
       ],
       "responses": {
-        "where-do-you-live": "France"
+        "where-do-you-live": "Ireland"
       },
       "answers": [
         {
@@ -212,54 +212,8 @@
             "title": "Where do you live?",
             "description": "To help us with travel arrangements"
           },
-          "humanized_response": "France",
-          "response": "FR",
-          "file": null
-        }
-      ]
-    },
-    {
-      "reference": "ZZPZ-4",
-      "slug": "ti_d6clZXJfi9SUNpWgYAgpFsQ",
-      "price": "0.0",
-      "price_less_tax": "0.0",
-      "total_paid": "0.0",
-      "total_paid_less_tax": "0.0",
-      "release_id": 4,
-      "release_slug": "speaker",
-      "release_title": "Speaker",
-      "release": {
-        "id": 4,
-        "slug": "speaker",
-        "title": "Speaker",
-        "price": "0.0",
-        "metadata": {
-          "my_release_variable": "else",
-          "another_release_variable": 456
-        }
-      },
-      "name": "Darth Sidious",
-      "first_name": "Darth",
-      "last_name": "Sidious",
-      "company_name": null,
-      "email": "macie+4@example.org",
-      "url": "https://ti.to/demo/awesomeconf/tickets/ti_d6clZXJfi9SUNpWgYAgpFsQ",
-      "admin_url": "https://dashboard.tito.io/demo/awesomeconf/tickets/ti_d6clZXJfi9SUNpWgYAgpFsQ",
-      "opt_ins": [
-
-      ],
-      "responses": {
-        "where-do-you-live": "United Kingdom"
-      },
-      "answers": [
-        {
-          "question": {
-            "id": 2,
-            "title": "Where do you live?",
-            "description": "To help us with travel arrangements"
-          },
-          "humanized_response": "United Kingdom",
-          "response": "UK",
+          "humanized_response": "Ireland",
+          "response": "IE",
           "file": null
         }
       ]
@@ -272,12 +226,12 @@
   },
   "receipt": {
     "number": "0000001",
-    "total": "0.0",
+    "total": "50.0",
     "tax": 0,
-    "total_less_tax": "0.0",
-    "payment_provider": "",
+    "total_less_tax": "50.0",
+    "payment_provider": "Invoice",
     "payment_reference": null,
-    "paid": true
+    "paid": false
   },
   "billing_address": null,
   "event": {
@@ -287,7 +241,7 @@
     "url": "https://ti.to/demo/awesomeconf",
     "account_slug": "demo",
     "slug": "awesomeconf",
-    "start_date": "2022-06-23",
+    "start_date": "2022-06-25",
     "end_date": null,
     "metadata": {
       "my_event_variable": "something",

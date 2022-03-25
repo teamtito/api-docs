@@ -4,8 +4,8 @@
     "_type": "event",
     "view": "extended",
     "id": 1,
-    "created_at": "2022-03-23T11:35:11.000Z",
-    "updated_at": "2022-03-23T11:35:32.000Z",
+    "created_at": "2022-03-25T09:21:55.000Z",
+    "updated_at": "2022-03-25T09:22:16.000Z",
     "title": "Awesomeconf",
     "description": null,
     "banner": {
@@ -38,14 +38,14 @@
     "private": false,
     "slug": "awesomeconf",
     "account_id": 1,
-    "start_date": "2022-06-23",
+    "start_date": "2022-06-25",
     "end_date": null,
-    "date_or_range": "June 23rd, 2022",
+    "date_or_range": "June 25th, 2022",
     "days_until": 92,
     "days_since": -92,
     "happening_in": "future",
     "day_number": null,
-    "security_token": "dgedFfgsAy56vot7kqvxYA",
+    "security_token": "9uizgSYDw9aFFkIv00gf9g",
     "metadata": {
       "my_event_variable": "something",
       "another_event_variable": 123
@@ -95,7 +95,7 @@
       }
     },
     "registrations_count": 30,
-    "tickets_count": 0,
+    "tickets_count": 173,
     "additional_info": null,
     "after_registration_closed_url": null,
     "after_registration_complete_url": null,
@@ -158,7 +158,7 @@
     "invoice_purchase_message": null,
     "invoice_tax_details": null,
     "italian_checkout": false,
-    "last_invoice_number": "0000059",
+    "last_invoice_number": "0000060",
     "lock_changes_when_ticket_not_complete": "1",
     "payment_instructions": null,
     "paypal_payment_option_id": null,
@@ -244,15 +244,15 @@
     "tracking_url": null,
     "typekit_id": null,
     "twitter_share_message": null,
-    "users_count": 6,
+    "users_count": 8,
     "releases": [
       {
         "_type": "release",
         "view": "extended",
         "id": 1,
         "event_id": 1,
-        "created_at": "2022-03-23T11:35:11.000Z",
-        "updated_at": "2022-03-23T11:35:11.000Z",
+        "created_at": "2022-03-25T09:21:55.000Z",
+        "updated_at": "2022-03-25T09:21:55.000Z",
         "slug": "early-bird",
         "title": "Early Bird",
         "description": null,
@@ -303,7 +303,7 @@
         "waiting_list_enabled_during_locked": false,
         "waiting_list_enabled_during_sold_out": false,
         "share_url": "https://ti.to/demo/awesomeconf/with/early-bird",
-        "tickets_count": 48,
+        "tickets_count": 34,
         "locked": false,
         "waiting_list": false,
         "sold_out": false,
@@ -318,7 +318,7 @@
         ],
         "display_price": 90.0,
         "gross_income": 0.0,
-        "full_price_tickets_count": 48,
+        "full_price_tickets_count": 34,
         "free_tickets_count": 0,
         "discounted_tickets_count": 0,
         "voided_tickets_count": 0,
@@ -347,8 +347,8 @@
         "view": "extended",
         "id": 2,
         "event_id": 1,
-        "created_at": "2022-03-23T11:35:11.000Z",
-        "updated_at": "2022-03-23T11:35:11.000Z",
+        "created_at": "2022-03-25T09:21:55.000Z",
+        "updated_at": "2022-03-25T09:21:55.000Z",
         "slug": "standard",
         "title": "Standard",
         "description": null,
@@ -399,7 +399,7 @@
         "waiting_list_enabled_during_locked": false,
         "waiting_list_enabled_during_sold_out": false,
         "share_url": "https://ti.to/demo/awesomeconf/with/standard",
-        "tickets_count": 42,
+        "tickets_count": 40,
         "locked": false,
         "waiting_list": false,
         "sold_out": false,
@@ -414,9 +414,9 @@
         ],
         "display_price": 100.0,
         "gross_income": 0.0,
-        "full_price_tickets_count": 33,
+        "full_price_tickets_count": 32,
         "free_tickets_count": 3,
-        "discounted_tickets_count": 9,
+        "discounted_tickets_count": 8,
         "voided_tickets_count": 0,
         "pending_waiting_list": false,
         "show_company_name": false,
@@ -434,7 +434,7 @@
           }
         },
         "warnings": {
-          "quantity": "This ticket’s quantity is not limited but there are only 96 remaining because it is limited by the capacity of the Conference activity."
+          "quantity": "This ticket’s quantity is not limited but there are only 99 remaining because it is limited by the capacity of the Conference activity."
         },
         "termset_id": null,
         "ticket_group_id": null
@@ -444,8 +444,8 @@
         "view": "extended",
         "id": 3,
         "event_id": 1,
-        "created_at": "2022-03-23T11:35:11.000Z",
-        "updated_at": "2022-03-23T11:35:12.000Z",
+        "created_at": "2022-03-25T09:21:55.000Z",
+        "updated_at": "2022-03-25T09:21:55.000Z",
         "slug": "exhibitor",
         "title": "Exhibitor",
         "description": null,
@@ -496,7 +496,7 @@
         "waiting_list_enabled_during_locked": false,
         "waiting_list_enabled_during_sold_out": false,
         "share_url": "https://ti.to/demo/awesomeconf/with/exhibitor",
-        "tickets_count": 50,
+        "tickets_count": 52,
         "locked": false,
         "waiting_list": false,
         "sold_out": false,
@@ -512,7 +512,7 @@
         "display_price": 0.0,
         "gross_income": 0.0,
         "full_price_tickets_count": 0,
-        "free_tickets_count": 50,
+        "free_tickets_count": 52,
         "discounted_tickets_count": 0,
         "voided_tickets_count": 0,
         "pending_waiting_list": false,
@@ -531,7 +531,7 @@
           }
         },
         "warnings": {
-          "quantity": "This ticket’s quantity is not limited but there are only 107 remaining because it is limited by the capacity of the Dinner activity."
+          "quantity": "This ticket’s quantity is not limited but there are only 88 remaining because it is limited by the capacity of the Dinner activity."
         },
         "termset_id": null,
         "ticket_group_id": null
@@ -541,8 +541,8 @@
         "view": "extended",
         "id": 4,
         "event_id": 1,
-        "created_at": "2022-03-23T11:35:12.000Z",
-        "updated_at": "2022-03-23T11:35:12.000Z",
+        "created_at": "2022-03-25T09:21:55.000Z",
+        "updated_at": "2022-03-25T09:21:55.000Z",
         "slug": "speaker",
         "title": "Speaker",
         "description": null,
@@ -593,7 +593,7 @@
         "waiting_list_enabled_during_locked": false,
         "waiting_list_enabled_during_sold_out": false,
         "share_url": "https://ti.to/demo/awesomeconf/with/speaker",
-        "tickets_count": 40,
+        "tickets_count": 47,
         "locked": false,
         "waiting_list": false,
         "sold_out": false,
@@ -609,7 +609,7 @@
         "display_price": 0.0,
         "gross_income": 0.0,
         "full_price_tickets_count": 0,
-        "free_tickets_count": 40,
+        "free_tickets_count": 47,
         "discounted_tickets_count": 0,
         "voided_tickets_count": 0,
         "pending_waiting_list": false,
@@ -628,7 +628,7 @@
           }
         },
         "warnings": {
-          "quantity": "This ticket’s quantity is not limited but there are only 107 remaining because it is limited by the capacity of the Dinner and Workshop activities."
+          "quantity": "This ticket’s quantity is not limited but there are only 88 remaining because it is limited by the capacity of the Dinner and Workshop activities."
         },
         "termset_id": null,
         "ticket_group_id": null

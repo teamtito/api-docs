@@ -10,12 +10,12 @@
       "include_free_text_field": false,
       "required": false,
       "slug": "favorite-color",
-      "tickets_count": 90
+      "tickets_count": 74
     },
     {
       "_type": "question",
       "id": 2,
-      "answers_count": 150,
+      "answers_count": 143,
       "description": "To help us with travel arrangements",
       "title": "Where do you live?",
       "field_type": "Country",

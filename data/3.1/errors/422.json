@@ -1,0 +1,22 @@
+{
+  "status": 422,
+  "message": "That request was invalid",
+  "errors": {
+    "code": [
+      "can't be blank"
+    ],
+    "type": [
+      "can't be blank"
+    ]
+  },
+  "error_list": [
+    {
+      "attribute": "code",
+      "message": "can't be blank"
+    },
+    {
+      "attribute": "type",
+      "message": "can't be blank"
+    }
+  ]
+}

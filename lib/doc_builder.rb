@@ -276,26 +276,26 @@ def show_url_key(combined_path, descriptions: {}, skip: nil)
   nil
 end
 
-def list_attributes(attributes, skip: [])
+def list_attributes(attributes, skip: [], context: nil)
   skip = Array(skip)
   concat "<ul class=\"attribute-list\">\n"
   attributes.reject { |name, hash| %w[id slug created_at updated_at].include?(name) || hash[:ignore] }.each do |name, hash|
-    list_attribute(name, hash, skip: skip)
+    list_attribute(name, hash, skip: skip, context: context)
   end
   common_attributes = attributes.select { |name| %w[id slug created_at updated_at].include?(name) }
   if common_attributes.any?
     concat "<li class=\"separator\">Common attributes:</li>"
     common_attributes.sort_by { |name, _| %w[id slug created_at updated_at].index(name) }.each do |name, hash|
-      list_attribute(name, hash, skip: skip)
+      list_attribute(name, hash, skip: skip, context: context)
     end
   end
   concat "</ul>\n"
 end
 
-def list_attribute(name, hash, skip:)
+def list_attribute(name, hash, skip:, context:)
   concat "<li><div>"
   concat "<code class=\"name\">#{name}</code>"
-  concat "<span class=\"type\">#{hash["type"]}</span>" if hash["type"].present?
+  concat "<span class=\"type\">#{hash[:type]}</span>" if hash[:type].present?
   concat "<span class=\"read-only\">read only</span>" if hash[:read_only] && !skip.include?(:read_only)
   concat "<span class=\"write-only\">write only</span>" if hash[:write_only] && !skip.include?(:write_only)
   concat "<span class=\"required\">required</span>" if hash[:required] && !skip.include?(:required)
@@ -312,7 +312,7 @@ def list_attribute(name, hash, skip:)
   if hash[:expandable] && !skip.include?(:expandable)
     descriptions << "This attribute is hidden by default but you can expand it using `?expand=#{name}`."
   end
-  if data[@version_as_string][name]
+  if data[@version_as_string][name] && name != context
     descriptions << "See <a href=\"##{name}\">#{name}</a>."
   end
   concat "<div class=\"attribute-description\">#{descriptions.join(" ").gsub(/`([^`]+)`/, '<code>\1</code>')}</div>" if descriptions.any?

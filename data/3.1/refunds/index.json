@@ -2,16 +2,16 @@
   "refunds": [
     {
       "_type": "refund",
-      "id": 7,
-      "amount": "-420.0",
-      "created_at": "2022-03-23T11:35:16.000Z",
+      "id": 13,
+      "amount": "0.0",
+      "created_at": "2022-03-25T09:22:03.000Z",
       "manual": null
     },
     {
       "_type": "refund",
-      "id": 13,
-      "amount": "-320.0",
-      "created_at": "2022-03-23T11:35:19.000Z",
+      "id": 7,
+      "amount": "-420.0",
+      "created_at": "2022-03-25T09:21:59.000Z",
       "manual": null
     },
     "..."
