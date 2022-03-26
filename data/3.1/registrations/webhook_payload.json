@@ -2,25 +2,25 @@
   "_type": "registration",
   "id": 1,
   "test_mode": false,
-  "slug": "reg_dq1hb6rb6dzDucrmoBddAwg",
-  "reference": "QVYZ",
-  "total": "50.0",
-  "total_less_tax": "50.0",
-  "name": "Leia Organa",
-  "first_name": "Leia",
-  "last_name": "Organa",
-  "email": "BxdXxRIFGWU5Kg@example.com",
+  "slug": "reg_dp9Z2e2FgFH9QrhrVbf7Whg",
+  "reference": "9K9R",
+  "total": "270.0",
+  "total_less_tax": "270.0",
+  "name": "Watto",
+  "first_name": "Watto",
+  "last_name": "",
+  "email": "nIFOizT0YnYTTA@example.com",
   "phone_number": null,
   "company_name": null,
-  "discount_code": "HALFPRICE",
+  "discount_code": "FREE2U",
   "payment_reference": null,
-  "created_at": "2022-03-25 09:21:56 UTC",
-  "completed_at": "2022-03-25 09:21:56 UTC",
-  "completed_date": "2022-03-25",
+  "created_at": "2022-03-26 07:36:07 UTC",
+  "completed_at": "2022-03-26 07:36:07 UTC",
+  "completed_date": "2022-03-26",
   "metadata": null,
-  "updated_at": "2022-03-25 11:50:47 UTC",
+  "updated_at": "2022-03-26 07:59:13 UTC",
   "locale": "en",
-  "created_date": "2022-03-25",
+  "created_date": "2022-03-26",
   "currency": "USD",
   "custom": {
   },
@@ -41,21 +41,21 @@
           "another_release_variable": 456
         }
       },
-      "price": "50.0",
+      "price": "0.0",
       "title": "Standard",
-      "quantity": 1,
-      "total": "50.0",
+      "quantity": 2,
+      "total": "0.0",
       "currency": "USD"
     },
     {
       "id": 2,
-      "release_slug": "speaker",
-      "release_id": 4,
-      "release_title": "Speaker",
+      "release_slug": "exhibitor",
+      "release_id": 3,
+      "release_title": "Exhibitor",
       "release_price": "0.0",
       "release": {
-        "slug": "speaker",
-        "title": "Speaker",
+        "slug": "exhibitor",
+        "title": "Exhibitor",
         "price": "0.0",
         "metadata": {
           "my_release_variable": "else",
@@ -63,30 +63,55 @@
         }
       },
       "price": "0.0",
-      "title": "Speaker",
-      "quantity": 2,
+      "title": "Exhibitor",
+      "quantity": 1,
       "total": "0.0",
+      "currency": "USD"
+    },
+    {
+      "id": 3,
+      "release_slug": "early-bird",
+      "release_id": 1,
+      "release_title": "Early Bird",
+      "release_price": "90.0",
+      "release": {
+        "slug": "early-bird",
+        "title": "Early Bird",
+        "price": "90.0",
+        "metadata": {
+          "my_release_variable": "else",
+          "another_release_variable": 456
+        }
+      },
+      "price": "90.0",
+      "title": "Early Bird",
+      "quantity": 3,
+      "total": "270.0",
       "currency": "USD"
     }
   ],
   "quantities": {
     "standard": {
       "release": "Standard",
+      "quantity": 2
+    },
+    "exhibitor": {
+      "release": "Exhibitor",
       "quantity": 1
     },
-    "speaker": {
-      "release": "Speaker",
-      "quantity": 2
+    "early-bird": {
+      "release": "Early Bird",
+      "quantity": 3
     }
   },
   "tickets": [
     {
-      "reference": "QVYZ-1",
-      "slug": "ti_dWpRqdgtyfRnjuXFyVFCSdw",
-      "price": "50.0",
-      "price_less_tax": "50.0",
-      "total_paid": "50.0",
-      "total_paid_less_tax": "50.0",
+      "reference": "9K9R-1",
+      "slug": "ti_dj8GKOodhY1PZK3VpFxVshw",
+      "price": "0.0",
+      "price_less_tax": "0.0",
+      "total_paid": "0.0",
+      "total_paid_less_tax": "0.0",
       "release_id": 2,
       "release_slug": "standard",
       "release_title": "Standard",
@@ -104,14 +129,14 @@
       "first_name": null,
       "last_name": null,
       "company_name": null,
-      "email": "dNsHG7JD1c23SA@example.com",
-      "url": "https://ti.to/demo/awesomeconf/tickets/ti_dWpRqdgtyfRnjuXFyVFCSdw",
-      "admin_url": "https://dashboard.tito.io/demo/awesomeconf/tickets/ti_dWpRqdgtyfRnjuXFyVFCSdw",
+      "email": "yW0K4UJmnG_eyQ@example.com",
+      "url": "https://ti.to/demo/awesomeconf/tickets/ti_dj8GKOodhY1PZK3VpFxVshw",
+      "admin_url": "https://dashboard.tito.io/demo/awesomeconf/tickets/ti_dj8GKOodhY1PZK3VpFxVshw",
       "opt_ins": [
 
       ],
       "responses": {
-        "favorite-color": "Green"
+        "favorite-color": "Blue"
       },
       "answers": [
         {
@@ -120,44 +145,44 @@
             "title": "Fave tree?",
             "description": "What is your most favorite color of all?"
           },
-          "humanized_response": "Green",
-          "response": "Green",
+          "humanized_response": "Blue",
+          "response": "Blue",
           "file": null
         }
       ]
     },
     {
-      "reference": "QVYZ-2",
-      "slug": "ti_dVxcB6ytnCqQpZOiwVKECHw",
+      "reference": "9K9R-2",
+      "slug": "ti_dbFC7zPGM4jkgWA1jpVfGOw",
       "price": "0.0",
       "price_less_tax": "0.0",
       "total_paid": "0.0",
       "total_paid_less_tax": "0.0",
-      "release_id": 4,
-      "release_slug": "speaker",
-      "release_title": "Speaker",
+      "release_id": 2,
+      "release_slug": "standard",
+      "release_title": "Standard",
       "release": {
-        "id": 4,
-        "slug": "speaker",
-        "title": "Speaker",
-        "price": "0.0",
+        "id": 2,
+        "slug": "standard",
+        "title": "Standard",
+        "price": "100.0",
         "metadata": {
           "my_release_variable": "else",
           "another_release_variable": 456
         }
       },
-      "name": "Leia Organa",
-      "first_name": "Leia",
-      "last_name": "Organa",
+      "name": "Watto",
+      "first_name": "Watto",
+      "last_name": null,
       "company_name": null,
-      "email": "hallie.miller+2@example.net",
-      "url": "https://ti.to/demo/awesomeconf/tickets/ti_dVxcB6ytnCqQpZOiwVKECHw",
-      "admin_url": "https://dashboard.tito.io/demo/awesomeconf/tickets/ti_dVxcB6ytnCqQpZOiwVKECHw",
+      "email": "jailyn@example.com",
+      "url": "https://ti.to/demo/awesomeconf/tickets/ti_dbFC7zPGM4jkgWA1jpVfGOw",
+      "admin_url": "https://dashboard.tito.io/demo/awesomeconf/tickets/ti_dbFC7zPGM4jkgWA1jpVfGOw",
       "opt_ins": [
 
       ],
       "responses": {
-        "where-do-you-live": "France"
+        "where-do-you-live": "United States"
       },
       "answers": [
         {
@@ -166,39 +191,131 @@
             "title": "Where do you live?",
             "description": "To help us with travel arrangements"
           },
-          "humanized_response": "France",
-          "response": "FR",
+          "humanized_response": "United States",
+          "response": "US",
           "file": null
         }
       ]
     },
     {
-      "reference": "QVYZ-3",
-      "slug": "ti_dxPER0rEDmmAN2Oxj7LqjDg",
+      "reference": "9K9R-3",
+      "slug": "ti_dpIFsGDCrA0ydKeuQxo4FEg",
       "price": "0.0",
       "price_less_tax": "0.0",
       "total_paid": "0.0",
       "total_paid_less_tax": "0.0",
-      "release_id": 4,
-      "release_slug": "speaker",
-      "release_title": "Speaker",
+      "release_id": 3,
+      "release_slug": "exhibitor",
+      "release_title": "Exhibitor",
       "release": {
-        "id": 4,
-        "slug": "speaker",
-        "title": "Speaker",
+        "id": 3,
+        "slug": "exhibitor",
+        "title": "Exhibitor",
         "price": "0.0",
         "metadata": {
           "my_release_variable": "else",
           "another_release_variable": 456
         }
       },
-      "name": "Leia Organa",
-      "first_name": "Leia",
-      "last_name": "Organa",
+      "name": "Watto",
+      "first_name": "Watto",
+      "last_name": null,
       "company_name": null,
-      "email": "hallie.miller+3@example.net",
-      "url": "https://ti.to/demo/awesomeconf/tickets/ti_dxPER0rEDmmAN2Oxj7LqjDg",
-      "admin_url": "https://dashboard.tito.io/demo/awesomeconf/tickets/ti_dxPER0rEDmmAN2Oxj7LqjDg",
+      "email": "jailyn@example.com",
+      "url": "https://ti.to/demo/awesomeconf/tickets/ti_dpIFsGDCrA0ydKeuQxo4FEg",
+      "admin_url": "https://dashboard.tito.io/demo/awesomeconf/tickets/ti_dpIFsGDCrA0ydKeuQxo4FEg",
+      "opt_ins": [
+
+      ],
+      "responses": {
+        "where-do-you-live": "Germany"
+      },
+      "answers": [
+        {
+          "question": {
+            "id": 2,
+            "title": "Where do you live?",
+            "description": "To help us with travel arrangements"
+          },
+          "humanized_response": "Germany",
+          "response": "DE",
+          "file": null
+        }
+      ]
+    },
+    {
+      "reference": "9K9R-4",
+      "slug": "ti_dPRNYLLpkElscpUJckyjwWg",
+      "price": "90.0",
+      "price_less_tax": "90.0",
+      "total_paid": "90.0",
+      "total_paid_less_tax": "90.0",
+      "release_id": 1,
+      "release_slug": "early-bird",
+      "release_title": "Early Bird",
+      "release": {
+        "id": 1,
+        "slug": "early-bird",
+        "title": "Early Bird",
+        "price": "90.0",
+        "metadata": {
+          "my_release_variable": "else",
+          "another_release_variable": 456
+        }
+      },
+      "name": "Watto",
+      "first_name": "Watto",
+      "last_name": null,
+      "company_name": null,
+      "email": "jailyn+4@example.com",
+      "url": "https://ti.to/demo/awesomeconf/tickets/ti_dPRNYLLpkElscpUJckyjwWg",
+      "admin_url": "https://dashboard.tito.io/demo/awesomeconf/tickets/ti_dPRNYLLpkElscpUJckyjwWg",
+      "opt_ins": [
+
+      ],
+      "responses": {
+        "where-do-you-live": "Germany"
+      },
+      "answers": [
+        {
+          "question": {
+            "id": 2,
+            "title": "Where do you live?",
+            "description": "To help us with travel arrangements"
+          },
+          "humanized_response": "Germany",
+          "response": "DE",
+          "file": null
+        }
+      ]
+    },
+    {
+      "reference": "9K9R-5",
+      "slug": "ti_dj4277jrKX8rpq2wbY1fEpg",
+      "price": "90.0",
+      "price_less_tax": "90.0",
+      "total_paid": "90.0",
+      "total_paid_less_tax": "90.0",
+      "release_id": 1,
+      "release_slug": "early-bird",
+      "release_title": "Early Bird",
+      "release": {
+        "id": 1,
+        "slug": "early-bird",
+        "title": "Early Bird",
+        "price": "90.0",
+        "metadata": {
+          "my_release_variable": "else",
+          "another_release_variable": 456
+        }
+      },
+      "name": "Watto",
+      "first_name": "Watto",
+      "last_name": null,
+      "company_name": null,
+      "email": "jailyn+5@example.com",
+      "url": "https://ti.to/demo/awesomeconf/tickets/ti_dj4277jrKX8rpq2wbY1fEpg",
+      "admin_url": "https://dashboard.tito.io/demo/awesomeconf/tickets/ti_dj4277jrKX8rpq2wbY1fEpg",
       "opt_ins": [
 
       ],
@@ -217,6 +334,63 @@
           "file": null
         }
       ]
+    },
+    {
+      "reference": "9K9R-6",
+      "slug": "ti_dDEWoBweq75fl7pFhrWAk2g",
+      "price": "90.0",
+      "price_less_tax": "90.0",
+      "total_paid": "90.0",
+      "total_paid_less_tax": "90.0",
+      "release_id": 1,
+      "release_slug": "early-bird",
+      "release_title": "Early Bird",
+      "release": {
+        "id": 1,
+        "slug": "early-bird",
+        "title": "Early Bird",
+        "price": "90.0",
+        "metadata": {
+          "my_release_variable": "else",
+          "another_release_variable": 456
+        }
+      },
+      "name": "",
+      "first_name": null,
+      "last_name": null,
+      "company_name": null,
+      "email": null,
+      "url": "https://ti.to/demo/awesomeconf/tickets/ti_dDEWoBweq75fl7pFhrWAk2g",
+      "admin_url": "https://dashboard.tito.io/demo/awesomeconf/tickets/ti_dDEWoBweq75fl7pFhrWAk2g",
+      "opt_ins": [
+
+      ],
+      "responses": {
+        "favorite-color": "Blue",
+        "where-do-you-live": "United Kingdom"
+      },
+      "answers": [
+        {
+          "question": {
+            "id": 1,
+            "title": "Fave tree?",
+            "description": "What is your most favorite color of all?"
+          },
+          "humanized_response": "Blue",
+          "response": "Blue",
+          "file": null
+        },
+        {
+          "question": {
+            "id": 2,
+            "title": "Where do you live?",
+            "description": "To help us with travel arrangements"
+          },
+          "humanized_response": "United Kingdom",
+          "response": "UK",
+          "file": null
+        }
+      ]
     }
   ],
   "source": null,
@@ -226,9 +400,9 @@
   },
   "receipt": {
     "number": "0000001",
-    "total": "50.0",
+    "total": "270.0",
     "tax": 0,
-    "total_less_tax": "50.0",
+    "total_less_tax": "270.0",
     "payment_provider": "Invoice",
     "payment_reference": null,
     "paid": false
@@ -241,7 +415,7 @@
     "url": "https://ti.to/demo/awesomeconf",
     "account_slug": "demo",
     "slug": "awesomeconf",
-    "start_date": "2022-06-25",
+    "start_date": "2022-06-26",
     "end_date": null,
     "metadata": {
       "my_event_variable": "something",

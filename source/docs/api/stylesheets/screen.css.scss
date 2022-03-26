@@ -986,6 +986,10 @@ body {
     @extend .badge;
     background-color: lighten(#0079ff, 45%);
   }
+  .code {
+    @extend .badge;
+    background-color: lighten(#0079ff, 45%);
+  }
   .read-only {
     @extend .badge;
     background-color: lighten(#f92672, 42%);

@@ -296,6 +296,7 @@ def list_attribute(name, hash, skip:, context:)
   concat "<li><div>"
   concat "<code class=\"name\">#{name}</code>"
   concat "<span class=\"type\">#{hash[:type]}</span>" if hash[:type].present?
+  concat "<span class=\"code\">#{hash[:code]}</span>" if hash[:code] && !skip.include?(:code)
   concat "<span class=\"read-only\">read only</span>" if hash[:read_only] && !skip.include?(:read_only)
   concat "<span class=\"write-only\">write only</span>" if hash[:write_only] && !skip.include?(:write_only)
   concat "<span class=\"required\">required</span>" if hash[:required] && !skip.include?(:required)

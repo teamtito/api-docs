@@ -12,7 +12,7 @@
       "expires_at": null,
       "expired": false,
       "open": true,
-      "qr_code_url": "https://qr.tito.io/checkin_lists/chk_dTRQ33efJAxk11LCGXqitTA",
+      "qr_code_url": "https://qr.tito.io/checkin_lists/chk_ddqgQVVWO6Unp9CyZkXrKWQ",
       "question_ids": [
         "favorite-color",
         "where-do-you-live"
@@ -27,12 +27,12 @@
       "show_email": true,
       "show_phone_number": true,
       "hide_unpaid": false,
-      "slug": "chk_dTRQ33efJAxk11LCGXqitTA",
+      "slug": "chk_ddqgQVVWO6Unp9CyZkXrKWQ",
       "state": "open",
       "title": "Front door",
-      "tickets_count": 175,
-      "created_at": "2022-03-25T09:21:56.000Z",
-      "updated_at": "2022-03-25T09:23:23.000Z"
+      "tickets_count": 184,
+      "created_at": "2022-03-26T07:36:07.000Z",
+      "updated_at": "2022-03-26T07:37:07.000Z"
     }
   ],
   "meta": {

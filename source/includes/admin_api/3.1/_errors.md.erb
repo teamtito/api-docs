@@ -52,48 +52,76 @@ If you get an error then it will follow a common format. Every error includes a 
 
 <%= display_response "401", resource: :errors %>
 
-If a request cannot be authenticated the Tito API returns the standard
-`401` unauthorized HTTP status code and includes more details of the
-authentication error in the HTTP response.
-
-The Tito API includes a machine readable `errors` key. It also has a `hint` key
-containing human friendly information on how to resolve your authentication error.
+If a request cannot be authenticated (we don't know who you are).
 
 ## Authorization errors [403] <i class="fa-regular fa-ban"></i>
 
 <%= display_response "403", resource: :errors %>
 
-If a request cannot be authorized as a user has insufficient permissions
-the Tito API returns a `403` forbidden HTTP status code and includes more details of the
-authorization error in the HTTP response.
+If a request cannot be authorized as a user has insufficient permissions (we know who you are but you're not allowed to do what you're trying to do).
 
 ## Resource not found [404] <i class="fa-regular fa-notdef"></i>
 
 <%= display_response "404", resource: :errors %>
 
-If the resource you are looking for isn't there.
+If the resource you are looking for isn't there. If the resource does exist but you were looking in the wrong test mode then it will tell you that in the `hint`.
 
 ## Validation errors [422] <i class="fa-regular fa-thumbs-down"></i>
 
+<%= show_url "discount_codes", method: :post, params: data["3.1"].errors["422_params"] %>
 <%= display_response "422", resource: :errors %>
 
-For example, if a resource requires the `title` attribute to be present there
-will be an `errors` key in the response with subkey of `title` containing an array
-of errors.
+For example, creating a new discount code can result in a validation error.
 
-The errors are repeated in an array called `error_list` which you might find easier.
+The validation errors are shown in the `errors` object with each attribute linked to an array of messages.
+
+This is repeated in an array called `error_list` which you might find easier.
 
 ## HTTP status codes <i class="fa-regular fa-network-wired"></i>
 
-Code | Meaning
----- | -------
-`200` OK | All is well.
-`201` Created | Your request has been fulfilled and has resulted in one or more new resources being created.
-`204` No Content | Your request has been fulfilled and that there is no additional content to send in the response payload body. e.g. deleting a resource.
-`401` Unauthorized | Your request is not authenticated. See the [Authentication Errors](#errors-authentication-errors) section for more information.
-`403` Forbidden | Your request is not authorized as the user has insufficient permissions. See the [Authorization Errors](#errors-authorization-errors) section for more information.
-`404` Page Not Found | The endpoint requested does not exist.
-`422` Unprocessable Entity | The resource couldn't be created or updated due to a validation error. Please see the response body for more information.
-`429` Too Many Requests | Your application is exceeding its rate limit. Slow down, pal!
-`500` Internal Server Error | Something is wrong on our end.
-`504` Gateway Timeout | Something has timed out on our end.
+<%= list_attributes({
+  "OK": {
+    code: "200",
+    description: "All is well."
+  },
+  "Created": {
+    code: "201",
+    description: "Your request has been fulfilled and has resulted in one or more new resources being created."
+  },
+  "No content": {
+    code: "204",
+    description: "Your request has been fulfilled and that there is no additional content to send in the response payload body, e.g. deleting a resource."
+  },
+  "Unauthorized": {
+    code: "401",
+    description: "Your request is not authenticated. See the [Authentication Errors](#errors-authentication-errors) section for more information."
+  },
+  "Forbidden": {
+    code: "403",
+    description: "Your request is not authorized as the user has insufficient permissions. See the [Authorization Errors](#errors-authorization-errors) section for more information."
+  },
+  "Page not found": {
+    code: "404",
+    description: "The endpoint requested does not exist."
+  },
+  "Unprocessable entity": {
+    code: "422",
+    description: "The resource couldn't be created or updated due to a validation error. Please see the response body for more information."
+  },
+  "Too many requests": {
+    code: "429",
+    description: "Your application is exceeding its rate limit. Slow down, pal!"
+  },
+  "Internal server error": {
+    code: "500",
+    description: "Something is wrong on our end."
+  },
+  "Bad gateway": {
+    code: "502",
+    description: "The app responsible for serving your request is temporarily unavailable."
+  },
+  "Gateway timeout": {
+    code: "504",
+    description: "Something has timed out on our end."
+  },
+}) -%>

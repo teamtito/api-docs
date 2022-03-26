@@ -10,8 +10,8 @@
     "start_at": "2022-12-25T09:00:00.000Z",
     "end_at": "2022-12-25T17:00:00.000Z",
     "name": "Conference",
-    "allocation_count": 78,
-    "sold_out": false,
+    "allocation_count": 103,
+    "sold_out": true,
     "show_to_attendee": true
   },
   "meta": {

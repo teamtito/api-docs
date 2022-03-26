@@ -2,10 +2,10 @@
   "interested_user": {
     "_type": "interested_user",
     "id": 1,
-    "name": "Qui-Gon Jinn",
-    "email": "aRU_wCHmWrAdhQ@example.com",
-    "created_at": "2022-03-25T09:21:56.000Z",
-    "updated_at": "2022-03-25T11:50:53.000Z"
+    "name": "Darth Sidious",
+    "email": "UdYANi0-YvKyiQ@example.com",
+    "created_at": "2022-03-26T07:36:07.000Z",
+    "updated_at": "2022-03-26T07:59:19.000Z"
   },
   "meta": {
     "api_version": "3.1.0"

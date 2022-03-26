@@ -1,8 +1,8 @@
 {
   "discount_code": {
     "_type": "discount_code",
-    "id": 9,
-    "code": "SPsQ9C6o-MFnMw",
+    "id": 6,
+    "code": "NcIgbNNuzOtOwg",
     "description": "Sell for 50.0% less. Unlimited. Applies to 0 tickets. Not used yet.",
     "description_for_organizer": null,
     "end_at": null,
@@ -13,7 +13,7 @@
     "quantity_used": 0,
     "registrations_count": 0,
     "reveal_secret": false,
-    "share_url": "https://ti.to/demo/awesomeconf/discount/SPsQ9C6o-MFnMw",
+    "share_url": "https://ti.to/demo/awesomeconf/discount/NcIgbNNuzOtOwg",
     "start_at": null,
     "state": "current",
     "tickets_count": 0,

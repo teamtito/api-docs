@@ -2,33 +2,33 @@
   "_type": "ticket",
   "id": 2,
   "test_mode": false,
-  "name": "Leia Organa",
-  "first_name": "Leia",
-  "last_name": "Organa",
-  "email": "hallie.miller+2@example.net",
+  "name": "Watto",
+  "first_name": "Watto",
+  "last_name": null,
+  "email": "jailyn@example.com",
   "phone_number": null,
   "company_name": null,
-  "reference": "QVYZ-2",
+  "reference": "9K9R-2",
   "price": "0.0",
   "tax": "0.0",
   "price_less_tax": "0.0",
-  "slug": "ti_dVxcB6ytnCqQpZOiwVKECHw",
+  "slug": "ti_dbFC7zPGM4jkgWA1jpVfGOw",
   "state_name": "complete",
   "gender": null,
   "total_paid": "0.0",
   "total_paid_less_tax": "0.0",
-  "updated_at": "2022-03-25 09:21:56 UTC",
-  "release_price": "0.0",
-  "discount_code_used": "HALFPRICE",
-  "url": "https://ti.to/demo/awesomeconf/tickets/ti_dVxcB6ytnCqQpZOiwVKECHw",
-  "admin_url": "https://dashboard.tito.io/demo/awesomeconf/tickets/ti_dVxcB6ytnCqQpZOiwVKECHw",
-  "release_title": "Speaker",
-  "release_slug": "speaker",
-  "release_id": 4,
+  "updated_at": "2022-03-26 07:36:07 UTC",
+  "release_price": "100.0",
+  "discount_code_used": "FREE2U",
+  "url": "https://ti.to/demo/awesomeconf/tickets/ti_dbFC7zPGM4jkgWA1jpVfGOw",
+  "admin_url": "https://dashboard.tito.io/demo/awesomeconf/tickets/ti_dbFC7zPGM4jkgWA1jpVfGOw",
+  "release_title": "Standard",
+  "release_slug": "standard",
+  "release_id": 2,
   "release": {
-    "id": 4,
-    "title": "Speaker",
-    "slug": "speaker",
+    "id": 2,
+    "title": "Standard",
+    "slug": "standard",
     "metadata": {
       "my_release_variable": "else",
       "another_release_variable": 456
@@ -37,7 +37,7 @@
   "custom": {
   },
   "registration_id": 1,
-  "registration_slug": "reg_dq1hb6rb6dzDucrmoBddAwg",
+  "registration_slug": "reg_dp9Z2e2FgFH9QrhrVbf7Whg",
   "metadata": null,
   "answers": [
     {
@@ -45,46 +45,51 @@
         "id": 2,
         "title": "Where do you live?"
       },
-      "response": "FR",
-      "humanized_response": "France"
+      "response": "US",
+      "humanized_response": "United States"
     }
   ],
   "opt_ins": [
 
   ],
   "responses": {
-    "where-do-you-live": "France"
+    "where-do-you-live": "United States"
   },
   "last_updated_by_type": "admin",
-  "upgrades": "#<Upgrade::ActiveRecord_Associations_CollectionProxy:0x0000aaaae42aed30>",
+  "upgrades": "#<Upgrade::ActiveRecord_Associations_CollectionProxy:0x0000aaaaf4a51078>",
   "upgrade_ids": [
 
   ],
   "registration": {
     "id": 1,
-    "slug": "reg_dq1hb6rb6dzDucrmoBddAwg",
-    "url": "https://ti.to/registrations/reg_dq1hb6rb6dzDucrmoBddAwg",
-    "admin_url": "https://dashboard.tito.io/demo/awesomeconf/registrations/reg_dq1hb6rb6dzDucrmoBddAwg",
-    "total": "50.0",
+    "slug": "reg_dp9Z2e2FgFH9QrhrVbf7Whg",
+    "url": "https://ti.to/registrations/reg_dp9Z2e2FgFH9QrhrVbf7Whg",
+    "admin_url": "https://dashboard.tito.io/demo/awesomeconf/registrations/reg_dp9Z2e2FgFH9QrhrVbf7Whg",
+    "total": "270.0",
     "currency": "USD",
     "payment_reference": null,
     "source": null,
-    "name": "Leia Organa",
-    "email": "BxdXxRIFGWU5Kg@example.com",
+    "name": "Watto",
+    "email": "nIFOizT0YnYTTA@example.com",
     "receipt": {
-      "total": "50.0",
+      "total": "270.0",
       "tax": 0,
       "payment_provider": "Invoice",
       "paid": false,
       "receipt_lines": [
         {
-          "total": "50.0",
-          "quantity": 1,
+          "total": "0.0",
+          "quantity": 2,
           "tax": 0
         },
         {
           "total": "0.0",
-          "quantity": 2,
+          "quantity": 1,
+          "tax": 0
+        },
+        {
+          "total": "270.0",
+          "quantity": 3,
           "tax": 0
         }
       ]
@@ -97,7 +102,7 @@
     "url": "https://ti.to/demo/awesomeconf",
     "account_slug": "demo",
     "slug": "awesomeconf",
-    "start_date": "2022-06-25",
+    "start_date": "2022-06-26",
     "end_date": null,
     "metadata": {
       "my_event_variable": "something",

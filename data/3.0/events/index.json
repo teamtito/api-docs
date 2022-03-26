@@ -3,8 +3,8 @@
     {
       "_type": "event",
       "id": 1,
-      "created_at": "2022-03-25T09:21:55.000Z",
-      "updated_at": "2022-03-25T10:34:47.000Z",
+      "created_at": "2022-03-26T07:36:06.000Z",
+      "updated_at": "2022-03-26T07:37:27.000Z",
       "title": "Awesomeconf",
       "description": null,
       "banner": {
@@ -37,22 +37,22 @@
       "private": false,
       "slug": "awesomeconf",
       "account_id": 1,
-      "start_date": "2022-06-25",
+      "start_date": "2022-06-26",
       "end_date": null,
-      "date_or_range": "June 25th, 2022",
+      "date_or_range": "June 26th, 2022",
       "days_until": 92,
       "days_since": -92,
       "happening_in": "future",
       "day_number": null,
-      "security_token": "9uizgSYDw9aFFkIv00gf9g",
+      "security_token": "8h0xrxP14FJEZrOJyu-eYg",
       "metadata": {
         "my_event_variable": "something",
         "another_event_variable": 123
       },
       "url": "https://ti.to/demo/awesomeconf",
-      "setup": true,
+      "setup": false,
       "show_discount_code_field": false,
-      "discount_codes_count": 3,
+      "discount_codes_count": 2,
       "releases_count": 4,
       "account_slug": "demo",
       "consent": {
@@ -62,8 +62,8 @@
     {
       "_type": "event",
       "id": 2,
-      "created_at": "2022-03-25T09:23:21.000Z",
-      "updated_at": "2022-03-25T09:23:21.000Z",
+      "created_at": "2022-03-26T07:37:05.000Z",
+      "updated_at": "2022-03-26T07:37:05.000Z",
       "title": "Very Cool Conf",
       "description": null,
       "banner": {
@@ -103,7 +103,7 @@
       "days_since": null,
       "happening_in": "unknown",
       "day_number": null,
-      "security_token": "j9JDuR2WcT2mdlZWFJXQsw",
+      "security_token": "zm5D5oJ5kf2AmncXlRHYjQ",
       "metadata": null,
       "url": "https://ti.to/demo/very-cool-conf",
       "setup": true,

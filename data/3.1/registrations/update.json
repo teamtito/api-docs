@@ -2,24 +2,24 @@
   "registration": {
     "_type": "registration",
     "id": 1,
-    "slug": "reg_dq1hb6rb6dzDucrmoBddAwg",
-    "created_at": "2022-03-25T09:21:56.000Z",
-    "updated_at": "2022-03-25T11:50:55.000Z",
-    "completed_at": "2022-03-25T09:21:56.000Z",
-    "discount_code": "HALFPRICE",
-    "email": "kVCRFex-flA5vA@example.com",
+    "slug": "reg_dp9Z2e2FgFH9QrhrVbf7Whg",
+    "created_at": "2022-03-26T07:36:07.000Z",
+    "updated_at": "2022-03-26T07:59:20.000Z",
+    "completed_at": "2022-03-26T07:36:07.000Z",
+    "discount_code": "FREE2U",
+    "email": "44UDocNZuV4pmw@example.com",
     "job_title": null,
-    "expires_at": "2022-03-25 09:36:56 UTC",
+    "expires_at": "2022-03-26 07:51:07 UTC",
     "ip_address": null,
     "locale": "en",
     "metadata": null,
-    "name": "Leia Organa",
+    "name": "Watto",
     "company_name": null,
     "payment_reference": null,
     "payment_option_name": null,
     "phone_number": null,
     "registration_type": "manual",
-    "reference": "QVYZ",
+    "reference": "9K9R",
     "source": null,
     "state": "incomplete",
     "test_mode": false,
@@ -39,25 +39,29 @@
     "receipt_id": 1,
     "payment_incomplete": true,
     "payment_complete": false,
-    "total": 50.0,
-    "tickets_count": 3,
+    "total": 270.0,
+    "tickets_count": 6,
     "consented_at": null,
     "terms_accepted": false,
     "termset_ids": [
 
     ],
     "editable_total_and_prices": true,
-    "total_less_tax": 50.0,
-    "discount_code_id": 2,
+    "total_less_tax": 270.0,
+    "discount_code_id": 1,
     "payment_option_provider_name": null,
     "quantities": {
+      "early-bird": {
+        "release": "Early Bird",
+        "quantity": 3
+      },
       "standard": {
         "release": "Standard",
-        "quantity": 1
-      },
-      "speaker": {
-        "release": "Speaker",
         "quantity": 2
+      },
+      "exhibitor": {
+        "release": "Exhibitor",
+        "quantity": 1
       }
     }
   },

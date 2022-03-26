@@ -1,0 +1,20 @@
+{
+  "status": 422,
+  "message": "That request was invalid",
+  "errors": {
+    "base": [
+      "Please choose at least one item",
+      "Early Bird is currently unavailable"
+    ]
+  },
+  "error_list": [
+    {
+      "attribute": "base",
+      "message": "Please choose at least one item"
+    },
+    {
+      "attribute": "base",
+      "message": "Early Bird is currently unavailable"
+    }
+  ]
+}

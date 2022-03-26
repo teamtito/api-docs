@@ -17,8 +17,8 @@
       ],
       "venue_id": 1,
       "accommodation": null,
-      "allocation_count": 76,
-      "sold_out": false,
+      "allocation_count": 103,
+      "sold_out": true,
       "show_to_attendee": true
     },
     {
@@ -38,8 +38,8 @@
       ],
       "venue_id": 1,
       "accommodation": null,
-      "allocation_count": 76,
-      "sold_out": false,
+      "allocation_count": 103,
+      "sold_out": true,
       "show_to_attendee": true
     },
     "..."
