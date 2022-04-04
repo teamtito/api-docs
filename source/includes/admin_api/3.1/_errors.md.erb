@@ -1,5 +1,4 @@
-# Errors
-
+# Errors <i class="fa-regular fa-bug"></i>
 
 ```json
 {
@@ -60,7 +59,7 @@ If a request cannot be authenticated (we don't know who you are).
 
 If a request cannot be authorized as a user has insufficient permissions (we know who you are but you're not allowed to do what you're trying to do).
 
-## Resource not found [404] <i class="fa-regular fa-notdef"></i>
+## Resource not found [404] <i class="fa-regular fa-empty-set"></i></i>
 
 <%= display_response "404", resource: :errors %>
 
@@ -77,7 +76,7 @@ The validation errors are shown in the `errors` object with each attribute linke
 
 This is repeated in an array called `error_list` which you might find easier.
 
-## HTTP status codes <i class="fa-regular fa-network-wired"></i>
+## HTTP status codes <i class="fa-regular fa-router"></i></i>
 
 <%= list_attributes({
   "OK": {
