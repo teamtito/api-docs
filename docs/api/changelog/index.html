@@ -41,7 +41,7 @@
 .highlight .cs {
   color: #75715e;
 }
-.highlight .c, .highlight .cd {
+.highlight .c, .highlight .ch, .highlight .cd, .highlight .cpf {
   color: #75715e;
 }
 .highlight .err {
@@ -125,7 +125,7 @@
 .highlight .s1 {
   color: #e6db74;
 }
-.highlight .s {
+.highlight .s, .highlight .sa, .highlight .dl {
   color: #e6db74;
 }
 .highlight .na {
@@ -140,41 +140,52 @@
 .highlight .ne {
   color: #a6e22e;
 }
-.highlight .nf {
+.highlight .nf, .highlight .fm {
   color: #a6e22e;
 }
 .highlight .vc {
   color: #ffffff;
+  background-color: #272822;
 }
 .highlight .nn {
   color: #ffffff;
+  background-color: #272822;
 }
 .highlight .nl {
   color: #ffffff;
+  background-color: #272822;
 }
 .highlight .ni {
   color: #ffffff;
+  background-color: #272822;
 }
 .highlight .bp {
   color: #ffffff;
+  background-color: #272822;
 }
 .highlight .vg {
   color: #ffffff;
+  background-color: #272822;
 }
 .highlight .vi {
   color: #ffffff;
+  background-color: #272822;
 }
-.highlight .nv {
+.highlight .nv, .highlight .vm {
   color: #ffffff;
+  background-color: #272822;
 }
 .highlight .w {
   color: #ffffff;
+  background-color: #272822;
 }
 .highlight {
   color: #ffffff;
+  background-color: #272822;
 }
 .highlight .n, .highlight .py, .highlight .nx {
   color: #ffffff;
+  background-color: #272822;
 }
 .highlight .ow {
   color: #f92672;
@@ -195,16 +206,17 @@
   color: #f92672;
 }
     </style>
-    <link href="/docs/api/stylesheets/screen.css" rel="stylesheet" media="screen" />
-    <link href="/docs/api/stylesheets/print.css" rel="stylesheet" media="print" />
-      <script src="/docs/api/javascripts/all_nosearch.js"></script>
+    <link href="/docs/api/stylesheets/screen-aa9063c4.css" rel="stylesheet" media="screen" />
+    <link href="/docs/api/stylesheets/print-b5fdc97a.css" rel="stylesheet" media="print" />
+      <script src="/docs/api/javascripts/all_nosearch-86e6fe79.js"></script>
+    <script src="https://kit.fontawesome.com/11d6f41cf5.js" crossorigin="anonymous"></script>
   </head>
 
   <body class="docs docs_api docs_api_changelog docs_api_changelog_index"">
     <a href="#" id="nav-button">
       <span>
         NAV
-        <img src="/docs/api/images/navbar.png" alt="Navbar" />
+        <img src="/docs/api/images/navbar-cad8cdcb.png" alt="" />
       </span>
     </a>
     <div class="api-warning">
@@ -213,42 +225,129 @@
 
     <div class="toc-wrapper">
       <a class="logo" href="/docs/api">
-        <img src="/docs/api/images/tito.svg" alt="Tito" /> API Docs
+        <img src="/docs/api/images/tito-4b2eaf9c.svg" alt="" /> API Docs
       </a>
       <ul class="toc-well">
   <li><a href="/docs/api/admin">Admin API</a></li>
-  <li><a href="/docs/api/checkout">Checkout API</a> <span>Coming 2021</span></li>
+  <!-- <li><a href="/docs/api/checkout">Checkout API</a> <span>Coming 2021</span></li> -->
   <li><a href="/docs/api/checkin">Check-in API</a></li>
+  <li><a href="/docs/api/widget">Widget</a></li>
   <li><a href="/docs/api/changelog">Changelog</a></li>
 </ul>
 
     </div>
-    <div class="page-wrapper full_width">
+    <div class="page-wrapper full-width">
       <div class="content">
-        <h1 id='changelog'>Changelog</h1><h2 id='changelog-1st-march-2021'>1st March 2021</h2><h3 id='changelog-1st-march-2021-added'>Added</h3>
+        <h1 id='changelog'>Changelog</h1><h2 id='changelog-5-april-2022'>5 April 2022</h2>
+<p>We&#39;ve released <a href="/docs/api/admin/3.1">version 3.1 of our Admin API</a> in beta.</p>
+
+<p>The aim of version 3.1 is simplicity and speed.</p>
+<h3 id='changelog-5-april-2022-no-nested-resources-by-default'>No nested resources by default</h3>
+<p>In version 3.0, if you asked for a <code>registration</code> then you got all its <code>tickets</code> too (as well <code>line_items</code>, <code>payment</code>, <code>receipt</code>, <code>receipts</code>, and <code>refunds</code>). But if you don&#39;t need all those other resources then it just makes the response bigger and slower. In version 3.1 you just get the resource you asked for unless you explicitly &quot;expand&quot; other resources.</p>
+
+<p>For example, to get a single registration:</p>
+<div class="highlight"><pre class="highlight plaintext"><code>https://api.tito.io/v3/:account/:event/registrations/:slug
+</code></pre></div>
+<p>To get its tickets too:</p>
+<div class="highlight"><pre class="highlight plaintext"><code>https://api.tito.io/v3/:account/:event/registrations/:slug?expand=tickets
+</code></pre></div>
+<p>You can expand multiple resources:</p>
+<div class="highlight"><pre class="highlight plaintext"><code>https://api.tito.io/v3/:account/:event/registrations/:slug?expand=tickets,receipts
+</code></pre></div><h3 id='changelog-5-april-2022-same-view'>Same view</h3>
+<p>In version 3.0, you got an &quot;extended&quot; view of a resource if you asked for a single resource and a &quot;short&quot; view of a resource if you asked for a list. In version 3.1, you get the same view regardless. The <code>view</code> option has been replaced with the more flexible <code>expand</code> option.</p>
+<h3 id='changelog-5-april-2022-choosing-a-version'>Choosing a version</h3>
+<p>You can choose which version you want to use in two ways:</p>
+
 <ul>
-<li>Add authorization error documentation. </li>
+<li>Set your access token to a specific version (<em>not implemented yet</em>)</li>
+<li>Send a <code>version</code> parameter in the URL</li>
+</ul>
+
+<p>For example:</p>
+<div class="highlight"><pre class="highlight plaintext"><code>https://api.tito.io/v3/:account/:event/registrations/:slug?version=3.1
+</code></pre></div>
+<p>The URL setting will override the access token setting.</p>
+<h3 id='changelog-5-april-2022-using-id-and-slug'>Using <code>id</code> and <code>slug</code></h3>
+<p>In verison 3.0 we had attributes like <code>release_ids</code> that would actually return you an array of slugs. Now, if you ask for ids you get integers as you would expect. Where possible, we also offer the slugs too, e.g. <code>release_slugs</code>.</p>
+<h3 id='changelog-5-april-2022-meta-data'>Meta data</h3>
+<p>In version 3.0, we attached a <code>meta</code> attribute to every list. In verison 3.1, all responses include it. Some additional information is also added to it:</p>
+
+<ul>
+<li><code>api_version</code></li>
+<li><code>expandable</code> — a list of possible expansions for this resource and whether they are expanded or not.</li>
+</ul>
+
+<p>If you try and use the <code>view</code> parameter or if you choose an expansion that is not available, then you will also see a <code>warning</code> attribute that tells you about that.</p>
+
+<p>For example:</p>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"ticket"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ticket"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">123</span><span class="p">,</span><span class="w">
+        </span><span class="err">...</span><span class="w">
+        </span><span class="nl">"registration"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"registration"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">106</span><span class="p">,</span><span class="w">
+          </span><span class="err">...</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="err">,</span><span class="w">
+    </span><span class="nl">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"api_version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3.1.0"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"expandable"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"activities"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"answers"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"opt_ins"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"registration"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"release"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"responses"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div><h2 id='changelog-17th-september-2021'>17th September 2021</h2><h3 id='changelog-17th-september-2021-added'>Added</h3>
+<ul>
+<li><a href="/docs/api/widget">Widget V2</a> documentation for using PayPal Platform</li>
+</ul>
+<h2 id='changelog-12th-august-2021'>12th August 2021</h2><h3 id='changelog-12th-august-2021-added'>Added</h3>
+<ul>
+<li><a href="/docs/api/admin#opt-ins">Opt-Ins</a> documentation</li>
+</ul>
+<h2 id='changelog-10th-june-2021'>10th June 2021</h2><h3 id='changelog-10th-june-2021-added'>Added</h3>
+<ul>
+<li><a href="/docs/api/widget">Widget V2</a> documentation</li>
+</ul>
+<h2 id='changelog-21st-may-2021'>21st May 2021</h2><h3 id='changelog-21st-may-2021-removed'>Removed</h3>
+<ul>
+<li>Remove reference to the <a href="/docs/api/admin#registrations">registration</a> filling state and webhook trigger. GDPR doesn&#39;t allow us to gather that information without express permission.</li>
+</ul>
+<h2 id='changelog-2nd-march-2021'>2nd March 2021</h2><h3 id='changelog-2nd-march-2021-added'>Added</h3>
+<ul>
+<li>Add documentation for setting custom name/email placeholders on <a href="/docs/api/widget">v2 widget</a>.</li>
+</ul>
+<h2 id='changelog-1st-march-2021'>1st March 2021</h2><h3 id='changelog-1st-march-2021-added'>Added</h3>
+<ul>
+<li>Add <a href="/docs/api/admin#errors-authorization-errors">authorization error</a> documentation.</li>
 </ul>
 <h2 id='changelog-3rd-december-2019'>3rd December 2019</h2><h3 id='changelog-3rd-december-2019-updated'>Updated</h3>
 <ul>
-<li>Release endpoints have deprecated <code>payment_type</code> in favour of the new <code>pricing_type</code> attribute which is not read-only. To change the pricing type set it to either <code>free</code>, <code>paid</code>, <code>donation</code> or <code>degressive</code>.</li>
+<li><a href="/docs/api/admin#releases-attributes">Release endpoints</a> have deprecated <code>payment_type</code> in favour of the new <code>pricing_type</code> attribute which is not read-only. To change the pricing type set it to either <code>free</code>, <code>paid</code>, <code>donation</code> or <code>degressive</code>.</li>
 </ul>
 <h2 id='changelog-4th-september-2019'>4th September 2019</h2><h3 id='changelog-4th-september-2019-added'>Added</h3>
 <ul>
-<li>Add Webhook Endpoint API docs</li>
-<li>Add Headers section to specify which headers are required to be sent with requests.</li>
+<li>Add <a href="/docs/api/admin#webhook-endpoints">Webhook Endpoint</a> API docs</li>
+<li>Add <a href="/docs/api/admin#headers">Headers</a> section to specify which headers are required to be sent with requests.</li>
 </ul>
 <h2 id='changelog-19th-august-2019'>19th August 2019</h2><h3 id='changelog-19th-august-2019-added'>Added</h3>
 <ul>
-<li>Added Webhook JSON payloads for checkin.* webhook types.</li>
+<li>Added <a href="/docs/api/admin#webhooks-payloads">Webhook JSON payloads</a> for checkin.* webhook types.</li>
 </ul>
 <h2 id='changelog-5th-august-2019'>5th August 2019</h2><h3 id='changelog-5th-august-2019-added'>Added</h3>
 <ul>
-<li>Added Webhook JSON payloads for ticket.* and registration.* webhook types.</li>
+<li>Added <a href="/docs/api/admin#webhooks-payloads">Webhook JSON payloads</a> for ticket.* and registration.* webhook types.</li>
 </ul>
 <h2 id='changelog-31st-july-2019'>31st July 2019</h2><h3 id='changelog-31st-july-2019-added'>Added</h3>
 <ul>
-<li>Added docs for receiving webhooks from Tito to your local development environment.</li>
+<li><a href="/docs/api/admin#webhooks-developing-locally">Added docs</a> for receiving webhooks from Tito to your local development environment.</li>
 </ul>
 <h2 id='changelog-6th-march-2019'>6th March 2019</h2><h3 id='changelog-6th-march-2019-modified'>Modified</h3>
 <p>When we return the <code>metadata</code> for an <a href="https://ti.to/docs/api/admin#events">event</a>, <a href="https://ti.to/docs/api/admin#releases">release</a>, <a href="https://ti.to/docs/api/admin#registrations">registration</a> or <a href="https://ti.to/docs/api/admin#tickets">ticket</a> we now return an object rather than a JSON string. So instead of seeing <code>&quot;metadata&quot;: &quot;{\&quot;foo\&quot;:\&quot;bar\&quot;}&quot;</code> you will see <code>&quot;metadata&quot;:{&quot;foo&quot;:&quot;bar&quot;}&quot;</code>.</p>
