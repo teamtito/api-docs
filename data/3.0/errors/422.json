@@ -1,0 +1,29 @@
+{
+  "status": 422,
+  "message": "That request was invalid",
+  "errors": {
+    "code": [
+      "has already been taken"
+    ],
+    "type": [
+      "is not included in the list"
+    ],
+    "value": [
+      "can't be blank"
+    ]
+  },
+  "error_list": [
+    {
+      "attribute": "code",
+      "message": "has already been taken"
+    },
+    {
+      "attribute": "type",
+      "message": "is not included in the list"
+    },
+    {
+      "attribute": "value",
+      "message": "can't be blank"
+    }
+  ]
+}

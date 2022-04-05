@@ -1,0 +1,20 @@
+{
+  "activity": {
+    "_type": "activity",
+    "id": 10,
+    "capacity": null,
+    "date": null,
+    "description": null,
+    "start_time": null,
+    "end_time": null,
+    "start_at": null,
+    "end_at": null,
+    "name": "Breakfast",
+    "allocation_count": 0,
+    "sold_out": false,
+    "show_to_attendee": true
+  },
+  "meta": {
+    "api_version": "3.1.0"
+  }
+}

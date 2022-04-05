@@ -1,0 +1,126 @@
+# RSVP Release Invitations
+
+<%= beta_feature "RSVP" %>
+
+An `RSVP Release Invitation` belongs to an [RSVP List](#rsvp-lists)
+
+
+## Attributes
+
+<%= partial "includes/shared/attributes", locals: { attributes: data.release_invitations.attributes } %>
+
+
+## Get all RSVP Release Invitations
+
+<%= partial "includes/requests/get",
+  locals: {
+    url: "#{config[:api_endpoint]}/:account_slug/:event_slug/rsvp_lists/:rsvp_list_slug/release_invitations"
+  }
+%>
+<%= partial "includes/admin_api/3.0/release_invitations/index.json" %>
+
+Retrieves all `RSVP Lists` for the given `Event`.
+
+`<%= "GET #{config[:api_endpoint]}/:account_slug/:event_slug/rsvp_lists/:rsvp_list_slug/release_invitations" %>`
+
+* `account_slug` - The `slug` attribute of an `Account`.
+* `event_slug` - The `slug` attribute of an `Event`.
+
+## Get an RSVP Release Invitation
+
+<%= partial "includes/requests/get",
+  locals: {
+    url: "#{config[:api_endpoint]}/:account_slug/:event_slug/rsvp_lists/:rsvp_list_slug/release_invitations/:release_invitation_slug"
+  }
+%>
+<%= partial "includes/admin_api/3.0/release_invitations/show.json" %>
+
+Retrieves a `Release Invitation` for the given `Event`.
+
+`GET <%= "#{config[:api_endpoint]}/:account_slug/:event_slug/rsvp_lists/:rsvp_list_slug/release_invitations/:release_invitation_slug" %>`
+
+* `account_slug` - The `slug` attribute of an `Account`.
+* `event_slug` - The `slug` attribute of an `Event`.
+* `rsvp_list_slug` - The `slug` attribute of an `RSVP List`.
+* `release_invitation_slug` - The `slug` attribute of an `RSVP Release Invitation`.
+
+## Create an RSVP Release Invitation
+
+<%= partial "includes/requests/post",
+  locals: {
+    url: "#{config[:api_endpoint]}/:account_slug/:event_slug/rsvp_lists/:rsvp_list_slug/release_invitations",
+    parameters: {
+      release_invitation: {
+        email: "grr@tito.io",
+        first_name: "Tony",
+        last_name: "Tiger",
+        release_ids: [1, 2, 3]
+      }
+    }
+  }
+%>
+<%= partial "includes/admin_api/3.0/release_invitations/create.json" %>
+
+Create a new `RSVP List` belonging to the given `Event`.
+
+`POST <%= "#{config[:api_endpoint]}/:account_slug/:event_slug/rsvp_lists" %>`
+
+* `account_slug` - The `slug` attribute of an `Account`.
+* `event_slug` - The `slug` attribute of an `Event`.
+* `rsvp_list_slug` - The `slug` attribute of an `RSVP List`.
+
+### Parameters
+
+<%= partial "includes/shared/parameters",
+  locals: {
+    parameters: data.release_invitations.attributes.reject { |name, attribute| attribute["read_only"] }
+  }
+%>
+
+## Update an RSVP Release Invitation
+
+<%= partial "includes/requests/patch",
+  locals: {
+    url: "#{config[:api_endpoint]}/:account_slug/:event_slug/rsvp_lists/:rsvp_list_slug/release_invitations/:release_invitation_slug",
+    parameters: {
+      release_invitation: {
+        first_name: "Anthony"
+      }
+    }
+  }
+%>
+<%= partial "includes/admin_api/3.0/release_invitations/update.json" %>
+
+Update an `Release Invitation` belonging to the given `RSVP List`.
+
+`PATCH <%= "#{config[:api_endpoint]}/:account_slug/:event_slug/rsvp_lists/:rsvp_list_slug/release_invitations/:release_invitation_slug" %>`
+
+* `account_slug` - The `slug` attribute of an `Account`.
+* `event_slug` - The `slug` attribute of an `Event`.
+* `rsvp_list_slug` - The `slug` attribute of an `RSVP List`.
+* `release_invitation_slug` - The `slug` attribute of an `RSVP Release Invitation`.
+
+### Parameters
+
+<%= partial "includes/shared/parameters",
+  locals: {
+    parameters: data.release_invitations.attributes.reject { |name, attribute| attribute["read_only"] }
+  }
+%>
+
+## Delete an RSVP Release Invitation
+
+<%= partial "includes/requests/delete",
+  locals: {
+    url: "#{config[:api_endpoint]}/:account_slug/:event_slug/rsvp_lists/:rsvp_list_slug/release_invitations/:release_invitation_slug",
+  }
+%>
+
+Delete an `RSVP Release Invitation` belonging to the given `RSVP List`.
+
+`DELETE <%= "#{config[:api_endpoint]}/:account_slug/:event_slug/rsvp_lists/:rsvp_list_slug/release_invitations/:release_invitation_slug" %>`
+
+* `account_slug` - The `slug` attribute of an `Account`.
+* `event_slug` - The `slug` attribute of an `Event`.
+* `rsvp_list_slug` - The `slug` attribute of an `RSVP List`.
+* `release_invitation_slug` - The `slug` attribute of an `RSVP Release Invitation`.

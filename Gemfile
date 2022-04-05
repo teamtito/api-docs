@@ -1,15 +1,17 @@
-source 'https://rubygems.org'
+ruby ">= 2.5"
+source "https://rubygems.org"
 
 # Middleman
-gem 'middleman', '~>4.2.1'
-gem 'middleman-syntax', '~> 3.0.0'
-gem 'middleman-autoprefixer', '~> 2.7.0'
-gem 'middleman-sprockets', '~> 4.1.0'
-gem 'rouge', '~> 2.0.5'
-gem 'redcarpet', '~> 3.4.0'
-gem 'nokogiri', '~> 1.8.2'
-
+gem "middleman", "~> 4.4"
+gem "middleman-syntax", "~> 3.2"
+gem "middleman-autoprefixer", "~> 3.0"
+gem "middleman-sprockets", "~> 4.1"
+gem "rouge", "~> 3.21"
+gem "redcarpet", "~> 3.5.0"
+gem "nokogiri", "~> 1.12.1"
+gem "sass"
+gem "webrick"
 
 gem "rake"
-gem 'puma'
-gem 'rack-contrib'
+gem "puma"
+gem "rack-contrib"

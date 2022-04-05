@@ -1,0 +1,115 @@
+{
+  "discount_codes": [
+    {
+      "_type": "discount_code",
+      "id": 2,
+      "code": "HALFPRICE",
+      "description": "Sell for 50.0% less. Unlimited. Applies to 1 ticket. Used 5 times.",
+      "description_for_organizer": null,
+      "end_at": null,
+      "max_quantity_per_release": null,
+      "min_quantity_per_release": null,
+      "only_show_attached": false,
+      "quantity": null,
+      "quantity_used": 5,
+      "registrations_count": 3,
+      "reveal_secret": false,
+      "share_url": "https://ti.to/demo/awesomeconf/discount/HALFPRICE",
+      "start_at": null,
+      "state": "current",
+      "tickets_count": 5,
+      "type": "PercentOffDiscountCode",
+      "value": "50.0",
+      "disable_for_degressive": false
+    },
+    {
+      "_type": "discount_code",
+      "id": 1,
+      "code": "FREE2U",
+      "description": "Sell for $1 less. Unlimited. Applies to 1 ticket. Used 5 times.",
+      "description_for_organizer": null,
+      "end_at": null,
+      "max_quantity_per_release": null,
+      "min_quantity_per_release": null,
+      "only_show_attached": false,
+      "quantity": null,
+      "quantity_used": 5,
+      "registrations_count": 3,
+      "reveal_secret": false,
+      "share_url": "https://ti.to/demo/awesomeconf/discount/FREE2U",
+      "start_at": null,
+      "state": "current",
+      "tickets_count": 5,
+      "type": "MoneyOffDiscountCode",
+      "value": "1.0",
+      "disable_for_degressive": false
+    }
+  ],
+  "meta": {
+    "api_version": "3.1.0",
+    "expandable": {
+      "releases": false,
+      "release_ids": false,
+      "release_slugs": false
+    },
+    "current_page": 1,
+    "next_page": null,
+    "prev_page": null,
+    "total_pages": 1,
+    "total_count": 2,
+    "per_page": 100,
+    "overall_total": 2,
+    "resources_hidden_by_default_count": 0,
+    "search_states_hidden_by_default": [
+      "past"
+    ],
+    "sort_options": {
+      "Code A-Z": {
+        "attr": "code",
+        "direction": "asc"
+      },
+      "Code Z-A": {
+        "attr": "code",
+        "direction": "desc",
+        "default": true
+      }
+    },
+    "filter_options": {
+      "sections": {
+        "states": {
+          "label": "Status",
+          "open": false
+        }
+      },
+      "collection": false,
+      "states": [
+        {
+          "label": "Current",
+          "value": "current"
+        },
+        {
+          "label": "Past",
+          "value": "past"
+        },
+        {
+          "label": "Upcoming",
+          "value": "upcoming"
+        },
+        {
+          "label": "Used",
+          "value": "used"
+        },
+        {
+          "label": "Unused",
+          "value": "unused"
+        }
+      ],
+      "selected_states": [
+        "current",
+        "upcoming",
+        "used",
+        "unused"
+      ]
+    }
+  }
+}

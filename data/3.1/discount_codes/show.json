@@ -1,0 +1,32 @@
+{
+  "discount_code": {
+    "_type": "discount_code",
+    "id": 1,
+    "code": "FREE2U",
+    "description": "Sell for $1 less. Unlimited. Applies to 1 ticket. Used 5 times.",
+    "description_for_organizer": null,
+    "end_at": null,
+    "max_quantity_per_release": null,
+    "min_quantity_per_release": null,
+    "only_show_attached": false,
+    "quantity": null,
+    "quantity_used": 5,
+    "registrations_count": 3,
+    "reveal_secret": false,
+    "share_url": "https://ti.to/demo/awesomeconf/discount/FREE2U",
+    "start_at": null,
+    "state": "current",
+    "tickets_count": 5,
+    "type": "MoneyOffDiscountCode",
+    "value": "1.0",
+    "disable_for_degressive": false
+  },
+  "meta": {
+    "api_version": "3.1.0",
+    "expandable": {
+      "releases": false,
+      "release_ids": false,
+      "release_slugs": false
+    }
+  }
+}

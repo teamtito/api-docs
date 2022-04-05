@@ -1,0 +1,39 @@
+# Refunds
+
+## Attributes
+
+<%= partial "includes/shared/attributes", locals: { attributes: data.refunds.attributes } %>
+
+## Get all Refunds
+
+<%= partial "includes/requests/get",
+  locals: {
+    url: "#{config[:api_endpoint]}/:account_slug/:event_slug/refunds"
+  }
+%>
+<%= partial "includes/admin_api/3.0/refunds/index.json" %>
+
+Retrieves all `Refunds` for the given `Event`.
+
+`<%= "GET #{config[:api_endpoint]}/:account_slug/:event_slug/refunds" %>`
+
+* `account_slug` - The `slug` attribute of an `Account`.
+* `event_slug` - The `slug` attribute of an `Event`.
+
+
+## Get a Refund
+
+<%= partial "includes/requests/get",
+  locals: {
+    url: "#{config[:api_endpoint]}/:account_slug/:event_slug/refunds/:refund_id"
+  }
+%>
+<%= partial "includes/admin_api/3.0/refunds/show.json" %>
+
+Retrieves a `Refund` for the given `Event`.
+
+`GET <%= "#{config[:api_endpoint]}/:account_slug/:event_slug/refunds/:refund_id" %>`
+
+* `account_slug` - The `slug` attribute of an `Account`.
+* `event_slug` - The `slug` attribute of an `Event`.
+* `refund_id` - The `id` attribute of a `Refund`.

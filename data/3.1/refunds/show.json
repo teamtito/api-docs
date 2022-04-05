@@ -1,0 +1,15 @@
+{
+  "refund": {
+    "_type": "refund",
+    "id": 7,
+    "amount": "-190.0",
+    "created_at": "2022-03-26T07:36:10.000Z",
+    "manual": null
+  },
+  "meta": {
+    "api_version": "3.1.0",
+    "expandable": {
+      "registration": false
+    }
+  }
+}

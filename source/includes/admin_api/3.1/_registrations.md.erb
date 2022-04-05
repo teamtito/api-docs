@@ -1,0 +1,106 @@
+# Registrations
+
+<% set_resource :registrations %>
+
+## Attributes <%= icon_for :attributes %>
+
+<%= show_doc :attributes %>
+
+## Expansions <%= icon_for :expansions %>
+
+<%= show_doc :expansions %>
+## Get all registrations <%= icon_for :index %>
+
+<%= show_doc :index %>
+
+### Sort Order
+
+The default order is by `created_at` with newest registrations first. You can change the order by appending some parameters to the endpoint URL. This is the same as the default:
+
+`?search[sort]=created_at&search[direction]=desc`
+
+The direction can either be `asc` or `desc`.
+
+You can sort on the following attributes:
+
+* `name`
+* `created_at`
+* `updated_at`
+* `total`
+* `reference`
+* `payment_provider`
+
+### Filtering
+
+You can filter which registrations you get back too. For instance, to only get `unpaid` or `incomplete` registrations:
+
+`?search[states][]=unpaid&search[states][]=incomplete`
+
+Possible states are:
+
+* `cancelled`
+* `complete`
+* `confirmed`
+* `incomplete`
+* `paid`
+* `unpaid`
+
+Or by time. This will show all registrations created since 1 Jan 2019 at 9am UTC:
+
+`?search[created_at][gt]=2019-01-01T09:00:00+UTC`
+
+That operator can be:
+
+* `gt` - greater than
+* `gte` - greater than or equal to
+* `lt` - less than
+* `lte` - less than or equal to
+
+And you can do that on the following attributes
+
+* `created_at`
+* `updated_at`
+
+So, for instance, to find all registrations that have been updated in the last hour:
+
+`?search[updated_at][gt]=2019-01-01T09:00:00+UTC`
+
+(where you obviously change that timestamp to be one hour ago).
+
+ Note: if you don't use the `+UTC` suffix on those timestamps it will default to the time zone used by the event itself.
+
+## Get a registration <%= icon_for :show %>
+
+<%= show_doc :show %>
+
+## Create a registration <%= icon_for :create %>
+
+<%= show_doc :create %>
+
+## Update a registration <%= icon_for :update %>
+
+<%= show_doc :update %>
+
+## Mark a registration as Paid
+
+<%= show_url "registrations/:registration_slug/confirmations", method: :post %>
+
+<%= beta_feature "Pay by invoice" %>
+
+<%= show_url_key "POST registrations/:registration_slug/confirmations" %>
+
+Show that a `Registration` has been paid. Useful if you are allowing your customers to pay by invoice.
+
+Changes the `receipt_paid` attribute to true.
+
+## Mark a Registration as Unpaid
+
+<%= show_url "registrations/:registration_slug/confirmations", method: :delete %>
+
+<%= beta_feature "Pay by invoice" %>
+
+<%= show_url_key "DELETE registrations/:registration_slug/confirmations" %>
+
+Show that a `Registration` has NOT been paid. Useful if you are allowing your customers to pay by invoice. You wouldn't normally need to do this but might do if you [marked it as paid](/docs/api/admin/#registrations-mark-a-registration-as-paid) by mistake.
+
+Changes the `receipt_paid` attribute to false.

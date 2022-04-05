@@ -1,0 +1,5 @@
+{
+  "status": 403,
+  "message": "Forbidden",
+  "hint": "You are not authorized to access discount_codes"
+}

@@ -1,0 +1,74 @@
+{
+  "registration": {
+    "_type": "registration",
+    "id": 1,
+    "slug": "reg_dp9Z2e2FgFH9QrhrVbf7Whg",
+    "created_at": "2022-03-26T07:36:07.000Z",
+    "updated_at": "2022-03-26T07:59:13.000Z",
+    "completed_at": "2022-03-26T07:36:07.000Z",
+    "discount_code": "FREE2U",
+    "email": "nIFOizT0YnYTTA@example.com",
+    "job_title": null,
+    "expires_at": "2022-03-26 07:51:07 UTC",
+    "ip_address": null,
+    "locale": "en",
+    "metadata": null,
+    "name": "Watto",
+    "company_name": null,
+    "payment_reference": null,
+    "payment_option_name": null,
+    "phone_number": null,
+    "registration_type": "manual",
+    "reference": "9K9R",
+    "source": null,
+    "state": "incomplete",
+    "test_mode": false,
+    "cancelled": false,
+    "cancelled_at": null,
+    "cancelled_by": null,
+    "free": false,
+    "paid": true,
+    "invoice": true,
+    "manual": true,
+    "imported": false,
+    "refundable": false,
+    "refunded": false,
+    "partially_refunded": false,
+    "receipt_paid": false,
+    "receipt_number": "0000001",
+    "receipt_id": 1,
+    "payment_incomplete": true,
+    "payment_complete": false,
+    "total": 270.0,
+    "tickets_count": 6,
+    "consented_at": null,
+    "terms_accepted": false,
+    "termset_ids": [
+
+    ],
+    "editable_total_and_prices": true,
+    "total_less_tax": 270.0,
+    "discount_code_id": 1,
+    "payment_option_provider_name": null,
+    "quantities": {
+      "early-bird": {
+        "release": "Early Bird",
+        "quantity": 3
+      },
+      "standard": {
+        "release": "Standard",
+        "quantity": 2
+      },
+      "exhibitor": {
+        "release": "Exhibitor",
+        "quantity": 1
+      }
+    }
+  },
+  "meta": {
+    "api_version": "3.1.0",
+    "expandable": {
+      "billing_address": false
+    }
+  }
+}

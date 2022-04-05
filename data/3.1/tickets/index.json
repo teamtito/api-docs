@@ -1,0 +1,276 @@
+{
+  "tickets": [
+    {
+      "_type": "ticket",
+      "id": 180,
+      "slug": "ti_dPBLf7TbEC1cWgKhTT1GRBQ",
+      "unique_url": "https://ti.to/demo/awesomeconf/tickets/ti_dPBLf7TbEC1cWgKhTT1GRBQ",
+      "company_name": null,
+      "email": "crystal_jast@example.org",
+      "metadata": null,
+      "first_name": "Ki-Adi-Mundi",
+      "last_name": null,
+      "name": "Ki-Adi-Mundi",
+      "number": 180,
+      "phone_number": null,
+      "price": 90.0,
+      "reference": "UHMF-4",
+      "state": "complete",
+      "test_mode": false,
+      "registration_id": 30,
+      "release_id": 1,
+      "release_archived": false,
+      "avatar_url": "https://secure.gravatar.com/avatar/34f008dbe93dc800315000b8b1889ab5?default=https://starwavatars.global.ssl.fastly.net/avatars/34f008dbe93dc800315000b8b1889ab5.png",
+      "void": false,
+      "changes_locked": false,
+      "consented_at": null,
+      "discount_code_used": null,
+      "tag_names": [
+
+      ],
+      "created_at": "2022-03-26T07:36:27.000Z",
+      "updated_at": "2022-03-26T07:36:27.000Z",
+      "assigned": true,
+      "qr_url": "https://qr.tito.io/tickets/ti_dPBLf7TbEC1cWgKhTT1GRBQ",
+      "show_qr_code": true,
+      "qr_code_disabled": false,
+      "price_less_tax": 90.0,
+      "total_paid": 90.0,
+      "total_tax_paid": 0.0,
+      "total_paid_less_tax": 90.0,
+      "tags": null,
+      "lock_changes": false
+    },
+    {
+      "_type": "ticket",
+      "id": 181,
+      "slug": "ti_dLn9FsjF44o5Cx0eFxdeSow",
+      "unique_url": "https://ti.to/demo/awesomeconf/tickets/ti_dLn9FsjF44o5Cx0eFxdeSow",
+      "company_name": null,
+      "email": "crystal_jast@example.org",
+      "metadata": null,
+      "first_name": "Ki-Adi-Mundi",
+      "last_name": null,
+      "name": "Ki-Adi-Mundi",
+      "number": 181,
+      "phone_number": null,
+      "price": 90.0,
+      "reference": "UHMF-5",
+      "state": "complete",
+      "test_mode": false,
+      "registration_id": 30,
+      "release_id": 1,
+      "release_archived": false,
+      "avatar_url": "https://secure.gravatar.com/avatar/34f008dbe93dc800315000b8b1889ab5?default=https://starwavatars.global.ssl.fastly.net/avatars/34f008dbe93dc800315000b8b1889ab5.png",
+      "void": false,
+      "changes_locked": false,
+      "consented_at": null,
+      "discount_code_used": null,
+      "tag_names": [
+
+      ],
+      "created_at": "2022-03-26T07:36:27.000Z",
+      "updated_at": "2022-03-26T07:36:27.000Z",
+      "assigned": true,
+      "qr_url": "https://qr.tito.io/tickets/ti_dLn9FsjF44o5Cx0eFxdeSow",
+      "show_qr_code": true,
+      "qr_code_disabled": false,
+      "price_less_tax": 90.0,
+      "total_paid": 90.0,
+      "total_tax_paid": 0.0,
+      "total_paid_less_tax": 90.0,
+      "tags": null,
+      "lock_changes": false
+    },
+    "..."
+  ],
+  "meta": {
+    "api_version": "3.1.0",
+    "expandable": {
+      "activities": false,
+      "activity_ids": false,
+      "answers": false,
+      "answer_ids": false,
+      "opt_ins": false,
+      "registration": false,
+      "release": false,
+      "responses": false,
+      "upgrade_ids": false
+    },
+    "current_page": 1,
+    "next_page": 2,
+    "prev_page": null,
+    "total_pages": 2,
+    "total_count": 184,
+    "per_page": 100,
+    "overall_total": 184,
+    "resources_hidden_by_default_count": 0,
+    "search_states_hidden_by_default": [
+      "void",
+      "archived"
+    ],
+    "sort_options": {
+      "First name A-Z": {
+        "attr": "first_name",
+        "direction": "asc"
+      },
+      "First name Z-A": {
+        "attr": "first_name",
+        "direction": "desc"
+      },
+      "Last name A-Z": {
+        "attr": "last_name",
+        "direction": "asc"
+      },
+      "Last name Z-A": {
+        "attr": "last_name",
+        "direction": "desc"
+      },
+      "Ticket date, earliest first": {
+        "attr": "tickets.created_at",
+        "direction": "asc"
+      },
+      "Ticket date, newest first": {
+        "attr": "tickets.created_at",
+        "direction": "desc",
+        "default": true
+      },
+      "Price, least first": {
+        "attr": "price",
+        "direction": "asc"
+      },
+      "Price, most first": {
+        "attr": "price",
+        "direction": "desc"
+      },
+      "Reference": {
+        "attr": "reference",
+        "direction": "asc"
+      },
+      "Number": {
+        "attr": "number",
+        "direction": "asc"
+      },
+      "Last change": {
+        "attr": "updated_at",
+        "direction": "desc"
+      }
+    },
+    "filter_options": {
+      "types": [
+        {
+          "label": "Added manually",
+          "value": "manual"
+        },
+        {
+          "label": "Ordered by customer",
+          "value": "standard"
+        }
+      ],
+      "release_ids": [
+        {
+          "label": "Early Bird",
+          "value": "early-bird"
+        },
+        {
+          "label": "Standard",
+          "value": "standard"
+        },
+        {
+          "label": "Exhibitor",
+          "value": "exhibitor"
+        },
+        {
+          "label": "Speaker",
+          "value": "speaker"
+        }
+      ],
+      "activity_ids": [
+        {
+          "label": "Conference",
+          "value": "1"
+        },
+        {
+          "label": "Dinner",
+          "value": "2"
+        },
+        {
+          "label": "Workshop",
+          "value": "3"
+        },
+        {
+          "label": "Conference Copy",
+          "value": "5"
+        },
+        {
+          "label": "Conference Copy",
+          "value": "7"
+        },
+        {
+          "label": "Conference Copy",
+          "value": "9"
+        },
+        {
+          "label": "Conference Copy",
+          "value": "11"
+        }
+      ],
+      "sections": {
+        "states": {
+          "label": "Status",
+          "open": false
+        },
+        "types": {
+          "label": "Type",
+          "open": false
+        },
+        "release_ids": {
+          "label": "Tickets",
+          "open": false
+        },
+        "activity_ids": {
+          "label": "Activities",
+          "open": false
+        }
+      },
+      "collection": false,
+      "states": [
+        {
+          "label": "Complete",
+          "value": "complete"
+        },
+        {
+          "label": "Incomplete",
+          "value": "incomplete"
+        },
+        {
+          "label": "Unassigned",
+          "value": "unassigned"
+        },
+        {
+          "label": "Void",
+          "value": "void"
+        },
+        {
+          "label": "Changes Locked",
+          "value": "changes_locked"
+        },
+        {
+          "label": "Changes Allowed",
+          "value": "changes_allowed"
+        },
+        {
+          "label": "Archived",
+          "value": "archived"
+        }
+      ],
+      "selected_states": [
+        "complete",
+        "incomplete",
+        "unassigned",
+        "changes_locked",
+        "changes_allowed"
+      ]
+    }
+  }
+}

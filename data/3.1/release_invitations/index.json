@@ -1,0 +1,82 @@
+{
+  "release_invitations": [
+    {
+      "_type": "release_invitation",
+      "id": 12,
+      "slug": "rsvp_duCBjB75EPway0pkHvtHlPA",
+      "first_name": null,
+      "last_name": null,
+      "email": "x2nbE-L3TW8Npw@example.com",
+      "name": "",
+      "unique_url": "https://ti.to/demo/awesomeconf/rsvp/rsvp_duCBjB75EPway0pkHvtHlPA",
+      "status": null,
+      "redeemed": false,
+      "registration_id": null,
+      "created_at": "2022-03-26T07:37:28.000Z",
+      "updated_at": "2022-03-26T07:37:28.000Z",
+      "importer_id": null,
+      "expires_at": null,
+      "rsvp_list_id": 1,
+      "discount_code": null,
+      "message_delivery_id": null,
+      "auto": false,
+      "guest": false,
+      "redirect": false
+    },
+    {
+      "_type": "release_invitation",
+      "id": 11,
+      "slug": "rsvp_dxeB0agrHdFadov28Ud7koA",
+      "first_name": null,
+      "last_name": null,
+      "email": "pe2r5cEeaEaaaw@example.com",
+      "name": "",
+      "unique_url": "https://ti.to/demo/awesomeconf/rsvp/rsvp_dxeB0agrHdFadov28Ud7koA",
+      "status": null,
+      "redeemed": false,
+      "registration_id": null,
+      "created_at": "2022-03-26T07:37:16.000Z",
+      "updated_at": "2022-03-26T07:37:16.000Z",
+      "importer_id": null,
+      "expires_at": null,
+      "rsvp_list_id": 1,
+      "discount_code": null,
+      "message_delivery_id": null,
+      "auto": false,
+      "guest": false,
+      "redirect": false
+    },
+    "..."
+  ],
+  "meta": {
+    "api_version": "3.1.0",
+    "expandable": {
+      "registration": false
+    },
+    "current_page": 1,
+    "next_page": null,
+    "prev_page": null,
+    "total_pages": 1,
+    "total_count": 10,
+    "per_page": 100,
+    "overall_total": 10,
+    "filter_options": {
+      "sections": {
+        "states": {
+          "label": "Status",
+          "open": false
+        }
+      },
+      "collection": false,
+      "states": [
+        {
+          "label": "Redeemed",
+          "value": "redeemed"
+        }
+      ],
+      "selected_states": [
+
+      ]
+    }
+  }
+}

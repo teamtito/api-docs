@@ -321,10 +321,9 @@ tito('on:registration:finished', function(data){
 
 This happens when the order is finished but not necessarily complete. It might not be complete if tickets have required questions that have yet to be filled in. It comes with full data about the order.
 
-<div></div>
-<h3 class="beta-feature">
-  Terms accepted -Beta feature
-</h3>
+### Terms accepted
+
+<%= beta_feature "Terms" %>
 
 ```js
 tito('on:registration:terms_accepted', function(){

@@ -1,0 +1,4 @@
+{
+  "discount_code[code]": "HALFPRICE",
+  "discount_code[type]": "WrongType"
+}

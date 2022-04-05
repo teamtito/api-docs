@@ -1,0 +1,11 @@
+<%= description %>
+
+<%= show_url path %>
+<%= display_response :index %>
+<%= show_url_key path %>
+
+<% if expansions&.any? %>
+  Use [expansions](#<%= resource %>-expansions) to return more data. For example:
+
+  <%= show_expand_example path, expansions %>
+<% end %>

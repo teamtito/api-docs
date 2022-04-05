@@ -1,0 +1,58 @@
+{
+  "rsvp_lists": [
+    {
+      "_type": "rsvp_list",
+      "id": 1,
+      "slug": "rsvp_list_dnAfyUA6p72PXipIdNXmt2Q",
+      "created_at": "2022-03-26T07:36:27.000Z",
+      "updated_at": "2022-03-26T07:36:27.000Z",
+      "title": "Welcome",
+      "redeemed_count": 3,
+      "maybes_count": 3,
+      "nos_count": 2,
+      "release_invitations_count": 10,
+      "message_slug": null
+    }
+  ],
+  "meta": {
+    "api_version": "3.0.0",
+    "current_page": 1,
+    "next_page": null,
+    "prev_page": null,
+    "total_pages": 1,
+    "total_count": 1,
+    "per_page": 100,
+    "overall_total": 1,
+    "sort_options": {
+      "Created time, earliest first": {
+        "attr": "created_at",
+        "direction": "asc"
+      },
+      "Created time, latest first": {
+        "attr": "created_at",
+        "direction": "desc",
+        "default": true
+      },
+      "Title A-Z": {
+        "attr": "title",
+        "direction": "asc"
+      },
+      "Title Z-A": {
+        "attr": "title",
+        "direction": "desc"
+      }
+    },
+    "filter_options": {
+      "sections": {
+        "states": {
+          "label": "Status",
+          "open": false
+        }
+      },
+      "collection": false,
+      "states": [
+
+      ]
+    }
+  }
+}

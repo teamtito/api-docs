@@ -1,0 +1,114 @@
+---
+title: Tito Admin API Docs
+
+api_name: "Admin API"
+
+includes:
+  - admin_api/3.1/pagination
+  - admin_api/3.1/expansions
+  - admin_api/3.1/translations
+  - admin_api/3.1/errors
+  - admin_api/3.1/activities
+  - admin_api/3.1/answers
+  - admin_api/3.1/checkin_lists
+  - admin_api/3.1/discount_codes
+  - admin_api/3.1/events
+  - admin_api/3.1/interested_users
+  - admin_api/3.1/opt_ins
+  - admin_api/3.1/questions
+  - admin_api/3.1/refunds
+  - admin_api/3.1/registrations
+  - admin_api/3.1/releases
+  - admin_api/3.1/rsvp_lists
+  - admin_api/3.1/release_invitations
+  - admin_api/3.1/tickets
+  - admin_api/3.1/webhook_endpoints
+  - admin_api/3.1/webhooks
+
+search: true
+---
+
+<% set_version "3.1" %>
+
+# Version 3.1
+
+> **Admin API endpoint**
+
+```
+<%= config[:api_endpoint] %>
+```
+
+> Examples in this documentation are written using curl.
+
+This is our latest beta version which you are welcome to try.
+
+The default version is [3.0](/docs/api/admin/3.0). To choose to use 3.1 instead you have two options:
+
+- Generate a new access token and choose version 3.1 (you can do that <a href="https://id.tito.io/api-access-tokens">here</a>). This means that all API requests made using that token will use version 3.1.
+- Append `version=3.1` to your URL parameters. This will allow you to experiment with a single endpoint without switching over to 3.1 completely.
+
+The examples given below assume you have switched over your access token.
+
+# Introduction
+
+The Admin API is designed to be a predictable and intuitive interface for secure programmatic access to Tito.
+The Admin API can be used to manage events, tickets, etc.
+
+The Admin API is a REST API and returns JSON responses.
+
+We hope by providing an API it will allow developers to build cool and useful tools on top of Tito.
+
+# Authentication
+
+The Admin API uses API tokens to allow users to authenticate without exposing their credentials.
+
+Developers can generate an API token by signing in at [https://id.tito.io](https://id.tito.io/api-access-tokens) and selecting
+`Generate New Token`.
+
+As the Admin API is a private API, only `secret` API token types can be used. As well as selecting a token type, a mode
+must also be selected:
+
+* `live` - Use this mode once your event has gone live. This mode will only return `tickets` and `registrations` from the live
+mode.
+* `test` - Use this mode to test your API integration is working. You can continue to use this token after your event has gone live and
+it will only read and write test data without affecting your live data. Note this mode will only return test `tickets` and `registrations`.
+
+If you find your API token has been compromised it can be [revoked](https://id.tito.io/api-access-tokens) and a new one generated.
+
+Your API token needs to be included in the `Authorization` header so your requests can be authenticated.
+
+### Confirm you can connect
+
+```shell
+curl --request GET \
+  --url '<%= config[:api_endpoint] %>/hello' \
+  --header 'Authorization: Token token=<%= config[:api_token] %>' \
+  --header 'Accept: application/json' \
+```
+
+```json
+{
+    "authenticated": true,
+    "access_token": "*ab1C",
+    "lookup_mode": "live",
+    "accounts": [
+        "biscuit-box",
+        "demo"
+    ]
+}
+```
+
+This endpoint will confirm you are authenticated properly and tell you which accounts you have access to.
+
+`<%= "GET #{config[:api_endpoint]}/hello" %>`
+
+The `access_token` is the last four characters of whatever access token you have used.
+
+The Admin API also provides detailed information about [Authentication Errors](#errors-authentication-errors).
+
+# Headers
+
+All API requests must send the following request headers:
+
+* `Authorization` with the value `Token token=<%= config[:api_token] %>` where `<%= config[:api_token] %>` is replaced with your API token.
+* `Accept` header with the value of `application/json`

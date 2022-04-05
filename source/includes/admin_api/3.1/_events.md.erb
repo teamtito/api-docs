@@ -1,0 +1,89 @@
+# Events
+
+<% set_resource :events, slug: true %>
+
+An Event belongs to an `Account` and most other resources belong to an event.
+
+An event URL is the combination of the `account_slug` and the `event_slug`.
+
+For example `https://ti.to/ultimateconf/<%= Date.today.year %>` is composed:
+
+* The base `ti.to` URL
+* The Ultimate Conf `account` slug `ultimateconf`
+* The specific `event` slug for the <%= Date.today.year %> edition.
+
+The equivalent event can be looked up using a similar URL structure with the API base URL:
+
+`<%= config[:api_endpoint] %>/ultimateconf/<%= Date.today.year %>`
+
+## Attributes <%= icon_for :attributes %>
+
+<%= show_doc :attributes %>
+
+## Expansions <%= icon_for :expansions %>
+
+<%= show_doc :expansions %>
+
+## Get all upcoming events <%= icon_for :index %>
+
+<%= show_doc :index %>
+
+## Get all Past Events <%= icon_for :index %>
+
+Where the `end_date` is in the past.
+
+<%= show_url "events/past" %>
+<%= show_url_key "events/past" %>
+
+## Get all Archived Events <%= icon_for :index %>
+
+Where the event is `archived`.
+
+<%= show_url "events/archived" %>
+<%= show_url_key "events/archived" %>
+
+## Get an event <%= icon_for :show %>
+
+<%= show_doc :show %>
+
+## Create an event <%= icon_for :create %>
+
+<%= show_doc :create %>
+
+## Update an event <%= icon_for :update %>
+
+<%= show_doc :update %>
+
+## Delete an event <%= icon_for :delete %>
+
+<%= show_doc :delete %>
+
+## Duplicate an event
+
+<%= show_url "duplication", method: :post %>
+<%= partial "includes/admin_api/3.0/events/duplication.json" %>
+<%= show_url_key "POST duplication" %>
+
+As duplicating an `Event` happens asynchronously the Tito API provides a response
+indicating the current `status` of the duplication:
+
+* `processing` - The duplication is still being processed.
+* `complete` - The duplication has successfully completed.
+
+The latest status of the duplication can be then looked up.
+
+## Duplicate an event status
+
+<%= show_url "duplication", method: :get %>
+<%= partial "includes/admin_api/3.0/events/duplication_complete.json" %>
+<%= show_url_key "duplication" %>
+
+The latest status of the `Event` duplication.
+
+As duplicating an `Event` happens asynchronously the API provides the ability to
+lookup the latest status of the duplication. The status can be either:
+
+* `processing` - The duplication is still being processed.
+* `complete` - The duplication has successfully completed.
+
+Once the duplication completes the Event `slug` and `title` will be assigned.

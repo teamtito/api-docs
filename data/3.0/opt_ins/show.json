@@ -1,0 +1,28 @@
+{
+  "opt_in": {
+    "_type": "opt_in",
+    "view": "extended",
+    "id": 1,
+    "slug": "newsletter",
+    "name": "Newsletter",
+    "description": "Please join!",
+    "release_ids": [
+
+    ],
+    "acceptance_count": 0,
+    "created_at": "2022-03-26T07:36:06.000Z",
+    "updated_at": "2022-03-26T07:37:10.000Z",
+    "translations": {
+      "en": {
+        "name": "Newsletter",
+        "description": "Please join!"
+      }
+    },
+    "releases": [
+
+    ]
+  },
+  "meta": {
+    "api_version": "3.0.0"
+  }
+}

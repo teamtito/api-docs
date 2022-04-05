@@ -3,98 +3,28 @@ title: Tito Admin API Docs
 
 api_name: "Admin API"
 
-includes:
-  - admin_api/pagination
-  - admin_api/views
-  - admin_api/errors
-  - admin_api/activities
-  - admin_api/answers
-  - admin_api/checkin_lists
-  - admin_api/discount_codes
-  - admin_api/events
-  - admin_api/interested_users
-  - admin_api/opt_ins
-  - admin_api/questions
-  - admin_api/refunds
-  - admin_api/registrations
-  - admin_api/releases
-  - admin_api/rsvp_lists
-  - admin_api/release_invitations
-  - admin_api/tickets
-  - admin_api/webhook_endpoints
-  - admin_api/webhooks
+layout: "full_width"
 
-search: true
 ---
 
-# Introduction
+# Admin API
 
-> **Admin API endpoint**
-
-```
-<%= config[:api_endpoint] %>/
-```
-
-> Examples in this documentation are written using curl.
-
-The Admin API is designed to be a predictable and intuitive interface for secure programmatic access to Tito.
-The Admin API can be used to manage events, tickets, etc.
-
-The Admin API is a REST API and returns JSON responses.
-
-We hope by providing an API it will allow developers to build cool and useful tools on top of Tito.
-
-# Authentication
-
-The Admin API uses API tokens to allow users to authenticate without exposing their credentials.
-
-Developers can generate an API token by signing in at [https://id.tito.io](https://id.tito.io/api-access-tokens) and selecting
-`Generate New Token`.
-
-As the Admin API is a private API, only `secret` API token types can be used. As well as selecting a token type, a mode
-must also be selected:
-
-* `live` - Use this mode once your event has gone live. This mode will only return `tickets` and `registrations` from the live
-mode.
-* `test` - Use this mode to test your API integration is working. You can continue to use this token after your event has gone live and
-it will only read and write test data without affecting your live data. Note this mode will only return test `tickets` and `registrations`.
-
-If you find your API token has been compromised it can be [revoked](https://id.tito.io/api-access-tokens) and a new one generated.
-
-Your API token needs to be included in the `Authorization` header so your requests can be authenticated.
-
-### Confirm you can connect
-
-```shell
-curl --request GET \
-  --url '<%= config[:api_endpoint] %>/hello' \
-  --header 'Authorization: Token token=<%= config[:api_token] %>' \
-  --header 'Accept: application/json' \
-```
-
-```json
-{
-    "authenticated": true,
-    "access_token": "*ab1C",
-    "lookup_mode": "live",
-    "accounts": [
-        "biscuit-box",
-        "demo"
-    ]
-}
-```
-
-This endpoint will confirm you are authenticated properly and tell you which accounts you have access to.
-
-`<%= "GET #{config[:api_endpoint]}/hello" %>`
-
-The `access_token` is the last four characters of whatever access token you have used.
-
-The Admin API also provides detailed information about [Authentication Errors](#errors-authentication-errors).
-
-# Headers
-
-All API requests must send the following request headers:
-
-* `Authorization` with the value `Token token=<%= config[:api_token] %>` where `<%= config[:api_token] %>` is replaced with your API token.
-* `Accept` header with the value of `application/json`
+<div class="version-list">
+  <nav class="version-docs">
+    <h2>v3.0</h2>
+    <p>Our latest, stable version.</p>
+    <div class="explore">
+      <a href="/docs/api/admin/3.0" class="btn">Explore the docs</a>
+    </div>
+  </nav>
+  <nav class="version-docs">
+    <h2>
+      v3.1
+      <i class="fa-solid fa-sparkles"></i>
+    </h2>
+    <p>Our beta version that is simpler and faster. There are a few breaking changes which you can read about in the <a href="/docs/api/changelog">changelog</a>.</p>
+    <div class="explore">
+      <a href="/docs/api/admin/3.1" class="btn">Explore the docs</a>
+    </div>
+  </nav>
+</div>

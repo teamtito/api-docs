@@ -1,0 +1,110 @@
+{
+  "answers_count": {
+    "description": null,
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": false,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": null
+  },
+  "description": {
+    "description": null,
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": false,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": null
+  },
+  "field_type": {
+    "description": null,
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": false,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": null
+  },
+  "id": {
+    "description": "Unique record identifier",
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": true,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": "integer"
+  },
+  "include_free_text_field": {
+    "description": null,
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": false,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": null
+  },
+  "required": {
+    "description": null,
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": false,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": null
+  },
+  "slug": {
+    "description": "Unique string used in the URL to identify this record.",
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": true,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": "string"
+  },
+  "tickets_count": {
+    "description": null,
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": false,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": null
+  },
+  "title": {
+    "description": null,
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": false,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": null
+  }
+}

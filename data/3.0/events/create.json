@@ -1,0 +1,347 @@
+{
+  "event": {
+    "discount_codes_count": 0,
+    "_type": "event",
+    "view": "extended",
+    "id": 4,
+    "created_at": "2022-03-26T07:59:02.000Z",
+    "updated_at": "2022-03-26T07:59:02.000Z",
+    "title": "Very Cool Conf",
+    "description": null,
+    "banner": {
+      "url": null,
+      "thumb": {
+        "url": null
+      }
+    },
+    "banner_url": "/uploads/event/banner/4/",
+    "currency": "USD",
+    "default_locale": "en",
+    "from_email": "\"Very Cool Conf\" <support@tito.io>",
+    "reply_to_email": "bill@tito.io",
+    "archived": false,
+    "live": false,
+    "test_mode": true,
+    "locales": [
+      "en"
+    ],
+    "location": null,
+    "logo": {
+      "url": null,
+      "thumb": {
+        "url": null
+      },
+      "display": {
+        "url": null
+      }
+    },
+    "private": false,
+    "slug": "very-cool-conf-2bd44dc2-d8ec-4990-9f03-c2879219feb4",
+    "account_id": 1,
+    "start_date": null,
+    "end_date": null,
+    "date_or_range": "",
+    "days_until": null,
+    "days_since": null,
+    "happening_in": "unknown",
+    "day_number": null,
+    "security_token": "hDUdnotQhFnS_7Ca1fQaoA",
+    "metadata": null,
+    "url": "https://ti.to/demo/very-cool-conf-2bd44dc2-d8ec-4990-9f03-c2879219feb4",
+    "setup": true,
+    "show_discount_code_field": false,
+    "releases_count": 0,
+    "account_slug": "demo",
+    "consent": {
+      "required": false
+    },
+    "translations": {
+      "en": {
+        "description": null,
+        "title": "Very Cool Conf",
+        "additional_info": null,
+        "after_registration_closed_url": null,
+        "after_registration_complete_url": null,
+        "custom_email_signature": null,
+        "custom_success_html": null,
+        "custom_ticket_message": null,
+        "custom_complete_ticket_label": null,
+        "custom_registration_unavailable_message": null,
+        "custom_registration_confirmation_subject": null,
+        "custom_ticket_added_subject": null,
+        "custom_ticket_gifted_subject": null,
+        "custom_ticket_updated_subject": null,
+        "custom_view_ticket_label": null,
+        "display_date": null,
+        "display_title": null,
+        "invoice_extra": null,
+        "invoice_form_message": null,
+        "invoice_payment_instructions": null,
+        "invoice_purchase_message": null,
+        "payment_instructions": null,
+        "receipt_footer_message": null,
+        "register_button_label": null,
+        "register_interest_form_label": null,
+        "team_signoff": null,
+        "tickets_form_label": null,
+        "ticket_fail_message": null,
+        "ticket_gifting_disabled_message": null,
+        "ticket_success_message": null,
+        "twitter_share_message": null,
+        "facebook_share_message": null
+      }
+    },
+    "registrations_count": 0,
+    "tickets_count": 0,
+    "additional_info": null,
+    "after_registration_closed_url": null,
+    "after_registration_complete_url": null,
+    "after_registration_redirect_after_questions": false,
+    "any_live_sales": false,
+    "any_live_tickets": false,
+    "banner_link": null,
+    "cors_domains": [
+
+    ],
+    "credit_card_payment_option_id": null,
+    "credit_card_payment_option_gateway_type": null,
+    "currency_options": [
+      {
+        "name": "AUD - Australian Dollar (A$)",
+        "code": "AUD"
+      },
+      {
+        "name": "CAD - Canadian Dollar (C$)",
+        "code": "CAD"
+      },
+      {
+        "name": "EUR - Euro (€)",
+        "code": "EUR"
+      },
+      {
+        "name": "GBP - British Pound (£)",
+        "code": "GBP"
+      },
+      {
+        "name": "JPY - Japanese Yen (¥)",
+        "code": "JPY"
+      },
+      {
+        "name": "USD - United States Dollar (US$)",
+        "code": "USD"
+      },
+      {
+        "name": "NZD - New Zealand Dollar (NZ$)",
+        "code": "NZD"
+      },
+      {
+        "name": "CHF - Swiss Franc (CHF)",
+        "code": "CHF"
+      },
+      {
+        "name": "HKD - Hong Kong Dollar (HK$)",
+        "code": "HKD"
+      },
+      {
+        "name": "SGD - Singapore Dollar (S$)",
+        "code": "SGD"
+      },
+      {
+        "name": "SEK - Swedish Krona (SEK)",
+        "code": "SEK"
+      },
+      {
+        "name": "DKK - Danish Krone (DKK)",
+        "code": "DKK"
+      },
+      {
+        "name": "PLN - Polish Złoty (zł)",
+        "code": "PLN"
+      },
+      {
+        "name": "NOK - Norwegian Krone (NOK)",
+        "code": "NOK"
+      },
+      {
+        "name": "HUF - Hungarian Forint (Ft)",
+        "code": "HUF"
+      },
+      {
+        "name": "CZK - Czech Koruna (Kč)",
+        "code": "CZK"
+      },
+      {
+        "name": "ILS - Israeli New Sheqel (₪)",
+        "code": "ILS"
+      },
+      {
+        "name": "MXN - Mexican Peso (MEX$)",
+        "code": "MXN"
+      },
+      {
+        "name": "BRL - Brazilian Real (only for Brazilian members)",
+        "code": "BRL"
+      },
+      {
+        "name": "MYR - Malaysian Ringgit (only for Malaysian members)",
+        "code": "MYR"
+      },
+      {
+        "name": "PHP - Philippine Peso (₱)",
+        "code": "PHP"
+      },
+      {
+        "name": "TWD - New Taiwan Dollar (NT$)",
+        "code": "TWD"
+      },
+      {
+        "name": "THB - Thai Baht (฿)",
+        "code": "THB"
+      },
+      {
+        "name": "TRY - Turkish Lira (only for Turkish members)",
+        "code": "TRY"
+      }
+    ],
+    "custom_background_color": null,
+    "custom_complete_ticket_label": null,
+    "custom_css": null,
+    "custom_domain": null,
+    "custom_email_css": null,
+    "custom_email_signature": null,
+    "custom_overlay_css": null,
+    "custom_registration_unavailable_message": null,
+    "custom_registration_confirmation_subject": null,
+    "custom_success_html": null,
+    "custom_ticket_message": null,
+    "custom_view_ticket_label": null,
+    "default_billing_country": null,
+    "display_date": null,
+    "display_title": null,
+    "email_address": "bill@tito.io",
+    "email_image": {
+      "url": null,
+      "thumb": {
+        "url": null
+      },
+      "display": {
+        "url": null
+      }
+    },
+    "email_invoice": true,
+    "external_order_reference_format": null,
+    "facebook_conversion_pixel_id": null,
+    "facebook_share_message": null,
+    "google_analytics_domains": null,
+    "google_analytics_property_id": null,
+    "google_conversion_id": null,
+    "hide_tax_types": false,
+    "invoice_change_cutoff_days": 90,
+    "invoice_due_days": null,
+    "invoice_extra": null,
+    "invoice_form_message": null,
+    "invoice_issue_method": "100",
+    "invoice_number_format": null,
+    "invoice_number_offset": null,
+    "invoice_payment_instructions": null,
+    "invoice_purchase_message": null,
+    "invoice_tax_details": null,
+    "italian_checkout": false,
+    "last_invoice_number": null,
+    "lock_changes_when_ticket_not_complete": "1",
+    "payment_instructions": null,
+    "paypal_payment_option_id": null,
+    "map_latitude": null,
+    "map_link": null,
+    "map_longitude": null,
+    "map_zoomlevel": null,
+    "max_tickets_per_person": null,
+    "max_tickets_per_registration": null,
+    "meta_robots": null,
+    "min_tickets_per_person": null,
+    "min_tickets_per_registration": null,
+    "next_invoice_number": "0000001",
+    "organization_address": null,
+    "organization_name": null,
+    "passbook_icon": null,
+    "quantity": null,
+    "receipt_footer_message": null,
+    "register_button_label": null,
+    "register_interest_form_label": null,
+    "requires_billing_address": false,
+    "requires_company_name": false,
+    "requires_country": false,
+    "requires_vat_number": false,
+    "secret_password": null,
+    "send_registration_confirmation_email": true,
+    "send_ticket_gifted_email": true,
+    "send_ticket_updated_email": true,
+    "share_link": null,
+    "shareable_image": {
+      "url": null,
+      "thumb": {
+        "url": null
+      },
+      "display": {
+        "url": null
+      }
+    },
+    "show_additional_info": true,
+    "show_banner": true,
+    "show_company_field": false,
+    "show_date": true,
+    "show_description": true,
+    "show_email_address": true,
+    "show_invoice_purchase_order_number_field": true,
+    "show_location": true,
+    "show_logo": true,
+    "show_next_tickets": false,
+    "show_past_tickets": true,
+    "show_phone_number_field": false,
+    "show_prices_ex_tax": false,
+    "show_register_interest_form": false,
+    "show_register_interest_form_tickets_not_on_sale": false,
+    "show_register_interest_form_tickets_on_sale": false,
+    "show_sharing_links": true,
+    "show_tickets_remaining": false,
+    "show_tickets_remaining_threshold": null,
+    "show_title": true,
+    "show_venue": true,
+    "snoozing_disabled": false,
+    "social_sharing_description": null,
+    "social_sharing_title": null,
+    "stripe": null,
+    "stripe_statement_descriptor": null,
+    "team_signoff": null,
+    "theme": "mcdonagh",
+    "ticket_cancelling_enabled": false,
+    "ticket_downloads_enabled": true,
+    "ticket_fail_message": null,
+    "ticket_gifting_disabled": false,
+    "ticket_gifting_disabled_at": null,
+    "ticket_gifting_disabled_now": false,
+    "ticket_gifting_disabled_message": null,
+    "ticket_groups": [
+
+    ],
+    "ticket_qr_codes_enabled": true,
+    "ticket_success_message": null,
+    "ticket_wallet_pass_enabled": true,
+    "tickets_form_label": null,
+    "timezone": "UTC",
+    "tracking_html": null,
+    "tracking_url": null,
+    "typekit_id": null,
+    "twitter_share_message": null,
+    "users_count": 6,
+    "releases": [
+
+    ],
+    "credit_card_payment_options": [
+
+    ],
+    "paypal_payment_options": [
+
+    ]
+  }
+}

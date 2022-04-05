@@ -1,0 +1,199 @@
+# Registrations
+
+## Attributes
+
+<%= partial "includes/shared/attributes", locals: { attributes: data.registrations.attributes } %>
+
+## Get all Registrations
+
+<%= partial "includes/requests/get",
+  locals: {
+    url: "#{config[:api_endpoint]}/:account_slug/:event_slug/registrations"
+  }
+%>
+<%= partial "includes/admin_api/3.0/registrations/index.json" %>
+
+
+Retrieves all `Registrations` for the given `Event`.
+
+`<%= "GET #{config[:api_endpoint]}/:account_slug/:event_slug/registrations" %>`
+
+* `account_slug` - The `slug` attribute of an `Account`.
+* `event_slug` - The `slug` attribute of an `Event`.
+
+### Sort Order
+
+The default order is by `created_at` with newest registrations first. You can change the order by appending some parameters to the endpoint URL. This is the same as the default:
+
+`?search[sort]=created_at&search[direction]=desc`
+
+The direction can either be `asc` or `desc`.
+
+You can sort on the following attributes:
+
+* `name`
+* `created_at`
+* `updated_at`
+* `total`
+* `reference`
+* `payment_provider`
+
+### Filtering
+
+You can filter which registrations you get back too. For instance, to only get `unpaid` or `incomplete` registrations:
+
+`?search[states][]=unpaid&search[states][]=incomplete`
+
+Possible states are:
+
+* `cancelled`
+* `complete`
+* `confirmed`
+* `incomplete`
+* `paid`
+* `unpaid`
+
+Or by time. This will show all registrations created since 1 Jan 2019 at 9am UTC:
+
+`?search[created_at][gt]=2019-01-01T09:00:00+UTC`
+
+That operator can be:
+
+* `gt` - greater than
+* `gte` - greater than or equal to
+* `lt` - less than
+* `lte` - less than or equal to
+
+And you can do that on the following attributes
+
+* `created_at`
+* `updated_at`
+
+So, for instance, to find all registrations that have been updated in the last hour:
+
+`?search[updated_at][gt]=2019-01-01T09:00:00+UTC`
+
+(where you obviously change that timestamp to be one hour ago).
+
+ Note: if you don't use the `+UTC` suffix on those timestamps it will default to the time zone used by the event itself.
+
+
+## Get a Registration
+
+<%= partial "includes/requests/get",
+  locals: {
+    url: "#{config[:api_endpoint]}/:account_slug/:event_slug/registrations/:registration_slug"
+  }
+%>
+<%= partial "includes/admin_api/3.0/registrations/show.json" %>
+
+Retrieves a `Registration` for the given `Event`.
+
+`GET <%= "#{config[:api_endpoint]}/:account_slug/:event_slug/registrations/:registration_slug" %>`
+
+* `account_slug` - The `slug` attribute of an `Account`.
+* `event_slug` - The `slug` attribute of an `Event`.
+* `registration_slug` - The `slug` attribute of a `Registration`.
+
+## Create a Registration
+
+<%= partial "includes/requests/post",
+  locals: {
+    url: "#{config[:api_endpoint]}/:account_slug/:event_slug/registrations",
+    parameters: {
+      registration: {
+        email: "jane@example.com",
+        "name":"John Smith",
+        "discount_code":"",
+        "source":"",
+        "line_items": [
+          {
+            "release_id": 123,
+            "quantity": 1
+          }
+        ]
+      }
+    }
+  }
+%>
+<%= partial "includes/admin_api/3.0/registrations/show.json" %>
+
+Create a registration with one or more tickets.
+
+`<%= "POST #{config[:api_endpoint]}/:account_slug/:event_slug/registrations" %>`
+
+* `account_slug` - The `slug` attribute of an `Account`.
+* `event_slug` - The `slug` attribute of an `Event`.
+
+### Parameters
+
+<%= partial "includes/shared/parameters", locals: { parameters: data.registrations.attributes.select { |name, attribute| %w[email name discount_code source notify line_items].include?(name) } }
+%>
+
+## Update a Registration
+
+<%= partial "includes/requests/patch",
+  locals: {
+    url: "#{config[:api_endpoint]}/:account_slug/:event_slug/registrations/:registration_slug",
+    parameters: {
+      registration: {
+        email: "john@example.com"
+      }
+    }
+  }
+%>
+<%= partial "includes/admin_api/3.0/registrations/update.json" %>
+
+Update a `Registration` belonging to the given `Event`.
+
+`PATCH <%= "#{config[:api_endpoint]}/:account_slug/:event_slug/registrations/:registration_slug" %>`
+
+* `account_slug` - The `slug` attribute of an `Account`.
+* `event_slug` - The `slug` attribute of an `Event`.
+* `registration_slug` - The `slug` attribute of a `Registration`.
+
+### Parameters
+
+<%= partial "includes/shared/parameters", locals: { parameters: data.registrations.attributes.reject { |name, attribute| attribute["read_only"] || %w[notify].include?(name) } } %>
+
+## Mark a Registration as Paid
+
+<%= partial "includes/requests/post",
+  locals: {
+    url: "#{config[:api_endpoint]}/:account_slug/:event_slug/registrations/:registration_slug/confirmations"
+  }
+%>
+<%= partial "includes/admin_api/3.0/registrations/update.json" %>
+
+<%= beta_feature "Pay by invoice" %>
+
+Show that a `Registration` has been paid. Useful if you are allowing your customers to pay by invoice.
+
+`POST <%= "#{config[:api_endpoint]}/:account_slug/:event_slug/registrations/:registration_slug/confirmations" %>`
+
+* `account_slug` - The `slug` attribute of an `Account`.
+* `event_slug` - The `slug` attribute of an `Event`.
+* `registration_slug` - The `slug` attribute of a `Registration`.
+
+Changes the `receipt_paid` attribute to true.
+
+## Mark a Registration as Unpaid
+
+<%= partial "includes/requests/post",
+  locals: {
+    url: "#{config[:api_endpoint]}/:account_slug/:event_slug/registrations/:registration_slug/confirmations"
+  }
+%>
+<%= partial "includes/admin_api/3.0/registrations/update_not_paid.json" %>
+
+<%= beta_feature "Pay by invoice" %>
+
+Show that a `Registration` has NOT been paid. Useful if you are allowing your customers to pay by invoice. You wouldn't normally need to do this but might do if you [marked it as paid](/docs/api/admin/#registrations-mark-a-registration-as-paid) by mistake.
+
+`DELETE <%= "#{config[:api_endpoint]}/:account_slug/:event_slug/registrations/:registration_slug/confirmations" %>`
+
+* `account_slug` - The `slug` attribute of an `Account`.
+* `event_slug` - The `slug` attribute of an `Event`.
+* `registration_slug` - The `slug` attribute of a `Registration`.
+
+Changes the `receipt_paid` attribute to false.

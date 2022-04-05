@@ -41,6 +41,7 @@ under the License.
     <% else %>
       <%= javascript_include_tag  "all_nosearch" %>
     <% end %>
+    <script src="https://kit.fontawesome.com/11d6f41cf5.js" crossorigin="anonymous"></script>
   </head>
 
   <body class="<%= page_classes %>" data-languages="<%=h language_tabs.map{ |lang| lang.is_a?(Hash) ? lang.keys.first : lang }.to_json %>">
@@ -87,7 +88,7 @@ under the License.
         </ul>
       <% end %>
     </div>
-    <div class="page-wrapper full_width">
+    <div class="page-wrapper full-width">
       <div class="content">
         <%= page_content %>
       </div>

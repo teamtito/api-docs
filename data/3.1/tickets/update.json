@@ -1,0 +1,46 @@
+{
+  "ticket": {
+    "_type": "ticket",
+    "id": 1,
+    "slug": "ti_dj8GKOodhY1PZK3VpFxVshw",
+    "unique_url": "https://ti.to/demo/awesomeconf/tickets/ti_dj8GKOodhY1PZK3VpFxVshw",
+    "company_name": null,
+    "email": "8nRo0oMfMkjHGA@example.com",
+    "metadata": null,
+    "first_name": null,
+    "last_name": null,
+    "name": "",
+    "number": 1,
+    "phone_number": null,
+    "price": 0.0,
+    "reference": "9K9R-1",
+    "state": "incomplete",
+    "test_mode": false,
+    "registration_id": 1,
+    "release_id": 2,
+    "release_archived": false,
+    "avatar_url": "https://secure.gravatar.com/avatar/69ad0840e4e3b9b5b6df4a0b6d27acf8?default=https://starwavatars.global.ssl.fastly.net/avatars/69ad0840e4e3b9b5b6df4a0b6d27acf8.png",
+    "void": false,
+    "changes_locked": false,
+    "consented_at": null,
+    "discount_code_used": "FREE2U",
+    "tag_names": [
+
+    ],
+    "created_at": "2022-03-26T07:36:07.000Z",
+    "updated_at": "2022-03-26T07:59:24.000Z",
+    "assigned": true,
+    "qr_url": "https://qr.tito.io/tickets/ti_dj8GKOodhY1PZK3VpFxVshw",
+    "show_qr_code": false,
+    "qr_code_disabled": false,
+    "price_less_tax": 0.0,
+    "total_paid": 0.0,
+    "total_tax_paid": 0.0,
+    "total_paid_less_tax": 0.0,
+    "tags": null,
+    "lock_changes": false
+  },
+  "meta": {
+    "api_version": "3.1.0"
+  }
+}

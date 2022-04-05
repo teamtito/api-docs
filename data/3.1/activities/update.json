@@ -1,0 +1,20 @@
+{
+  "activity": {
+    "_type": "activity",
+    "id": 1,
+    "capacity": 100,
+    "date": "2022-12-25",
+    "description": "An activity for Conference",
+    "start_time": "09:00",
+    "end_time": "17:00",
+    "start_at": "2022-12-25T09:00:00.000Z",
+    "end_at": "2022-12-25T17:00:00.000Z",
+    "name": "Conference",
+    "allocation_count": 103,
+    "sold_out": true,
+    "show_to_attendee": true
+  },
+  "meta": {
+    "api_version": "3.1.0"
+  }
+}

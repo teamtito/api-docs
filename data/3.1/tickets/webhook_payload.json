@@ -1,0 +1,112 @@
+{
+  "_type": "ticket",
+  "id": 2,
+  "test_mode": false,
+  "name": "Watto",
+  "first_name": "Watto",
+  "last_name": null,
+  "email": "jailyn@example.com",
+  "phone_number": null,
+  "company_name": null,
+  "reference": "9K9R-2",
+  "price": "0.0",
+  "tax": "0.0",
+  "price_less_tax": "0.0",
+  "slug": "ti_dbFC7zPGM4jkgWA1jpVfGOw",
+  "state_name": "complete",
+  "gender": null,
+  "total_paid": "0.0",
+  "total_paid_less_tax": "0.0",
+  "updated_at": "2022-03-26 07:36:07 UTC",
+  "release_price": "100.0",
+  "discount_code_used": "FREE2U",
+  "url": "https://ti.to/demo/awesomeconf/tickets/ti_dbFC7zPGM4jkgWA1jpVfGOw",
+  "admin_url": "https://dashboard.tito.io/demo/awesomeconf/tickets/ti_dbFC7zPGM4jkgWA1jpVfGOw",
+  "release_title": "Standard",
+  "release_slug": "standard",
+  "release_id": 2,
+  "release": {
+    "id": 2,
+    "title": "Standard",
+    "slug": "standard",
+    "metadata": {
+      "my_release_variable": "else",
+      "another_release_variable": 456
+    }
+  },
+  "custom": {
+  },
+  "registration_id": 1,
+  "registration_slug": "reg_dp9Z2e2FgFH9QrhrVbf7Whg",
+  "metadata": null,
+  "answers": [
+    {
+      "question": {
+        "id": 2,
+        "title": "Where do you live?"
+      },
+      "response": "US",
+      "humanized_response": "United States"
+    }
+  ],
+  "opt_ins": [
+
+  ],
+  "responses": {
+    "where-do-you-live": "United States"
+  },
+  "last_updated_by_type": "admin",
+  "upgrades": "#<Upgrade::ActiveRecord_Associations_CollectionProxy:0x0000aaaaf4a51078>",
+  "upgrade_ids": [
+
+  ],
+  "registration": {
+    "id": 1,
+    "slug": "reg_dp9Z2e2FgFH9QrhrVbf7Whg",
+    "url": "https://ti.to/registrations/reg_dp9Z2e2FgFH9QrhrVbf7Whg",
+    "admin_url": "https://dashboard.tito.io/demo/awesomeconf/registrations/reg_dp9Z2e2FgFH9QrhrVbf7Whg",
+    "total": "270.0",
+    "currency": "USD",
+    "payment_reference": null,
+    "source": null,
+    "name": "Watto",
+    "email": "nIFOizT0YnYTTA@example.com",
+    "receipt": {
+      "total": "270.0",
+      "tax": 0,
+      "payment_provider": "Invoice",
+      "paid": false,
+      "receipt_lines": [
+        {
+          "total": "0.0",
+          "quantity": 2,
+          "tax": 0
+        },
+        {
+          "total": "0.0",
+          "quantity": 1,
+          "tax": 0
+        },
+        {
+          "total": "270.0",
+          "quantity": 3,
+          "tax": 0
+        }
+      ]
+    }
+  },
+  "event": {
+    "_type": "event",
+    "id": 1,
+    "title": "Awesomeconf",
+    "url": "https://ti.to/demo/awesomeconf",
+    "account_slug": "demo",
+    "slug": "awesomeconf",
+    "start_date": "2022-06-26",
+    "end_date": null,
+    "metadata": {
+      "my_event_variable": "something",
+      "another_event_variable": 123
+    }
+  }
+}

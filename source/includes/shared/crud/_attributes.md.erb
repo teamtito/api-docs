@@ -1,0 +1,5 @@
+<%= list_attributes attributes %>
+
+<% if attributes.any? { |_, hash| hash["translated"] } %>
+<span class="translated-note">*</span> See <a href="#translations">translations</a>.
+<% end %>

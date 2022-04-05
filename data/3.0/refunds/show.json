@@ -1,0 +1,122 @@
+{
+  "refund": {
+    "_type": "refund",
+    "id": 7,
+    "amount": "-190.0",
+    "created_at": "2022-03-26T07:36:10.000Z",
+    "manual": null,
+    "registration": {
+      "_type": "registration",
+      "view": "extended",
+      "id": 6,
+      "slug": "reg_dznCwEd00C8tFKGNSNx3NqA",
+      "billing_address": null,
+      "created_at": "2022-03-26T07:36:10.000Z",
+      "updated_at": "2022-03-26T07:36:10.000Z",
+      "completed_at": "2022-03-26T07:36:10.000Z",
+      "discount_code": "HALFPRICE",
+      "email": "dee_donnelly@example.org",
+      "job_title": null,
+      "expires_at": "2022-03-26 07:51:10 UTC",
+      "ip_address": null,
+      "locale": "en",
+      "metadata": null,
+      "name": "Luke Skywalker",
+      "company_name": null,
+      "payment_reference": null,
+      "payment_option_name": null,
+      "phone_number": null,
+      "registration_type": "manual",
+      "reference": "6MWI",
+      "source": null,
+      "state": "incomplete",
+      "test_mode": false,
+      "cancelled": false,
+      "cancelled_at": null,
+      "cancelled_by": null,
+      "free": false,
+      "paid": true,
+      "invoice": true,
+      "manual": true,
+      "imported": false,
+      "refundable": false,
+      "refunded": true,
+      "partially_refunded": false,
+      "receipt_paid": true,
+      "receipt_number": "0000010",
+      "receipt_id": 10,
+      "payment_incomplete": false,
+      "payment_complete": true,
+      "total": 190.0,
+      "tickets_count": 5,
+      "consented_at": null,
+      "terms_accepted": false,
+      "termset_ids": [
+
+      ],
+      "editable_total_and_prices": true,
+      "payment": {
+        "reference": null,
+        "type": "invoice",
+        "refundable_amount": 0.0
+      },
+      "total_less_tax": 190.0,
+      "discount_code_id": 2,
+      "payment_option_provider_name": null,
+      "quantities": {
+        "early-bird": {
+          "release": "Early Bird",
+          "quantity": 1
+        },
+        "standard": {
+          "release": "Standard",
+          "quantity": 2
+        },
+        "speaker": {
+          "release": "Speaker",
+          "quantity": 2
+        }
+      },
+      "receipt": {
+        "id": 10,
+        "slug": "rct_d9Hb0y9XfXOjDa9S4qW3CMw",
+        "total": 190.0,
+        "receipt_lines": [
+          {
+            "id": 15,
+            "quantity": 2,
+            "description": "Standard",
+            "price": 50.0,
+            "total": 100.0,
+            "receipt_line_taxes": [
+
+            ]
+          },
+          {
+            "id": 16,
+            "quantity": 2,
+            "description": "Speaker",
+            "price": 0.0,
+            "total": 0.0,
+            "receipt_line_taxes": [
+
+            ]
+          },
+          {
+            "id": 17,
+            "quantity": 1,
+            "description": "Early Bird",
+            "price": 90.0,
+            "total": 90.0,
+            "receipt_line_taxes": [
+
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "meta": {
+    "api_version": "3.0.0"
+  }
+}

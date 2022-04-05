@@ -1,0 +1,187 @@
+# Events
+
+Events are planned social occasions that tickets will be sold for and people will attend.
+
+An Event belongs to an `Account` and most other resources belong to an event.
+
+An event URL is comprised of the combination of the `account_slug` and the `event_slug`.
+
+For example `https://ti.to/ultimateconf/<%= Date.today.year %>` is composed:
+
+* The base `ti.to` URL
+* The Ultimate Conf `Account` slug `ultimateconf`
+* The specific `Event` slug for the <%= Date.today.year %> edition.
+
+The equivalent event can be looked up using a similar URL structure with the API base URL:
+
+`<%= config[:api_endpoint] %>/ultimateconf/<%= Date.today.year %>`
+
+## Attributes
+
+<%= partial "includes/shared/attributes", locals: { attributes: data.events.attributes } %>
+
+## Get all upcoming Events
+
+<%= partial "includes/requests/get",
+  locals: {
+    url: "#{config[:api_endpoint]}/:account_slug/events"
+  }
+%>
+<%= partial "includes/admin_api/3.0/events/index.json" %>
+
+Retrieves all upcoming `Events` for the given `Account`.
+
+`<%= "GET #{config[:api_endpoint]}/:account_slug/events" %>`
+
+* `account_slug` - The `slug` attribute of an `Account`.
+
+## Get all past Events
+
+<%= partial "includes/requests/get",
+  locals: {
+    url: "#{config[:api_endpoint]}/:account_slug/events/past"
+  }
+%>
+
+Retrieves all past `Events` for the given `Account`.
+
+`<%= "GET #{config[:api_endpoint]}/:account_slug/events/past" %>`
+
+* `account_slug` - The `slug` attribute of an `Account`.
+
+## Get all archived Events
+
+<%= partial "includes/requests/get",
+  locals: {
+    url: "#{config[:api_endpoint]}/:account_slug/events/archived"
+  }
+%>
+
+Retrieves all archived `Events` for the given `Account`.
+
+`<%= "GET #{config[:api_endpoint]}/:account_slug/events/archived" %>`
+
+* `account_slug` - The `slug` attribute of an `Account`.
+
+## Get an Event
+
+<%= partial "includes/requests/get",
+  locals: {
+    url: "#{config[:api_endpoint]}/:account_slug/:event_slug"
+  }
+%>
+<%= partial "includes/admin_api/3.0/events/show.json" %>
+
+Retrieve an `Event` for the given `Account`.
+
+`<%= "GET #{config[:api_endpoint]}/:account_slug/:event_slug" %>`
+
+* `account_slug` - The `slug` attribute of an `Account`.
+* `event_slug` - The `slug` attribute of an `Event`.
+
+## Create an Event
+
+<%= partial "includes/requests/post",
+  locals: {
+    url: "#{config[:api_endpoint]}/:account_slug/events",
+    parameters: {
+      event: {
+        title: "Awesome Conf"
+      }
+    }
+  }
+%>
+<%= partial "includes/admin_api/3.0/events/create.json" %>
+
+
+Create a new `Event` belonging to the given `Account`.
+
+`<%= "POST #{config[:api_endpoint]}/:account_slug/events" %>`
+
+* `account_slug` - The `slug` attribute of an `Account`.
+
+### Parameters
+
+<%= partial "includes/shared/parameters", locals: { parameters: data.events.attributes.reject { |name,attribute| attribute["read_only"] } } %>
+
+## Update an Event
+
+<%= partial "includes/requests/patch",
+  locals: {
+    url: "#{config[:api_endpoint]}/:account_slug/:event_slug",
+    parameters: {
+      event: {
+        location: "Dublin, Ireland"
+      }
+    }
+  }
+%>
+
+Update an `Event` belonging to the given `Account`.
+
+`<%= "PATCH #{config[:api_endpoint]}/:account_slug/:event_slug" %>`
+
+* `account_slug` - The `slug` attribute of an `Account`.
+* `event_slug` - The `slug` attribute of an `Event`.
+
+## Delete an Event
+
+<%= partial "includes/requests/delete", locals: {
+  url: "#{config[:api_endpoint]}/:account_slug/:event_slug"
+} %>
+
+Delete an `Event` belonging to the given `Account`.
+
+`<%= "DELETE #{config[:api_endpoint]}/:account_slug/:event_slug" %>`
+
+* `account_slug` - The `slug` attribute of an `Account`.
+* `event_slug` - The `slug` attribute of an `Event`.
+
+## Duplicate an Event
+
+<%= partial "includes/requests/post",
+  locals: {
+    url: "#{config[:api_endpoint]}/:account_slug/:event_slug/duplication",
+    parameters: {}
+  }
+%>
+<%= partial "includes/admin_api/3.0/events/duplication.json" %>
+
+Duplicate an existing `Event` belonging to the given `Account`.
+
+`<%= "POST #{config[:api_endpoint]}/:account_slug/:event_slug/duplication" %>`
+
+* `account_slug` - The `slug` attribute of an `Account`.
+* `event_slug` - The `slug` attribute of an `Event` to be duplicated.
+
+As duplicating an `Event` happens asynchronously the Tito API provides a response
+indicating the current `status` of the duplication:
+
+* `processing` - The duplication is still being processed.
+* `complete` - The duplication has successfully completed.
+
+The latest status of the duplication can be then looked up.
+
+## Duplicate an Event status
+
+<%= partial "includes/requests/get",
+  locals: {
+    url: "#{config[:api_endpoint]}/:account_slug/:event_slug/duplication"
+  }
+%>
+<%= partial "includes/admin_api/3.0/events/duplication_complete.json" %>
+
+The latest status of the `Event` duplication.
+
+`<%= "GET #{config[:api_endpoint]}/:account_slug/:event_slug/duplication" %>`
+
+* `account_slug` - The `slug` attribute of an `Account`.
+* `event_slug` - The `slug` attribute of an `Event` to be duplicated.
+
+As duplicating an `Event` happens asynchronously the API provides the ability to
+lookup the latest status of the duplication. The status can be either:
+
+* `processing` - The duplication is still being processed.
+* `complete` - The duplication has successfully completed.
+
+Once the duplication completes the Event `slug` and `title` will be assigned.

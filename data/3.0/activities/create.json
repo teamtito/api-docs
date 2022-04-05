@@ -1,0 +1,43 @@
+{
+  "activity": {
+    "_type": "activity",
+    "view": "extended",
+    "id": 8,
+    "capacity": null,
+    "date": null,
+    "description": null,
+    "start_time": null,
+    "end_time": null,
+    "start_at": null,
+    "end_at": null,
+    "name": "Breakfast",
+    "private": true,
+    "question_ids": [
+
+    ],
+    "venue_id": null,
+    "accommodation": null,
+    "allocation_count": 0,
+    "sold_out": false,
+    "show_to_attendee": true,
+    "release_ids": [
+
+    ],
+    "translations": {
+      "en": {
+        "description": null,
+        "name": "Breakfast"
+      }
+    },
+    "venue": null,
+    "questions": [
+
+    ],
+    "releases": [
+
+    ]
+  },
+  "meta": {
+    "api_version": "3.0.0"
+  }
+}

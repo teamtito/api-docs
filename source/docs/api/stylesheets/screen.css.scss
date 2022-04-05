@@ -392,12 +392,14 @@ body {
 }
 
 .lang-selector {
+  display: flex;
   background-color: $lang-select-bg;
   padding: 10px 0 0 0;
   width: 100%;
+  font-weight: bold;
+  overflow-x: auto;
   a {
-    display: block;
-    float: left;
+    display: inline;
     color: $lang-select-text;
     text-decoration: none;
     padding: 8px 32px;
@@ -456,8 +458,7 @@ body {
   & > ul,
   & > ol,
   & > aside,
-  & > dl,
-  & > div {
+  & > dl {
     margin-right: $examples-width;
     padding: 0 $main-padding;
     box-sizing: border-box;
@@ -498,6 +499,9 @@ body {
 
   h2 {
     @extend %header-font;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     font-size: 19px;
     margin-top: 4em;
     margin-bottom: 0;
@@ -509,6 +513,11 @@ body {
       rgba(#fff, 0.2),
       rgba(#fff, 0)
     );
+    .fa-stack,
+    i {
+      color: #0079ff;
+      font-size: 2rem;
+    }
   }
 
   // h2s right after h1s should bump right up
@@ -532,7 +541,7 @@ body {
   h4,
   h5,
   h6 {
-    font-size: 10px;
+    font-size: 15px;
   }
 
   div.warning {
@@ -575,16 +584,12 @@ body {
       padding: 10px;
     }
 
-    tr:last-child {
-      border-bottom: 1px solid #ccc;
-    }
-
     tr:nth-child(odd) > td {
       background-color: lighten($main-bg, 4.2%);
     }
 
     tr:nth-child(even) > td {
-      background-color: lighten($main-bg, 2.4%);
+      background-color: darken($main-bg, 4%);
     }
   }
 
@@ -666,14 +671,14 @@ body {
 }
 
 // Allow the content to go full width when there are no code examples.
-.full_width {
+.full-width {
   @media (min-width: 700px) {
     border-right: 1px solid #ccc;
-    margin-right: calc(50% - 150px);
+    margin-right: 0;
   }
 }
 
-.full_width .content {
+.full-width .content {
   & > h1,
   & > h2,
   & > h3,
@@ -692,6 +697,12 @@ body {
   h3 {
     margin-top: 0;
   }
+
+  pre, blockquote {
+    float: none;
+    margin-bottom: 1rem;
+    width: auto;
+  }
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -700,8 +711,18 @@ body {
 // This is all the stuff that appears in the right half of the page
 
 .content {
-  pre,
-  blockquote {
+
+  h1 {
+    background-color: #eee;
+    border-top: 3px solid #0079ff;
+    margin-right: 0;
+  }
+
+  &>div.highlight {
+    clear:none;
+  }
+
+  pre, blockquote {
     background-color: $code-bg;
     color: #fff;
 
@@ -876,12 +897,187 @@ body {
   .beta-feature {
     background: #ff7;
   }
-  p.beta-feature {
-    margin-top: -21px;
+  p.beta-feature,
+  p.new-in-version {
+    i {
+      margin-right: 0.3rem;
+    }
     padding: 1rem 28px;
   }
-  h3.beta-feature {
+  h1 + p.beta-feature {
+    margin-top: -21px;
+  }
+  h3.beta-feature,
+  p.new-in-version {
     padding-top: 1rem;
     padding-bottom: 1rem;
   }
+
+  .new-in-version {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    span.highlight {
+      box-shadow: 0 0 10px #eec;
+      display: block;
+      font-size: 1rem;
+      font-weight: normal;
+      background: #ff7;
+      padding: 0.25rem 0.5rem;
+      &:before {
+        content: "New in ";
+      }
+    }
+  }
+
+  .removed-in-version {
+    margin-right: 50%;
+    padding: 0 28px;
+  }
+}
+
+.toc-wrapper li {
+  span.version {
+    display: none;
+  }
+  i {
+    display: none;
+  }
+}
+
+.copy-clipboard {
+  float: right;
+  fill: #9DAAB6;
+  cursor: pointer;
+  opacity: 0.4;
+  height: 18px;
+  width: 18px;
+}
+
+.copy-clipboard:hover {
+  opacity: 0.8;
+}
+
+.attribute-list {
+  code {
+    white-space: nowrap;
+    &.name {
+      font-weight: bold;
+    }
+  }
+  .sub-attribute {
+    margin-top: 1rem;
+    margin-left: 1rem;
+  }
+  .sub-attribute-description {
+    margin-left: 1rem;
+  }
+  .badge {
+    border-radius: 4px;
+    color: black;
+    display: inline-block;
+    font-size: 0.8rem;
+    margin: 0 0.25rem;
+    padding: 0 0.5rem;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  .type {
+    @extend .badge;
+    background-color: lighten(#0079ff, 45%);
+  }
+  .code {
+    @extend .badge;
+    background-color: lighten(#0079ff, 45%);
+  }
+  .read-only {
+    @extend .badge;
+    background-color: lighten(#f92672, 42%);
+    color: #f92672;
+  }
+  .write-only {
+    @extend .badge;
+    background-color: #f6af58;
+    color: white;
+  }
+  .required {
+    @extend .badge;
+    background-color: lighten(#50e3c2, 25%);
+  }
+  .expandable {
+    @extend .badge;
+    background-color: #777;
+    color: white;
+  }
+  .translated {
+    @extend .badge;
+    background-color: lighten(#ae81ff, 20%);
+  }
+  .targetted-feature {
+    color: orange;
+    margin: 0 0.25rem;
+  }
+  li {
+    padding: 0.5rem 0;
+    &.separator {
+      list-style: none;
+      margin: 1rem 0 0;
+      opacity: 0.5;
+    }
+  }
+}
+
+.translated-note {
+  color: #ae81ff;
+  font-weight: bold;
+}
+
+.version-list {
+  margin-right: 50%;
+  padding: 1rem;
+  > nav {
+    background-color: #f3f3f3;
+    border-radius: 1rem;
+    margin: 1rem 1rem 2rem;
+    padding: 1rem;
+  }
+  h2 {
+    background-image: none;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    font-size: 2rem;
+    margin: 0 0 0.5rem;
+    padding: 0;
+    i {
+      color: black;
+    }
+  }
+  .explore {
+    text-align: right;
+  }
+  .btn {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    display: inline-block;
+    padding: 1rem;
+    text-decoration: none;
+    &:hover {
+      background-color: #f9f9ff;
+    }
+  }
+}
+@media (max-width: 700px) {
+  .version-list {
+    margin-right: 0;
+  }
+}
+
+a,
+a:visited {
+  color: darken(#0079ff, 10%);
+}
+a:hover {
+  color: darken(#0079ff, 20%);
 }

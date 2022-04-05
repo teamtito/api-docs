@@ -1,0 +1,4 @@
+<%= show_url "#{resource_plural}/:#{resource}#{id_suffix}", method: :patch, params: params %>
+<%= display_response :update %>
+<%= show_url_key "PATCH #{resource_plural}/:#{resource_name}#{id_suffix}" %>
+<%= list_required_attributes version, resource %>

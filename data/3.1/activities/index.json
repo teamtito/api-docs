@@ -1,0 +1,78 @@
+{
+  "activities": [
+    {
+      "_type": "activity",
+      "id": 1,
+      "capacity": 100,
+      "date": "2022-12-25",
+      "description": "An activity for Conference",
+      "start_time": "09:00",
+      "end_time": "17:00",
+      "start_at": "2022-12-25T09:00:00.000Z",
+      "end_at": "2022-12-25T17:00:00.000Z",
+      "name": "Conference",
+      "allocation_count": 103,
+      "sold_out": true,
+      "show_to_attendee": true
+    },
+    {
+      "_type": "activity",
+      "id": 9,
+      "capacity": 100,
+      "date": "2022-12-25",
+      "description": "An activity for Conference",
+      "start_time": "09:00",
+      "end_time": "17:00",
+      "start_at": "2022-12-25T09:00:00.000Z",
+      "end_at": "2022-12-25T17:00:00.000Z",
+      "name": "Conference Copy",
+      "allocation_count": 103,
+      "sold_out": true,
+      "show_to_attendee": true
+    },
+    "..."
+  ],
+  "meta": {
+    "api_version": "3.1.0",
+    "expandable": {
+      "questions": false,
+      "question_ids": false,
+      "question_slugs": false,
+      "releases": false,
+      "release_ids": false,
+      "release_slugs": false,
+      "upgrades": false,
+      "venue": false
+    },
+    "current_page": 1,
+    "next_page": null,
+    "prev_page": null,
+    "total_pages": 1,
+    "total_count": 6,
+    "per_page": 100,
+    "overall_total": 6,
+    "sort_options": {
+      "Name A-Z": {
+        "attr": "name",
+        "direction": "asc",
+        "default": true
+      },
+      "Name Z-A": {
+        "attr": "name",
+        "direction": "desc"
+      }
+    },
+    "filter_options": {
+      "sections": {
+        "states": {
+          "label": "Status",
+          "open": false
+        }
+      },
+      "collection": false,
+      "states": [
+
+      ]
+    }
+  }
+}

@@ -1,0 +1,17 @@
+# Pagination
+
+Endpoints which enumerate objects are paginated.
+
+Pagination information is returned in the `meta` attribute in the response body.
+
+* `current_page` - The current page number.
+* `next_page` - The next page number.
+* `prev_page` - The previous page number.
+* `total_pages` - The number of pages.
+* `total_count` - The number of records with filtering applied,
+* `per_page` - The number of results returned in each page.
+* `overall_total` - The overall number of records without any filtering applied.
+
+A specific page can be retrieved by providing the `page` parameter:
+
+`<%= "#{config[:api_endpoint]}/:account_slug/:event_slug/activities/:activity_id?page=2" %>`

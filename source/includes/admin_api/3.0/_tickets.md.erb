@@ -1,0 +1,252 @@
+# Tickets
+
+## Attributes
+
+<%= partial "includes/shared/attributes", locals: { attributes: data.tickets.attributes } %>
+
+## Get all Tickets
+
+<%= partial "includes/requests/get",
+  locals: {
+    url: "#{config[:api_endpoint]}/:account_slug/:event_slug/tickets"
+  }
+%>
+<%= partial "includes/admin_api/3.0/tickets/index.json" %>
+
+
+Retrieves all `Tickets` for the given `Event`.
+
+`<%= "GET #{config[:api_endpoint]}/:account_slug/:event_slug/tickets" %>`
+
+* `account_slug` - The `slug` attribute of an `Account`.
+* `event_slug` - The `slug` attribute of an `Event`.
+
+### Sort Order
+
+The default order is by `created_at` with newest tickets first. You can change the order by appending some parameters to the endpoint URL. This is the same as the default:
+
+`?search[sort]=created_at&search[direction]=desc`
+
+The direction can either be `asc` or `desc`.
+
+You can sort on the following attributes:
+
+* `first_name`
+* `last_name`
+* `created_at`
+* `updated_at`
+* `price`
+* `reference`
+* `number`
+
+### Filtering
+
+You can filter which tickets you get back too. For instance, to only get `incomplete` or `unassigned` tickets:
+
+`?search[states][]=incomplete&search[states][]=unassigned`
+
+Possible states are:
+
+* `complete`
+* `incomplete`
+* `unassigned`
+* `void`
+
+By default, the list will exclude `void` tickets. If you want void tickets then you have to explicitly ask for them.
+
+There are some other pseudo-states that behave a little differently.
+
+* `changes_allowed` (only show tickets that allow changes)
+* `changes_locked` (only show tickets that have changes locked)
+
+If you select both `changes_allowed` and `changes_locked` then that's effectively the same as saying "those tickets that are either locked or not locked" which is the same as the default.
+
+* `archived` (tickets belonging to an archived release)
+
+The list excludes archived tickets by default. If you select this state then it also includes archived tickets _as well_ as non-archived tickets.
+
+Or you can filter by type of ticket:
+
+`?search[types][]=manual`
+
+Possible types are:
+
+* `manual` - added manually
+* `standard` - ordered by customer
+
+Or by [release](#releases):
+
+`?search[release_ids][]=early-bird`
+
+where "early-bird" is the release `slug`.
+
+Or by [activity](#activities):
+
+`?search[activity_ids][]=1025351`
+
+where "1025351" is the activity `id`.
+
+Or by time. This will show all tickets created since 1 Jan 2019 at 9am UTC:
+
+`?search[created_at][gt]=2019-01-01T09:00:00+UTC`
+
+That operator can be:
+
+* `gt` - greater than
+* `gte` - greater than or equal to
+* `lt` - less than
+* `lte` - less than or equal to
+
+And you can do that on the following attributes
+
+* `created_at`
+* `updated_at`
+
+So, for instance, to find all tickets that have been updated in the last hour:
+
+`?search[updated_at][gt]=2019-01-01T09:00:00+UTC`
+
+(where you obviously change that timestamp to be one hour ago).
+
+ Note: if you don't use the `+UTC` suffix on those timestamps it will default to the time zone used by the event itself.
+
+## Get a Ticket
+
+<%= partial "includes/requests/get",
+  locals: {
+    url: "#{config[:api_endpoint]}/:account_slug/:event_slug/tickets/:ticket_slug"
+  }
+%>
+<%= partial "includes/admin_api/3.0/tickets/show.json" %>
+
+Retrieves a `Ticket` for the given `Event`.
+
+`GET <%= "#{config[:api_endpoint]}/:account_slug/:event_slug/tickets/:ticket_slug" %>`
+
+* `account_slug` - The `slug` attribute of an `Account`.
+* `event_slug` - The `slug` attribute of an `Event`.
+* `ticket_slug` - The `slug` attribute of a `Ticket`.
+
+## Create a Ticket
+
+<%= partial "includes/requests/post",
+  locals: {
+    url: "#{config[:api_endpoint]}/:account_slug/:event_slug/tickets",
+    parameters: {
+      ticket: {
+        release_id: "coffee-brewing",
+        first_name: "Jane",
+        last_name: "Doe"
+      }
+    }
+  }
+%>
+<%= partial "includes/admin_api/3.0/tickets/create.json" %>
+
+Create a new `Ticket` belonging to the given `Event`.
+
+`POST <%= "#{config[:api_endpoint]}/:account_slug/:event_slug/tickets" %>`
+
+* `account_slug` - The `slug` attribute of an `Account`.
+* `event_slug` - The `slug` attribute of an `Event`.
+
+### Parameters
+
+<%= partial "includes/shared/parameters", locals: { parameters: data.tickets.attributes.reject { |name,attribute| attribute["read_only"] } } %>
+
+## Update a Ticket
+
+<%= partial "includes/requests/patch",
+  locals: {
+    url: "#{config[:api_endpoint]}/:account_slug/:event_slug/tickets/:ticket_slug",
+    parameters: {
+      ticket: {
+        last_name: "Smith"
+      }
+    }
+  }
+%>
+<%= partial "includes/admin_api/3.0/tickets/update.json" %>
+
+Update a `Ticket` belonging to the given `Event`.
+
+`PATCH <%= "#{config[:api_endpoint]}/:account_slug/:event_slug/tickets/:ticket_slug" %>`
+
+* `account_slug` - The `slug` attribute of an `Account`.
+* `event_slug` - The `slug` attribute of an `Event`.
+* `ticket_slug` - The `slug` attribute of a `Ticket`.
+
+### Parameters
+
+<%= partial "includes/shared/parameters", locals: { parameters: data.tickets.attributes.reject { |name,attribute| attribute["read_only"] } } %>
+
+## Reassign a Ticket
+
+<%= partial "includes/requests/post",
+  locals: {
+    url: "#{config[:api_endpoint]}/:account_slug/:event_slug/tickets/:ticket_slug/reassignments",
+    parameters: {
+      reassignment: {
+        email: "jane@example.com",
+        first_name: "Jane",
+        last_name: "Smith",
+        delete_answers: true
+      }
+    }
+  }
+%>
+<%= partial "includes/admin_api/3.0/reassignments/create.json" %>
+
+Reassign a `Ticket` to a new attendee. It's different from just updating the email and name for a ticket: reassigning a ticket also sends out an email to the new attendee and (optionally) deletes all the answers made by the original attendee.
+
+`POST <%= "#{config[:api_endpoint]}/:account_slug/:event_slug/tickets/:ticket_slug/reassignments" %>`
+
+* `account_slug` - The `slug` attribute of an `Account`.
+* `event_slug` - The `slug` attribute of an `Event`.
+* `ticket_slug` - The `slug` attribute of a `Ticket`.
+
+### Parameters
+
+<%= partial "includes/shared/parameters", locals: { parameters: data.reassignments.attributes.reject { |name,attribute| attribute["read_only"] } } %>
+
+### Emails Sent
+
+The following people receive an email after a reassignment:
+
+* the new attendee
+* the orderer (if their email is different to the original email for this ticket)
+* the organisers (if they have chosen to receive notifications)
+
+## Void a Ticket
+
+<%= partial "includes/requests/post",
+  locals: {
+    url: "#{config[:api_endpoint]}/:account_slug/:event_slug/tickets/:ticket_slug/void",
+    parameters: {
+      void: {
+        resell: true
+      }
+    }
+  }
+%>
+<%= partial "includes/admin_api/3.0/voids/create.json" %>
+
+Void a `Ticket` so that it is no longer able to be used to [checkin](/docs/api/checkin) to an event.
+
+`POST <%= "#{config[:api_endpoint]}/:account_slug/:event_slug/tickets/:ticket_slug/void" %>`
+
+* `account_slug` - The `slug` attribute of an `Account`.
+* `event_slug` - The `slug` attribute of an `Event`.
+* `ticket_slug` - The `slug` attribute of a `Ticket`.
+
+### Parameters
+
+<%= partial "includes/shared/parameters", locals: { parameters: data.voids.attributes.reject { |name,attribute| attribute["read_only"] } } %>
+
+If the `Release` `quantity` is defined (i.e. the number of tickets for that release is limited) then you also need to pass in the `resell` parameter.
+
+For instance, if you have 19/20 tickets sold and you void one and you pass `"resell":true` then it will show 18/20 tickets sold and two will now be available.
+
+If you pass `"resell":false` then it will show 18/19 tickets sold and only one will be available.
+
+If the `Release` `quantity` is not defined (i.e. the number of tickets available is infinite) then the `resell` parameter is optional.

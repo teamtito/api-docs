@@ -1,0 +1,126 @@
+# Errors
+
+```json
+{
+  "status": 422,
+  "message": "A readable message that describes the problem"
+}
+```
+
+If you get an error then it will follow a common format. Every error includes a `status` and a `message`.
+
+## Attributes <%= icon_for :attributes %>
+
+<%= list_attributes({
+  access_token: {
+    description: "The last four characters of the access token used. Included if you get a 404 error.",
+    type: "string"
+  },
+  errors: {
+    description: "A hash of each attribute and an array of messages for that attribute.",
+    type: "object"
+  },
+  error_list: {
+    description: "Similar to `errors` but in an array.",
+    type: "object array"
+  },
+  hint: {
+    description: "Guidance on what to do to solve this problem.",
+    type: "string"
+  },
+  identifier: {
+    description: "If we have logged this error then this unique identifier will help us find it in our logs.",
+    type: "string"
+  },
+  test_mode: {
+    description: "Whether test mode is on or off.",
+    type: "boolean",
+    since: "3.1.0"
+  },
+  message: {
+    description: "Describes the problem.",
+    type: "string"
+  },
+  status: {
+    description: "The HTTP status code. See <a href=\"#errors-http-status-codes\">below</a>.",
+    type: "integer"
+  },
+}, context: :errors) %>
+
+## Authentication errors [401] <i class="fa-regular fa-lock-keyhole"></i>
+
+<%= display_response "401", resource: :errors %>
+
+If a request cannot be authenticated (we don't know who you are).
+
+## Authorization errors [403] <i class="fa-regular fa-ban"></i>
+
+<%= display_response "403", resource: :errors %>
+
+If a request cannot be authorized as a user has insufficient permissions (we know who you are but you're not allowed to do what you're trying to do).
+
+## Resource not found [404] <i class="fa-regular fa-empty-set"></i></i>
+
+<%= display_response "404", resource: :errors %>
+
+If the resource you are looking for isn't there. If the resource does exist but you were looking in the wrong test mode then it will tell you that in the `hint`.
+
+## Validation errors [422] <i class="fa-regular fa-thumbs-down"></i>
+
+<%= show_url "discount_codes", method: :post, params: data["3.1"].errors["422_params"] %>
+<%= display_response "422", resource: :errors %>
+
+For example, creating a new discount code can result in a validation error.
+
+The validation errors are shown in the `errors` object with each attribute linked to an array of messages.
+
+This is repeated in an array called `error_list` which you might find easier.
+
+## HTTP status codes <i class="fa-regular fa-router"></i></i>
+
+<%= list_attributes({
+  "OK": {
+    code: "200",
+    description: "All is well."
+  },
+  "Created": {
+    code: "201",
+    description: "Your request has been fulfilled and has resulted in one or more new resources being created."
+  },
+  "No content": {
+    code: "204",
+    description: "Your request has been fulfilled and that there is no additional content to send in the response payload body, e.g. deleting a resource."
+  },
+  "Unauthorized": {
+    code: "401",
+    description: "Your request is not authenticated. See the [Authentication Errors](#errors-authentication-errors) section for more information."
+  },
+  "Forbidden": {
+    code: "403",
+    description: "Your request is not authorized as the user has insufficient permissions. See the [Authorization Errors](#errors-authorization-errors) section for more information."
+  },
+  "Page not found": {
+    code: "404",
+    description: "The endpoint requested does not exist."
+  },
+  "Unprocessable entity": {
+    code: "422",
+    description: "The resource couldn't be created or updated due to a validation error. Please see the response body for more information."
+  },
+  "Too many requests": {
+    code: "429",
+    description: "Your application is exceeding its rate limit. Slow down, pal!"
+  },
+  "Internal server error": {
+    code: "500",
+    description: "Something is wrong on our end."
+  },
+  "Bad gateway": {
+    code: "502",
+    description: "The app responsible for serving your request is temporarily unavailable."
+  },
+  "Gateway timeout": {
+    code: "504",
+    description: "Something has timed out on our end."
+  },
+}) -%>

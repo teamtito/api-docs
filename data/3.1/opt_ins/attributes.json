@@ -1,0 +1,98 @@
+{
+  "acceptance_count": {
+    "description": null,
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": false,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": null
+  },
+  "created_at": {
+    "description": "Timestamp of when this record was created.",
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": true,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": "datetime"
+  },
+  "description": {
+    "description": "The description of this opt-in.",
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": false,
+    "write_only": false,
+    "required": false,
+    "translated": true,
+    "type": "string"
+  },
+  "id": {
+    "description": "Unique record identifier",
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": true,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": "integer"
+  },
+  "name": {
+    "description": "The name of this opt-in.",
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": false,
+    "write_only": false,
+    "required": true,
+    "translated": true,
+    "type": "string"
+  },
+  "releases": {
+    "description": "A list of releases linked to this opt-in.",
+    "expandable": true,
+    "expand_ids": true,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": false,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": "object array"
+  },
+  "slug": {
+    "description": "Unique string used in the URL to identify this record.",
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": true,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": "string"
+  },
+  "updated_at": {
+    "description": "Timestamp of when this record was last updated.",
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": true,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": "datetime"
+  }
+}

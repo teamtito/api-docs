@@ -1,5 +1,5 @@
 # Unique header generation
-require './lib/nesting_unique_head.rb'
+require "./lib/nesting_unique_head.rb"
 
 # Markdown
 set :markdown_engine, :redcarpet
@@ -15,40 +15,44 @@ set :markdown,
     renderer: NestingUniqueHeadCounter
 
 # Assets
-set :css_dir, 'docs/api/stylesheets'
-set :js_dir, 'docs/api/javascripts'
-set :images_dir, 'docs/api/images'
-set :fonts_dir, 'docs/api/fonts'
+set :css_dir, "docs/api/stylesheets"
+set :js_dir, "docs/api/javascripts"
+set :images_dir, "docs/api/images"
+set :fonts_dir, "docs/api/fonts"
 
 # Activate the syntax highlighter
 activate :syntax
 ready do
-  require './lib/multilang.rb'
+  require "./lib/monokai_sublime_slate.rb"
+  require "./lib/multilang.rb"
 end
 
 activate :sprockets
 
 activate :autoprefixer do |config|
-  config.browsers = ['last 2 version', 'Firefox ESR']
-  config.cascade  = false
-  config.inline   = true
+  config.browsers = ["last 2 version", "Firefox ESR"]
+  config.cascade = false
+  config.inline = true
 end
 
 config[:api_endpoint] = "https://api.tito.io/v3"
 config[:api_token] = "YOUR-API-TOKEN"
 config[:checkin_api_endpoint] = "https://checkin.tito.io"
 config[:checkout_api_endpoint] = "https://checkout.tito.io"
-config[:url_substitutions] = {
-}
+config[:url_substitutions] = {}
 
 # Build Configuration
 configure :build do
+  # We do want to hash woff and woff2 as there's a bug where woff2 will use
+  # woff asset hash which breaks things. Trying to use a combination of ignore and
+  # rewrite_ignore does not work as it conflicts weirdly with relative_assets. Disabling
+  # the .woff2 extension only does not work as .woff will still activate it so have to
+  # have both. See https://github.com/slatedocs/slate/issues/1171 for more details.
+  activate :asset_hash, :exts => app.config[:asset_extensions] - %w[.woff .woff2]
   # If you're having trouble with Middleman hanging, commenting
   # out the following two lines has been known to help
   activate :minify_css
   activate :minify_javascript
-  # activate :relative_assets
-  # activate :asset_hash
   # activate :gzip
 end
 
@@ -57,7 +61,8 @@ end
 set :port, 4567
 
 helpers do
-  require './lib/toc_data.rb'
+  require "./lib/toc_data.rb"
+  require "./lib/doc_builder.rb"
 
   def apply_api_subsititions(url)
     config[:url_substitutions].reduce(url) { |url, (name, value)| url.gsub(":#{name}", value) }

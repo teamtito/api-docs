@@ -1,0 +1,22 @@
+# Answers
+
+## Attributes
+
+<%= partial "includes/shared/attributes", locals: { attributes: data.answers.attributes } %>
+
+## Get all Answers
+
+<%= partial "includes/requests/get",
+  locals: {
+    url: "#{config[:api_endpoint]}/:account_slug/:event_slug/questions/:question_slug/answers"
+  }
+%>
+<%= partial "includes/admin_api/3.0/answers/index.json" %>
+
+Retrieves all `Answers` for the given `Question` on an `Event`.
+
+`<%= "GET #{config[:api_endpoint]}/:account_slug/:event_slug/questions/:question_slug/answers" %>`
+
+* `account_slug` - The `slug` attribute of an `Account`.
+* `event_slug` - The `slug` attribute of an `Event`.
+* `question_slug` - The `slug` attribute of a `Question`.
