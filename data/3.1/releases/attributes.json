@@ -973,7 +973,7 @@
     "type": null
   },
   "waiting_list_enabled_during_locked": {
-    "description": "Whether the waiting list enabled because this release is locked.",
+    "description": "Whether the waiting list is enabled because this release is locked.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
@@ -985,7 +985,7 @@
     "type": "boolean"
   },
   "waiting_list_enabled_during_sold_out": {
-    "description": "Whether the waiting list enabled because this release is sold out.",
+    "description": "Whether the waiting list is enabled because this release is sold out.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,

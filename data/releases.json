@@ -135,7 +135,7 @@
       "required": false
     },
     "share_url": {
-      "description": "A sharable URL of a direct link to purchasing this release.",
+      "description": "A shareable URL of a direct link to purchasing this release.",
       "type": "string",
       "read_only": true,
       "required": false
