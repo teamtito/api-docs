@@ -365,3 +365,15 @@ end
 def beta_feature(title)
   partial "includes/shared/beta_feature", locals: { title: title }
 end
+
+def read_more(link, subject = nil)
+  if !(link =~ /http/)
+    link = "https://help.tito.io/en/articles/#{link}"
+  end
+  caption = if subject
+      "Read more about #{subject}"
+    else
+      "Read more"
+    end
+  "<i class=\"fa-regular fa-up-right-from-square fa-xl mr-1\"></i> <a href=\"#{link}\" target=\"_blank\">#{caption}</a>"
+end
