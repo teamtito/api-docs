@@ -201,7 +201,7 @@
       "required": false
     },
     "line_items": {
-      "description": "A list of `LineItems` for this registration: `release_id` and `quantity`.",
+      "description": "A list of `LineItems` for this registration: `release_id` and `quantity`. If the `Release` supports donations you can specify a `donation` amount.",
       "type": "array",
       "read_only": true,
       "required": false
