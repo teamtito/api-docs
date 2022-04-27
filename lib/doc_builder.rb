@@ -278,16 +278,22 @@ end
 
 def list_attributes(attributes, skip: [], context: nil)
   skip = Array(skip)
+  list_count = 0
   concat "<ul class=\"attribute-list\">\n"
   attributes.reject { |name, hash| %w[id slug created_at updated_at].include?(name) || hash[:ignore] }.each do |name, hash|
     list_attribute(name, hash, skip: skip, context: context)
+    list_count += 1
   end
   common_attributes = attributes.select { |name| %w[id slug created_at updated_at].include?(name) }
   if common_attributes.any?
     concat "<li class=\"separator\">Common attributes:</li>"
     common_attributes.sort_by { |name, _| %w[id slug created_at updated_at].index(name) }.each do |name, hash|
       list_attribute(name, hash, skip: skip, context: context)
+      list_count += 1
     end
+  end
+  if list_count == 0
+    concat "<li>None</li>"
   end
   concat "</ul>\n"
 end
