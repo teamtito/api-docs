@@ -320,7 +320,7 @@
             <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#authentication-declining-confirm-you-can-connect" class="toc-h2 toc-link" data-title="Confirm you can connect">Confirm you can connect</a>
+                    <a href="#authentication-widget-confirm-you-can-connect" class="toc-h2 toc-link" data-title="Confirm you can connect">Confirm you can connect</a>
                   </li>
               </ul>
           </li>
@@ -865,7 +865,7 @@ it will only read and write test data without affecting your live data. Note thi
 <p>If you find your API token has been compromised it can be <a href="https://id.tito.io/api-access-tokens">revoked</a> and a new one generated.</p>
 
 <p>Your API token needs to be included in the <code>Authorization</code> header so your requests can be authenticated.</p>
-<h3 id='authentication-declining-confirm-you-can-connect'>Confirm you can connect</h3><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">--request</span> GET <span class="se">\</span>
+<h3 id='authentication-widget-confirm-you-can-connect'>Confirm you can connect</h3><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">--request</span> GET <span class="se">\</span>
   <span class="nt">--url</span> <span class="s1">'https://api.tito.io/v3/hello'</span> <span class="se">\</span>
   <span class="nt">--header</span> <span class="s1">'Authorization: Token token=YOUR-API-TOKEN'</span> <span class="se">\</span>
   <span class="nt">--header</span> <span class="s1">'Accept: application/json'</span> <span class="se">\</span>
@@ -4864,7 +4864,90 @@ lookup the latest status of the duplication. The status can be either:</p>
 <li><code>registration_id</code> - the <code>id</code> of the <code>registration</code></li>
 </ul>
 <h2 id='registrations-create-a-registration'>Create a registration <i class="fa-regular fa-file-plus"></i></h2>
-<p>TODO: missing <code>data/3.1/registrations/create.json</code></p>
+<div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">--request</span> POST <span class="se">\</span>
+  <span class="nt">--url</span> <span class="s1">'https://api.tito.io/v3/:account_slug/:event_slug/registrations'</span> <span class="se">\</span>
+  <span class="nt">--header</span> <span class="s1">'Authorization: Token token=YOUR-API-TOKEN'</span> <span class="se">\</span>
+  <span class="nt">--header</span> <span class="s1">'Accept: application/json'</span> <span class="se">\</span>
+  <span class="nt">--header</span> <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+  <span class="nt">--data</span> <span class="s1">'{"registration[email]":"rUQwD6LdqHR8sA@example.com","registration[name]":"Jane Smith","registration[discount_code]":"","registration[source]":"","registration[line_items][][release_id]":1,"registration[line_items][][quantity]":1}'</span>
+</code></pre></div>
+
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"registration"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"registration"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">105</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"slug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"reg_dzHx3ANTal31xvP1dHbdL0w"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-04-27T08:09:33.000+01:00"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-04-27T08:09:33.000+01:00"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"completed_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-04-27T08:09:33.000+01:00"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"discount_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rUQwD6LdqHR8sA@example.com"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"job_title"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"expires_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-04-27 08:24:33 +0100"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ip_address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"192.168.80.6"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"locale"</span><span class="p">:</span><span class="w"> </span><span class="s2">"en"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"metadata"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Jane Smith"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"company_name"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"payment_reference"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"payment_option_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"manual"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"phone_number"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"registration_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"manual"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"reference"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3Q8K"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"source"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"incomplete"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"test_mode"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"cancelled"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"cancelled_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"cancelled_by"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"free"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"paid"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"invoice"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"manual"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"imported"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"refundable"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"refunded"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"partially_refunded"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"receipt_paid"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"receipt_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0000025"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"receipt_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">108</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"payment_incomplete"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"payment_complete"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"total"</span><span class="p">:</span><span class="w"> </span><span class="mf">90.0</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"tickets_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"consented_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"terms_accepted"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"termset_ids"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nl">"editable_total_and_prices"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"total_less_tax"</span><span class="p">:</span><span class="w"> </span><span class="mf">90.0</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"discount_code_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"payment_option_provider_name"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"quantities"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"early-bird"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"release"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Early Bird for Wednesday and Thursday for Students and Others Only"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"api_version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3.1.0"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+
+<p><code>POST /:account_slug/:event_slug/registrations</code></p>
+
+<ul>
+<li><code>account_slug</code> - the <code>slug</code> of the <code>account</code>.</li>
+<li><code>event_slug</code> - the <code>slug</code> of the <code>event</code>.</li>
+</ul>
+
+<h3 id='refunds-get-a-refund-i-class-fa-regular-fa-file-i-required-attributes'>Required attributes</h3>
+
+<ul class="attribute-list">
+<li>None</li></ul>
 <h2 id='registrations-update-a-registration'>Update a registration <i class="fa-regular fa-file-pen"></i></h2>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">--request</span> PATCH <span class="se">\</span>
   <span class="nt">--url</span> <span class="s1">'https://api.tito.io/v3/:account_slug/:event_slug/registrations/:registrations_id'</span> <span class="se">\</span>
@@ -4956,7 +5039,7 @@ lookup the latest status of the duplication. The status can be either:</p>
 </ul>
 <h3 id='registrations-update-a-registration-i-class-fa-regular-fa-file-pen-i-required-attributes'>Required attributes</h3>
 <ul class="attribute-list">
-</ul>
+<li>None</li></ul>
 <h2 id='registrations-mark-a-registration-as-paid'>Mark a registration as Paid</h2>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">--request</span> POST <span class="se">\</span>
   <span class="nt">--url</span> <span class="s1">'https://api.tito.io/v3/:account_slug/:event_slug/registrations/:registration_slug/confirmations'</span> <span class="se">\</span>
