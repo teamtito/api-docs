@@ -1,0 +1,63 @@
+{
+  "registration": {
+    "_type": "registration",
+    "id": 105,
+    "slug": "reg_dzHx3ANTal31xvP1dHbdL0w",
+    "created_at": "2022-04-27T08:09:33.000+01:00",
+    "updated_at": "2022-04-27T08:09:33.000+01:00",
+    "completed_at": "2022-04-27T08:09:33.000+01:00",
+    "discount_code": "",
+    "email": "rUQwD6LdqHR8sA@example.com",
+    "job_title": null,
+    "expires_at": "2022-04-27 08:24:33 +0100",
+    "ip_address": "192.168.80.6",
+    "locale": "en",
+    "metadata": null,
+    "name": "Jane Smith",
+    "company_name": null,
+    "payment_reference": null,
+    "payment_option_name": "manual",
+    "phone_number": null,
+    "registration_type": "manual",
+    "reference": "3Q8K",
+    "source": null,
+    "state": "incomplete",
+    "test_mode": false,
+    "cancelled": false,
+    "cancelled_at": null,
+    "cancelled_by": null,
+    "free": false,
+    "paid": true,
+    "invoice": false,
+    "manual": true,
+    "imported": false,
+    "refundable": true,
+    "refunded": false,
+    "partially_refunded": false,
+    "receipt_paid": true,
+    "receipt_number": "0000025",
+    "receipt_id": 108,
+    "payment_incomplete": false,
+    "payment_complete": true,
+    "total": 90.0,
+    "tickets_count": 1,
+    "consented_at": null,
+    "terms_accepted": false,
+    "termset_ids": [
+
+    ],
+    "editable_total_and_prices": true,
+    "total_less_tax": 90.0,
+    "discount_code_id": null,
+    "payment_option_provider_name": null,
+    "quantities": {
+      "early-bird": {
+        "release": "Early Bird for Wednesday and Thursday for Students and Others Only",
+        "quantity": 1
+      }
+    }
+  },
+  "meta": {
+    "api_version": "3.1.0"
+  }
+}

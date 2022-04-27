@@ -1,0 +1,8 @@
+{
+  "registration[email]": "rUQwD6LdqHR8sA@example.com",
+  "registration[name]": "Jane Smith",
+  "registration[discount_code]": "",
+  "registration[source]": "",
+  "registration[line_items][][release_id]": 1,
+  "registration[line_items][][quantity]": 1
+}
