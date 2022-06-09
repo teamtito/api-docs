@@ -320,7 +320,7 @@
             <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#authentication-widget-confirm-you-can-connect" class="toc-h2 toc-link" data-title="Confirm you can connect">Confirm you can connect</a>
+                    <a href="#authentication-confirm-you-can-connect" class="toc-h2 toc-link" data-title="Confirm you can connect">Confirm you can connect</a>
                   </li>
               </ul>
           </li>
@@ -865,7 +865,7 @@ it will only read and write test data without affecting your live data. Note thi
 <p>If you find your API token has been compromised it can be <a href="https://id.tito.io/api-access-tokens">revoked</a> and a new one generated.</p>
 
 <p>Your API token needs to be included in the <code>Authorization</code> header so your requests can be authenticated.</p>
-<h3 id='authentication-widget-confirm-you-can-connect'>Confirm you can connect</h3><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">--request</span> GET <span class="se">\</span>
+<h3 id='authentication-confirm-you-can-connect'>Confirm you can connect</h3><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">--request</span> GET <span class="se">\</span>
   <span class="nt">--url</span> <span class="s1">'https://api.tito.io/v3/hello'</span> <span class="se">\</span>
   <span class="nt">--header</span> <span class="s1">'Authorization: Token token=YOUR-API-TOKEN'</span> <span class="se">\</span>
   <span class="nt">--header</span> <span class="s1">'Accept: application/json'</span> <span class="se">\</span>

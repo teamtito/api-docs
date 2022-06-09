@@ -385,7 +385,7 @@
 </code></pre></div>
 <script>window.tito = window.tito || function() { (tito.q = tito.q || []).push(arguments);};</script>
 
-<script src='https://js.tito.io/v2?key=pk_YTb5e_xQyzVau1cjM' async></script>
+<script src='https://js.tito.io/v2?key=public_test__P2Stz_fUG381_t17rXU' async></script>
 
 <!-- Place this where you want the widget to appear -->
 
@@ -408,10 +408,10 @@
 <p><tito-button event="ultimateconf/2013">My custom label</tito-button></p>
 <h2 id='tito-widget-v2-showing-specific-tickets'>Showing Specific tickets</h2>
 <p>You can pass a specific ticket or set of tickets to a widget, with the releases attribute:</p>
-<h3 id='tito-widget-v2-showing-specific-tickets-a-single-ticket'> A single ticket</h3><div class="highlight"><pre class="highlight html tab-html"><code><span class="nt">&lt;tito-button</span> <span class="na">event=</span><span class="s">"ultimateconf/2013"</span> <span class="na">releases=</span><span class="s">"3elajg6qcxu"</span><span class="nt">&gt;&lt;/tito-button&gt;</span>
+<h3 id='tito-widget-v2-showing-specific-tickets-a-single-ticket'>A single ticket</h3><div class="highlight"><pre class="highlight html tab-html"><code><span class="nt">&lt;tito-button</span> <span class="na">event=</span><span class="s">"ultimateconf/2013"</span> <span class="na">releases=</span><span class="s">"3elajg6qcxu"</span><span class="nt">&gt;&lt;/tito-button&gt;</span>
 </code></pre></div>
 <p><tito-button event="ultimateconf/2013" releases="3elajg6qcxu">I only show one ticket</tito-button></p>
-<h3 id='tito-widget-v2-showing-specific-tickets-multiple-tickets'> Multiple tickets</h3>
+<h3 id='tito-widget-v2-showing-specific-tickets-multiple-tickets'>Multiple tickets</h3>
 <p>Show multiple tickets with a comma separated list:</p>
 <div class="highlight"><pre class="highlight html tab-html"><code><span class="nt">&lt;tito-button</span> <span class="na">event=</span><span class="s">"ultimateconf/2013"</span> <span class="na">releases=</span><span class="s">"3elajg6qcxu,6qiiw4socs4"</span><span class="nt">&gt;&lt;/tito-button&gt;</span>
 </code></pre></div>
@@ -452,7 +452,7 @@
 </script>
 
 <div class="no-clear"><div id="tito-widget"></div></div>
-<h3 id='tito-widget-v2-javascript-api-mounting-a-button'> Mounting a button</h3><div class="highlight"><pre class="highlight html tab-html"><code><span class="nt">&lt;script&gt;</span>
+<h3 id='tito-widget-v2-javascript-api-mounting-a-button'>Mounting a button</h3><div class="highlight"><pre class="highlight html tab-html"><code><span class="nt">&lt;script&gt;</span>
   <span class="nx">tito</span><span class="p">(</span><span class="dl">"</span><span class="s2">button.mount</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span><span class="na">el</span><span class="p">:</span> <span class="dl">"</span><span class="s2">#tito-button</span><span class="dl">"</span><span class="p">,</span> <span class="na">event</span><span class="p">:</span> <span class="dl">"</span><span class="s2">ultimateconf/2013</span><span class="dl">"</span><span class="p">})</span>
 <span class="nt">&lt;/script&gt;</span>
 
@@ -633,11 +633,9 @@
 <h3 id='tito-widget-v2-prefill-data-using-the-url'>Using the URL</h3>
 <p>You can also pass data in using the <code>prefill</code> parameter in the URL:</p>
 
-<p><code>https://mywebsite.com/#/?prefill=%7B%22company_name%22%3A%20%22My%20Company%22%7D</code></p>
+<p><code>https://mywebsite.com/?prefill=%7B%22company_name%22%3A%20%22My%20Company%22%7D</code></p>
 
 <p>That&#39;s the equivalent of <code>prefill={&quot;company_name&quot;:&quot;My Company&quot;}</code> but it&#39;s escaped for use in a URL.</p>
-
-<p>Note that the <code>?prefill=</code> bit comes <strong>after</strong> the <code>/#/</code> bit.</p>
 <h2 id='tito-widget-v2-plugins'>Plugins</h2><div class="highlight"><pre class="highlight html tab-html"><code><span class="nt">&lt;script
   </span><span class="na">src=</span><span class="s">'https://js.tito.io/v2/with/plugin1,plugin2'</span>
   <span class="na">async</span>
@@ -650,7 +648,7 @@
 <p>By default, the widget is loaded inside an iframe. This makes it easy to isolate the CSS and make sure your website&#39;s design doesn&#39;t leak into the widget. However, if you want full control over how the widget looks then using the <code>inline</code> plugin will skip the iframe and embed it directly into your website. You can then use your own CSS to style the widget.</p>
 
 <p>Using the widget inline also allows you to listen to any of the javascript <a href="#tito-widget-v2-callbacks">callbacks</a>.</p>
-<h3 id='tito-widget-v2-plugins-google-analytics'> Google Analytics</h3>
+<h3 id='tito-widget-v2-plugins-google-analytics'>Google Analytics</h3>
 <p>We have three different plugins for Google Analytics:</p>
 
 <ul>
