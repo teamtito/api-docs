@@ -337,9 +337,6 @@
                     <a href="#tito-widget-v2-plugins" class="toc-h2 toc-link" data-title="Plugins">Plugins</a>
                   </li>
                   <li>
-                    <a href="#tito-widget-v2-test-mode" class="toc-h2 toc-link" data-title="Test Mode">Test Mode</a>
-                  </li>
-                  <li>
                     <a href="#tito-widget-v2-custom-order-form-placeholders" class="toc-h2 toc-link" data-title="Custom order form placeholders">Custom order form placeholders</a>
                   </li>
               </ul>
@@ -641,7 +638,9 @@
   <span class="na">async</span>
   <span class="nt">&gt;&lt;/script&gt;</span>
 </code></pre></div>
-<p>Various plugins are available that have pre-defined integrations with third-party tools. To load plugins, you can append <code>with/&lt;pluginname&gt;</code> to the end of the <code>src</code> attribute of the <code>script</code> tag. You can use multiple plugins by separating them with a comma.</p>
+<p>Various plugins are available, including pre-defined integrations with third-party tools. To load plugins, you can append <code>with/&lt;pluginname&gt;</code> to the end of the <code>src</code> attribute of the <code>script</code> tag. You can use multiple plugins by separating them with a comma.</p>
+<h3 id='tito-widget-v2-plugins-test-mode'>Test Mode</h3>
+<p>The <code>test_mode</code> plugin allows you to put through test transactions to see what your attendees will see when they register for your events. It’s very useful for you to be able to check over your Tito setup before you share your event publicly.</p>
 <h3 id='tito-widget-v2-plugins-facebook'>Facebook</h3>
 <p>The <code>facebook</code> plugin sends data via Facebook&#39;s <code>fbq</code> function. Make sure that you have loaded the facebook <code>script</code> to use this plugin.</p>
 <h3 id='tito-widget-v2-plugins-inline'>Inline</h3>
@@ -662,20 +661,6 @@
 <p>Use the <code>hits</code> plugin to record a page view every time someone loads the widget.</p>
 <h3 id='tito-widget-v2-plugins-trialfire'>Trialfire</h3>
 <p>Use the <code>trialfire</code> plugin to integrate with <a href="https://trialfire.com/">Trialfire</a>.</p>
-<h2 id='tito-widget-v2-test-mode'>Test Mode</h2><div class="highlight"><pre class="highlight html tab-html"><code><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">'https://js.tito.io/v2?key=xyz'</span> <span class="na">async</span><span class="nt">&gt;&lt;/script&gt;</span>
-</code></pre></div>
-<p>You can load the widget in test mode by using a test mode publishable key.</p>
-
-<p>To get a test mode public key:</p>
-
-<ol>
-<li>Go to <a href="https://id.tito.io">https://id.tito.io</a></li>
-<li>Click on &quot;API Access&quot;</li>
-<li>Click on &quot;Generate New Token&quot;</li>
-<li>Choose &quot;Test&quot; and &quot;Publishable Key&quot; and click &quot;Create&quot;</li>
-</ol>
-
-<p>Now you can add <code>key=</code> to your <code>script</code> <code>src</code> attributes and all requests and purchases will be in test mode.</p>
 <h2 id='tito-widget-v2-custom-order-form-placeholders'>Custom order form placeholders</h2><div class="highlight"><pre class="highlight html tab-html"><code><span class="nt">&lt;tito-widget</span>
   <span class="na">event=</span><span class="s">"ultimateconf/2013"</span>
   <span class="na">email-placeholder=</span><span class="s">"michael.scott@dundermifflin.inc"</span>
