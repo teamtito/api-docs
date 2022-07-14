@@ -389,7 +389,11 @@ That's the equivalent of `prefill={"company_name":"My Company"}` but it's escape
   ></script>
 ```
 
-Various plugins are available that have pre-defined integrations with third-party tools. To load plugins, you can append `with/<pluginname>` to the end of the `src` attribute of the `script` tag. You can use multiple plugins by separating them with a comma.
+Various plugins are available, including pre-defined integrations with third-party tools. To load plugins, you can append `with/<pluginname>` to the end of the `src` attribute of the `script` tag. You can use multiple plugins by separating them with a comma.
+
+### Test Mode
+
+The `test_mode` plugin allows you to put through test transactions to see what your attendees will see when they register for your events. It’s very useful for you to be able to check over your Tito setup before you share your event publicly.
 
 ### Facebook
 
@@ -418,23 +422,6 @@ Use the `hits` plugin to record a page view every time someone loads the widget.
 ### Trialfire
 
 Use the `trialfire` plugin to integrate with [Trialfire](https://trialfire.com/).
-
-## Test Mode
-
-```html
-<script src='https://js.tito.io/v2?key=xyz' async></script>
-```
-
-You can load the widget in test mode by using a test mode publishable key.
-
-To get a test mode public key:
-
-1. Go to [https://id.tito.io](https://id.tito.io)
-2. Click on "API Access"
-3. Click on "Generate New Token"
-4. Choose "Test" and "Publishable Key" and click "Create"
-
-Now you can add `key=` to your `script` `src` attributes and all requests and purchases will be in test mode.
 
 ## Custom order form placeholders
 
