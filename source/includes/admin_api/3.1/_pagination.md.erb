@@ -15,3 +15,10 @@ Pagination information is returned in the `meta` attribute in the response body.
 A specific page can be retrieved by providing the `page` parameter:
 
 `<%= "#{config[:api_endpoint]}/:account_slug/:event_slug/activities/:activity_id?page=2" %>`
+
+The number of records returned in each page can be set with a `page[size]` parameter:
+
+`<%= "#{config[:api_endpoint]}/:account_slug/:event_slug/tickets?page[size]=100" %>`
+
+The default page size is 100 and the maximum page size is 1000.
+
