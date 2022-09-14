@@ -7441,7 +7441,55 @@ and can only be purchased through the shareable URL (<code>share_url</code>).</p
 <li><code>waitlisted_person_id</code> - the <code>id</code> of the <code>waitlisted_person</code></li>
 </ul>
 <h2 id='waitlisted-people-create-a-waitlisted-person'>Create a waitlisted person <i class="fa-regular fa-file-plus"></i></h2>
-<p>TODO: missing <code>data/3.1/waitlisted_people/create.json</code></p>
+<div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">--request</span> POST <span class="se">\</span>
+  <span class="nt">--url</span> <span class="s1">'https://api.tito.io/v3/:account_slug/:event_slug/waitlisted_people'</span> <span class="se">\</span>
+  <span class="nt">--header</span> <span class="s1">'Authorization: Token token=YOUR-API-TOKEN'</span> <span class="se">\</span>
+  <span class="nt">--header</span> <span class="s1">'Accept: application/json'</span> <span class="se">\</span>
+  <span class="nt">--header</span> <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+  <span class="nt">--data</span> <span class="s1">'{"waitlisted_person[name]":"Jane Doe","waitlisted_person[email]":"jane.doe@example.com","waitlisted_person[release_id]":1}'</span>
+</code></pre></div>
+
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"waitlisted_person"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"waitlisted_person"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">13</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Jane Doe"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"jane.doe@example.com"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"offered_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"expires_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-09-14T15:13:21.000Z"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-09-14T15:13:21.000Z"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"joined_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-09-14T15:13:21.000Z"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"release_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"joined"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Waiting"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"redeemed"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"expired"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"joined"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"offered"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"rejected"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"unique_offer_url"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"api_version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3.1.0"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+
+<p><code>POST /:account_slug/:event_slug/waitlisted_people</code></p>
+
+<ul>
+<li><code>account_slug</code> - the <code>slug</code> of the <code>account</code>.</li>
+<li><code>event_slug</code> - the <code>slug</code> of the <code>event</code>.</li>
+</ul>
+
+<h3 id='tickets-void-a-ticket-required-attributes'>Required attributes</h3>
+
+<ul class="attribute-list">
+<li><div><code class="name">email</code><span class="type">string</span></div><div class="attribute-description">The person's email.</div></li>
+<li><div><code class="name">release_id</code><span class="type">integer</span></div><div class="attribute-description">References the release that this person is waiting for.</div></li>
+</ul>
 <h2 id='waitlisted-people-update-a-waitlisted-person'>Update a waitlisted person <i class="fa-regular fa-file-pen"></i></h2>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">--request</span> PATCH <span class="se">\</span>
   <span class="nt">--url</span> <span class="s1">'https://api.tito.io/v3/:account_slug/:event_slug/waitlisted_people/:waitlisted_people_id'</span> <span class="se">\</span>
