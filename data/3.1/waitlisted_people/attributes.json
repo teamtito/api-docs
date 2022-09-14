@@ -1,68 +1,6 @@
 {
-  "accommodation": {
-    "description": "Whether this activity is considered accommodation.",
-    "expandable": false,
-    "expand_ids": false,
-    "expand_slugs": false,
-    "ignore": false,
-    "read_only": false,
-    "write_only": false,
-    "required": false,
-    "translated": false,
-    "type": "boolean",
-    "until": "3.0.0",
-    "targetted_feature": "accommodation"
-  },
-  "allocation_count": {
-    "description": "the number of tickets (or upgrades) linked to this activity. Limited by the activity `capacity`.",
-    "expandable": false,
-    "expand_ids": false,
-    "expand_slugs": false,
-    "ignore": false,
-    "read_only": false,
-    "write_only": false,
-    "required": false,
-    "translated": false,
-    "type": "integer"
-  },
-  "capacity": {
-    "description": "The number of people who can attend. If not set then there is no limit.",
-    "expandable": false,
-    "expand_ids": false,
-    "expand_slugs": false,
-    "ignore": false,
-    "read_only": false,
-    "write_only": false,
-    "required": false,
-    "translated": false,
-    "type": "integer"
-  },
-  "date": {
-    "description": "The date of this activity.",
-    "expandable": false,
-    "expand_ids": false,
-    "expand_slugs": false,
-    "ignore": false,
-    "read_only": false,
-    "write_only": false,
-    "required": false,
-    "translated": false,
-    "type": "date"
-  },
-  "description": {
-    "description": "A statement or tag line describing the activity.",
-    "expandable": false,
-    "expand_ids": false,
-    "expand_slugs": false,
-    "ignore": false,
-    "read_only": false,
-    "write_only": false,
-    "required": false,
-    "translated": true,
-    "type": "text"
-  },
-  "end_at": {
-    "description": "The date and time the activity is going to end based on the `date` and `end_time`.",
+  "created_at": {
+    "description": "Timestamp of when this record was created.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
@@ -73,8 +11,32 @@
     "translated": false,
     "type": "datetime"
   },
-  "end_time": {
-    "description": "The time the activity is going to start, e.g. \"17:00\" (24-hour clock).",
+  "email": {
+    "description": "The person's email.",
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": false,
+    "write_only": false,
+    "required": true,
+    "translated": false,
+    "type": "string"
+  },
+  "expired": {
+    "description": "True if the `state` is \"expired\".",
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": true,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": "boolean"
+  },
+  "expires_at": {
+    "description": "The date and time the offer expires, if set.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
@@ -83,7 +45,7 @@
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": "time"
+    "type": "datetime"
   },
   "id": {
     "description": "Unique record identifier",
@@ -97,8 +59,128 @@
     "translated": false,
     "type": "integer"
   },
+  "joined": {
+    "description": "True if the `state` is \"joined\".",
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": true,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": "boolean"
+  },
+  "joined_at": {
+    "description": "The date and time the person was added to the list.",
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": false,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": "datetime"
+  },
+  "message": {
+    "description": "The custom message to send in the offer email. Leave blank to use the standard message.",
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": false,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": null
+  },
   "name": {
-    "description": "The name of the activity.",
+    "description": "The person's name.",
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": false,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": "string"
+  },
+  "offered": {
+    "description": "True if the `state` is \"offered\".",
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": true,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": "boolean"
+  },
+  "offered_at": {
+    "description": "The date and time the person was offered a ticket.",
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": false,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": "datetime"
+  },
+  "redeemed": {
+    "description": "True if the `state` is \"redeemed\".",
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": true,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": "boolean"
+  },
+  "registration": {
+    "description": "The `Registration` created when the offer is redeemed.",
+    "expandable": true,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": true,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": "object"
+  },
+  "rejected": {
+    "description": "True if the `state` is \"rejected\".",
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": true,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": "boolean"
+  },
+  "release": {
+    "description": "The `Release` attached to this person.",
+    "expandable": true,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": true,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": "object"
+  },
+  "release_id": {
+    "description": "References the release that this person is waiting for.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
@@ -106,72 +188,47 @@
     "read_only": false,
     "write_only": false,
     "required": true,
-    "translated": true,
+    "translated": false,
+    "type": "integer"
+  },
+  "state": {
+    "description": "One of `joined`, `offered`, `redeemed` or `rejected`.",
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": true,
+    "write_only": false,
+    "required": false,
+    "translated": false,
     "type": "string"
   },
-  "private": {
-    "description": "Alias for `show_to_attendee`.",
+  "status": {
+    "description": "One of \"Redeemed\", \"Expired\", \"Waiting\", \"Offered\", or \"Rejected\".",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
     "ignore": false,
-    "read_only": false,
+    "read_only": true,
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": "boolean",
-    "until": "3.0.0"
+    "type": "string"
   },
-  "questions": {
-    "description": "A list of questions that will be asked for this activity.",
-    "expandable": true,
-    "expand_ids": true,
-    "expand_slugs": true,
-    "ignore": false,
-    "read_only": false,
-    "write_only": false,
-    "required": false,
-    "translated": false,
-    "type": "object array"
-  },
-  "releases": {
-    "description": "A list of releases attached to this activity.",
-    "expandable": true,
-    "expand_ids": true,
-    "expand_slugs": true,
-    "ignore": false,
-    "read_only": false,
-    "write_only": false,
-    "required": false,
-    "translated": false,
-    "type": "object array"
-  },
-  "show_to_attendee": {
-    "description": "You can choose to show this activity to attendees. If shown, it will be listed on their ticket. Default is `false`.",
+  "unique_offer_url": {
+    "description": "Once the person has been offered a ticket, this contains the URL they need to use to redeem it.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
     "ignore": false,
-    "read_only": false,
+    "read_only": true,
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": "boolean"
+    "type": "string"
   },
-  "sold_out": {
-    "description": "True if this activity's `capacity` has been reached.",
-    "expandable": false,
-    "expand_ids": false,
-    "expand_slugs": false,
-    "ignore": false,
-    "read_only": false,
-    "write_only": false,
-    "required": false,
-    "translated": false,
-    "type": "boolean"
-  },
-  "start_at": {
-    "description": "The date and time the activity is going to start based on the `date` and `start_time`.",
+  "updated_at": {
+    "description": "Timestamp of when this record was last updated.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
@@ -181,54 +238,5 @@
     "required": false,
     "translated": false,
     "type": "datetime"
-  },
-  "start_time": {
-    "description": "The time the activity is going to start, e.g. \"09:00\" (24-hour clock).",
-    "expandable": false,
-    "expand_ids": false,
-    "expand_slugs": false,
-    "ignore": false,
-    "read_only": false,
-    "write_only": false,
-    "required": false,
-    "translated": false,
-    "type": "time"
-  },
-  "upgrades": {
-    "description": "A list of upgrades attached to this activity.",
-    "expandable": true,
-    "expand_ids": false,
-    "expand_slugs": false,
-    "ignore": false,
-    "read_only": false,
-    "write_only": false,
-    "required": false,
-    "translated": false,
-    "type": "object array"
-  },
-  "venue": {
-    "description": "The venue associated with this activity.",
-    "expandable": true,
-    "expand_ids": false,
-    "expand_slugs": false,
-    "ignore": false,
-    "read_only": false,
-    "write_only": false,
-    "required": false,
-    "translated": false,
-    "type": "object"
-  },
-  "venue_id": {
-    "description": "The venue associated with this activity.",
-    "expandable": false,
-    "expand_ids": false,
-    "expand_slugs": false,
-    "ignore": false,
-    "read_only": false,
-    "write_only": false,
-    "required": false,
-    "translated": false,
-    "type": "integer",
-    "until": "3.0.0"
   }
 }

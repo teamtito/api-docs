@@ -35,6 +35,18 @@
     "translated": true,
     "type": "text"
   },
+  "additional_receipt_currency": {
+    "description": "The code of an optional, additional currency to be displayed on receipts/invoices, by default they will only display your event currency.",
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": false,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": "string"
+  },
   "after_registration_closed_url": {
     "description": null,
     "expandable": false,
@@ -203,6 +215,18 @@
     "required": false,
     "translated": false,
     "type": "integer"
+  },
+  "credit_card_payment_options": {
+    "description": "Include credit card payment options",
+    "expandable": true,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": false,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": "object array"
   },
   "currency": {
     "description": "3 letter ISO 4217 currency code e.g. `USD`",
@@ -1121,19 +1145,6 @@
     "translated": false,
     "type": "boolean"
   },
-  "quantity": {
-    "description": "Not used.",
-    "expandable": false,
-    "expand_ids": false,
-    "expand_slugs": false,
-    "ignore": false,
-    "read_only": false,
-    "write_only": false,
-    "required": false,
-    "translated": false,
-    "type": "integer",
-    "until": "3.0.0"
-  },
   "receipt_footer_message": {
     "description": null,
     "expandable": false,
@@ -1447,6 +1458,18 @@
     "type": "boolean"
   },
   "show_invoice_purchase_order_number_field": {
+    "description": null,
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": false,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": "boolean"
+  },
+  "show_job_title_field": {
     "description": null,
     "expandable": false,
     "expand_ids": false,

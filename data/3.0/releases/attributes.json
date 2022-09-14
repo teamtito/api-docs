@@ -1,15 +1,39 @@
 {
+  "activities": {
+    "description": "Activities linked to this release.",
+    "expandable": true,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": true,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": "object array"
+  },
+  "activity_questions": {
+    "description": "Questions linked by activities to this release.",
+    "expandable": true,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": true,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": "object array"
+  },
   "allocatable": {
     "description": null,
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
     "ignore": false,
-    "read_only": false,
+    "read_only": true,
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "integer"
   },
   "archived": {
     "description": null,
@@ -21,7 +45,7 @@
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "boolean"
   },
   "card_payments": {
     "description": null,
@@ -33,7 +57,31 @@
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "boolean"
+  },
+  "changes_locked": {
+    "description": "Whether tickets of this release type can be changed. Depends on `lock_changes` and also the event settings.",
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": true,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": "boolean"
+  },
+  "combo_releases": {
+    "description": "A list of releases linked by `super_combo_releases`.",
+    "expandable": true,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": true,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": "object array"
   },
   "created_at": {
     "description": "Timestamp of when this record was created.",
@@ -48,7 +96,7 @@
     "type": "datetime"
   },
   "default_quantity": {
-    "description": null,
+    "description": "The number of tickets to add the payment form by default.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
@@ -57,10 +105,22 @@
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "integer"
+  },
+  "deletable": {
+    "description": "Whether this release can be safely deleted. Set to false if any tickets have been sold (even in test mode).",
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": true,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": "boolean"
   },
   "description": {
-    "description": null,
+    "description": "Describes this release",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
@@ -68,11 +128,35 @@
     "read_only": false,
     "write_only": false,
     "required": false,
+    "translated": true,
+    "type": "string"
+  },
+  "discounted_tickets_count": {
+    "description": "How many tickets of this release type that have been discounted.",
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": true,
+    "write_only": false,
+    "required": false,
     "translated": false,
-    "type": null
+    "type": "integer"
+  },
+  "display_price": {
+    "description": "The price to display. Could be including or excluding tax depending on the event settings.",
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": true,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": "decimal"
   },
   "donation": {
-    "description": null,
+    "description": "Whether donations are allowed for this release.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
@@ -81,7 +165,7 @@
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "boolean"
   },
   "enable_super_combo_summary": {
     "description": null,
@@ -93,10 +177,10 @@
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "boolean"
   },
   "end_at": {
-    "description": null,
+    "description": "When the release is available until (can be null). See also `start_at`.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
@@ -105,22 +189,34 @@
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "datetime"
   },
   "event_id": {
-    "description": null,
+    "description": "References the event",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
     "ignore": false,
-    "read_only": false,
+    "read_only": true,
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "integer"
   },
   "expired": {
-    "description": null,
+    "description": "If the `end_at` is set and it's in the past",
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": true,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": "boolean"
+  },
+  "fail_message": {
+    "description": "Message to show on failure.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
@@ -128,32 +224,68 @@
     "read_only": false,
     "write_only": false,
     "required": false,
+    "translated": true,
+    "type": "text"
+  },
+  "free_tickets_count": {
+    "description": "The number of free tickets of this release type.",
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": true,
+    "write_only": false,
+    "required": false,
     "translated": false,
-    "type": null
+    "type": "integer"
+  },
+  "full_price_tickets_count": {
+    "description": "The number of tickets of this release type for which full price was paid.",
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": true,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": "integer"
+  },
+  "gross_income": {
+    "description": "The income generated including tax and fees",
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": true,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": "decimal"
   },
   "has_fail_message": {
-    "description": null,
+    "description": "Whether the `fail_message` is present.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
     "ignore": false,
-    "read_only": false,
+    "read_only": true,
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "boolean"
   },
   "has_success_message": {
-    "description": null,
+    "description": "Whether the `success_message` is present.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
     "ignore": false,
-    "read_only": false,
+    "read_only": true,
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "boolean"
   },
   "id": {
     "description": "Unique record identifier",
@@ -168,7 +300,7 @@
     "type": "integer"
   },
   "invoice": {
-    "description": null,
+    "description": "Whether people can pay by invoice.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
@@ -177,10 +309,11 @@
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "boolean",
+    "targetted_feature": "invoices"
   },
   "lock_changes": {
-    "description": null,
+    "description": "Whether tickets are locked for this release.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
@@ -189,22 +322,22 @@
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "boolean"
   },
   "locked": {
-    "description": null,
+    "description": "If a lot of people are buying tickets of this type and we're nearing capacity then the release is automatically locked for a short period of time.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
     "ignore": false,
-    "read_only": false,
+    "read_only": true,
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "boolean"
   },
   "max_donation": {
-    "description": null,
+    "description": "The maximum allowable donation. See also `donation` and `min_donation`.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
@@ -213,10 +346,10 @@
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "decimal"
   },
   "max_tickets_per_person": {
-    "description": null,
+    "description": "Actually the maximum number tickets of this release type per registration (order) not per person. See also `min_tickets_per_person`.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
@@ -225,10 +358,10 @@
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "integer"
   },
   "metadata": {
-    "description": null,
+    "description": "A hash of metadata.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
@@ -237,10 +370,10 @@
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "object"
   },
   "min_donation": {
-    "description": null,
+    "description": "The minimum allowable donation. See also `donation` and `max_donation`.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
@@ -249,10 +382,10 @@
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "decimal"
   },
   "min_tickets_per_person": {
-    "description": null,
+    "description": "Actually the minimum number tickets of this release type per registration (order) not per person. See also `max_tickets_per_person`.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
@@ -261,10 +394,10 @@
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "integer"
   },
   "not_a_ticket": {
-    "description": null,
+    "description": "Whether tickets of this release type appear as tickets to the attendee. Usually used in combination with supercombos.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
@@ -273,22 +406,22 @@
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "boolean"
   },
   "off_sale": {
-    "description": null,
+    "description": "Whether this release is currently available to buy. See also `state_name`.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
     "ignore": false,
-    "read_only": false,
+    "read_only": true,
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "boolean"
   },
   "only_issue_combos": {
-    "description": null,
+    "description": "Used in connection with supercombos.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
@@ -297,9 +430,21 @@
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "boolean"
   },
   "payment_type": {
+    "description": "Either \"degressive\", \"donation\", \"paid\", or \"free\".",
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": true,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": "string"
+  },
+  "pending_waiting_list": {
     "description": null,
     "expandable": false,
     "expand_ids": false,
@@ -312,7 +457,7 @@
     "type": null
   },
   "position": {
-    "description": null,
+    "description": "Defines sort order when displaying releases.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
@@ -321,10 +466,10 @@
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "integer"
   },
   "price": {
-    "description": null,
+    "description": "How much to sell this release for. See also `tax_exclusive` and `price_degressive`.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
@@ -333,10 +478,10 @@
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "decimal"
   },
   "price_degressive": {
-    "description": null,
+    "description": "Comma separated list of prices to use with degressive (reducing) pricing.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
@@ -345,46 +490,46 @@
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "string"
   },
   "price_degressive_list": {
-    "description": null,
+    "description": "List of `price_degressive`, split by commas.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
     "ignore": false,
-    "read_only": false,
+    "read_only": true,
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "decimal array"
   },
   "price_ex_tax": {
-    "description": null,
+    "description": "The price excluding any tax. See also `price` and `tax_exclusive`.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
     "ignore": false,
-    "read_only": false,
+    "read_only": true,
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "decimal"
   },
   "pricing_type": {
-    "description": null,
+    "description": "Alias for `payment_type`.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
     "ignore": false,
-    "read_only": false,
+    "read_only": true,
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "string"
   },
   "quantity": {
-    "description": null,
+    "description": "The total number of tickets of this release type available.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
@@ -393,10 +538,35 @@
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "integer"
+  },
+  "question_ids": {
+    "description": "List of question `ids`.",
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": true,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": "integer array",
+    "until": "3.0.0"
+  },
+  "questions": {
+    "description": "List of questions.",
+    "expandable": true,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": true,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": "object array"
   },
   "request_company_name": {
-    "description": null,
+    "description": "Whether the company name field is shown on the payment form. See also `require_company_name`.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
@@ -405,10 +575,10 @@
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "boolean"
   },
   "request_vat_number": {
-    "description": null,
+    "description": "Whether the VAT number field is shown on the payment form. See also `require_vat_number`.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
@@ -417,10 +587,10 @@
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "boolean"
   },
   "require_billing_address": {
-    "description": null,
+    "description": "Whether the billing address is required on the payment form.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
@@ -429,7 +599,19 @@
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "boolean"
+  },
+  "require_company_name": {
+    "description": "Whether the company name is required. See also `request_company_name`.",
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": false,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": "boolean"
   },
   "require_credit_card_for_sold_out_waiting_list": {
     "description": null,
@@ -441,10 +623,10 @@
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "boolean"
   },
   "require_email": {
-    "description": null,
+    "description": "Whether an email is required. Default is `true`.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
@@ -453,10 +635,10 @@
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "boolean"
   },
   "require_name": {
-    "description": null,
+    "description": "Whether a name is required. Default is `true`.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
@@ -465,10 +647,10 @@
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "boolean"
   },
   "require_vat_number": {
-    "description": null,
+    "description": "Whether the VAT number is required. See also `request_vat_number`.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
@@ -477,10 +659,10 @@
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "boolean"
   },
   "secret": {
-    "description": null,
+    "description": "A secret release is only shown if you use its shareable URL (`share_url`) or if it's revealed by using a discount code.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
@@ -489,9 +671,21 @@
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "boolean"
   },
   "share_url": {
+    "description": "A URL that will display just this release. Useful for giving people access to `secret` tickets.",
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": true,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": "url"
+  },
+  "show_company_name": {
     "description": null,
     "expandable": false,
     "expand_ids": false,
@@ -501,7 +695,31 @@
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "boolean"
+  },
+  "show_discount_code_field_here": {
+    "description": null,
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": false,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": "boolean"
+  },
+  "show_phone_number": {
+    "description": null,
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": false,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": "boolean"
   },
   "show_price": {
     "description": null,
@@ -513,7 +731,7 @@
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "boolean"
   },
   "show_qr_code": {
     "description": null,
@@ -525,7 +743,19 @@
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "boolean"
+  },
+  "show_vat_number": {
+    "description": null,
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": false,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": "boolean"
   },
   "slug": {
     "description": "Unique string used in the URL to identify this record.",
@@ -540,19 +770,19 @@
     "type": "string"
   },
   "sold_out": {
-    "description": null,
+    "description": "There are no more tickets available. Could be because of `quantity` or a linked activity.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
     "ignore": false,
-    "read_only": false,
+    "read_only": true,
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "boolean"
   },
   "start_at": {
-    "description": null,
+    "description": "When the release is available until (can be null). See also `end_at`.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
@@ -561,10 +791,34 @@
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "datetime"
   },
   "state_name": {
-    "description": null,
+    "description": "Either \"on_sale\" or \"off_sale\".",
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": true,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": "string"
+  },
+  "success_message": {
+    "description": "Message to show on success.",
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": false,
+    "write_only": false,
+    "required": false,
+    "translated": true,
+    "type": "text"
+  },
+  "suggested_donation": {
+    "description": "The suggested donation amount. See also `min_donation` and `max_donation`.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
@@ -573,9 +827,33 @@
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "decimal"
   },
-  "suggested_donation": {
+  "super_combo_releases": {
+    "description": "A list of that shows the release `id` of all super combo releases and the `quantity` of each. See also `combo_releases`.",
+    "expandable": true,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": true,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": "object array"
+  },
+  "tax_components": {
+    "description": "Tax components linked to this release.",
+    "expandable": true,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": true,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": "object array"
+  },
+  "tax_description": {
     "description": null,
     "expandable": false,
     "expand_ids": false,
@@ -588,7 +866,7 @@
     "type": null
   },
   "tax_exclusive": {
-    "description": null,
+    "description": "Whether the `price` is inclusive or exclusive of tax.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
@@ -597,43 +875,105 @@
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "boolean"
+  },
+  "tax_types": {
+    "description": "Tax types linked to this release.",
+    "expandable": true,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": true,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": "object array"
+  },
+  "termset": {
+    "description": "Link to termset",
+    "expandable": true,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": true,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": "object"
+  },
+  "termset_id": {
+    "description": "Link to termset",
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": false,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": "integer",
+    "until": "3.0.0"
+  },
+  "ticket_group": {
+    "description": "Link to ticket group",
+    "expandable": true,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": false,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": "object"
+  },
+  "ticket_group_id": {
+    "description": "Link to ticket group",
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": false,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": "integer",
+    "until": "3.0.0"
   },
   "tickets_count": {
-    "description": null,
+    "description": "The number of non-void tickets.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
     "ignore": false,
-    "read_only": false,
+    "read_only": true,
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "integer"
   },
   "title": {
-    "description": null,
+    "description": "The title of this release.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
     "ignore": false,
     "read_only": false,
     "write_only": false,
-    "required": false,
-    "translated": false,
-    "type": null
+    "required": true,
+    "translated": true,
+    "type": "string"
   },
   "upcoming": {
-    "description": null,
+    "description": "If the `start_at` is in the future. Set to `false` if there is no `start_at`.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
     "ignore": false,
-    "read_only": false,
+    "read_only": true,
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "boolean"
   },
   "updated_at": {
     "description": "Timestamp of when this record was last updated.",
@@ -646,6 +986,18 @@
     "required": false,
     "translated": false,
     "type": "datetime"
+  },
+  "voided_tickets_count": {
+    "description": "The number of voided tickets.",
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": true,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": "integer"
   },
   "waiting_list": {
     "description": null,
@@ -660,7 +1012,7 @@
     "type": null
   },
   "waiting_list_enabled_during_locked": {
-    "description": null,
+    "description": "Whether the waiting list is enabled because this release is locked.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
@@ -669,10 +1021,10 @@
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "boolean"
   },
   "waiting_list_enabled_during_sold_out": {
-    "description": null,
+    "description": "Whether the waiting list is enabled because this release is sold out.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
@@ -681,6 +1033,18 @@
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "boolean"
+  },
+  "warnings": {
+    "description": "Warnings related to whether this release is limited because of activity limits or whether this release is locked.",
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": true,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": "object"
   }
 }

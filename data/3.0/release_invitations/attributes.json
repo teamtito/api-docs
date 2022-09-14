@@ -1,6 +1,6 @@
 {
-  "email": {
-    "description": null,
+  "auto": {
+    "description": "Auto-register the person being invited once they confirm attendance. You probably only want to set this if it's a free ticket. Default is false.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
@@ -9,10 +9,58 @@
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "boolean"
+  },
+  "created_at": {
+    "description": "Timestamp of when this record was created.",
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": true,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": "datetime"
+  },
+  "discount_code": {
+    "description": "Auto-apply this discount code when the invitee orders the ticket.",
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": false,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": "string"
+  },
+  "email": {
+    "description": "The email of the person who is being invited. It must be unique within this RSVP list.",
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": false,
+    "write_only": false,
+    "required": true,
+    "translated": false,
+    "type": "string"
+  },
+  "expires_at": {
+    "description": "The invitation must be redeemed before this time.",
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": false,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": "datetime"
   },
   "first_name": {
-    "description": null,
+    "description": "The first name of the person who is being invited.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
@@ -21,7 +69,19 @@
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "string"
+  },
+  "guest": {
+    "description": "Allow the person being invited to register a guest.",
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": false,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": "boolean"
   },
   "id": {
     "description": "Unique record identifier",
@@ -35,8 +95,20 @@
     "translated": false,
     "type": "integer"
   },
+  "importer_id": {
+    "description": "An internal reference that links to the file that was used to import this invitation (if it was imported).",
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": true,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": "integer"
+  },
   "last_name": {
-    "description": null,
+    "description": "The last name of the person who is being invited.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
@@ -45,22 +117,46 @@
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "string"
+  },
+  "message_delivery_id": {
+    "description": "An internal reference that links to the message that was sent.",
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": true,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": "integer"
   },
   "name": {
-    "description": null,
+    "description": "See `first_name` and `last_name`.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
     "ignore": false,
-    "read_only": false,
+    "read_only": true,
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "string"
   },
   "redeemed": {
-    "description": null,
+    "description": "Whether this invitation has been accepted. This means that it is linked to a registration and that registration is \"finished\".",
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": true,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": "boolean"
+  },
+  "redirect": {
+    "description": "What happens if the customer clicks the invitation link after they've ordered. True means they will be redirected to their order, false means they will be shown a \"link expired\" message. Defaults is false.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
@@ -69,67 +165,108 @@
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "boolean"
+  },
+  "registration": {
+    "description": "The registration linked to this invitation once it's accepted.",
+    "expandable": true,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": true,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": "object"
   },
   "registration_id": {
-    "description": null,
+    "description": "Links to the registration once this invitation has been redeemed.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
     "ignore": false,
-    "read_only": false,
+    "read_only": true,
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "integer"
   },
   "registration_reference": {
-    "description": null,
+    "description": "The `reference` of the registration.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
     "ignore": false,
-    "read_only": false,
+    "read_only": true,
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "string",
+    "until": "3.0.0"
   },
   "registration_slug": {
-    "description": null,
+    "description": "The `slug` of the registration.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
     "ignore": false,
-    "read_only": false,
+    "read_only": true,
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "string",
+    "until": "3.0.0"
   },
   "registration_url": {
-    "description": null,
+    "description": "The `url` of the registration.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
     "ignore": false,
-    "read_only": false,
+    "read_only": true,
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "string",
+    "until": "3.0.0"
+  },
+  "release_id": {
+    "description": "Not used.",
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": true,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": "integer",
+    "since": "3.0.0"
   },
   "releases": {
-    "description": null,
+    "description": "A list of objects that includes the `id`, `title` and `slug` of the release.",
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": true,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": "object array",
+    "until": "3.0.0"
+  },
+  "rsvp_list_id": {
+    "description": "Link to the RSVP list this invitation belongs to.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
     "ignore": false,
     "read_only": false,
     "write_only": false,
-    "required": false,
+    "required": true,
     "translated": false,
-    "type": null
+    "type": "integer"
   },
   "slug": {
     "description": "Unique string used in the URL to identify this record.",
@@ -144,7 +281,7 @@
     "type": "string"
   },
   "status": {
-    "description": null,
+    "description": "Either `yes`, `no` or `maybe`.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
@@ -153,18 +290,30 @@
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "string"
   },
   "unique_url": {
-    "description": null,
+    "description": "The link that is emailed to the person who is being invited. Clicking this link allows them to redeem the invitation.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
     "ignore": false,
-    "read_only": false,
+    "read_only": true,
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "url"
+  },
+  "updated_at": {
+    "description": "Timestamp of when this record was last updated.",
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": true,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": "datetime"
   }
 }

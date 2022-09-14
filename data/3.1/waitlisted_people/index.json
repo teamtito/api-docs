@@ -1,0 +1,99 @@
+{
+  "waitlisted_people": [
+    {
+      "_type": "waitlisted_person",
+      "id": 4,
+      "name": "Jane Smith",
+      "email": "jane.smith@example.com",
+      "offered_at": null,
+      "expires_at": null,
+      "created_at": "2022-09-14T08:04:35.000Z",
+      "updated_at": "2022-09-14T08:04:35.000Z",
+      "joined_at": "2022-09-14T08:04:35.000Z",
+      "release_id": 1,
+      "state": "joined",
+      "message": null,
+      "status": "Waiting",
+      "redeemed": false,
+      "expired": false,
+      "joined": true,
+      "offered": false,
+      "rejected": false,
+      "unique_offer_url": null
+    }
+  ],
+  "meta": {
+    "api_version": "3.1.0",
+    "expandable": {
+      "registration": false,
+      "release": false
+    },
+    "current_page": 1,
+    "next_page": null,
+    "prev_page": null,
+    "total_pages": 1,
+    "total_count": 1,
+    "per_page": 100,
+    "overall_total": 1,
+    "resources_hidden_by_default_count": 0,
+    "search_states_hidden_by_default": [
+      "redeemed",
+      "rejected",
+      "expired"
+    ],
+    "sort_options": {
+      "Name A-Z": {
+        "attr": "name",
+        "direction": "asc"
+      },
+      "Name Z-A": {
+        "attr": "name",
+        "direction": "desc"
+      },
+      "Join date, earliest first": {
+        "attr": "created_at",
+        "direction": "asc"
+      },
+      "Join date, newest first": {
+        "attr": "created_at",
+        "direction": "desc",
+        "default": true
+      }
+    },
+    "filter_options": {
+      "sections": {
+        "states": {
+          "label": "Status",
+          "open": false
+        }
+      },
+      "collection": false,
+      "states": [
+        {
+          "label": "Joined",
+          "value": "joined"
+        },
+        {
+          "label": "Offered",
+          "value": "offered"
+        },
+        {
+          "label": "Redeemed",
+          "value": "redeemed"
+        },
+        {
+          "label": "Rejected",
+          "value": "rejected"
+        },
+        {
+          "label": "Expired",
+          "value": "expired"
+        }
+      ],
+      "selected_states": [
+        "joined",
+        "offered"
+      ]
+    }
+  }
+}
