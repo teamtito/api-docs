@@ -764,6 +764,29 @@
               </ul>
           </li>
           <li>
+            <a href="#waitlisted-people" class="toc-h1 toc-link" data-title="Waitlisted people">Waitlisted people</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#waitlisted-people-attributes" class="toc-h2 toc-link" data-title="Attributes ">Attributes <i class="fa-regular fa-tags"></i></a>
+                  </li>
+                  <li>
+                    <a href="#waitlisted-people-get-all-waitlisted_people" class="toc-h2 toc-link" data-title="Get all waitlisted_people ">Get all waitlisted_people <i class="fa-regular fa-files"></i></a>
+                  </li>
+                  <li>
+                    <a href="#waitlisted-people-get-a-waitlisted-person" class="toc-h2 toc-link" data-title="Get a waitlisted person ">Get a waitlisted person <i class="fa-regular fa-file"></i></a>
+                  </li>
+                  <li>
+                    <a href="#waitlisted-people-create-a-waitlisted-person" class="toc-h2 toc-link" data-title="Create a waitlisted person ">Create a waitlisted person <i class="fa-regular fa-file-plus"></i></a>
+                  </li>
+                  <li>
+                    <a href="#waitlisted-people-update-a-waitlisted-person" class="toc-h2 toc-link" data-title="Update a waitlisted person ">Update a waitlisted person <i class="fa-regular fa-file-pen"></i></a>
+                  </li>
+                  <li>
+                    <a href="#waitlisted-people-delete-a-waitlisted-person" class="toc-h2 toc-link" data-title="Delete a waitlisted person ">Delete a waitlisted person <i class="fa-regular fa-file-xmark"></i></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
             <a href="#webhook-endpoints" class="toc-h1 toc-link" data-title="Webhook Endpoints">Webhook Endpoints</a>
               <ul class="toc-list-h2">
                   <li>
@@ -7234,6 +7257,254 @@ and can only be purchased through the shareable URL (<code>share_url</code>).</p
 <p>If you pass <code>&quot;resell&quot;:false</code> then it will show 18/19 tickets sold and only one will be available.</p>
 
 <p>If the <code>Release</code> <code>quantity</code> is not defined (i.e. the number of tickets available is infinite) then the <code>resell</code> parameter is optional.</p>
+<h1 id='waitlisted-people'>Waitlisted people</h1><h2 id='waitlisted-people-attributes'>Attributes <i class="fa-regular fa-tags"></i></h2>
+<ul class="attribute-list">
+<li><div><code class="name">email</code><span class="type">string</span><span class="required">required</span></div><div class="attribute-description">The person's email.</div></li>
+<li><div><code class="name">expired</code><span class="type">boolean</span><span class="read-only">read only</span></div><div class="attribute-description">True if the <code>state</code> is "expired".</div></li>
+<li><div><code class="name">expires_at</code><span class="type">datetime</span></div><div class="attribute-description">The date and time the offer expires, if set.</div></li>
+<li><div><code class="name">joined</code><span class="type">boolean</span><span class="read-only">read only</span></div><div class="attribute-description">True if the <code>state</code> is "joined".</div></li>
+<li><div><code class="name">joined_at</code><span class="type">datetime</span></div><div class="attribute-description">The date and time the person was added to the list.</div></li>
+<li><div><code class="name">message</code></div><div class="attribute-description">The custom message to send in the offer email. Leave blank to use the standard message.</div></li>
+<li><div><code class="name">name</code><span class="type">string</span></div><div class="attribute-description">The person's name.</div></li>
+<li><div><code class="name">offered</code><span class="type">boolean</span><span class="read-only">read only</span></div><div class="attribute-description">True if the <code>state</code> is "offered".</div></li>
+<li><div><code class="name">offered_at</code><span class="type">datetime</span></div><div class="attribute-description">The date and time the person was offered a ticket.</div></li>
+<li><div><code class="name">redeemed</code><span class="type">boolean</span><span class="read-only">read only</span></div><div class="attribute-description">True if the <code>state</code> is "redeemed".</div></li>
+<li><div><code class="name">registration</code><span class="type">object</span><span class="read-only">read only</span><span class="expandable">expandable</span></div><div class="attribute-description">The <code>Registration</code> created when the offer is redeemed. This attribute is hidden by default but you can expand it using <code>?expand=registration</code>.</div></li>
+<li><div><code class="name">rejected</code><span class="type">boolean</span><span class="read-only">read only</span></div><div class="attribute-description">True if the <code>state</code> is "rejected".</div></li>
+<li><div><code class="name">release</code><span class="type">object</span><span class="read-only">read only</span><span class="expandable">expandable</span></div><div class="attribute-description">The <code>Release</code> attached to this person. This attribute is hidden by default but you can expand it using <code>?expand=release</code>.</div></li>
+<li><div><code class="name">release_id</code><span class="type">integer</span><span class="required">required</span></div><div class="attribute-description">References the release that this person is waiting for.</div></li>
+<li><div><code class="name">state</code><span class="type">string</span><span class="read-only">read only</span></div><div class="attribute-description">One of <code>joined</code>, <code>offered</code>, <code>redeemed</code> or <code>rejected</code>.</div></li>
+<li><div><code class="name">status</code><span class="type">string</span><span class="read-only">read only</span></div><div class="attribute-description">One of "Redeemed", "Expired", "Waiting", "Offered", or "Rejected".</div></li>
+<li><div><code class="name">unique_offer_url</code><span class="type">string</span><span class="read-only">read only</span></div><div class="attribute-description">Once the person has been offered a ticket, this contains the URL they need to use to redeem it.</div></li>
+<li class="separator">Common attributes:</li><li><div><code class="name">id</code><span class="type">integer</span><span class="read-only">read only</span></div><div class="attribute-description">Unique record identifier</div></li>
+<li><div><code class="name">created_at</code><span class="type">datetime</span><span class="read-only">read only</span></div><div class="attribute-description">Timestamp of when this record was created.</div></li>
+<li><div><code class="name">updated_at</code><span class="type">datetime</span><span class="read-only">read only</span></div><div class="attribute-description">Timestamp of when this record was last updated.</div></li>
+</ul>
+<h2 id='waitlisted-people-get-all-waitlisted_people'>Get all waitlisted_people <i class="fa-regular fa-files"></i></h2>
+<div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">--request</span> GET <span class="se">\</span>
+  <span class="nt">--url</span> <span class="s1">'https://api.tito.io/v3/:account_slug/:event_slug/waitlisted_people'</span> <span class="se">\</span>
+  <span class="nt">--header</span> <span class="s1">'Authorization: Token token=YOUR-API-TOKEN'</span> <span class="se">\</span>
+  <span class="nt">--header</span> <span class="s1">'Accept: application/json'</span>
+</code></pre></div>
+
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"waitlisted_people"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"waitlisted_person"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Jane Smith"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"jane.smith@example.com"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"offered_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"expires_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-09-14T08:04:35.000Z"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-09-14T08:04:35.000Z"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"joined_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-09-14T08:04:35.000Z"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"release_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"joined"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Waiting"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"redeemed"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"expired"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"joined"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"offered"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"rejected"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"unique_offer_url"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nl">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"api_version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3.1.0"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"expandable"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"registration"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"release"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"current_page"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"next_page"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"prev_page"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"total_pages"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"total_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"per_page"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"overall_total"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"resources_hidden_by_default_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"search_states_hidden_by_default"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="s2">"redeemed"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"rejected"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"expired"</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nl">"sort_options"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"Name A-Z"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"attr"</span><span class="p">:</span><span class="w"> </span><span class="s2">"name"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"direction"</span><span class="p">:</span><span class="w"> </span><span class="s2">"asc"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"Name Z-A"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"attr"</span><span class="p">:</span><span class="w"> </span><span class="s2">"name"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"direction"</span><span class="p">:</span><span class="w"> </span><span class="s2">"desc"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"Join date, earliest first"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"attr"</span><span class="p">:</span><span class="w"> </span><span class="s2">"created_at"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"direction"</span><span class="p">:</span><span class="w"> </span><span class="s2">"asc"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"Join date, newest first"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"attr"</span><span class="p">:</span><span class="w"> </span><span class="s2">"created_at"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"direction"</span><span class="p">:</span><span class="w"> </span><span class="s2">"desc"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"default"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"filter_options"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"sections"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"states"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Status"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"open"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"collection"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"states"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Joined"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"joined"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Offered"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"offered"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Redeemed"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"redeemed"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Rejected"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rejected"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Expired"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"expired"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">],</span><span class="w">
+      </span><span class="nl">"selected_states"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="s2">"joined"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"offered"</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+
+<p><code>GET /:account_slug/:event_slug/waitlisted_people</code></p>
+
+<ul>
+<li><code>account_slug</code> - the <code>slug</code> of the <code>account</code>.</li>
+<li><code>event_slug</code> - the <code>slug</code> of the <code>event</code>.</li>
+</ul>
+<h2 id='waitlisted-people-get-a-waitlisted-person'>Get a waitlisted person <i class="fa-regular fa-file"></i></h2>
+<div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">--request</span> GET <span class="se">\</span>
+  <span class="nt">--url</span> <span class="s1">'https://api.tito.io/v3/:account_slug/:event_slug/waitlisted_people/:waitlisted_person_id'</span> <span class="se">\</span>
+  <span class="nt">--header</span> <span class="s1">'Authorization: Token token=YOUR-API-TOKEN'</span> <span class="se">\</span>
+  <span class="nt">--header</span> <span class="s1">'Accept: application/json'</span>
+</code></pre></div>
+
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"waitlisted_person"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"waitlisted_person"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Jane Smith"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"jane.smith@example.com"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"offered_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"expires_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-09-14T08:04:35.000Z"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-09-14T08:04:35.000Z"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"joined_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-09-14T08:04:35.000Z"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"release_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"joined"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Waiting"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"redeemed"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"expired"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"joined"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"offered"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"rejected"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"unique_offer_url"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"api_version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3.1.0"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"expandable"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"registration"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"release"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+
+<p><code>GET /:account_slug/:event_slug/waitlisted_people/:waitlisted_person_id</code></p>
+
+<ul>
+<li><code>account_slug</code> - the <code>slug</code> of the <code>account</code>.</li>
+<li><code>event_slug</code> - the <code>slug</code> of the <code>event</code>.</li>
+<li><code>waitlisted_person_id</code> - the <code>id</code> of the <code>waitlisted_person</code></li>
+</ul>
+<h2 id='waitlisted-people-create-a-waitlisted-person'>Create a waitlisted person <i class="fa-regular fa-file-plus"></i></h2>
+<p>TODO: missing <code>data/3.1/waitlisted_people/create.json</code></p>
+<h2 id='waitlisted-people-update-a-waitlisted-person'>Update a waitlisted person <i class="fa-regular fa-file-pen"></i></h2>
+<div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">--request</span> PATCH <span class="se">\</span>
+  <span class="nt">--url</span> <span class="s1">'https://api.tito.io/v3/:account_slug/:event_slug/waitlisted_people/:waitlisted_people_id'</span> <span class="se">\</span>
+  <span class="nt">--header</span> <span class="s1">'Authorization: Token token=YOUR-API-TOKEN'</span> <span class="se">\</span>
+  <span class="nt">--header</span> <span class="s1">'Accept: application/json'</span> <span class="se">\</span>
+  <span class="nt">--header</span> <span class="s1">'Content-type: application/json'</span> <span class="se">\</span>
+  <span class="nt">--data</span> <span class="s1">'{"waitlisted_person[email]":"7GmO4VysORdDsw@example.com"}'</span>
+</code></pre></div>
+
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"waitlisted_person"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"waitlisted_person"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Jane Smith"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7GmO4VysORdDsw@example.com"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"offered_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"expires_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-09-14T08:04:35.000Z"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-09-14T08:04:35.000Z"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"joined_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-09-14T08:04:35.000Z"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"release_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"joined"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Waiting"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"redeemed"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"expired"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"joined"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"offered"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"rejected"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"unique_offer_url"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"api_version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3.1.0"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+
+<p><code>PATCH /:account_slug/:event_slug/waitlisted_people/:waitlisted_person_id</code></p>
+
+<ul>
+<li><code>account_slug</code> - the <code>slug</code> of the <code>account</code>.</li>
+<li><code>event_slug</code> - the <code>slug</code> of the <code>event</code>.</li>
+<li><code>waitlisted_person_id</code> - the <code>id</code> of the <code>waitlisted_person</code></li>
+</ul>
+<h3 id='waitlisted-people-update-a-waitlisted-person-i-class-fa-regular-fa-file-pen-i-required-attributes'>Required attributes</h3>
+<ul class="attribute-list">
+<li><div><code class="name">email</code><span class="type">string</span></div><div class="attribute-description">The person's email.</div></li>
+<li><div><code class="name">release_id</code><span class="type">integer</span></div><div class="attribute-description">References the release that this person is waiting for.</div></li>
+</ul>
+<h2 id='waitlisted-people-delete-a-waitlisted-person'>Delete a waitlisted person <i class="fa-regular fa-file-xmark"></i></h2>
+<div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">--request</span> DELETE <span class="se">\</span>
+  <span class="nt">--url</span> <span class="s1">'https://api.tito.io/v3/:account_slug/:event_slug/waitlisted_people/:waitlisted_people_id'</span> <span class="se">\</span>
+  <span class="nt">--header</span> <span class="s1">'Authorization: Token token=YOUR-API-TOKEN'</span> <span class="se">\</span>
+  <span class="nt">--header</span> <span class="s1">'Accept: application/json'</span>
+</code></pre></div>
+
+<p><code>DELETE /:account_slug/:event_slug/waitlisted_people/:waitlisted_person_id</code></p>
+
+<ul>
+<li><code>account_slug</code> - the <code>slug</code> of the <code>account</code>.</li>
+<li><code>event_slug</code> - the <code>slug</code> of the <code>event</code>.</li>
+<li><code>waitlisted_person_id</code> - the <code>id</code> of the <code>waitlisted_person</code></li>
+</ul>
 <h1 id='webhook-endpoints'>Webhook Endpoints</h1>
 <p>See <a href="#webhooks">Webhooks</a> for more information.</p>
 <h2 id='webhook-endpoints-attributes'>Attributes <i class="fa-regular fa-tags"></i></h2>
@@ -7353,7 +7624,7 @@ and can only be purchased through the shareable URL (<code>share_url</code>).</p
 <li><code>event_slug</code> - the <code>slug</code> of the <code>event</code>.</li>
 </ul>
 
-<h3 id='tickets-void-a-ticket-required-attributes'>Required attributes</h3>
+<h3 id='waitlisted-people-delete-a-waitlisted-person-i-class-fa-regular-fa-file-xmark-i-required-attributes'>Required attributes</h3>
 
 <ul class="attribute-list">
 <li><div><code class="name">included_triggers</code><span class="type">string array</span></div><div class="attribute-description">List of triggers that will be sent to this webhook endpoint.</div></li>
