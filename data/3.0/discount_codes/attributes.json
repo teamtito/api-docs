@@ -1,18 +1,18 @@
 {
   "code": {
-    "description": null,
+    "description": "The code that will be distributed to provide a discount.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
     "ignore": false,
     "read_only": false,
     "write_only": false,
-    "required": false,
+    "required": true,
     "translated": false,
-    "type": null
+    "type": "String"
   },
   "description": {
-    "description": null,
+    "description": "Shown on the payment form.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
@@ -21,10 +21,10 @@
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "String"
   },
   "description_for_organizer": {
-    "description": null,
+    "description": "Only visible to organizers. Useful for keeping track of what discount codes are for.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
@@ -33,10 +33,22 @@
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "String"
+  },
+  "disable_for_degressive": {
+    "description": "Disable this discount code if it's used with degressive pricing (see `release#price_degressive`).",
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": false,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": "boolean"
   },
   "discount_code_type": {
-    "description": null,
+    "description": "Alias for `type`",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
@@ -45,10 +57,11 @@
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "String",
+    "until": "3.0.0"
   },
   "end_at": {
-    "description": null,
+    "description": "The time when the discount code becomes unavailable.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
@@ -57,7 +70,7 @@
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "datetime"
   },
   "id": {
     "description": "Unique record identifier",
@@ -72,7 +85,7 @@
     "type": "integer"
   },
   "max_quantity_per_release": {
-    "description": null,
+    "description": "Discount only applies to a maximum of this number.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
@@ -81,10 +94,10 @@
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "integer"
   },
   "min_quantity_per_release": {
-    "description": null,
+    "description": "Discount only applies if this many tickets are selected.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
@@ -93,10 +106,10 @@
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "integer"
   },
   "only_show_attached": {
-    "description": null,
+    "description": "Only display tickets attached to this discount code when it is displayed or not e.g. display all publicly visible tickets. Default is `false`",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
@@ -105,10 +118,10 @@
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "boolean"
   },
   "quantity": {
-    "description": null,
+    "description": "The number of tickets that can avail of this discount code.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
@@ -117,34 +130,46 @@
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "integer"
   },
   "quantity_used": {
-    "description": null,
+    "description": "The number of tickets this discount code has been applied to.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
     "ignore": false,
-    "read_only": false,
+    "read_only": true,
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "integer"
   },
   "registrations_count": {
-    "description": null,
+    "description": "The number of `registrations` that used this discount code. Will be more than the `quantity_used` if people buy multiple `tickets` at the same time.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
+    "ignore": false,
+    "read_only": true,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": "integer"
+  },
+  "releases": {
+    "description": "The `releases` this discount code can be applied to.",
+    "expandable": true,
+    "expand_ids": true,
+    "expand_slugs": true,
     "ignore": false,
     "read_only": false,
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "object array"
   },
   "reveal_secret": {
-    "description": null,
+    "description": "Should secret tickets be revealed if this discount code is applied or not. Default is `false`.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
@@ -153,10 +178,10 @@
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "boolean"
   },
   "share_url": {
-    "description": null,
+    "description": "Shareable link to give access to the discount.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
@@ -165,10 +190,10 @@
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "url"
   },
   "source_id": {
-    "description": null,
+    "description": "The landing page linked to this discount code. Landing pages have been deprecated in favor of source types.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
@@ -177,10 +202,11 @@
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "integer",
+    "until": "3.0.0"
   },
   "start_at": {
-    "description": null,
+    "description": "The time when the discount code becomes available.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
@@ -189,10 +215,10 @@
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "datetime"
   },
   "state": {
-    "description": null,
+    "description": "Either `upcoming`, `current` or `past` depending on the `start_at` and `end_at` values.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
@@ -201,10 +227,10 @@
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "string"
   },
   "tickets_count": {
-    "description": null,
+    "description": "How many tickets have been bought with this discount code.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
@@ -213,30 +239,30 @@
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "integer"
   },
   "type": {
-    "description": null,
+    "description": "The kind of discount to apply. `MoneyOffDiscountCode` applies a flat discount. `PercentOffDiscountCode` applies a percentage discount.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
     "ignore": false,
     "read_only": false,
     "write_only": false,
-    "required": false,
+    "required": true,
     "translated": false,
-    "type": null
+    "type": "String"
   },
   "value": {
-    "description": null,
+    "description": "The amount off per ticket. A percentage or flat amount depending on the discount code type.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
     "ignore": false,
     "read_only": false,
     "write_only": false,
-    "required": false,
+    "required": true,
     "translated": false,
-    "type": null
+    "type": "decimal"
   }
 }

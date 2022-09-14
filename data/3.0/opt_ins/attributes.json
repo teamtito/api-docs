@@ -24,7 +24,7 @@
     "type": "datetime"
   },
   "description": {
-    "description": null,
+    "description": "The description of this opt-in.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
@@ -32,8 +32,8 @@
     "read_only": false,
     "write_only": false,
     "required": false,
-    "translated": false,
-    "type": null
+    "translated": true,
+    "type": "string"
   },
   "id": {
     "description": "Unique record identifier",
@@ -48,28 +48,28 @@
     "type": "integer"
   },
   "name": {
-    "description": null,
+    "description": "The name of this opt-in.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
     "ignore": false,
     "read_only": false,
     "write_only": false,
-    "required": false,
-    "translated": false,
-    "type": null
+    "required": true,
+    "translated": true,
+    "type": "string"
   },
-  "release_ids": {
-    "description": null,
-    "expandable": false,
-    "expand_ids": false,
+  "releases": {
+    "description": "A list of releases linked to this opt-in.",
+    "expandable": true,
+    "expand_ids": true,
     "expand_slugs": false,
     "ignore": false,
     "read_only": false,
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "object array"
   },
   "slug": {
     "description": "Unique string used in the URL to identify this record.",

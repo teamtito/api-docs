@@ -1,27 +1,39 @@
 {
-  "activity_ids": {
-    "description": null,
-    "expandable": false,
-    "expand_ids": false,
+  "activities": {
+    "description": "The activities linked to this check-in list.",
+    "expandable": true,
+    "expand_ids": true,
     "expand_slugs": false,
     "ignore": false,
     "read_only": false,
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "object array"
   },
   "checked_in_count": {
-    "description": null,
+    "description": "How many attendees have checked in.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
     "ignore": false,
-    "read_only": false,
+    "read_only": true,
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "integer"
+  },
+  "checked_in_percent": {
+    "description": "The `checked_in_count` expressed as a percentage.",
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": true,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": "integer"
   },
   "created_at": {
     "description": "Timestamp of when this record was created.",
@@ -36,19 +48,19 @@
     "type": "datetime"
   },
   "expired": {
-    "description": null,
+    "description": "True if the `expires_at` is in the past.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
     "ignore": false,
-    "read_only": false,
+    "read_only": true,
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "boolean"
   },
   "expires_at": {
-    "description": null,
+    "description": "The time at which the check-in list should no longer be accessible or null for no expiry.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
@@ -57,10 +69,10 @@
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "datetime"
   },
   "hide_unpaid": {
-    "description": null,
+    "description": "If true then any tickets not yet paid (e.g. paid by invoice) will not appear in the list.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
@@ -69,7 +81,7 @@
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "boolean"
   },
   "id": {
     "description": "Unique record identifier",
@@ -84,79 +96,55 @@
     "type": "integer"
   },
   "open": {
-    "description": null,
+    "description": "True is the `expires_at` is in the future or is null. The inverse of `expired`.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
     "ignore": false,
-    "read_only": false,
+    "read_only": true,
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "boolean"
   },
   "qr_code_url": {
-    "description": null,
+    "description": "Scanning the QR code at this URL will give our check-in apps access to this check-in list.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
     "ignore": false,
-    "read_only": false,
+    "read_only": true,
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "url"
   },
-  "question_ids": {
-    "description": null,
-    "expandable": false,
-    "expand_ids": false,
-    "expand_slugs": false,
+  "questions": {
+    "description": "The questions linked to this check-in list.",
+    "expandable": true,
+    "expand_ids": true,
+    "expand_slugs": true,
     "ignore": false,
     "read_only": false,
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "object array"
   },
-  "question_slugs": {
-    "description": null,
-    "expandable": false,
-    "expand_ids": false,
-    "expand_slugs": false,
+  "releases": {
+    "description": "The releases linked to this check-in list.",
+    "expandable": true,
+    "expand_ids": true,
+    "expand_slugs": true,
     "ignore": false,
     "read_only": false,
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
-  },
-  "release_ids": {
-    "description": null,
-    "expandable": false,
-    "expand_ids": false,
-    "expand_slugs": false,
-    "ignore": false,
-    "read_only": false,
-    "write_only": false,
-    "required": false,
-    "translated": false,
-    "type": null
-  },
-  "release_slugs": {
-    "description": null,
-    "expandable": false,
-    "expand_ids": false,
-    "expand_slugs": false,
-    "ignore": false,
-    "read_only": false,
-    "write_only": false,
-    "required": false,
-    "translated": false,
-    "type": null
+    "type": "object array"
   },
   "show_company_name": {
-    "description": null,
+    "description": "Show the attendees' company name on the check-in list.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
@@ -165,10 +153,10 @@
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "boolean"
   },
   "show_email": {
-    "description": null,
+    "description": "Show the attendees' email address on the check-in list.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
@@ -177,10 +165,10 @@
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "boolean"
   },
   "show_phone_number": {
-    "description": null,
+    "description": "Show the attendees' phone number on the check-in list.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
@@ -189,7 +177,7 @@
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "boolean"
   },
   "slug": {
     "description": "Unique string used in the URL to identify this record.",
@@ -204,40 +192,40 @@
     "type": "string"
   },
   "state": {
-    "description": null,
+    "description": "Either `expired` or `open`.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
     "ignore": false,
-    "read_only": false,
+    "read_only": true,
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "string"
   },
   "tickets_count": {
-    "description": null,
+    "description": "How many tickets are there. When the `checked_in_count` is the same as this then everyone is checked in.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
     "ignore": false,
-    "read_only": false,
+    "read_only": true,
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "integer"
   },
   "title": {
-    "description": null,
+    "description": "The name of the check-in list.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
     "ignore": false,
     "read_only": false,
     "write_only": false,
-    "required": false,
+    "required": true,
     "translated": false,
-    "type": null
+    "type": "string"
   },
   "updated_at": {
     "description": "Timestamp of when this record was last updated.",
@@ -250,5 +238,17 @@
     "required": false,
     "translated": false,
     "type": "datetime"
+  },
+  "web_checkin_url": {
+    "description": "Gives you access to the web based checkin app.",
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": true,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": "url"
   }
 }

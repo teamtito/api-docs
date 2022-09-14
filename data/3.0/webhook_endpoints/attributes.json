@@ -1,1 +1,62 @@
-null
+{
+  "custom_data": {
+    "description": "A hash of custom data that will be passed along in the webhook payload.",
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": false,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": "object"
+  },
+  "deprecated": {
+    "description": "Whether the URL is deprecated. We only support secure, https connections now.",
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": true,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": "boolean"
+  },
+  "id": {
+    "description": "Unique record identifier",
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": true,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": "integer"
+  },
+  "included_triggers": {
+    "description": "List of triggers that will be sent to this webhook endpoint.",
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": false,
+    "write_only": false,
+    "required": true,
+    "translated": false,
+    "type": "string array"
+  },
+  "url": {
+    "description": "Where to send the webhooks to. Must be a secure, https URL.",
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": false,
+    "write_only": false,
+    "required": true,
+    "translated": false,
+    "type": "url"
+  }
+}

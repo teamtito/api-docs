@@ -1,1 +1,122 @@
-null
+{
+  "created_at": {
+    "description": "Timestamp of when this record was created.",
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": true,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": "datetime"
+  },
+  "id": {
+    "description": "Unique record identifier",
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": true,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": "integer"
+  },
+  "maybes_count": {
+    "description": "How many people have responded \"maybe\".",
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": true,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": "integer"
+  },
+  "message_slug": {
+    "description": "The slug for the message that was used to send the invitation.",
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": true,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": "string"
+  },
+  "nos_count": {
+    "description": "How many people have responded \"no\".",
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": true,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": "integer"
+  },
+  "redeemed_count": {
+    "description": "How many people have accepted the invitation.",
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": true,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": "integer"
+  },
+  "release_invitations_count": {
+    "description": "How many people have been invited.",
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": true,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": "integer"
+  },
+  "slug": {
+    "description": "Unique string used in the URL to identify this record.",
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": true,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": "string"
+  },
+  "title": {
+    "description": "A title for this list",
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": false,
+    "write_only": false,
+    "required": true,
+    "translated": false,
+    "type": "string"
+  },
+  "updated_at": {
+    "description": "Timestamp of when this record was last updated.",
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": true,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": "datetime"
+  }
+}

@@ -1,7 +1,7 @@
 {
   "billing_address": {
-    "description": null,
-    "expandable": false,
+    "description": "The address entered during payment.",
+    "expandable": true,
     "expand_ids": false,
     "expand_slugs": false,
     "ignore": false,
@@ -9,43 +9,43 @@
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "object"
   },
   "cancelled": {
-    "description": null,
+    "description": "Whether this registration has been cancelled.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
     "ignore": false,
-    "read_only": false,
+    "read_only": true,
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "boolean"
   },
   "cancelled_at": {
-    "description": null,
+    "description": "The date this registration was cancelled.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
     "ignore": false,
-    "read_only": false,
+    "read_only": true,
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "datetime"
   },
   "cancelled_by": {
-    "description": null,
+    "description": "The name or email of who cancelled this registration.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
     "ignore": false,
-    "read_only": false,
+    "read_only": true,
     "write_only": false,
     "required": false,
     "translated": false,
-    "type": null
+    "type": "string"
   },
   "company_name": {
     "description": null,
@@ -96,6 +96,30 @@
     "type": "datetime"
   },
   "discount_code": {
+    "description": null,
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": false,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": null
+  },
+  "discount_code_id": {
+    "description": null,
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": false,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": null
+  },
+  "editable_total_and_prices": {
     "description": null,
     "expandable": false,
     "expand_ids": false,
@@ -275,6 +299,18 @@
     "translated": false,
     "type": null
   },
+  "payment": {
+    "description": null,
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": false,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": null
+  },
   "payment_complete": {
     "description": null,
     "expandable": false,
@@ -311,6 +347,18 @@
     "translated": false,
     "type": null
   },
+  "payment_option_provider_name": {
+    "description": null,
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": false,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": null
+  },
   "payment_reference": {
     "description": null,
     "expandable": false,
@@ -324,6 +372,30 @@
     "type": null
   },
   "phone_number": {
+    "description": null,
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": false,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": null
+  },
+  "quantities": {
+    "description": null,
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": false,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": null
+  },
+  "receipt": {
     "description": null,
     "expandable": false,
     "expand_ids": false,
@@ -455,6 +527,30 @@
     "translated": false,
     "type": null
   },
+  "terms_accepted": {
+    "description": null,
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": false,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": null
+  },
+  "termset_ids": {
+    "description": null,
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": false,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": null
+  },
   "test_mode": {
     "description": null,
     "expandable": false,
@@ -480,6 +576,18 @@
     "type": null
   },
   "total": {
+    "description": null,
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": false,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": null
+  },
+  "total_less_tax": {
     "description": null,
     "expandable": false,
     "expand_ids": false,
