@@ -1,0 +1,5 @@
+{
+  "waitlisted_person[name]": "Jane Doe",
+  "waitlisted_person[email]": "jane.doe@example.com",
+  "waitlisted_person[release_id]": 1
+}
