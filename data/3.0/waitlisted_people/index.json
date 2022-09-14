@@ -1,0 +1,193 @@
+{
+  "waitlisted_people": [
+    {
+      "_type": "waitlisted_person",
+      "id": 3,
+      "name": "Jane Smith",
+      "email": "jane.smith@example.com",
+      "offered_at": null,
+      "expires_at": null,
+      "created_at": "2022-09-14T08:04:26.000Z",
+      "updated_at": "2022-09-14T08:04:26.000Z",
+      "joined_at": "2022-09-14T08:04:26.000Z",
+      "release_id": 1,
+      "state": "joined",
+      "message": null,
+      "status": "Waiting",
+      "redeemed": false,
+      "expired": false,
+      "joined": true,
+      "offered": false,
+      "rejected": false,
+      "unique_offer_url": null,
+      "release": {
+        "_type": "release",
+        "view": "extended",
+        "id": 1,
+        "event_id": 1,
+        "created_at": "2022-09-14T07:54:34.000Z",
+        "updated_at": "2022-09-14T07:55:23.000Z",
+        "slug": "early-bird",
+        "title": "Early Bird",
+        "description": null,
+        "archived": false,
+        "card_payments": true,
+        "default_quantity": 0,
+        "donation": false,
+        "enable_super_combo_summary": true,
+        "end_at": null,
+        "has_success_message": false,
+        "has_fail_message": false,
+        "invoice": false,
+        "max_donation": null,
+        "max_tickets_per_person": null,
+        "metadata": {
+          "my_release_variable": "else",
+          "another_release_variable": 456
+        },
+        "min_tickets_per_person": null,
+        "min_donation": null,
+        "not_a_ticket": false,
+        "show_qr_code": true,
+        "only_issue_combos": false,
+        "pricing_type": "paid",
+        "payment_type": "paid",
+        "position": 0,
+        "price": 90.0,
+        "price_ex_tax": 90.0,
+        "tax_exclusive": false,
+        "price_degressive": null,
+        "price_degressive_list": [
+
+        ],
+        "quantity": 300,
+        "request_company_name": null,
+        "request_vat_number": null,
+        "require_vat_number": false,
+        "require_billing_address": null,
+        "require_credit_card_for_sold_out_waiting_list": false,
+        "require_email": true,
+        "require_name": false,
+        "secret": false,
+        "show_price": true,
+        "suggested_donation": "90.0",
+        "lock_changes": null,
+        "state_name": "on_sale",
+        "start_at": null,
+        "waiting_list_enabled_during_locked": false,
+        "waiting_list_enabled_during_sold_out": false,
+        "share_url": "https://ti.to/demo/awesomeconf/with/early-bird",
+        "tickets_count": 12,
+        "locked": false,
+        "waiting_list": false,
+        "sold_out": false,
+        "off_sale": false,
+        "expired": false,
+        "upcoming": false,
+        "allocatable": true,
+        "changes_locked": false,
+        "deletable": false,
+        "question_ids": [
+          1
+        ],
+        "display_price": 90.0,
+        "gross_income": 900.0,
+        "full_price_tickets_count": 12,
+        "free_tickets_count": 0,
+        "discounted_tickets_count": 0,
+        "voided_tickets_count": 0,
+        "pending_waiting_list": false,
+        "show_company_name": false,
+        "require_company_name": false,
+        "show_vat_number": false,
+        "show_discount_code_field_here": null,
+        "show_phone_number": false,
+        "tax_description": null,
+        "translations": {
+          "en": {
+            "description": null,
+            "fail_message": null,
+            "success_message": null,
+            "title": "Early Bird"
+          }
+        },
+        "warnings": {
+          "quantity": "This ticket’s quantity is set to 300 but there are only 73 remaining because it is limited by the capacity of the Conference, Conference Copy, Conference Copy, Conference Copy, Conference Copy, and Conference Copy activities."
+        },
+        "termset_id": null,
+        "ticket_group_id": null
+      },
+      "registration": null
+    }
+  ],
+  "meta": {
+    "api_version": "3.0.0",
+    "current_page": 1,
+    "next_page": null,
+    "prev_page": null,
+    "total_pages": 1,
+    "total_count": 1,
+    "per_page": 100,
+    "overall_total": 1,
+    "resources_hidden_by_default_count": 0,
+    "search_states_hidden_by_default": [
+      "redeemed",
+      "rejected",
+      "expired"
+    ],
+    "sort_options": {
+      "Name A-Z": {
+        "attr": "name",
+        "direction": "asc"
+      },
+      "Name Z-A": {
+        "attr": "name",
+        "direction": "desc"
+      },
+      "Join date, earliest first": {
+        "attr": "created_at",
+        "direction": "asc"
+      },
+      "Join date, newest first": {
+        "attr": "created_at",
+        "direction": "desc",
+        "default": true
+      }
+    },
+    "filter_options": {
+      "sections": {
+        "states": {
+          "label": "Status",
+          "open": false
+        }
+      },
+      "collection": false,
+      "states": [
+        {
+          "label": "Joined",
+          "value": "joined"
+        },
+        {
+          "label": "Offered",
+          "value": "offered"
+        },
+        {
+          "label": "Redeemed",
+          "value": "redeemed"
+        },
+        {
+          "label": "Rejected",
+          "value": "rejected"
+        },
+        {
+          "label": "Expired",
+          "value": "expired"
+        }
+      ],
+      "selected_states": [
+        "joined",
+        "offered"
+      ]
+    }
+  }
+}
