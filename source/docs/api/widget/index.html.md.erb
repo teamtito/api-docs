@@ -141,7 +141,7 @@ You can use the JavaScript API to load a widget on-demand without using the `tit
   tito("widget.mount", {el: "#tito-widget", event: "ultimateconf/2013"})
 </script>
 
-<div class="no-clear" id="tito-widget"></div>
+<div id="tito-widget"></div>
 
 ```
 <script>
@@ -154,14 +154,18 @@ You can use the JavaScript API to load a widget on-demand without using the `tit
 
 ```html
 <script>
-  tito("button.mount", {el: "#tito-button", event: "ultimateconf/2013"})
+  tito("button.mount", {
+    el: "#tito-button",
+    event: "ultimateconf/2013",
+    buttonLabel: "Register" // Optional, defaults to 'Tickets'
+  })
 </script>
 
-<div class="no-clear" id="tito-button"></div>
+<div id="tito-button"></div>
 
 ```
 <script>
-  tito("button.mount", {el: "#tito-button", event: "ultimateconf/2013"})
+  tito("button.mount", {el: "#tito-button", event: "ultimateconf/2013", buttonLabel: "Register" })
 </script>
 
 <div class="no-clear"><div id="tito-button"></div></div>
