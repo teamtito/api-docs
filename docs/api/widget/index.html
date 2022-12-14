@@ -433,7 +433,7 @@
   <span class="nx">tito</span><span class="p">(</span><span class="dl">"</span><span class="s2">widget.mount</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span><span class="na">el</span><span class="p">:</span> <span class="dl">"</span><span class="s2">#tito-widget</span><span class="dl">"</span><span class="p">,</span> <span class="na">event</span><span class="p">:</span> <span class="dl">"</span><span class="s2">ultimateconf/2013</span><span class="dl">"</span><span class="p">})</span>
 <span class="nt">&lt;/script&gt;</span>
 
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"no-clear"</span> <span class="na">id=</span><span class="s">"tito-widget"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"tito-widget"</span><span class="nt">&gt;&lt;/div&gt;</span>
 
 </code></pre></div>
 <script>
@@ -442,14 +442,18 @@
 
 <div class="no-clear"><div id="tito-widget"></div></div>
 <h3 id='tito-widget-v2-javascript-api-mounting-a-button'>Mounting a button</h3><div class="highlight"><pre class="highlight html tab-html"><code><span class="nt">&lt;script&gt;</span>
-  <span class="nx">tito</span><span class="p">(</span><span class="dl">"</span><span class="s2">button.mount</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span><span class="na">el</span><span class="p">:</span> <span class="dl">"</span><span class="s2">#tito-button</span><span class="dl">"</span><span class="p">,</span> <span class="na">event</span><span class="p">:</span> <span class="dl">"</span><span class="s2">ultimateconf/2013</span><span class="dl">"</span><span class="p">})</span>
+  <span class="nx">tito</span><span class="p">(</span><span class="dl">"</span><span class="s2">button.mount</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span>
+    <span class="na">el</span><span class="p">:</span> <span class="dl">"</span><span class="s2">#tito-button</span><span class="dl">"</span><span class="p">,</span>
+    <span class="na">event</span><span class="p">:</span> <span class="dl">"</span><span class="s2">ultimateconf/2013</span><span class="dl">"</span><span class="p">,</span>
+    <span class="na">buttonLabel</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Register</span><span class="dl">"</span> <span class="c1">// Optional, defaults to 'Tickets'</span>
+  <span class="p">})</span>
 <span class="nt">&lt;/script&gt;</span>
 
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"no-clear"</span> <span class="na">id=</span><span class="s">"tito-button"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"tito-button"</span><span class="nt">&gt;&lt;/div&gt;</span>
 
 </code></pre></div>
 <script>
-  tito("button.mount", {el: "#tito-button", event: "ultimateconf/2013"})
+  tito("button.mount", {el: "#tito-button", event: "ultimateconf/2013", buttonLabel: "Register" })
 </script>
 
 <div class="no-clear"><div id="tito-button"></div></div>
