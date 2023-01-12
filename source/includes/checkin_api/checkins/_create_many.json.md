@@ -2,19 +2,41 @@
 [
   {
     "id":123456,
-    "uuid":"1a1f0ab5-89c8-45ab-a342-04b680ff9382",
-    "created_at":"2018-11-30T12:41:18.000Z",
-    "updated_at":"2018-11-30T12:41:18.000Z",
     "ticket_id":111111,
-    "deleted_at":null
+    "created_at":"2018-11-30T12:03:51.000Z",
+    "updated_at":"2018-11-30T12:03:51.000Z",
+    "deleted_at":null,
+    "uuid":"e169x65x-ca51-4e9f-9d48-04b680ff9382",
+    "ticket":{
+      "slug":"abc123",
+      "reference":"ABCD-1",
+      "email":"alice@example.com",
+      "first_name":"Alice",
+      "last_name":"Example"
+    },
+    "release":{
+      "slug":"early-bird",
+      "title":"Early Bird"
+    }
   },
   {
     "id":123457,
-    "uuid":"aeb3147e-9939-4125-938x-a85c97d64825",
-    "created_at":"2018-11-30T12:41:18.000Z",
-    "updated_at":"2018-11-30T12:41:18.000Z",
-    "ticket_id":222222,
-    "deleted_at":null
+    "ticket_id":111111,
+    "created_at":"2018-11-30T12:03:51.000Z",
+    "updated_at":"2018-11-30T12:03:51.000Z",
+    "deleted_at":null,
+    "uuid":"e169x65x-ca51-4e9f-9d48-32e5819eb2b3",
+    "ticket":{
+      "slug":"abc124",
+      "reference":"ABCD-2",
+      "email":"bob@example.com",
+      "first_name":"Bob",
+      "last_name":"Example"
+    },
+    "release":{
+      "slug":"early-bird",
+      "title":"Early Bird"
+    }
   }
 ]
 ```
