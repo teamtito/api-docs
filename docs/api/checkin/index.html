@@ -578,13 +578,22 @@ like to record their attendence.</p>
 
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"id"</span><span class="p">:</span><span class="mi">12345</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"checkin_list_id"</span><span class="p">:</span><span class="mi">12345</span><span class="p">,</span><span class="w">
   </span><span class="nl">"ticket_id"</span><span class="p">:</span><span class="mi">111111</span><span class="p">,</span><span class="w">
   </span><span class="nl">"created_at"</span><span class="p">:</span><span class="s2">"2018-11-30T12:03:51.000Z"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"updated_at"</span><span class="p">:</span><span class="s2">"2018-11-30T12:03:51.000Z"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"uuid_bin"</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span><span class="w">
   </span><span class="nl">"deleted_at"</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"uuid"</span><span class="p">:</span><span class="s2">"e169x65x-ca51-4e9f-9d48-32e5819eb2b3"</span><span class="w">
+  </span><span class="nl">"uuid"</span><span class="p">:</span><span class="s2">"e169x65x-ca51-4e9f-9d48-32e5819eb2b3"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"ticket"</span><span class="p">:{</span><span class="w">
+    </span><span class="nl">"slug"</span><span class="p">:</span><span class="s2">"abc123"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"reference"</span><span class="p">:</span><span class="s2">"ABCD-1"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"email"</span><span class="p">:</span><span class="s2">"alice@example.com"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"first_name"</span><span class="p">:</span><span class="s2">"Alice"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"last_name"</span><span class="p">:</span><span class="s2">"Example"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"release"</span><span class="p">:{</span><span class="w">
+    </span><span class="nl">"slug"</span><span class="p">:</span><span class="s2">"early-bird"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"title"</span><span class="p">:</span><span class="s2">"Early Bird"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div>
 
@@ -627,19 +636,41 @@ like to record their attendence.</p>
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
   </span><span class="p">{</span><span class="w">
     </span><span class="nl">"id"</span><span class="p">:</span><span class="mi">123456</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"uuid"</span><span class="p">:</span><span class="s2">"1a1f0ab5-89c8-45ab-a342-04b680ff9382"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"created_at"</span><span class="p">:</span><span class="s2">"2018-11-30T12:41:18.000Z"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"updated_at"</span><span class="p">:</span><span class="s2">"2018-11-30T12:41:18.000Z"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"ticket_id"</span><span class="p">:</span><span class="mi">111111</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"deleted_at"</span><span class="p">:</span><span class="kc">null</span><span class="w">
+    </span><span class="nl">"created_at"</span><span class="p">:</span><span class="s2">"2018-11-30T12:03:51.000Z"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"updated_at"</span><span class="p">:</span><span class="s2">"2018-11-30T12:03:51.000Z"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"deleted_at"</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"uuid"</span><span class="p">:</span><span class="s2">"e169x65x-ca51-4e9f-9d48-04b680ff9382"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ticket"</span><span class="p">:{</span><span class="w">
+      </span><span class="nl">"slug"</span><span class="p">:</span><span class="s2">"abc123"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"reference"</span><span class="p">:</span><span class="s2">"ABCD-1"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"email"</span><span class="p">:</span><span class="s2">"alice@example.com"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"first_name"</span><span class="p">:</span><span class="s2">"Alice"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"last_name"</span><span class="p">:</span><span class="s2">"Example"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"release"</span><span class="p">:{</span><span class="w">
+      </span><span class="nl">"slug"</span><span class="p">:</span><span class="s2">"early-bird"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"title"</span><span class="p">:</span><span class="s2">"Early Bird"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="p">{</span><span class="w">
     </span><span class="nl">"id"</span><span class="p">:</span><span class="mi">123457</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"uuid"</span><span class="p">:</span><span class="s2">"aeb3147e-9939-4125-938x-a85c97d64825"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"created_at"</span><span class="p">:</span><span class="s2">"2018-11-30T12:41:18.000Z"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"updated_at"</span><span class="p">:</span><span class="s2">"2018-11-30T12:41:18.000Z"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"ticket_id"</span><span class="p">:</span><span class="mi">222222</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"deleted_at"</span><span class="p">:</span><span class="kc">null</span><span class="w">
+    </span><span class="nl">"ticket_id"</span><span class="p">:</span><span class="mi">111111</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"created_at"</span><span class="p">:</span><span class="s2">"2018-11-30T12:03:51.000Z"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"updated_at"</span><span class="p">:</span><span class="s2">"2018-11-30T12:03:51.000Z"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"deleted_at"</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"uuid"</span><span class="p">:</span><span class="s2">"e169x65x-ca51-4e9f-9d48-32e5819eb2b3"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ticket"</span><span class="p">:{</span><span class="w">
+      </span><span class="nl">"slug"</span><span class="p">:</span><span class="s2">"abc124"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"reference"</span><span class="p">:</span><span class="s2">"ABCD-2"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"email"</span><span class="p">:</span><span class="s2">"bob@example.com"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"first_name"</span><span class="p">:</span><span class="s2">"Bob"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"last_name"</span><span class="p">:</span><span class="s2">"Example"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"release"</span><span class="p">:{</span><span class="w">
+      </span><span class="nl">"slug"</span><span class="p">:</span><span class="s2">"early-bird"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"title"</span><span class="p">:</span><span class="s2">"Early Bird"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">]</span><span class="w">
 </span></code></pre></div>

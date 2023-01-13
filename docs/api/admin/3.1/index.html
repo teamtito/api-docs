@@ -320,7 +320,7 @@
             <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#authentication-developing-locally-confirm-you-can-connect" class="toc-h2 toc-link" data-title="Confirm you can connect">Confirm you can connect</a>
+                    <a href="#authentication-declining-confirm-you-can-connect" class="toc-h2 toc-link" data-title="Confirm you can connect">Confirm you can connect</a>
                   </li>
               </ul>
           </li>
@@ -888,7 +888,7 @@ it will only read and write test data without affecting your live data. Note thi
 <p>If you find your API token has been compromised it can be <a href="https://id.tito.io/api-access-tokens">revoked</a> and a new one generated.</p>
 
 <p>Your API token needs to be included in the <code>Authorization</code> header so your requests can be authenticated.</p>
-<h3 id='authentication-developing-locally-confirm-you-can-connect'>Confirm you can connect</h3><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">--request</span> GET <span class="se">\</span>
+<h3 id='authentication-declining-confirm-you-can-connect'>Confirm you can connect</h3><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">--request</span> GET <span class="se">\</span>
   <span class="nt">--url</span> <span class="s1">'https://api.tito.io/v3/hello'</span> <span class="se">\</span>
   <span class="nt">--header</span> <span class="s1">'Authorization: Token token=YOUR-API-TOKEN'</span> <span class="se">\</span>
   <span class="nt">--header</span> <span class="s1">'Accept: application/json'</span> <span class="se">\</span>
@@ -2265,17 +2265,17 @@ events, and show a schedule and itinerary to attendees.</p>
 
 <p>An event URL is the combination of the <code>account_slug</code> and the <code>event_slug</code>.</p>
 
-<p>For example <code>https://ti.to/ultimateconf/2022</code> is composed:</p>
+<p>For example <code>https://ti.to/ultimateconf/2023</code> is composed:</p>
 
 <ul>
 <li>The base <code>ti.to</code> URL</li>
 <li>The Ultimate Conf <code>account</code> slug <code>ultimateconf</code></li>
-<li>The specific <code>event</code> slug for the 2022 edition.</li>
+<li>The specific <code>event</code> slug for the 2023 edition.</li>
 </ul>
 
 <p>The equivalent event can be looked up using a similar URL structure with the API base URL:</p>
 
-<p><code>https://api.tito.io/v3/ultimateconf/2022</code></p>
+<p><code>https://api.tito.io/v3/ultimateconf/2023</code></p>
 <h2 id='events-attributes'>Attributes <i class="fa-regular fa-tags"></i></h2>
 <ul class="attribute-list">
 <li><div><code class="name">account_id</code><span class="type">integer</span><span class="read-only">read only</span></div><div class="attribute-description">Link to the account</div></li>
