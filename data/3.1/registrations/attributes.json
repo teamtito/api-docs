@@ -143,6 +143,18 @@
     "translated": false,
     "type": null
   },
+  "event": {
+    "description": "The event this registration belongs to, containing its `id`, `title`, `slug` and `path`.",
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": true,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": "Object"
+  },
   "expires_at": {
     "description": null,
     "expandable": false,
@@ -226,6 +238,18 @@
     "required": false,
     "translated": false,
     "type": null
+  },
+  "line_items": {
+    "description": "An array of `Line Items` attached to this registration.",
+    "expandable": true,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": false,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": "object array"
   },
   "locale": {
     "description": null,
@@ -443,6 +467,18 @@
     "translated": false,
     "type": null
   },
+  "receipts": {
+    "description": "An array of `Receipts` attached to this registration.",
+    "expandable": true,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": false,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": "object array"
+  },
   "reference": {
     "description": null,
     "expandable": false,
@@ -478,6 +514,18 @@
     "required": false,
     "translated": false,
     "type": null
+  },
+  "refunds": {
+    "description": "An array of `Refunds` attached to this registration.",
+    "expandable": true,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": false,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": "object array"
   },
   "registration_type": {
     "description": null,
@@ -562,6 +610,18 @@
     "required": false,
     "translated": false,
     "type": null
+  },
+  "tickets": {
+    "description": "An array of `Tickets` attached to this registration.",
+    "expandable": true,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": false,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": "object array"
   },
   "tickets_count": {
     "description": null,
