@@ -375,6 +375,52 @@ You can also pass data in using the `prefill` parameter in the URL:
 
 That's the equivalent of `prefill={"company_name":"My Company"}` but it's escaped for use in a URL.
 
+### Saving URL parameters in the metadata
+
+```html
+<tito-widget
+  event="ultimateconf/2013"
+  save-metadata-parameters="foo,bar"
+  ></tito-widget>
+```
+
+You can pass a list of URL parameters you want to add to the registration's `metadata`. For example, if you set the `save-metadata-parameters` attribute to "foo,bar" and then add this to the URL:
+
+`?foo=1&bar=2&something=3`
+
+Then the `metadata` will be set to:
+
+
+`{
+  "foo": "1",
+  "bar": "2"
+}`
+
+It ignores the `something` parameter because it's not in the list.
+
+### UTM parameters
+
+```html
+<tito-widget
+  event="ultimateconf/2013"
+  save-metadata-parameters="utm_*"
+  ></tito-widget>
+```
+
+You can use a wildcard in `save-metadata-parameters` to capture all UTM parameters by setting it to "utm_*". For example:
+
+`?utm_campaign=spring&utm_content=banner&utm_medium=cpc&utm_source=sample&utm_term=local%2Bevents`
+
+Would lead to:
+
+`{
+  "utm_campaign": "spring",
+  "utm_content": "banner",
+  "utm_medium": "cpc",
+  "utm_source": "sample",
+  "utm_term": "local%2Bevents"
+}`
+
 
 ## Plugins
 
