@@ -616,18 +616,6 @@
     "translated": false,
     "type": null
   },
-  "facebook_conversion_pixel_id": {
-    "description": null,
-    "expandable": false,
-    "expand_ids": false,
-    "expand_slugs": false,
-    "ignore": false,
-    "read_only": false,
-    "write_only": false,
-    "required": false,
-    "translated": false,
-    "type": null
-  },
   "facebook_share_message": {
     "description": null,
     "expandable": false,
@@ -641,42 +629,6 @@
     "type": null
   },
   "from_email": {
-    "description": null,
-    "expandable": false,
-    "expand_ids": false,
-    "expand_slugs": false,
-    "ignore": false,
-    "read_only": false,
-    "write_only": false,
-    "required": false,
-    "translated": false,
-    "type": null
-  },
-  "google_analytics_domains": {
-    "description": null,
-    "expandable": false,
-    "expand_ids": false,
-    "expand_slugs": false,
-    "ignore": false,
-    "read_only": false,
-    "write_only": false,
-    "required": false,
-    "translated": false,
-    "type": null
-  },
-  "google_analytics_property_id": {
-    "description": null,
-    "expandable": false,
-    "expand_ids": false,
-    "expand_slugs": false,
-    "ignore": false,
-    "read_only": false,
-    "write_only": false,
-    "required": false,
-    "translated": false,
-    "type": null
-  },
-  "google_conversion_id": {
     "description": null,
     "expandable": false,
     "expand_ids": false,
@@ -1948,30 +1900,6 @@
     "required": true,
     "translated": true,
     "type": "string"
-  },
-  "tracking_html": {
-    "description": null,
-    "expandable": false,
-    "expand_ids": false,
-    "expand_slugs": false,
-    "ignore": false,
-    "read_only": false,
-    "write_only": false,
-    "required": false,
-    "translated": false,
-    "type": "text"
-  },
-  "tracking_url": {
-    "description": null,
-    "expandable": false,
-    "expand_ids": false,
-    "expand_slugs": false,
-    "ignore": false,
-    "read_only": false,
-    "write_only": false,
-    "required": false,
-    "translated": false,
-    "type": "url"
   },
   "twitter_share_message": {
     "description": null,
