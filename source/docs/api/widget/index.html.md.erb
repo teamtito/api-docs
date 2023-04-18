@@ -433,6 +433,10 @@ Would lead to:
 
 Various plugins are available, including pre-defined integrations with third-party tools. To load plugins, you can append `with/<pluginname>` to the end of the `src` attribute of the `script` tag. You can use multiple plugins by separating them with a comma.
 
+### Development Mode
+
+The widget requires a secure https connection. If you try to load the widget on a plain http connection it will not work, a link to your event homepage on Tito will be loaded instead. The `development_mode` plugin allows you to bypass the https requirement if you only have a plain http connection available while developing your site and widget locally. The `development_mode` plugin must not be used in your production environment.
+
 ### Test Mode
 
 The `test_mode` plugin allows you to put through test transactions to see what your attendees will see when they register for your events. It’s very useful for you to be able to check over your Tito setup before you share your event publicly.
