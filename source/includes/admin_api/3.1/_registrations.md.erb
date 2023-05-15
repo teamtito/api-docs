@@ -34,6 +34,8 @@ You can sort on the following attributes:
 
 You can filter which registrations you get back too. For instance, to only get `unpaid` or `incomplete` registrations:
 
+#### By state
+
 `?search[states][]=unpaid&search[states][]=incomplete`
 
 Possible states are:
@@ -45,7 +47,9 @@ Possible states are:
 * `paid`
 * `unpaid`
 
-Or by time. This will show all registrations created since 1 Jan 2019 at 9am UTC:
+#### By time
+
+This will show all registrations created since 1 Jan 2019 at 9am UTC:
 
 `?search[created_at][gt]=2019-01-01T09:00:00+UTC`
 
@@ -68,6 +72,21 @@ So, for instance, to find all registrations that have been updated in the last h
 (where you obviously change that timestamp to be one hour ago).
 
  Note: if you don't use the `+UTC` suffix on those timestamps it will default to the time zone used by the event itself.
+
+#### By any text
+
+You can also search by text, which uses the same logic as the dashboard UI:
+
+* email
+* name
+* slug
+* reference
+* company name
+* discount code
+
+For example:
+
+`?q=Alice`
 
 ## Get a registration <%= icon_for :show %>
 

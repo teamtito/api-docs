@@ -41,7 +41,11 @@ You can sort on the following attributes:
 
 ### Filtering
 
-You can filter which tickets you get back too. For instance, to only get `incomplete` or `unassigned` tickets:
+You can filter which tickets you get back too.
+
+#### By state
+
+For instance, to only get `incomplete` or `unassigned` tickets:
 
 `?search[states][]=incomplete&search[states][]=unassigned`
 
@@ -65,7 +69,7 @@ If you select both `changes_allowed` and `changes_locked` then that's effectivel
 
 The list excludes archived tickets by default. If you select this state then it also includes archived tickets _as well_ as non-archived tickets.
 
-Or you can filter by type of ticket:
+#### By type
 
 `?search[types][]=manual`
 
@@ -74,19 +78,21 @@ Possible types are:
 * `manual` - added manually
 * `standard` - ordered by customer
 
-Or by [release](#releases):
+#### By release
 
 `?search[release_ids][]=early-bird`
 
 where "early-bird" is the release `slug`.
 
-Or by [activity](#activities):
+#### By activity
 
 `?search[activity_ids][]=1025351`
 
 where "1025351" is the activity `id`.
 
-Or by time. This will show all tickets created since 1 Jan 2019 at 9am UTC:
+#### By time
+
+This will show all tickets created since 1 Jan 2019 at 9am UTC:
 
 `?search[created_at][gt]=2019-01-01T09:00:00+UTC`
 
@@ -108,7 +114,23 @@ So, for instance, to find all tickets that have been updated in the last hour:
 
 (where you obviously change that timestamp to be one hour ago).
 
- Note: if you don't use the `+UTC` suffix on those timestamps it will default to the time zone used by the event itself.
+Note: if you don't use the `+UTC` suffix on those timestamps it will default to the time zone used by the event itself.
+
+#### By any text
+
+You can also search by text, which uses the same logic as the dashboard UI:
+
+* email
+* name
+* phone number
+* slug
+* reference
+* company name
+* tag
+
+For example:
+
+`?q=Alice`
 
 ## Get a Ticket
 
