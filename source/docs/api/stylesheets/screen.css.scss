@@ -533,7 +533,7 @@ body {
   h5,
   h6 {
     @extend %header-font;
-    font-size: 15px;
+    font-size: 16px;
     margin-top: 2.5em;
     margin-bottom: 0.8em;
   }
@@ -541,7 +541,8 @@ body {
   h4,
   h5,
   h6 {
-    font-size: 15px;
+    font-size: inherit;
+    margin-top: 1.5em;
   }
 
   div.warning {
