@@ -12,6 +12,12 @@ Pagination information is returned in the `meta` attribute in the response body.
 * `per_page` - The number of results returned in each page.
 * `overall_total` - The overall number of records without any filtering applied.
 
-A specific page can be retrieved by providing the `page` parameter:
+A specific page can be retrieved by providing the `page[number]` parameter:
 
-`<%= "#{config[:api_endpoint]}/:account_slug/:event_slug/activities/:activity_id?page=2" %>`
+`<%= "#{config[:api_endpoint]}/:account_slug/:event_slug/activities/:activity_id?page[number]=2" %>`
+
+The number of records returned in each page can be set with a `page[size]` parameter:
+
+`<%= "#{config[:api_endpoint]}/:account_slug/:event_slug/tickets?page[size]=100" %>`
+
+The default page size is 100 and the maximum page size is 1000.
