@@ -444,7 +444,7 @@
     "type": "string"
   },
   "state": {
-    "description": "Either `new`, `complete`, `incomplete`, `reminder`, or `void`. Default is `new`.",
+    "description": "Either `unassigned`, `complete`, `incomplete`, or `void`. Default is `unassigned`.",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
