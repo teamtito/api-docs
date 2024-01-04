@@ -1,4 +1,16 @@
 {
+  "block_registrations_if_not_applicable": {
+    "description": "Block registrations when discount cannot be applied to all discountable tickets. Default is `false`.",
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": false,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": "boolean"
+  },
   "code": {
     "description": "The code that will be distributed to provide a discount.",
     "expandable": false,
@@ -95,18 +107,6 @@
     "translated": false,
     "type": "integer"
   },
-  "only_show_attached": {
-    "description": "Only display tickets attached to this discount code when it is displayed or not e.g. display all publicly visible tickets. Default is `false`",
-    "expandable": false,
-    "expand_ids": false,
-    "expand_slugs": false,
-    "ignore": false,
-    "read_only": false,
-    "write_only": false,
-    "required": false,
-    "translated": false,
-    "type": "boolean"
-  },
   "quantity": {
     "description": "The number of tickets that can avail of this discount code.",
     "expandable": false,
@@ -155,18 +155,6 @@
     "translated": false,
     "type": "object array"
   },
-  "reveal_secret": {
-    "description": "Should secret tickets be revealed if this discount code is applied or not. Default is `false`.",
-    "expandable": false,
-    "expand_ids": false,
-    "expand_slugs": false,
-    "ignore": false,
-    "read_only": false,
-    "write_only": false,
-    "required": false,
-    "translated": false,
-    "type": "boolean"
-  },
   "share_url": {
     "description": "Shareable link to give access to the discount.",
     "expandable": false,
@@ -178,6 +166,32 @@
     "required": false,
     "translated": false,
     "type": "url"
+  },
+  "show_public_releases": {
+    "description": "Whether all public tickets are shown when this discount code is used. If set to \"all\" (default) then they are all shown; if set to \"only_attached\" then public tickets are only shown if they are attached to this discount code.",
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": false,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": "string",
+    "since": "3.1.0"
+  },
+  "show_secret_releases": {
+    "description": "Whether secret tickets are revealed when this discount code is used. Set to \"none\" (default) to have them not revealed;  \"if_discount_code_available\" to reveal them if this discount code is available; and \"even_if_discount_code_not_available\" if they should be revealed regardless of whether this discount code is available or not.",
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": false,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": "string",
+    "since": "3.1.0"
   },
   "start_at": {
     "description": "The time when the discount code becomes available.",
