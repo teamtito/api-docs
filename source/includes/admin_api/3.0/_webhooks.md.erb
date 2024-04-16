@@ -61,22 +61,6 @@ When you are developing your application locally you'll need to expose your loca
 environment to the Internet, so that Tito can send you webhooks and your application can
 process them.
 
+### Using ngrok
 
-### Using Serveo
-
-You can expose your local environment to the internet using [Serveo](https://serveo.net/)
-
-To expose your local environment to the internet:
-
-`ssh -R 80:localhost:4567 serveo.net` where `4567` is the port number your application
-is running on.
-
-You should see a line that looks something like this:
-
-`Forwarding HTTP traffic from https://duncan.serveo.net`
-
-Copy and paste that *.serveo.net URL into your browser. Notice you can now access
-your application using that URL.
-
-If your application listens for webhooks from Tito on `http://localhost:4567/webhooks/`
-you can create a webhook endpoint within Tito with the url `https://duncan.serveo.net/webhooks/`.
+You can expose your local environment to the internet using [ngrok](https://ngrok.com/use-cases/ingress-for-dev-test-environments)
