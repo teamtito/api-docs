@@ -56,7 +56,9 @@
     "where-do-you-live": "United States"
   },
   "last_updated_by_type": "admin",
-  "upgrades": "#<Upgrade::ActiveRecord_Associations_CollectionProxy:0x0000aaaaf4a51078>",
+  "upgrades": [
+
+  ],
   "upgrade_ids": [
 
   ],
