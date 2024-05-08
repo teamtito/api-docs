@@ -33,16 +33,8 @@
       "description": "Fired when a ticket is changed to a voided state. Free tickets that are cancelled by the attendee will also cause this webhook to fire."
     },
     {
-      "name": "registration.started",
-      "description": "Fired when a registration is started e.g. after they have selected tickets but before they have filled in any details."
-    },
-    {
       "name": "registration.updated",
       "description": "Fired when the registration is updated in the Tito admin area or via the API."
-    },
-    {
-      "name": "registration.filling",
-      "description": "Fired as soon as the person registering starts to filling in details like name, email, etc."
     },
     {
       "name": "registration.finished",
