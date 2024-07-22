@@ -127,14 +127,17 @@ The widget loading code expects to be loaded async, so when using the API, you s
 ```html
 <script>
 window.tito = window.tito || function() { (tito.q = tito.q || []).push(arguments);};
+
+// Specify which events are allowed to be loaded by the widget.
+tito("config.set", { allowedEvents: ["ultimateconf/2013"] });
 </script>
 ```
 
 You should define `tito` before you make any calls.
 
-### Mounting a widget
+You can use the JavaScript API to load a widget on-demand without using the `tito-widget` or `tito-button` custom elements. Note, if you are not using those custom elements you must specify an array list of events which are allowed to be loaded by the widget.
 
-You can use the JavaScript API to load a widget on-demand without using the `tito-widget` or `tito-button` custom elements.
+### Mounting a widget
 
 ```html
 <script>
