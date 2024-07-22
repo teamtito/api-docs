@@ -282,7 +282,7 @@
   color: #859900;
 }
     </style>
-    <link href="/docs/api/stylesheets/screen-aa9063c4.css" rel="stylesheet" media="screen" />
+    <link href="/docs/api/stylesheets/screen-9317edd5.css" rel="stylesheet" media="screen" />
     <link href="/docs/api/stylesheets/print-b5fdc97a.css" rel="stylesheet" media="print" />
       <script src="/docs/api/javascripts/all_nosearch-86e6fe79.js"></script>
 
@@ -296,10 +296,6 @@
         <img src="/docs/api/images/navbar-cad8cdcb.png" alt="" />
       </span>
     </a>
-    <div class="api-warning">
-  <p><b>API Early Access</b> Please note this API is under active development &mdash; view our <a href="/docs/api/changelog/">Changelog</a>&nbsp;for&nbsp;updates</p>
-</div>
-
     <div class="toc-wrapper">
       <a class="logo" href="/docs/api">
         <img src="/docs/api/images/tito-4b2eaf9c.svg" alt="" /> API Docs
@@ -338,6 +334,12 @@
                   </li>
                   <li>
                     <a href="#tito-widget-v2-custom-order-form-placeholders" class="toc-h2 toc-link" data-title="Custom order form placeholders">Custom order form placeholders</a>
+                  </li>
+                  <li>
+                    <a href="#tito-widget-v2-events-widget" class="toc-h2 toc-link" data-title="Events widget">Events widget</a>
+                  </li>
+                  <li>
+                    <a href="#tito-widget-v2-register-interest-widget" class="toc-h2 toc-link" data-title="Register interest widget">Register interest widget</a>
                   </li>
               </ul>
           </li>
@@ -424,12 +426,15 @@
 <p>The widget loading code expects to be loaded async, so when using the API, you should not expect that the <code>tito</code> function will be defined when you call it. Like other embedded JavaScript widget APIs, the <code>tito</code> function simply adds actions to a queue and processes them later.</p>
 <div class="highlight"><pre class="highlight html tab-html"><code><span class="nt">&lt;script&gt;</span>
 <span class="nb">window</span><span class="p">.</span><span class="nx">tito</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">tito</span> <span class="o">||</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="p">(</span><span class="nx">tito</span><span class="p">.</span><span class="nx">q</span> <span class="o">=</span> <span class="nx">tito</span><span class="p">.</span><span class="nx">q</span> <span class="o">||</span> <span class="p">[]).</span><span class="nx">push</span><span class="p">(</span><span class="nx">arguments</span><span class="p">);};</span>
+
+<span class="c1">// Specify which events are allowed to be loaded by the widget.</span>
+<span class="nx">tito</span><span class="p">(</span><span class="dl">"</span><span class="s2">config.set</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span> <span class="na">allowedEvents</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">ultimateconf/2013</span><span class="dl">"</span><span class="p">]</span> <span class="p">});</span>
 <span class="nt">&lt;/script&gt;</span>
 </code></pre></div>
 <p>You should define <code>tito</code> before you make any calls.</p>
-<h3 id='tito-widget-v2-javascript-api-mounting-a-widget'>Mounting a widget</h3>
-<p>You can use the JavaScript API to load a widget on-demand without using the <code>tito-widget</code> or <code>tito-button</code> custom elements.</p>
-<div class="highlight"><pre class="highlight html tab-html"><code><span class="nt">&lt;script&gt;</span>
+
+<p>You can use the JavaScript API to load a widget on-demand without using the <code>tito-widget</code> or <code>tito-button</code> custom elements. Note, if you are not using those custom elements you must specify an array list of events which are allowed to be loaded by the widget.</p>
+<h3 id='tito-widget-v2-javascript-api-mounting-a-widget'>Mounting a widget</h3><div class="highlight"><pre class="highlight html tab-html"><code><span class="nt">&lt;script&gt;</span>
   <span class="nx">tito</span><span class="p">(</span><span class="dl">"</span><span class="s2">widget.mount</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span><span class="na">el</span><span class="p">:</span> <span class="dl">"</span><span class="s2">#tito-widget</span><span class="dl">"</span><span class="p">,</span> <span class="na">event</span><span class="p">:</span> <span class="dl">"</span><span class="s2">ultimateconf/2013</span><span class="dl">"</span><span class="p">})</span>
 <span class="nt">&lt;/script&gt;</span>
 
@@ -629,12 +634,49 @@
 <p><code>https://mywebsite.com/?prefill=%7B%22company_name%22%3A%20%22My%20Company%22%7D</code></p>
 
 <p>That&#39;s the equivalent of <code>prefill={&quot;company_name&quot;:&quot;My Company&quot;}</code> but it&#39;s escaped for use in a URL.</p>
+<h3 id='tito-widget-v2-prefill-data-saving-url-parameters-in-the-metadata'>Saving URL parameters in the metadata</h3><div class="highlight"><pre class="highlight html tab-html"><code><span class="nt">&lt;tito-widget</span>
+  <span class="na">event=</span><span class="s">"ultimateconf/2013"</span>
+  <span class="na">save-metadata-parameters=</span><span class="s">"foo,bar"</span>
+  <span class="nt">&gt;&lt;/tito-widget&gt;</span>
+</code></pre></div>
+<p>You can pass a list of URL parameters you want to add to the registration&#39;s <code>metadata</code>. For example, if you set the <code>save-metadata-parameters</code> attribute to &quot;foo,bar&quot; and then add this to the URL:</p>
+
+<p><code>?foo=1&amp;bar=2&amp;something=3</code></p>
+
+<p>Then the <code>metadata</code> will be set to:</p>
+
+<p><code>{
+  &quot;foo&quot;: &quot;1&quot;,
+  &quot;bar&quot;: &quot;2&quot;
+}</code></p>
+
+<p>It ignores the <code>something</code> parameter because it&#39;s not in the list.</p>
+<h3 id='tito-widget-v2-prefill-data-utm-parameters'>UTM parameters</h3><div class="highlight"><pre class="highlight html tab-html"><code><span class="nt">&lt;tito-widget</span>
+  <span class="na">event=</span><span class="s">"ultimateconf/2013"</span>
+  <span class="na">save-metadata-parameters=</span><span class="s">"utm_*"</span>
+  <span class="nt">&gt;&lt;/tito-widget&gt;</span>
+</code></pre></div>
+<p>You can use a wildcard in <code>save-metadata-parameters</code> to capture all UTM parameters by setting it to &quot;utm_*&quot;. For example:</p>
+
+<p><code>?utm_campaign=spring&amp;utm_content=banner&amp;utm_medium=cpc&amp;utm_source=sample&amp;utm_term=local%2Bevents</code></p>
+
+<p>Would lead to:</p>
+
+<p><code>{
+  &quot;utm_campaign&quot;: &quot;spring&quot;,
+  &quot;utm_content&quot;: &quot;banner&quot;,
+  &quot;utm_medium&quot;: &quot;cpc&quot;,
+  &quot;utm_source&quot;: &quot;sample&quot;,
+  &quot;utm_term&quot;: &quot;local%2Bevents&quot;
+}</code></p>
 <h2 id='tito-widget-v2-plugins'>Plugins</h2><div class="highlight"><pre class="highlight html tab-html"><code><span class="nt">&lt;script
   </span><span class="na">src=</span><span class="s">'https://js.tito.io/v2/with/plugin1,plugin2'</span>
   <span class="na">async</span>
   <span class="nt">&gt;&lt;/script&gt;</span>
 </code></pre></div>
 <p>Various plugins are available, including pre-defined integrations with third-party tools. To load plugins, you can append <code>with/&lt;pluginname&gt;</code> to the end of the <code>src</code> attribute of the <code>script</code> tag. You can use multiple plugins by separating them with a comma.</p>
+<h3 id='tito-widget-v2-plugins-development-mode'>Development Mode</h3>
+<p>The widget requires a secure https connection. If you try to load the widget on a plain http connection it will not work, a link to your event homepage on Tito will be loaded instead. The <code>development_mode</code> plugin allows you to bypass the https requirement if you only have a plain http connection available while developing your site and widget locally. The <code>development_mode</code> plugin must not be used in your production environment.</p>
 <h3 id='tito-widget-v2-plugins-test-mode'>Test Mode</h3>
 <p>The <code>test_mode</code> plugin allows you to put through test transactions to see what your attendees will see when they register for your events. It’s very useful for you to be able to check over your Tito setup before you share your event publicly.</p>
 <h3 id='tito-widget-v2-plugins-facebook'>Facebook</h3>
@@ -644,7 +686,9 @@
 
 <p>Using the widget inline also allows you to listen to any of the javascript <a href="#tito-widget-v2-callbacks">callbacks</a>.</p>
 <h3 id='tito-widget-v2-plugins-google-analytics'>Google Analytics</h3>
-<p>We have three different plugins for Google Analytics:</p>
+<p>Google Analytics is changing. Their eCommerce tracking is moving to <code>GA4</code>, and as such, we are trialling a new <code>ga4</code> plugin.</p>
+
+<p>The below plugins are now deprecated:</p>
 
 <ul>
 <li><code>google_analytics</code></li>
@@ -664,7 +708,13 @@
   <span class="nt">&gt;&lt;/tito-widget&gt;</span>
 </code></pre></div>
 <p>You can use <code>email-placeholder</code> and <code>name-placeholder</code> attributes to set custom placeholders for the name and email fields on the order form.</p>
-
+<h2 id='tito-widget-v2-events-widget'>Events widget</h2>
+<p>To display a list of your upcoming and past events on your site, like what appears on your Tito public account timeline <a href="https://ti.to/events" target="_blank">here</a> for example, you can use the <code>&lt;tito-events&gt;</code> widget.</p>
+<div class="highlight"><pre class="highlight html tab-html"><code><span class="nt">&lt;tito-events</span> <span class="na">account=</span><span class="s">"ultimateconf"</span><span class="nt">&gt;&lt;/tito-events&gt;</span>
+</code></pre></div><h2 id='tito-widget-v2-register-interest-widget'>Register interest widget</h2>
+<p>To add a form on your site for people to <a href="https://help.tito.io/en/articles/2003003-interested-people" target="_blank">register interest</a> in your event, you can use the <code>&lt;tito-register-interest&gt;</code> widget.</p>
+<div class="highlight"><pre class="highlight html tab-html"><code><span class="nt">&lt;tito-register-interest</span> <span class="na">event=</span><span class="s">"ultimateconf/2013"</span><span class="nt">&gt;&lt;/tito-register-interest&gt;</span>
+</code></pre></div>
 <p><br>
 <br>
 <br>

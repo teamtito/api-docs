@@ -282,7 +282,7 @@
   color: #859900;
 }
     </style>
-    <link href="/docs/api/stylesheets/screen-aa9063c4.css" rel="stylesheet" media="screen" />
+    <link href="/docs/api/stylesheets/screen-9317edd5.css" rel="stylesheet" media="screen" />
     <link href="/docs/api/stylesheets/print-b5fdc97a.css" rel="stylesheet" media="print" />
       <script src="/docs/api/javascripts/all-506f4b9d.js"></script>
 
@@ -296,10 +296,6 @@
         <img src="/docs/api/images/navbar-cad8cdcb.png" alt="" />
       </span>
     </a>
-    <div class="api-warning">
-  <p><b>API Early Access</b> Please note this API is under active development &mdash; view our <a href="/docs/api/changelog/">Changelog</a>&nbsp;for&nbsp;updates</p>
-</div>
-
     <div class="toc-wrapper">
       <a class="logo" href="/docs/api">
         <img src="/docs/api/images/tito-4b2eaf9c.svg" alt="" /> Admin API
@@ -320,7 +316,7 @@
             <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#authentication-20th-nov-2018-confirm-you-can-connect" class="toc-h2 toc-link" data-title="Confirm you can connect">Confirm you can connect</a>
+                    <a href="#authentication-confirm-you-can-connect" class="toc-h2 toc-link" data-title="Confirm you can connect">Confirm you can connect</a>
                   </li>
               </ul>
           </li>
@@ -334,13 +330,13 @@
             <a href="#views" class="toc-h1 toc-link" data-title="Views">Views</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#views-20th-nov-2018-short" class="toc-h2 toc-link" data-title=" Short"> Short</a>
+                    <a href="#views-short" class="toc-h2 toc-link" data-title=" Short"> Short</a>
                   </li>
                   <li>
-                    <a href="#views-20th-nov-2018-extended" class="toc-h2 toc-link" data-title="Extended">Extended</a>
+                    <a href="#views-extended" class="toc-h2 toc-link" data-title="Extended">Extended</a>
                   </li>
                   <li>
-                    <a href="#views-20th-nov-2018-choosing-the-view" class="toc-h2 toc-link" data-title="Choosing the view">Choosing the view</a>
+                    <a href="#views-choosing-the-view" class="toc-h2 toc-link" data-title="Choosing the view">Choosing the view</a>
                   </li>
               </ul>
           </li>
@@ -791,7 +787,7 @@ it will only read and write test data without affecting your live data. Note thi
 <p>If you find your API token has been compromised it can be <a href="https://id.tito.io/api-access-tokens">revoked</a> and a new one generated.</p>
 
 <p>Your API token needs to be included in the <code>Authorization</code> header so your requests can be authenticated.</p>
-<h3 id='authentication-20th-nov-2018-confirm-you-can-connect'>Confirm you can connect</h3><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">--request</span> GET <span class="se">\</span>
+<h3 id='authentication-confirm-you-can-connect'>Confirm you can connect</h3><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">--request</span> GET <span class="se">\</span>
   <span class="nt">--url</span> <span class="s1">'https://api.tito.io/v3/hello'</span> <span class="se">\</span>
   <span class="nt">--header</span> <span class="s1">'Authorization: Token token=YOUR-API-TOKEN'</span> <span class="se">\</span>
   <span class="nt">--header</span> <span class="s1">'Accept: application/json'</span> <span class="se">\</span>
@@ -834,9 +830,15 @@ it will only read and write test data without affecting your live data. Note thi
 <li><code>overall_total</code> - The overall number of records without any filtering applied.</li>
 </ul>
 
-<p>A specific page can be retrieved by providing the <code>page</code> parameter:</p>
+<p>A specific page can be retrieved by providing the <code>page[number]</code> parameter:</p>
 
-<p><code>https://api.tito.io/v3/:account_slug/:event_slug/activities/:activity_id?page=2</code></p>
+<p><code>https://api.tito.io/v3/:account_slug/:event_slug/activities/:activity_id?page[number]=2</code></p>
+
+<p>The number of records returned in each page can be set with a <code>page[size]</code> parameter:</p>
+
+<p><code>https://api.tito.io/v3/:account_slug/:event_slug/tickets?page[size]=100</code></p>
+
+<p>The default page size is 100 and the maximum page size is 1000.</p>
 <h1 id='views'>Views</h1>
 <p>We have two views on the data we return:</p>
 
@@ -844,11 +846,11 @@ it will only read and write test data without affecting your live data. Note thi
 <li>Short</li>
 <li>Extended</li>
 </ul>
-<h3 id='views-20th-nov-2018-short'> Short</h3>
+<h3 id='views-short'> Short</h3>
 <p>This is what you get if you ask for a list of records (e.g. <a href="#registrations-get-all-registrations">Get all Registrations</a>) then we give you the &quot;short&quot; view of the data, so that we can make the response as quick as possible and you don&#39;t get a lot of data all at once.</p>
-<h3 id='views-20th-nov-2018-extended'>Extended</h3>
+<h3 id='views-extended'>Extended</h3>
 <p>If you ask for a single record (e.g. <a href="#registrations-get-a-registration">Get a Registration</a>) then we give you the &quot;extended&quot; view which gives you more detailed information and possible associated records.</p>
-<h3 id='views-20th-nov-2018-choosing-the-view'>Choosing the view</h3>
+<h3 id='views-choosing-the-view'>Choosing the view</h3>
 <p>You can override this by passing the <code>view</code> parameter. For example:</p>
 
 <p><code>GET https://api.tito.io/v3/:account_slug/:event_slug/tickets?view=extended</code></p>
@@ -2208,17 +2210,17 @@ events, and show a schedule and itinerary to attendees.</p>
 
 <p>An event URL is comprised of the combination of the <code>account_slug</code> and the <code>event_slug</code>.</p>
 
-<p>For example <code>https://ti.to/ultimateconf/2023</code> is composed:</p>
+<p>For example <code>https://ti.to/ultimateconf/2024</code> is composed:</p>
 
 <ul>
 <li>The base <code>ti.to</code> URL</li>
 <li>The Ultimate Conf <code>Account</code> slug <code>ultimateconf</code></li>
-<li>The specific <code>Event</code> slug for the 2023 edition.</li>
+<li>The specific <code>Event</code> slug for the 2024 edition.</li>
 </ul>
 
 <p>The equivalent event can be looked up using a similar URL structure with the API base URL:</p>
 
-<p><code>https://api.tito.io/v3/ultimateconf/2023</code></p>
+<p><code>https://api.tito.io/v3/ultimateconf/2024</code></p>
 <h2 id='events-attributes'>Attributes</h2>
 <table><thead>
 <tr>
@@ -4152,7 +4154,7 @@ lookup the latest status of the duplication. The status can be either:</p>
 </ul>
 <h3 id='registrations-get-all-registrations-filtering'>Filtering</h3>
 <p>You can filter which registrations you get back too. For instance, to only get <code>unpaid</code> or <code>incomplete</code> registrations:</p>
-
+<h4 id='registrations-get-all-registrations-filtering-by-state'>By state</h4>
 <p><code>?search[states][]=unpaid&amp;search[states][]=incomplete</code></p>
 
 <p>Possible states are:</p>
@@ -4165,8 +4167,8 @@ lookup the latest status of the duplication. The status can be either:</p>
 <li><code>paid</code></li>
 <li><code>unpaid</code></li>
 </ul>
-
-<p>Or by time. This will show all registrations created since 1 Jan 2019 at 9am UTC:</p>
+<h4 id='registrations-get-all-registrations-filtering-by-time'>By time</h4>
+<p>This will show all registrations created since 1 Jan 2019 at 9am UTC:</p>
 
 <p><code>?search[created_at][gt]=2019-01-01T09:00:00+UTC</code></p>
 
@@ -4193,6 +4195,21 @@ lookup the latest status of the duplication. The status can be either:</p>
 <p>(where you obviously change that timestamp to be one hour ago).</p>
 
 <p>Note: if you don&#39;t use the <code>+UTC</code> suffix on those timestamps it will default to the time zone used by the event itself.</p>
+<h4 id='registrations-get-all-registrations-filtering-by-any-text'>By any text</h4>
+<p>You can also search by text, which uses the same logic as the dashboard UI:</p>
+
+<ul>
+<li>email</li>
+<li>name</li>
+<li>slug</li>
+<li>reference</li>
+<li>company name</li>
+<li>discount code</li>
+</ul>
+
+<p>For example:</p>
+
+<p><code>?q=Alice</code></p>
 <h2 id='registrations-get-a-registration'>Get a Registration</h2>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">--request</span> GET <span class="se">\</span>
   <span class="nt">--url</span> <span class="s1">'https://api.tito.io/v3/:account_slug/:event_slug/registrations/:registration_slug'</span> <span class="se">\</span>
@@ -7337,7 +7354,9 @@ and can only be purchased through the shareable URL.</p>
 <li><code>number</code></li>
 </ul>
 <h3 id='tickets-get-all-tickets-filtering'>Filtering</h3>
-<p>You can filter which tickets you get back too. For instance, to only get <code>incomplete</code> or <code>unassigned</code> tickets:</p>
+<p>You can filter which tickets you get back too.</p>
+<h4 id='tickets-get-all-tickets-filtering-by-state'>By state</h4>
+<p>For instance, to only get <code>incomplete</code> or <code>unassigned</code> tickets:</p>
 
 <p><code>?search[states][]=incomplete&amp;search[states][]=unassigned</code></p>
 
@@ -7366,9 +7385,7 @@ and can only be purchased through the shareable URL.</p>
 </ul>
 
 <p>The list excludes archived tickets by default. If you select this state then it also includes archived tickets <em>as well</em> as non-archived tickets.</p>
-
-<p>Or you can filter by type of ticket:</p>
-
+<h4 id='tickets-get-all-tickets-filtering-by-type'>By type</h4>
 <p><code>?search[types][]=manual</code></p>
 
 <p>Possible types are:</p>
@@ -7377,20 +7394,16 @@ and can only be purchased through the shareable URL.</p>
 <li><code>manual</code> - added manually</li>
 <li><code>standard</code> - ordered by customer</li>
 </ul>
-
-<p>Or by <a href="#releases">release</a>:</p>
-
+<h4 id='tickets-get-all-tickets-filtering-by-release'>By release</h4>
 <p><code>?search[release_ids][]=early-bird</code></p>
 
 <p>where &quot;early-bird&quot; is the release <code>slug</code>.</p>
-
-<p>Or by <a href="#activities">activity</a>:</p>
-
+<h4 id='tickets-get-all-tickets-filtering-by-activity'>By activity</h4>
 <p><code>?search[activity_ids][]=1025351</code></p>
 
 <p>where &quot;1025351&quot; is the activity <code>id</code>.</p>
-
-<p>Or by time. This will show all tickets created since 1 Jan 2019 at 9am UTC:</p>
+<h4 id='tickets-get-all-tickets-filtering-by-time'>By time</h4>
+<p>This will show all tickets created since 1 Jan 2019 at 9am UTC:</p>
 
 <p><code>?search[created_at][gt]=2019-01-01T09:00:00+UTC</code></p>
 
@@ -7417,6 +7430,22 @@ and can only be purchased through the shareable URL.</p>
 <p>(where you obviously change that timestamp to be one hour ago).</p>
 
 <p>Note: if you don&#39;t use the <code>+UTC</code> suffix on those timestamps it will default to the time zone used by the event itself.</p>
+<h4 id='tickets-get-all-tickets-filtering-by-any-text'>By any text</h4>
+<p>You can also search by text, which uses the same logic as the dashboard UI:</p>
+
+<ul>
+<li>email</li>
+<li>name</li>
+<li>phone number</li>
+<li>slug</li>
+<li>reference</li>
+<li>company name</li>
+<li>tag</li>
+</ul>
+
+<p>For example:</p>
+
+<p><code>?q=Alice</code></p>
 <h2 id='tickets-get-a-ticket'>Get a Ticket</h2>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">--request</span> GET <span class="se">\</span>
   <span class="nt">--url</span> <span class="s1">'https://api.tito.io/v3/:account_slug/:event_slug/tickets/:ticket_slug'</span> <span class="se">\</span>
@@ -8188,16 +8217,8 @@ header.</p>
 <td>Fired when a ticket is changed to a voided state. Free tickets that are cancelled by the attendee will also cause this webhook to fire.</td>
 </tr>
 <tr>
-<td><code>registration.started</code></td>
-<td>Fired when a registration is started e.g. after they have selected tickets but before they have filled in any details.</td>
-</tr>
-<tr>
 <td><code>registration.updated</code></td>
 <td>Fired when the registration is updated in the Tito admin area or via the API.</td>
-</tr>
-<tr>
-<td><code>registration.filling</code></td>
-<td>Fired as soon as the person registering starts to filling in details like name, email, etc.</td>
 </tr>
 <tr>
 <td><code>registration.finished</code></td>

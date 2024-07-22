@@ -282,7 +282,7 @@
   color: #859900;
 }
     </style>
-    <link href="/docs/api/stylesheets/screen-aa9063c4.css" rel="stylesheet" media="screen" />
+    <link href="/docs/api/stylesheets/screen-9317edd5.css" rel="stylesheet" media="screen" />
     <link href="/docs/api/stylesheets/print-b5fdc97a.css" rel="stylesheet" media="print" />
       <script src="/docs/api/javascripts/all-506f4b9d.js"></script>
 
@@ -296,10 +296,6 @@
         <img src="/docs/api/images/navbar-cad8cdcb.png" alt="" />
       </span>
     </a>
-    <div class="api-warning">
-  <p><b>API Early Access</b> Please note this API is under active development &mdash; view our <a href="/docs/api/changelog/">Changelog</a>&nbsp;for&nbsp;updates</p>
-</div>
-
     <div class="toc-wrapper">
       <a class="logo" href="/docs/api">
         <img src="/docs/api/images/tito-4b2eaf9c.svg" alt="" /> Admin API
@@ -320,7 +316,7 @@
             <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#authentication-declining-confirm-you-can-connect" class="toc-h2 toc-link" data-title="Confirm you can connect">Confirm you can connect</a>
+                    <a href="#authentication-confirm-you-can-connect" class="toc-h2 toc-link" data-title="Confirm you can connect">Confirm you can connect</a>
                   </li>
               </ul>
           </li>
@@ -888,7 +884,7 @@ it will only read and write test data without affecting your live data. Note thi
 <p>If you find your API token has been compromised it can be <a href="https://id.tito.io/api-access-tokens">revoked</a> and a new one generated.</p>
 
 <p>Your API token needs to be included in the <code>Authorization</code> header so your requests can be authenticated.</p>
-<h3 id='authentication-declining-confirm-you-can-connect'>Confirm you can connect</h3><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">--request</span> GET <span class="se">\</span>
+<h3 id='authentication-confirm-you-can-connect'>Confirm you can connect</h3><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">--request</span> GET <span class="se">\</span>
   <span class="nt">--url</span> <span class="s1">'https://api.tito.io/v3/hello'</span> <span class="se">\</span>
   <span class="nt">--header</span> <span class="s1">'Authorization: Token token=YOUR-API-TOKEN'</span> <span class="se">\</span>
   <span class="nt">--header</span> <span class="s1">'Accept: application/json'</span> <span class="se">\</span>
@@ -931,9 +927,9 @@ it will only read and write test data without affecting your live data. Note thi
 <li><code>overall_total</code> - The overall number of records without any filtering applied.</li>
 </ul>
 
-<p>A specific page can be retrieved by providing the <code>page</code> parameter:</p>
+<p>A specific page can be retrieved by providing the <code>page[number]</code> parameter:</p>
 
-<p><code>https://api.tito.io/v3/:account_slug/:event_slug/activities/:activity_id?page=2</code></p>
+<p><code>https://api.tito.io/v3/:account_slug/:event_slug/activities/:activity_id?page[number]=2</code></p>
 
 <p>The number of records returned in each page can be set with a <code>page[size]</code> parameter:</p>
 
@@ -1938,6 +1934,7 @@ events, and show a schedule and itinerary to attendees.</p>
 <p><i class="fa-regular fa-up-right-from-square fa-xl mr-1"></i> <a href="https://help.tito.io/en/articles/2003023-discount-codes" target="_blank">Read more about discount codes</a></p>
 <h2 id='discount-codes-attributes'>Attributes <i class="fa-regular fa-tags"></i></h2>
 <ul class="attribute-list">
+<li><div><code class="name">block_registrations_if_not_applicable</code><span class="type">boolean</span></div><div class="attribute-description">Block registrations when discount cannot be applied to all discountable tickets. Default is <code>false</code>.</div></li>
 <li><div><code class="name">code</code><span class="type">String</span><span class="required">required</span></div><div class="attribute-description">The code that will be distributed to provide a discount.</div></li>
 <li><div><code class="name">description</code><span class="type">String</span></div><div class="attribute-description">Shown on the payment form.</div></li>
 <li><div><code class="name">description_for_organizer</code><span class="type">String</span></div><div class="attribute-description">Only visible to organizers. Useful for keeping track of what discount codes are for.</div></li>
@@ -1945,13 +1942,13 @@ events, and show a schedule and itinerary to attendees.</p>
 <li><div><code class="name">end_at</code><span class="type">datetime</span></div><div class="attribute-description">The time when the discount code becomes unavailable.</div></li>
 <li><div><code class="name">max_quantity_per_release</code><span class="type">integer</span></div><div class="attribute-description">Discount only applies to a maximum of this number.</div></li>
 <li><div><code class="name">min_quantity_per_release</code><span class="type">integer</span></div><div class="attribute-description">Discount only applies if this many tickets are selected.</div></li>
-<li><div><code class="name">only_show_attached</code><span class="type">boolean</span></div><div class="attribute-description">Only display tickets attached to this discount code when it is displayed or not e.g. display all publicly visible tickets. Default is <code>false</code></div></li>
 <li><div><code class="name">quantity</code><span class="type">integer</span></div><div class="attribute-description">The number of tickets that can avail of this discount code.</div></li>
 <li><div><code class="name">quantity_used</code><span class="type">integer</span><span class="read-only">read only</span></div><div class="attribute-description">The number of tickets this discount code has been applied to.</div></li>
 <li><div><code class="name">registrations_count</code><span class="type">integer</span><span class="read-only">read only</span></div><div class="attribute-description">The number of <code>registrations</code> that used this discount code. Will be more than the <code>quantity_used</code> if people buy multiple <code>tickets</code> at the same time.</div></li>
 <li><div><code class="name">releases</code><span class="type">object array</span><span class="expandable">expandable</span></div><div class="attribute-description">The <code>releases</code> this discount code can be applied to. This attribute is hidden by default but you can expand it using <code>?expand=releases</code>. See <a href="#releases">releases</a>.</div><div class="sub-attribute"><code class="name">releases_ids</code><span class="type">integer array</span><span class="expandable">expandable</span></div><div class="sub-attribute-description">Or use <code>releases_ids</code> and just get an array of <code>id</code> values.</div><div class="sub-attribute"><code class="name">releases_slugs</code><span class="type">string array</span><span class="expandable">expandable</span></div><div class="sub-attribute-description">Or use <code>releases_slugs</code> and just get an array of <code>slug</code> values.</div></li>
-<li><div><code class="name">reveal_secret</code><span class="type">boolean</span></div><div class="attribute-description">Should secret tickets be revealed if this discount code is applied or not. Default is <code>false</code>.</div></li>
 <li><div><code class="name">share_url</code><span class="type">url</span></div><div class="attribute-description">Shareable link to give access to the discount.</div></li>
+<li><div><code class="name">show_public_releases</code><span class="type">string</span></div><div class="attribute-description">Whether all public tickets are shown when this discount code is used. If set to "all" (default) then they are all shown; if set to "only_attached" then public tickets are only shown if they are attached to this discount code.</div></li>
+<li><div><code class="name">show_secret_releases</code><span class="type">string</span></div><div class="attribute-description">Whether secret tickets are revealed when this discount code is used. Set to "none" (default) to have them not revealed;  "if_discount_code_available" to reveal them if this discount code is available; and "even_if_discount_code_not_available" if they should be revealed regardless of whether this discount code is available or not.</div></li>
 <li><div><code class="name">start_at</code><span class="type">datetime</span></div><div class="attribute-description">The time when the discount code becomes available.</div></li>
 <li><div><code class="name">state</code><span class="type">string</span></div><div class="attribute-description">Either <code>upcoming</code>, <code>current</code> or <code>past</code> depending on the <code>start_at</code> and <code>end_at</code> values.</div></li>
 <li><div><code class="name">tickets_count</code><span class="type">integer</span></div><div class="attribute-description">How many tickets have been bought with this discount code.</div></li>
@@ -1983,17 +1980,18 @@ events, and show a schedule and itinerary to attendees.</p>
       </span><span class="nl">"end_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
       </span><span class="nl">"max_quantity_per_release"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
       </span><span class="nl">"min_quantity_per_release"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"only_show_attached"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
       </span><span class="nl">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
       </span><span class="nl">"quantity_used"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
       </span><span class="nl">"registrations_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"reveal_secret"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"show_public_releases"</span><span class="p">:</span><span class="w"> </span><span class="s2">"all"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"show_secret_releases"</span><span class="p">:</span><span class="w"> </span><span class="s2">"none"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"share_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://ti.to/demo/awesomeconf/discount/HALFPRICE"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"start_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
       </span><span class="nl">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"current"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"tickets_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
       </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PercentOffDiscountCode"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"50.0"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"block_registrations_if_not_applicable"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
       </span><span class="nl">"disable_for_degressive"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="p">{</span><span class="w">
@@ -2005,17 +2003,18 @@ events, and show a schedule and itinerary to attendees.</p>
       </span><span class="nl">"end_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
       </span><span class="nl">"max_quantity_per_release"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
       </span><span class="nl">"min_quantity_per_release"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"only_show_attached"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
       </span><span class="nl">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
       </span><span class="nl">"quantity_used"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
       </span><span class="nl">"registrations_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"reveal_secret"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"show_public_releases"</span><span class="p">:</span><span class="w"> </span><span class="s2">"all"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"show_secret_releases"</span><span class="p">:</span><span class="w"> </span><span class="s2">"none"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"share_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://ti.to/demo/awesomeconf/discount/FREE2U"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"start_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
       </span><span class="nl">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"current"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"tickets_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
       </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MoneyOffDiscountCode"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.0"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"block_registrations_if_not_applicable"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
       </span><span class="nl">"disable_for_degressive"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">],</span><span class="w">
@@ -2112,17 +2111,18 @@ events, and show a schedule and itinerary to attendees.</p>
     </span><span class="nl">"end_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
     </span><span class="nl">"max_quantity_per_release"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
     </span><span class="nl">"min_quantity_per_release"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"only_show_attached"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
     </span><span class="nl">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
     </span><span class="nl">"quantity_used"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
     </span><span class="nl">"registrations_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"reveal_secret"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"show_public_releases"</span><span class="p">:</span><span class="w"> </span><span class="s2">"all"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"show_secret_releases"</span><span class="p">:</span><span class="w"> </span><span class="s2">"none"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"share_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://ti.to/demo/awesomeconf/discount/FREE2U"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"start_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
     </span><span class="nl">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"current"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"tickets_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
     </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MoneyOffDiscountCode"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.0"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"block_registrations_if_not_applicable"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
     </span><span class="nl">"disable_for_degressive"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="nl">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -2162,17 +2162,18 @@ events, and show a schedule and itinerary to attendees.</p>
     </span><span class="nl">"end_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
     </span><span class="nl">"max_quantity_per_release"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
     </span><span class="nl">"min_quantity_per_release"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"only_show_attached"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
     </span><span class="nl">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
     </span><span class="nl">"quantity_used"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
     </span><span class="nl">"registrations_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"reveal_secret"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"show_public_releases"</span><span class="p">:</span><span class="w"> </span><span class="s2">"all"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"show_secret_releases"</span><span class="p">:</span><span class="w"> </span><span class="s2">"none"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"share_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://ti.to/demo/awesomeconf/discount/NcIgbNNuzOtOwg"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"start_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
     </span><span class="nl">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"current"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"tickets_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
     </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PercentOffDiscountCode"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"50.0"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"block_registrations_if_not_applicable"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
     </span><span class="nl">"disable_for_degressive"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="nl">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -2214,17 +2215,18 @@ events, and show a schedule and itinerary to attendees.</p>
     </span><span class="nl">"end_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
     </span><span class="nl">"max_quantity_per_release"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
     </span><span class="nl">"min_quantity_per_release"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"only_show_attached"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
     </span><span class="nl">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
     </span><span class="nl">"quantity_used"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
     </span><span class="nl">"registrations_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"reveal_secret"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"show_public_releases"</span><span class="p">:</span><span class="w"> </span><span class="s2">"all"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"show_secret_releases"</span><span class="p">:</span><span class="w"> </span><span class="s2">"none"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"share_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://ti.to/demo/awesomeconf/discount/FREE2U"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"start_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
     </span><span class="nl">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"current"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"tickets_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
     </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MoneyOffDiscountCode"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.0"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"block_registrations_if_not_applicable"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
     </span><span class="nl">"disable_for_degressive"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="nl">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -2265,17 +2267,17 @@ events, and show a schedule and itinerary to attendees.</p>
 
 <p>An event URL is the combination of the <code>account_slug</code> and the <code>event_slug</code>.</p>
 
-<p>For example <code>https://ti.to/ultimateconf/2023</code> is composed:</p>
+<p>For example <code>https://ti.to/ultimateconf/2024</code> is composed:</p>
 
 <ul>
 <li>The base <code>ti.to</code> URL</li>
 <li>The Ultimate Conf <code>account</code> slug <code>ultimateconf</code></li>
-<li>The specific <code>event</code> slug for the 2023 edition.</li>
+<li>The specific <code>event</code> slug for the 2024 edition.</li>
 </ul>
 
 <p>The equivalent event can be looked up using a similar URL structure with the API base URL:</p>
 
-<p><code>https://api.tito.io/v3/ultimateconf/2023</code></p>
+<p><code>https://api.tito.io/v3/ultimateconf/2024</code></p>
 <h2 id='events-attributes'>Attributes <i class="fa-regular fa-tags"></i></h2>
 <ul class="attribute-list">
 <li><div><code class="name">account_id</code><span class="type">integer</span><span class="read-only">read only</span></div><div class="attribute-description">Link to the account</div></li>
@@ -2324,12 +2326,8 @@ events, and show a schedule and itinerary to attendees.</p>
 <li><div><code class="name">email_invoice</code></div></li>
 <li><div><code class="name">end_date</code><span class="type">date</span></div><div class="attribute-description">The date the event is going to end</div></li>
 <li><div><code class="name">external_order_reference_format</code></div></li>
-<li><div><code class="name">facebook_conversion_pixel_id</code></div></li>
 <li><div><code class="name">facebook_share_message</code><span class="translated">translated</span><span class="translated-note">*</span></div></li>
 <li><div><code class="name">from_email</code></div></li>
-<li><div><code class="name">google_analytics_domains</code></div></li>
-<li><div><code class="name">google_analytics_property_id</code></div></li>
-<li><div><code class="name">google_conversion_id</code></div></li>
 <li><div><code class="name">happening_in</code></div><div class="attribute-description">Either <code>past</code>, <code>now</code>, <code>future</code> or <code>unknown</code> (if <code>start_date</code> is blank).</div></li>
 <li><div><code class="name">hide_tax_types</code></div></li>
 <li><div><code class="name">invoice_change_cutoff_days</code></div></li>
@@ -2432,8 +2430,6 @@ events, and show a schedule and itinerary to attendees.</p>
 <li><div><code class="name">tickets_form_label</code><span class="translated">translated</span><span class="translated-note">*</span></div></li>
 <li><div><code class="name">timezone</code><span class="type">string</span></div><div class="attribute-description">The time zone for this event, e.g. "Pacific Time (US & Canada)". Default is "UTC".</div></li>
 <li><div><code class="name">title</code><span class="type">string</span><span class="required">required</span><span class="translated">translated</span><span class="translated-note">*</span></div><div class="attribute-description">The name of the event</div></li>
-<li><div><code class="name">tracking_html</code><span class="type">text</span></div></li>
-<li><div><code class="name">tracking_url</code><span class="type">url</span></div></li>
 <li><div><code class="name">twitter_share_message</code><span class="type">text</span><span class="translated">translated</span><span class="translated-note">*</span></div></li>
 <li><div><code class="name">typekit_id</code><span class="type">string</span></div></li>
 <li><div><code class="name">url</code><span class="type">url</span><span class="read-only">read only</span></div><div class="attribute-description">The URL for the event homepage, based on the account <code>slug</code> and event <code>slug</code>.</div></li>
@@ -2558,11 +2554,7 @@ events, and show a schedule and itinerary to attendees.</p>
       </span><span class="p">},</span><span class="w">
       </span><span class="nl">"email_invoice"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
       </span><span class="nl">"external_order_reference_format"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"facebook_conversion_pixel_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
       </span><span class="nl">"facebook_share_message"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"google_analytics_domains"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"google_analytics_property_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"google_conversion_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
       </span><span class="nl">"hide_tax_types"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
       </span><span class="nl">"invoice_change_cutoff_days"</span><span class="p">:</span><span class="w"> </span><span class="mi">90</span><span class="p">,</span><span class="w">
       </span><span class="nl">"invoice_due_days"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
@@ -2653,8 +2645,6 @@ events, and show a schedule and itinerary to attendees.</p>
       </span><span class="nl">"ticket_wallet_pass_enabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
       </span><span class="nl">"tickets_form_label"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
       </span><span class="nl">"timezone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"UTC"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"tracking_html"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"tracking_url"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
       </span><span class="nl">"typekit_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
       </span><span class="nl">"twitter_share_message"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
       </span><span class="nl">"users_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="w">
@@ -2751,11 +2741,7 @@ events, and show a schedule and itinerary to attendees.</p>
       </span><span class="p">},</span><span class="w">
       </span><span class="nl">"email_invoice"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
       </span><span class="nl">"external_order_reference_format"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"facebook_conversion_pixel_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
       </span><span class="nl">"facebook_share_message"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"google_analytics_domains"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"google_analytics_property_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"google_conversion_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
       </span><span class="nl">"hide_tax_types"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
       </span><span class="nl">"invoice_change_cutoff_days"</span><span class="p">:</span><span class="w"> </span><span class="mi">90</span><span class="p">,</span><span class="w">
       </span><span class="nl">"invoice_due_days"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
@@ -2846,8 +2832,6 @@ events, and show a schedule and itinerary to attendees.</p>
       </span><span class="nl">"ticket_wallet_pass_enabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
       </span><span class="nl">"tickets_form_label"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
       </span><span class="nl">"timezone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"UTC"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"tracking_html"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"tracking_url"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
       </span><span class="nl">"typekit_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
       </span><span class="nl">"twitter_share_message"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
       </span><span class="nl">"users_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="w">
@@ -3031,11 +3015,7 @@ events, and show a schedule and itinerary to attendees.</p>
     </span><span class="p">},</span><span class="w">
     </span><span class="nl">"email_invoice"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
     </span><span class="nl">"external_order_reference_format"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"facebook_conversion_pixel_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
     </span><span class="nl">"facebook_share_message"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"google_analytics_domains"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"google_analytics_property_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"google_conversion_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
     </span><span class="nl">"hide_tax_types"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
     </span><span class="nl">"invoice_change_cutoff_days"</span><span class="p">:</span><span class="w"> </span><span class="mi">90</span><span class="p">,</span><span class="w">
     </span><span class="nl">"invoice_due_days"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
@@ -3126,8 +3106,6 @@ events, and show a schedule and itinerary to attendees.</p>
     </span><span class="nl">"ticket_wallet_pass_enabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
     </span><span class="nl">"tickets_form_label"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
     </span><span class="nl">"timezone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"UTC"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"tracking_html"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"tracking_url"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
     </span><span class="nl">"typekit_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
     </span><span class="nl">"twitter_share_message"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
     </span><span class="nl">"users_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="w">
@@ -3253,11 +3231,7 @@ events, and show a schedule and itinerary to attendees.</p>
     </span><span class="p">},</span><span class="w">
     </span><span class="nl">"email_invoice"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
     </span><span class="nl">"external_order_reference_format"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"facebook_conversion_pixel_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
     </span><span class="nl">"facebook_share_message"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"google_analytics_domains"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"google_analytics_property_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"google_conversion_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
     </span><span class="nl">"hide_tax_types"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
     </span><span class="nl">"invoice_change_cutoff_days"</span><span class="p">:</span><span class="w"> </span><span class="mi">90</span><span class="p">,</span><span class="w">
     </span><span class="nl">"invoice_due_days"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
@@ -3348,8 +3322,6 @@ events, and show a schedule and itinerary to attendees.</p>
     </span><span class="nl">"ticket_wallet_pass_enabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
     </span><span class="nl">"tickets_form_label"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
     </span><span class="nl">"timezone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"UTC"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"tracking_html"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"tracking_url"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
     </span><span class="nl">"typekit_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
     </span><span class="nl">"twitter_share_message"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
     </span><span class="nl">"users_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="w">
@@ -3477,11 +3449,7 @@ events, and show a schedule and itinerary to attendees.</p>
     </span><span class="p">},</span><span class="w">
     </span><span class="nl">"email_invoice"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
     </span><span class="nl">"external_order_reference_format"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"facebook_conversion_pixel_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
     </span><span class="nl">"facebook_share_message"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"google_analytics_domains"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"google_analytics_property_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"google_conversion_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
     </span><span class="nl">"hide_tax_types"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
     </span><span class="nl">"invoice_change_cutoff_days"</span><span class="p">:</span><span class="w"> </span><span class="mi">90</span><span class="p">,</span><span class="w">
     </span><span class="nl">"invoice_due_days"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
@@ -3572,8 +3540,6 @@ events, and show a schedule and itinerary to attendees.</p>
     </span><span class="nl">"ticket_wallet_pass_enabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
     </span><span class="nl">"tickets_form_label"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
     </span><span class="nl">"timezone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"UTC"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"tracking_html"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"tracking_url"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
     </span><span class="nl">"typekit_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
     </span><span class="nl">"twitter_share_message"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
     </span><span class="nl">"users_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="w">
@@ -4441,12 +4407,14 @@ lookup the latest status of the duplication. The status can be either:</p>
 <li><div><code class="name">discount_code_id</code></div></li>
 <li><div><code class="name">editable_total_and_prices</code></div></li>
 <li><div><code class="name">email</code></div></li>
+<li><div><code class="name">event</code><span class="type">Object</span><span class="read-only">read only</span></div><div class="attribute-description">The event this registration belongs to, containing its <code>id</code>, <code>title</code>, <code>slug</code> and <code>path</code>.</div></li>
 <li><div><code class="name">expires_at</code></div></li>
 <li><div><code class="name">free</code></div></li>
 <li><div><code class="name">imported</code></div></li>
 <li><div><code class="name">invoice</code></div></li>
 <li><div><code class="name">ip_address</code></div></li>
 <li><div><code class="name">job_title</code></div></li>
+<li><div><code class="name">line_items</code><span class="type">object array</span><span class="expandable">expandable</span></div><div class="attribute-description">An array of <code>Line Items</code> attached to this registration. This attribute is hidden by default but you can expand it using <code>?expand=line_items</code>.</div></li>
 <li><div><code class="name">locale</code></div></li>
 <li><div><code class="name">manual</code></div></li>
 <li><div><code class="name">metadata</code></div></li>
@@ -4465,15 +4433,18 @@ lookup the latest status of the duplication. The status can be either:</p>
 <li><div><code class="name">receipt_id</code></div></li>
 <li><div><code class="name">receipt_number</code></div></li>
 <li><div><code class="name">receipt_paid</code></div></li>
+<li><div><code class="name">receipts</code><span class="type">object array</span><span class="expandable">expandable</span></div><div class="attribute-description">An array of <code>Receipts</code> attached to this registration. This attribute is hidden by default but you can expand it using <code>?expand=receipts</code>.</div></li>
 <li><div><code class="name">reference</code></div></li>
 <li><div><code class="name">refundable</code></div></li>
 <li><div><code class="name">refunded</code></div></li>
+<li><div><code class="name">refunds</code><span class="type">object array</span><span class="expandable">expandable</span></div><div class="attribute-description">An array of <code>Refunds</code> attached to this registration. This attribute is hidden by default but you can expand it using <code>?expand=refunds</code>. See <a href="#refunds">refunds</a>.</div></li>
 <li><div><code class="name">registration_type</code></div></li>
 <li><div><code class="name">source</code></div></li>
 <li><div><code class="name">state</code></div></li>
 <li><div><code class="name">terms_accepted</code></div></li>
 <li><div><code class="name">termset_ids</code></div></li>
 <li><div><code class="name">test_mode</code></div></li>
+<li><div><code class="name">tickets</code><span class="type">object array</span><span class="expandable">expandable</span></div><div class="attribute-description">An array of <code>Tickets</code> attached to this registration. This attribute is hidden by default but you can expand it using <code>?expand=tickets</code>. See <a href="#tickets">tickets</a>.</div></li>
 <li><div><code class="name">tickets_count</code></div></li>
 <li><div><code class="name">total</code></div></li>
 <li><div><code class="name">total_less_tax</code></div></li>
@@ -4487,6 +4458,10 @@ lookup the latest status of the duplication. The status can be either:</p>
 
 <ul class="attribute-list">
 <li><div><code class="name">billing_address</code><span class="type">object</span></div><div class="attribute-description">The address entered during payment.</div></li>
+<li><div><code class="name">line_items</code><span class="type">object array</span></div><div class="attribute-description">An array of <code>Line Items</code> attached to this registration.</div></li>
+<li><div><code class="name">receipts</code><span class="type">object array</span></div><div class="attribute-description">An array of <code>Receipts</code> attached to this registration.</div></li>
+<li><div><code class="name">refunds</code><span class="type">object array</span></div><div class="attribute-description">An array of <code>Refunds</code> attached to this registration. See <a href="#refunds">refunds</a>.</div></li>
+<li><div><code class="name">tickets</code><span class="type">object array</span></div><div class="attribute-description">An array of <code>Tickets</code> attached to this registration. See <a href="#tickets">tickets</a>.</div></li>
 </ul>
 <h2 id='registrations-get-all-registrations'>Get all registrations <i class="fa-regular fa-files"></i></h2>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">--request</span> GET <span class="se">\</span>
@@ -4761,7 +4736,7 @@ lookup the latest status of the duplication. The status can be either:</p>
 </ul>
 <h3 id='registrations-get-all-registrations-i-class-fa-regular-fa-files-i-filtering'>Filtering</h3>
 <p>You can filter which registrations you get back too. For instance, to only get <code>unpaid</code> or <code>incomplete</code> registrations:</p>
-
+<h4 id='registrations-get-all-registrations-i-class-fa-regular-fa-files-i-filtering-by-state'>By state</h4>
 <p><code>?search[states][]=unpaid&amp;search[states][]=incomplete</code></p>
 
 <p>Possible states are:</p>
@@ -4774,8 +4749,8 @@ lookup the latest status of the duplication. The status can be either:</p>
 <li><code>paid</code></li>
 <li><code>unpaid</code></li>
 </ul>
-
-<p>Or by time. This will show all registrations created since 1 Jan 2019 at 9am UTC:</p>
+<h4 id='registrations-get-all-registrations-i-class-fa-regular-fa-files-i-filtering-by-time'>By time</h4>
+<p>This will show all registrations created since 1 Jan 2019 at 9am UTC:</p>
 
 <p><code>?search[created_at][gt]=2019-01-01T09:00:00+UTC</code></p>
 
@@ -4802,6 +4777,21 @@ lookup the latest status of the duplication. The status can be either:</p>
 <p>(where you obviously change that timestamp to be one hour ago).</p>
 
 <p>Note: if you don&#39;t use the <code>+UTC</code> suffix on those timestamps it will default to the time zone used by the event itself.</p>
+<h4 id='registrations-get-all-registrations-i-class-fa-regular-fa-files-i-filtering-by-any-text'>By any text</h4>
+<p>You can also search by text, which uses the same logic as the dashboard UI:</p>
+
+<ul>
+<li>email</li>
+<li>name</li>
+<li>slug</li>
+<li>reference</li>
+<li>company name</li>
+<li>discount code</li>
+</ul>
+
+<p>For example:</p>
+
+<p><code>?q=Alice</code></p>
 <h2 id='registrations-get-a-registration'>Get a registration <i class="fa-regular fa-file"></i></h2>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">--request</span> GET <span class="se">\</span>
   <span class="nt">--url</span> <span class="s1">'https://api.tito.io/v3/:account_slug/:event_slug/registrations/:registration_id'</span> <span class="se">\</span>
@@ -6539,7 +6529,7 @@ and can only be purchased through the shareable URL (<code>share_url</code>).</p
 <li><div><code class="name">resell</code><span class="type">boolean</span><span class="write-only">write only</span></div><div class="attribute-description">Whether a ticket can be resold after it's been voided if you have limited capacity.</div></li>
 <li><div><code class="name">responses</code><span class="type">object array</span><span class="read-only">read only</span><span class="expandable">expandable</span></div><div class="attribute-description">The answer to each <code>Question</code> attached to the ticket. Format: A hash of answers, keyed by <code>Question</code> slug e.g.<br><code>{ "t-shirt-siz: "Medium" }</code> This attribute is hidden by default but you can expand it using <code>?expand=responses</code>.</div></li>
 <li><div><code class="name">show_qr_code</code><span class="type">boolean</span></div><div class="attribute-description">See also <code>qr_code_disabled</code>.</div></li>
-<li><div><code class="name">state</code><span class="type">string</span><span class="read-only">read only</span></div><div class="attribute-description">Either <code>new</code>, <code>complete</code>, <code>incomplete</code>, <code>reminder</code>, or <code>void</code>. Default is <code>new</code>.</div></li>
+<li><div><code class="name">state</code><span class="type">string</span><span class="read-only">read only</span></div><div class="attribute-description">Either <code>unassigned</code>, <code>complete</code>, <code>incomplete</code>, or <code>void</code>. Default is <code>unassigned</code>.</div></li>
 <li><div><code class="name">tag_names</code><span class="type">string array</span></div><div class="attribute-description">A list of tag names</div></li>
 <li><div><code class="name">tags</code><span class="type">string</span></div><div class="attribute-description">A comma separated list of tags for the ticket.</div></li>
 <li><div><code class="name">temporary</code><span class="type">boolean</span><span class="read-only">read only</span></div><div class="attribute-description">Is the ticket temporary or not. For example if a ticket needs to be assigned but is not yet confirmed e.g. a payment is pending. Default is <code>false</code>.</div></li>
@@ -6877,7 +6867,9 @@ and can only be purchased through the shareable URL (<code>share_url</code>).</p
 <li><code>number</code></li>
 </ul>
 <h3 id='tickets-get-all-tickets-i-class-fa-regular-fa-files-i-filtering'>Filtering</h3>
-<p>You can filter which tickets you get back too. For instance, to only get <code>incomplete</code> or <code>unassigned</code> tickets:</p>
+<p>You can filter which tickets you get back too.</p>
+<h4 id='tickets-get-all-tickets-i-class-fa-regular-fa-files-i-filtering-by-state'>By state</h4>
+<p>For instance, to only get <code>incomplete</code> or <code>unassigned</code> tickets:</p>
 
 <p><code>?search[states][]=incomplete&amp;search[states][]=unassigned</code></p>
 
@@ -6906,9 +6898,7 @@ and can only be purchased through the shareable URL (<code>share_url</code>).</p
 </ul>
 
 <p>The list excludes archived tickets by default. If you select this state then it also includes archived tickets <em>as well</em> as non-archived tickets.</p>
-
-<p>Or you can filter by type of ticket:</p>
-
+<h4 id='tickets-get-all-tickets-i-class-fa-regular-fa-files-i-filtering-by-type'>By type</h4>
 <p><code>?search[types][]=manual</code></p>
 
 <p>Possible types are:</p>
@@ -6917,20 +6907,16 @@ and can only be purchased through the shareable URL (<code>share_url</code>).</p
 <li><code>manual</code> - added manually</li>
 <li><code>standard</code> - ordered by customer</li>
 </ul>
-
-<p>Or by <a href="#releases">release</a>:</p>
-
+<h4 id='tickets-get-all-tickets-i-class-fa-regular-fa-files-i-filtering-by-release'>By release</h4>
 <p><code>?search[release_ids][]=early-bird</code></p>
 
 <p>where &quot;early-bird&quot; is the release <code>slug</code>.</p>
-
-<p>Or by <a href="#activities">activity</a>:</p>
-
+<h4 id='tickets-get-all-tickets-i-class-fa-regular-fa-files-i-filtering-by-activity'>By activity</h4>
 <p><code>?search[activity_ids][]=1025351</code></p>
 
 <p>where &quot;1025351&quot; is the activity <code>id</code>.</p>
-
-<p>Or by time. This will show all tickets created since 1 Jan 2019 at 9am UTC:</p>
+<h4 id='tickets-get-all-tickets-i-class-fa-regular-fa-files-i-filtering-by-time'>By time</h4>
+<p>This will show all tickets created since 1 Jan 2019 at 9am UTC:</p>
 
 <p><code>?search[created_at][gt]=2019-01-01T09:00:00+UTC</code></p>
 
@@ -6957,6 +6943,22 @@ and can only be purchased through the shareable URL (<code>share_url</code>).</p
 <p>(where you obviously change that timestamp to be one hour ago).</p>
 
 <p>Note: if you don&#39;t use the <code>+UTC</code> suffix on those timestamps it will default to the time zone used by the event itself.</p>
+<h4 id='tickets-get-all-tickets-i-class-fa-regular-fa-files-i-filtering-by-any-text'>By any text</h4>
+<p>You can also search by text, which uses the same logic as the dashboard UI:</p>
+
+<ul>
+<li>email</li>
+<li>name</li>
+<li>phone number</li>
+<li>slug</li>
+<li>reference</li>
+<li>company name</li>
+<li>tag</li>
+</ul>
+
+<p>For example:</p>
+
+<p><code>?q=Alice</code></p>
 <h2 id='tickets-get-a-ticket'>Get a ticket <i class="fa-regular fa-file"></i></h2>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">--request</span> GET <span class="se">\</span>
   <span class="nt">--url</span> <span class="s1">'https://api.tito.io/v3/:account_slug/:event_slug/tickets/:ticket_slug'</span> <span class="se">\</span>
@@ -7776,16 +7778,8 @@ header.</p>
 <td>Fired when a ticket is changed to a voided state. Free tickets that are cancelled by the attendee will also cause this webhook to fire.</td>
 </tr>
 <tr>
-<td><code>registration.started</code></td>
-<td>Fired when a registration is started e.g. after they have selected tickets but before they have filled in any details.</td>
-</tr>
-<tr>
 <td><code>registration.updated</code></td>
 <td>Fired when the registration is updated in the Tito admin area or via the API.</td>
-</tr>
-<tr>
-<td><code>registration.filling</code></td>
-<td>Fired as soon as the person registering starts to filling in details like name, email, etc.</td>
 </tr>
 <tr>
 <td><code>registration.finished</code></td>
@@ -7861,7 +7855,9 @@ header.</p>
     </span><span class="nl">"where-do-you-live"</span><span class="p">:</span><span class="w"> </span><span class="s2">"United States"</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="nl">"last_updated_by_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"admin"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"upgrades"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#&lt;Upgrade::ActiveRecord_Associations_CollectionProxy:0x0000aaaaf4a51078&gt;"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"upgrades"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+
+  </span><span class="p">],</span><span class="w">
   </span><span class="nl">"upgrade_ids"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
 
   </span><span class="p">],</span><span class="w">
