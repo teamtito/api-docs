@@ -66,7 +66,6 @@
       "after_registration_redirect_after_questions": false,
       "any_live_sales": true,
       "any_live_tickets": true,
-      "banner_link": null,
       "credit_card_payment_option_id": null,
       "credit_card_payment_option_gateway_type": null,
       "custom_background_color": null,
@@ -94,7 +93,6 @@
         }
       },
       "email_invoice": true,
-      "external_order_reference_format": null,
       "facebook_share_message": null,
       "hide_tax_types": false,
       "invoice_change_cutoff_days": 90,
@@ -253,7 +251,6 @@
       "after_registration_redirect_after_questions": false,
       "any_live_sales": false,
       "any_live_tickets": false,
-      "banner_link": null,
       "credit_card_payment_option_id": null,
       "credit_card_payment_option_gateway_type": null,
       "custom_background_color": null,
@@ -281,7 +278,6 @@
         }
       },
       "email_invoice": true,
-      "external_order_reference_format": null,
       "facebook_share_message": null,
       "hide_tax_types": false,
       "invoice_change_cutoff_days": 90,

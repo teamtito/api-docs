@@ -102,7 +102,6 @@
     "after_registration_redirect_after_questions": false,
     "any_live_sales": true,
     "any_live_tickets": true,
-    "banner_link": null,
     "cors_domains": [
 
     ],
@@ -140,7 +139,6 @@
       }
     },
     "email_invoice": true,
-    "external_order_reference_format": null,
     "facebook_share_message": null,
     "hide_tax_types": false,
     "invoice_change_cutoff_days": 90,

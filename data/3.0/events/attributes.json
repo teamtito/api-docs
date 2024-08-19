@@ -131,18 +131,6 @@
     "translated": false,
     "type": "object"
   },
-  "banner_link": {
-    "description": null,
-    "expandable": false,
-    "expand_ids": false,
-    "expand_slugs": false,
-    "ignore": false,
-    "read_only": false,
-    "write_only": false,
-    "required": false,
-    "translated": false,
-    "type": null
-  },
   "banner_url": {
     "description": "A link to the event's banner image.",
     "expandable": false,
@@ -603,18 +591,6 @@
     "required": false,
     "translated": false,
     "type": "date"
-  },
-  "external_order_reference_format": {
-    "description": null,
-    "expandable": false,
-    "expand_ids": false,
-    "expand_slugs": false,
-    "ignore": false,
-    "read_only": false,
-    "write_only": false,
-    "required": false,
-    "translated": false,
-    "type": null
   },
   "facebook_share_message": {
     "description": null,
