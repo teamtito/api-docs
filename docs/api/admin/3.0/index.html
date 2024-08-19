@@ -316,7 +316,7 @@
             <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#authentication-confirm-you-can-connect" class="toc-h2 toc-link" data-title="Confirm you can connect">Confirm you can connect</a>
+                    <a href="#authentication-register-interest-widget-confirm-you-can-connect" class="toc-h2 toc-link" data-title="Confirm you can connect">Confirm you can connect</a>
                   </li>
               </ul>
           </li>
@@ -330,13 +330,13 @@
             <a href="#views" class="toc-h1 toc-link" data-title="Views">Views</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#views-short" class="toc-h2 toc-link" data-title=" Short"> Short</a>
+                    <a href="#views-register-interest-widget-short" class="toc-h2 toc-link" data-title=" Short"> Short</a>
                   </li>
                   <li>
-                    <a href="#views-extended" class="toc-h2 toc-link" data-title="Extended">Extended</a>
+                    <a href="#views-register-interest-widget-extended" class="toc-h2 toc-link" data-title="Extended">Extended</a>
                   </li>
                   <li>
-                    <a href="#views-choosing-the-view" class="toc-h2 toc-link" data-title="Choosing the view">Choosing the view</a>
+                    <a href="#views-register-interest-widget-choosing-the-view" class="toc-h2 toc-link" data-title="Choosing the view">Choosing the view</a>
                   </li>
               </ul>
           </li>
@@ -787,7 +787,7 @@ it will only read and write test data without affecting your live data. Note thi
 <p>If you find your API token has been compromised it can be <a href="https://id.tito.io/api-access-tokens">revoked</a> and a new one generated.</p>
 
 <p>Your API token needs to be included in the <code>Authorization</code> header so your requests can be authenticated.</p>
-<h3 id='authentication-confirm-you-can-connect'>Confirm you can connect</h3><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">--request</span> GET <span class="se">\</span>
+<h3 id='authentication-register-interest-widget-confirm-you-can-connect'>Confirm you can connect</h3><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">--request</span> GET <span class="se">\</span>
   <span class="nt">--url</span> <span class="s1">'https://api.tito.io/v3/hello'</span> <span class="se">\</span>
   <span class="nt">--header</span> <span class="s1">'Authorization: Token token=YOUR-API-TOKEN'</span> <span class="se">\</span>
   <span class="nt">--header</span> <span class="s1">'Accept: application/json'</span> <span class="se">\</span>
@@ -846,11 +846,11 @@ it will only read and write test data without affecting your live data. Note thi
 <li>Short</li>
 <li>Extended</li>
 </ul>
-<h3 id='views-short'> Short</h3>
+<h3 id='views-register-interest-widget-short'> Short</h3>
 <p>This is what you get if you ask for a list of records (e.g. <a href="#registrations-get-all-registrations">Get all Registrations</a>) then we give you the &quot;short&quot; view of the data, so that we can make the response as quick as possible and you don&#39;t get a lot of data all at once.</p>
-<h3 id='views-extended'>Extended</h3>
+<h3 id='views-register-interest-widget-extended'>Extended</h3>
 <p>If you ask for a single record (e.g. <a href="#registrations-get-a-registration">Get a Registration</a>) then we give you the &quot;extended&quot; view which gives you more detailed information and possible associated records.</p>
-<h3 id='views-choosing-the-view'>Choosing the view</h3>
+<h3 id='views-register-interest-widget-choosing-the-view'>Choosing the view</h3>
 <p>You can override this by passing the <code>view</code> parameter. For example:</p>
 
 <p><code>GET https://api.tito.io/v3/:account_slug/:event_slug/tickets?view=extended</code></p>
