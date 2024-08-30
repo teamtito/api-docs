@@ -298,6 +298,22 @@ def list_attributes(attributes, skip: [], context: nil)
   concat "</ul>\n"
 end
 
+def list_simple_attributes(attributes)
+  concat "<ul class=\"attribute-list\">"
+  attributes.each do |name, hash|
+    concat "<li>"
+    concat "<div>"
+    concat "<code class=\"name\">#{name}</code>"
+    concat "<span class=\"type\">#{hash[:type]}</span>" if hash[:type].present?
+    concat "<span class=\"required\">required</span>" if hash[:required]
+    concat "</div>"
+    concat "<div class=\"attribute-description\">#{hash[:description].gsub(/`([^`]+)`/, '<code>\1</code>')}</div>" if hash[:description].present?
+    concat "</li>"
+  end
+  concat "</ul>"
+  nil
+end
+
 def list_attribute(name, hash, skip:, context:)
   concat "<li><div>"
   concat "<code class=\"name\">#{name}</code>"
