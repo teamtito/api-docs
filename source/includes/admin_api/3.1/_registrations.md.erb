@@ -123,3 +123,19 @@ Changes the `receipt_paid` attribute to true.
 Show that a `Registration` has NOT been paid. Useful if you are allowing your customers to pay by invoice. You wouldn't normally need to do this but might do if you [marked it as paid](/docs/api/admin/#registrations-mark-a-registration-as-paid) by mistake.
 
 Changes the `receipt_paid` attribute to false.
+
+## Refund a Registration
+
+<%= show_url "registrations/:registration_slug/refunds", method: :post, params: { refund: { manual: false } }%>
+<%= show_url_key "POST registrations/:registration_slug/refunds" %>
+
+### Parameters
+
+<%= list_simple_attributes "refund[manual]": { type: :boolean, description: "Set to true if you don't want to refund via the payment provider or false if you do.", required: true } %>
+
+## Cancel a Registration
+
+<%= show_url "registrations/:registration_slug/cancellation", method: :post %>
+<%= show_url_key "POST registrations/:registration_slug/cancellation" %>
+
+This will cancel a registration and void any associated tickets.
