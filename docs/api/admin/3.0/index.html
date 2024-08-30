@@ -579,6 +579,12 @@
                   <li>
                     <a href="#registrations-mark-a-registration-as-unpaid" class="toc-h2 toc-link" data-title="Mark a Registration as Unpaid">Mark a Registration as Unpaid</a>
                   </li>
+                  <li>
+                    <a href="#registrations-refund-a-registration" class="toc-h2 toc-link" data-title="Refund a Registration">Refund a Registration</a>
+                  </li>
+                  <li>
+                    <a href="#registrations-cancel-a-registration" class="toc-h2 toc-link" data-title="Cancel a Registration">Cancel a Registration</a>
+                  </li>
               </ul>
           </li>
           <li>
@@ -4648,6 +4654,41 @@ lookup the latest status of the duplication. The status can be either:</p>
 </ul>
 
 <p>Changes the <code>receipt_paid</code> attribute to false.</p>
+<h2 id='registrations-refund-a-registration'>Refund a Registration</h2>
+<div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">--request</span> POST <span class="se">\</span>
+  <span class="nt">--url</span> <span class="s1">'https://api.tito.io/v3/:account_slug/:event_slug/registrations/:registration_slug/refunds'</span> <span class="se">\</span>
+  <span class="nt">--header</span> <span class="s1">'Authorization: Token token=YOUR-API-TOKEN'</span> <span class="se">\</span>
+  <span class="nt">--header</span> <span class="s1">'Accept: application/json'</span> <span class="se">\</span>
+  <span class="nt">--header</span> <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+  <span class="nt">--data</span> <span class="s1">'{"refund":{"manual":false}}'</span>
+</code></pre></div>
+
+<p><code>POST /:account_slug/:event_slug/registrations/:registration_slug/refunds</code></p>
+
+<ul>
+<li><code>account_slug</code> - the <code>slug</code> of the <code>account</code>.</li>
+<li><code>event_slug</code> - the <code>slug</code> of the <code>event</code>.</li>
+<li><code>registration_slug</code> - the <code>slug</code> (or <code>id</code>) of the <code>registration</code>.</li>
+</ul>
+<h3 id='registrations-refund-a-registration-parameters'>Parameters</h3>
+<ul class="attribute-list"><li><div><code class="name">refund[manual]</code><span class="type">boolean</span><span class="required">required</span></div><div class="attribute-description">Set to true if you don't want to refund via the payment provider or false if you do.</div></li></ul>
+<h2 id='registrations-cancel-a-registration'>Cancel a Registration</h2>
+<div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">--request</span> POST <span class="se">\</span>
+  <span class="nt">--url</span> <span class="s1">'https://api.tito.io/v3/:account_slug/:event_slug/registrations/:registration_slug/cancellation'</span> <span class="se">\</span>
+  <span class="nt">--header</span> <span class="s1">'Authorization: Token token=YOUR-API-TOKEN'</span> <span class="se">\</span>
+  <span class="nt">--header</span> <span class="s1">'Accept: application/json'</span> <span class="se">\</span>
+  <span class="nt">--header</span> <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+</code></pre></div>
+
+<p><code>POST /:account_slug/:event_slug/registrations/:registration_slug/cancellation</code></p>
+
+<ul>
+<li><code>account_slug</code> - the <code>slug</code> of the <code>account</code>.</li>
+<li><code>event_slug</code> - the <code>slug</code> of the <code>event</code>.</li>
+<li><code>registration_slug</code> - the <code>slug</code> (or <code>id</code>) of the <code>registration</code>.</li>
+</ul>
+
+<p>This will cancel a registration and void any associated tickets.</p>
 <h1 id='releases'>Releases</h1><h2 id='releases-attributes'>Attributes</h2>
 <table><thead>
 <tr>
