@@ -530,8 +530,20 @@
     "translated": false,
     "type": null
   },
+  "end_at": {
+    "description": "The date and time the event is going to end based on the `end_date` and `end_time`, e.g. 2020-12-31T20:00:00.000+01:00.",
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": false,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": "timestamp"
+  },
   "end_date": {
-    "description": "The date the event is going to end",
+    "description": "The date the event is going to end, e.g. 2020-12-31",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
@@ -541,6 +553,18 @@
     "required": false,
     "translated": false,
     "type": "date"
+  },
+  "end_time": {
+    "description": "The time the event is going to end using the event's `timezone`, e.g. 18:00",
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": false,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": "time"
   },
   "facebook_share_message": {
     "description": null,
@@ -1563,8 +1587,20 @@
     "translated": false,
     "type": "string"
   },
+  "start_at": {
+    "description": "The time the event is going to start based on the `start_date` and `start_time`, e.g. 2020-12-31T13:00:00.000+01:00",
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": false,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": "timestamp"
+  },
   "start_date": {
-    "description": "The date the event is going to start",
+    "description": "The date the event is going to start, e.g. 2020-12-31",
     "expandable": false,
     "expand_ids": false,
     "expand_slugs": false,
@@ -1574,6 +1610,18 @@
     "required": false,
     "translated": false,
     "type": "date"
+  },
+  "start_time": {
+    "description": "The time the event is going to start using the event's time zone, e.g. 13:00",
+    "expandable": false,
+    "expand_ids": false,
+    "expand_slugs": false,
+    "ignore": false,
+    "read_only": false,
+    "write_only": false,
+    "required": false,
+    "translated": false,
+    "type": "time"
   },
   "stripe": {
     "description": null,
