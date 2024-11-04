@@ -2286,9 +2286,19 @@ events, and show a schedule and itinerary to attendees.</p>
 <td>The contact email address so that attendees can get in touch.</td>
 </tr>
 <tr>
+<td>end_at</td>
+<td><code>timestamp</code></td>
+<td>The time the event is going to end based on the <code>end_date</code> and <code>end_time</code>, e.g. 2020-12-31T18:00:00.000+01:00</td>
+</tr>
+<tr>
 <td>end_date</td>
 <td><code>date</code></td>
-<td>The date the event is going to end</td>
+<td>The date the event is going to end, e.g. 2020-12-31</td>
+</tr>
+<tr>
+<td>end_time</td>
+<td><code>string</code></td>
+<td>The time the event is going to end using the event&#39;s <code>timezone</code>, e.g. 18:00</td>
 </tr>
 <tr>
 <td>live</td>
@@ -2346,14 +2356,29 @@ events, and show a schedule and itinerary to attendees.</p>
 <td>A human friendly string used in the Event URL</td>
 </tr>
 <tr>
+<td>start_at</td>
+<td><code>timestamp</code></td>
+<td>The time the event is going to start based on the <code>start_date</code> and <code>start_time</code>, e.g. 2020-12-31T13:00:00.000+01:00</td>
+</tr>
+<tr>
 <td>start_date</td>
 <td><code>date</code></td>
-<td>The date the event is going to start</td>
+<td>The date the event is going to start, e.g. 2020-12-31</td>
+</tr>
+<tr>
+<td>start_time</td>
+<td><code>string</code></td>
+<td>The time the event is going to start using the event&#39;s time zone, e.g. 13:00</td>
 </tr>
 <tr>
 <td>test_mode</td>
 <td><code>boolean</code></td>
 <td>Is the event in test mode or not.</td>
+</tr>
+<tr>
+<td>timezone <span class='read_only'>Read only</span></td>
+<td><code>string</code></td>
+<td>The time zone for the event, e.g. Paris</td>
 </tr>
 <tr>
 <td>title</td>
@@ -2670,9 +2695,19 @@ events, and show a schedule and itinerary to attendees.</p>
 <td>A statement or tag line describing the event</td>
 </tr>
 <tr>
+<td>end_at</td>
+<td><code>timestamp</code></td>
+<td>The time the event is going to end based on the <code>end_date</code> and <code>end_time</code>, e.g. 2020-12-31T18:00:00.000+01:00</td>
+</tr>
+<tr>
 <td>end_date</td>
 <td><code>date</code></td>
-<td>The date the event is going to end</td>
+<td>The date the event is going to end, e.g. 2020-12-31</td>
+</tr>
+<tr>
+<td>end_time</td>
+<td><code>string</code></td>
+<td>The time the event is going to end using the event&#39;s <code>timezone</code>, e.g. 18:00</td>
 </tr>
 <tr>
 <td>live</td>
@@ -2710,9 +2745,19 @@ events, and show a schedule and itinerary to attendees.</p>
 <td>A human friendly string used in the Event URL</td>
 </tr>
 <tr>
+<td>start_at</td>
+<td><code>timestamp</code></td>
+<td>The time the event is going to start based on the <code>start_date</code> and <code>start_time</code>, e.g. 2020-12-31T13:00:00.000+01:00</td>
+</tr>
+<tr>
 <td>start_date</td>
 <td><code>date</code></td>
-<td>The date the event is going to start</td>
+<td>The date the event is going to start, e.g. 2020-12-31</td>
+</tr>
+<tr>
+<td>start_time</td>
+<td><code>string</code></td>
+<td>The time the event is going to start using the event&#39;s time zone, e.g. 13:00</td>
 </tr>
 <tr>
 <td>test_mode</td>
