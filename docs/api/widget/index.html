@@ -335,11 +335,16 @@
                   <li>
                     <a href="#tito-widget-v2-custom-order-form-placeholders" class="toc-h2 toc-link" data-title="Custom order form placeholders">Custom order form placeholders</a>
                   </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#events-widget" class="toc-h1 toc-link" data-title="Events widget">Events widget</a>
+          </li>
+          <li>
+            <a href="#register-interest-widget" class="toc-h1 toc-link" data-title="Register interest widget">Register interest widget</a>
+              <ul class="toc-list-h2">
                   <li>
-                    <a href="#tito-widget-v2-events-widget" class="toc-h2 toc-link" data-title="Events widget">Events widget</a>
-                  </li>
-                  <li>
-                    <a href="#tito-widget-v2-register-interest-widget" class="toc-h2 toc-link" data-title="Register interest widget">Register interest widget</a>
+                    <a href="#register-interest-widget-custom-placeholders" class="toc-h2 toc-link" data-title="Custom placeholders">Custom placeholders</a>
                   </li>
               </ul>
           </li>
@@ -708,13 +713,20 @@
   <span class="nt">&gt;&lt;/tito-widget&gt;</span>
 </code></pre></div>
 <p>You can use <code>email-placeholder</code> and <code>name-placeholder</code> attributes to set custom placeholders for the name and email fields on the order form.</p>
-<h2 id='tito-widget-v2-events-widget'>Events widget</h2>
+<h1 id='events-widget'>Events widget</h1>
 <p>To display a list of your upcoming and past events on your site, like what appears on your Tito public account timeline <a href="https://ti.to/events" target="_blank">here</a> for example, you can use the <code>&lt;tito-events&gt;</code> widget.</p>
 <div class="highlight"><pre class="highlight html tab-html"><code><span class="nt">&lt;tito-events</span> <span class="na">account=</span><span class="s">"ultimateconf"</span><span class="nt">&gt;&lt;/tito-events&gt;</span>
-</code></pre></div><h2 id='tito-widget-v2-register-interest-widget'>Register interest widget</h2>
-<p>To add a form on your site for people to <a href="https://help.tito.io/en/articles/2003003-interested-people" target="_blank">register interest</a> in your event, you can use the <code>&lt;tito-register-interest&gt;</code> widget.</p>
-<div class="highlight"><pre class="highlight html tab-html"><code><span class="nt">&lt;tito-register-interest</span> <span class="na">event=</span><span class="s">"ultimateconf/2013"</span><span class="nt">&gt;&lt;/tito-register-interest&gt;</span>
+</code></pre></div><h1 id='register-interest-widget'>Register interest widget</h1><div class="highlight"><pre class="highlight html tab-html"><code><span class="nt">&lt;tito-register-interest</span> <span class="na">event=</span><span class="s">"ultimateconf/2013"</span><span class="nt">&gt;&lt;/tito-register-interest&gt;</span>
 </code></pre></div>
+<p>To add a form on your site for people to <a href="https://help.tito.io/en/articles/2003003-interested-people" target="_blank">register interest</a> in your event, you can use the <code>&lt;tito-register-interest&gt;</code> widget.</p>
+<h2 id='register-interest-widget-custom-placeholders'>Custom placeholders</h2><div class="highlight"><pre class="highlight html tab-html"><code><span class="nt">&lt;tito-register-interest</span>
+  <span class="na">event=</span><span class="s">"ultimateconf/2013"</span>
+  <span class="na">email-placeholder=</span><span class="s">"michael.scott@dundermifflin.inc"</span>
+  <span class="na">name-placeholder=</span><span class="s">"Michael Scott"</span>
+  <span class="nt">&gt;&lt;/tito-register-interest&gt;</span>
+</code></pre></div>
+<p>You can use <code>email-placeholder</code> and <code>name-placeholder</code> attributes to set custom placeholders for the name and email fields on the register interest widget.</p>
+
 <p><br>
 <br>
 <br>
