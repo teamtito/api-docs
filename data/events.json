@@ -15,7 +15,7 @@
     "banner": {
       "description": null,
       "type": "object",
-      "read_only": false,
+      "read_only": true,
       "required": false
     },
     "banner_url": {
