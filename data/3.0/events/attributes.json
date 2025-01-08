@@ -125,7 +125,7 @@
     "expand_ids": false,
     "expand_slugs": false,
     "ignore": false,
-    "read_only": false,
+    "read_only": true,
     "write_only": false,
     "required": false,
     "translated": false,
