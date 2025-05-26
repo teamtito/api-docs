@@ -529,6 +529,11 @@ like to record their attendence.</p>
 <td>The <code>reference</code> of the ticket that was checked-in.</td>
 </tr>
 <tr>
+<td>ticket_slug</td>
+<td><code>string</code></td>
+<td>The <code>slug</code> of the ticket that was checked-in.</td>
+</tr>
+<tr>
 <td>updated_at</td>
 <td><code>datetime</code></td>
 <td>The date the <code>Checkin</code> was last updated.</td>
@@ -601,7 +606,7 @@ like to record their attendence.</p>
 <li><code>checkin_list_slug</code> - The <code>slug</code> attribute of a <code>CheckinList</code>.</li>
 </ul>
 <h3 id='check-ins-create-a-check-in-parameters'>Parameters</h3>
-<p>You must pass in one of either <code>ticket_id</code> or <code>ticket_reference</code>.</p>
+<p>You must pass in one of either <code>ticket_id</code>, <code>ticket_reference</code> or <code>ticket_slug</code>.</p>
 
 <table><thead>
 <tr>
@@ -619,6 +624,11 @@ like to record their attendence.</p>
 <td>ticket_reference</td>
 <td><code>string</code></td>
 <td>The <code>reference</code> of the ticket that was checked-in.</td>
+</tr>
+<tr>
+<td>ticket_slug</td>
+<td><code>string</code></td>
+<td>The <code>slug</code> of the ticket that was checked-in.</td>
 </tr>
 </tbody></table>
 <h2 id='check-ins-create-many-check-ins'>Create many Check-ins</h2>
