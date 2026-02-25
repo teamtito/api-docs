@@ -6,12 +6,11 @@
   "name": "John Smith",
   "created_at": "2026-02-19T11:32:02.000Z",
   "updated_at": "2026-02-19T11:32:02.000Z",
-  "event":
-  {
+  "event": {
     "_type": "event",
     "id": 83154,
     "title": "Caramel",
-    "url": "https://checkout.dev.tito.io/biscuit-box/caramel",
+    "url": "https://ti.to/biscuit-box/caramel",
     "account_slug": "biscuit-box",
     "slug": "caramel",
     "start_date": null,
