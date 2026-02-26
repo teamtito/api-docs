@@ -2216,17 +2216,17 @@ events, and show a schedule and itinerary to attendees.</p>
 
 <p>An event URL is comprised of the combination of the <code>account_slug</code> and the <code>event_slug</code>.</p>
 
-<p>For example <code>https://ti.to/ultimateconf/2025</code> is composed:</p>
+<p>For example <code>https://ti.to/ultimateconf/2026</code> is composed:</p>
 
 <ul>
 <li>The base <code>ti.to</code> URL</li>
 <li>The Ultimate Conf <code>Account</code> slug <code>ultimateconf</code></li>
-<li>The specific <code>Event</code> slug for the 2025 edition.</li>
+<li>The specific <code>Event</code> slug for the 2026 edition.</li>
 </ul>
 
 <p>The equivalent event can be looked up using a similar URL structure with the API base URL:</p>
 
-<p><code>https://api.tito.io/v3/ultimateconf/2025</code></p>
+<p><code>https://api.tito.io/v3/ultimateconf/2026</code></p>
 <h2 id='events-attributes'>Attributes</h2>
 <table><thead>
 <tr>
@@ -8313,6 +8313,18 @@ header.</p>
 <td><code>registration.cancelled</code></td>
 <td>Fired when the registration is cancelled in the Tito admin area or via the API. Free tickets that are cancelled by the attendee will also cause this webhook to fire.</td>
 </tr>
+<tr>
+<td><code>interested_user.created</code></td>
+<td>Fired when someone registers interest in your event, or if an interested person is added in the Tito admin area or via the API.</td>
+</tr>
+<tr>
+<td><code>interested_user.deleted</code></td>
+<td>Fired when an interested person is removed from your event.</td>
+</tr>
+<tr>
+<td><code>interested_user.updated</code></td>
+<td>Fired when the interested person is updated in the Tito admin area or via the API.</td>
+</tr>
 </tbody></table>
 <h2 id='webhooks-payloads'>Payloads</h2>
 <h3 style="clear:both;">Ticket Payload</h3>
@@ -8581,6 +8593,32 @@ will be sent.</p>
 </span></code></pre></div>
 
 <p>For webhooks that have the webhook type of <code>checkin.*</code> the following JSON payload
+will be sent.</p>
+
+<h3 style="clear:both;">Interested User Payload</h3>
+
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"interested_user"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">390247</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"john@smith.com"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"John Smith"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-02-19T11:32:02.000Z"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-02-19T11:32:02.000Z"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"event"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"event"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">83154</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Caramel"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://ti.to/biscuit-box/caramel"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"account_slug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"biscuit-box"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"slug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"caramel"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"start_date"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"end_date"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"metadata"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+
+<p>For webhooks that have the webhook type of <code>interested_user.*</code> the following JSON payload
 will be sent.</p>
 <h2 id='webhooks-verifying-the-payload'>Verifying the payload</h2><div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="n">key</span> <span class="o">=</span> <span class="s1">'YOUR EVENT SECURITY TOKEN'</span>
 <span class="nb">hash</span> <span class="o">=</span> <span class="no">OpenSSL</span><span class="o">::</span><span class="no">Digest</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="s1">'sha256'</span><span class="p">)</span>
