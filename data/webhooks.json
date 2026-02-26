@@ -47,6 +47,18 @@
     {
       "name": "registration.cancelled",
       "description": "Fired when the registration is cancelled in the Tito admin area or via the API. Free tickets that are cancelled by the attendee will also cause this webhook to fire."
+    },
+    {
+      "name": "interested_user.created",
+      "description": "Fired when someone registers interest in your event, or if an interested person is added in the Tito admin area or via the API."
+    },
+    {
+      "name": "interested_user.deleted",
+      "description": "Fired when an interested person is removed from your event."
+    },
+    {
+      "name": "interested_user.updated",
+      "description": "Fired when the interested person is updated in the Tito admin area or via the API."
     }
   ]
 }
