@@ -2,6 +2,10 @@
 
 <% set_resource :releases, slug: true %>
 
+A release has its own `quantity`, which caps how many of that single release
+can be sold. To set a shared capacity across multiple releases, create an
+[Activity](#activities) with a `capacity` and attach your releases to it.
+
 ## Attributes <%= icon_for :attributes %>
 
 <%= show_doc :attributes %>
