@@ -316,7 +316,7 @@
             <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#authentication-confirm-you-can-connect" class="toc-h2 toc-link" data-title="Confirm you can connect">Confirm you can connect</a>
+                    <a href="#authentication-20th-nov-2018-confirm-you-can-connect" class="toc-h2 toc-link" data-title="Confirm you can connect">Confirm you can connect</a>
                   </li>
               </ul>
           </li>
@@ -890,7 +890,7 @@ it will only read and write test data without affecting your live data. Note thi
 <p>If you find your API token has been compromised it can be <a href="https://id.tito.io/api-access-tokens">revoked</a> and a new one generated.</p>
 
 <p>Your API token needs to be included in the <code>Authorization</code> header so your requests can be authenticated.</p>
-<h3 id='authentication-confirm-you-can-connect'>Confirm you can connect</h3><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">--request</span> GET <span class="se">\</span>
+<h3 id='authentication-20th-nov-2018-confirm-you-can-connect'>Confirm you can connect</h3><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">--request</span> GET <span class="se">\</span>
   <span class="nt">--url</span> <span class="s1">'https://api.tito.io/v3/hello'</span> <span class="se">\</span>
   <span class="nt">--header</span> <span class="s1">'Authorization: Token token=YOUR-API-TOKEN'</span> <span class="se">\</span>
   <span class="nt">--header</span> <span class="s1">'Accept: application/json'</span> <span class="se">\</span>
@@ -1250,6 +1250,9 @@ that are not part of their ticket e.g. bowling or conference dinner.</p>
 <p>Tickets can have multiple activities attached, allowing you to share capacity,
 set start and end dates and times, sell single and combo tickets for multi-day
 events, and show a schedule and itinerary to attendees.</p>
+
+<p>To set a shared capacity across multiple releases, create an <code>activity</code> with a
+<code>capacity</code> and attach your releases to it via <code>release_ids</code>.</p>
 
 <p><i class="fa-regular fa-up-right-from-square fa-xl"></i> <a href="https://help.tito.io/en/articles/2002811-activities" target="_blank">Read more about activities</a></p>
 <h2 id='activities-attributes'>Attributes <i class="fa-regular fa-tags"></i></h2>
@@ -5139,7 +5142,11 @@ lookup the latest status of the duplication. The status can be either:</p>
 </ul>
 
 <p>This will cancel a registration and void any associated tickets.</p>
-<h1 id='releases'>Releases</h1><h2 id='releases-attributes'>Attributes <i class="fa-regular fa-tags"></i></h2>
+<h1 id='releases'>Releases</h1>
+<p>A release has its own <code>quantity</code>, which caps how many of that single release
+can be sold. To set a shared capacity across multiple releases, create an
+<a href="#activities">Activity</a> with a <code>capacity</code> and attach your releases to it.</p>
+<h2 id='releases-attributes'>Attributes <i class="fa-regular fa-tags"></i></h2>
 <ul class="attribute-list">
 <li><div><code class="name">activities</code><span class="type">object array</span><span class="read-only">read only</span><span class="expandable">expandable</span></div><div class="attribute-description">Activities linked to this release. This attribute is hidden by default but you can expand it using <code>?expand=activities</code>. See <a href="#activities">activities</a>.</div></li>
 <li><div><code class="name">activity_questions</code><span class="type">object array</span><span class="read-only">read only</span><span class="expandable">expandable</span></div><div class="attribute-description">Questions linked by activities to this release. This attribute is hidden by default but you can expand it using <code>?expand=activity_questions</code>.</div></li>

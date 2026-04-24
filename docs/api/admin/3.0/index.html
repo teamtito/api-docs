@@ -958,6 +958,9 @@ that are not part of their ticket e.g. bowling or conference dinner.</p>
 <p>Tickets can have multiple activities attached, allowing you to share capacity,
 set start and end dates and times, sell single and combo tickets for multi-day
 events, and show a schedule and itinerary to attendees.</p>
+
+<p>To set a shared capacity across multiple releases, create an <code>Activity</code> with a
+<code>capacity</code> and attach your releases to it via <code>release_ids</code>.</p>
 <h2 id='activities-attributes'>Attributes</h2>
 <table><thead>
 <tr>
@@ -4729,7 +4732,11 @@ lookup the latest status of the duplication. The status can be either:</p>
 </ul>
 
 <p>This will cancel a registration and void any associated tickets.</p>
-<h1 id='releases'>Releases</h1><h2 id='releases-attributes'>Attributes</h2>
+<h1 id='releases'>Releases</h1>
+<p>A release has its own <code>quantity</code>, which caps how many of that single release
+can be sold. To set a shared capacity across multiple releases, create an
+<a href="#activities">Activity</a> with a <code>capacity</code> and attach your releases to it.</p>
+<h2 id='releases-attributes'>Attributes</h2>
 <table><thead>
 <tr>
 <th>Attribute</th>
