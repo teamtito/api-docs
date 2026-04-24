@@ -7,6 +7,9 @@ Tickets can have multiple activities attached, allowing you to share capacity,
 set start and end dates and times, sell single and combo tickets for multi-day
 events, and show a schedule and itinerary to attendees.
 
+To set a shared capacity across multiple releases, create an `Activity` with a
+`capacity` and attach your releases to it via `release_ids`.
+
 ## Attributes
 
 <%= partial "includes/shared/attributes", locals: { attributes: data.activities.attributes } %>

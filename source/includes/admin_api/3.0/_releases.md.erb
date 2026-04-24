@@ -1,5 +1,9 @@
 # Releases
 
+A release has its own `quantity`, which caps how many of that single release
+can be sold. To set a shared capacity across multiple releases, create an
+[Activity](#activities) with a `capacity` and attach your releases to it.
+
 ## Attributes
 
 <%= partial "includes/shared/attributes", locals: { attributes: data.releases.attributes } %>
