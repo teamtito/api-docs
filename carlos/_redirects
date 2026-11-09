@@ -1,0 +1,8 @@
+# The docs as CARLOS serves them (app api-docs in the tito account).
+# ti.to's front proxies /docs/api/* here. A page without its trailing
+# slash is redirected to it (the platform's folder rule), where its
+# index.html is served. Middleman skips files named with a leading
+# underscore, so this lives outside source/ and CI copies it in.
+/                  /docs/api/                      302!
+/docs/api          /docs/api/index.html            200
+/*                 /docs/api/404.html              404

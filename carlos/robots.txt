@@ -1,0 +1,4 @@
+# The platform address stays out of search; ti.to/docs/api is the one
+# people find.
+User-agent: *
+Disallow: /
