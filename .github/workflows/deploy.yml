@@ -3,13 +3,15 @@ name: Deploy
 on:
   push:
     branches: [ 'main' ]
+  # By hand, to redeploy, or to try a branch's workflow before it merges.
+  workflow_dispatch:
 
 jobs:
   deploy:
     permissions:
       contents: write
 
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     env:
       ruby-version: 3.2.0
 
@@ -42,3 +44,52 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./build
         keep_files: true
+
+    # The same build, to the docs' home on CARLOS (app api-docs, account
+    # tito, sqid bae): https://api-docs.bae.platform.tito.io/docs/api/
+    # (PRO-6832). carlos/ holds what only that copy needs: the redirects and
+    # a robots.txt keeping the platform address out of search.
+    #
+    # secrets.CARLOS_SERVICE_TOKEN is a CARLOS deploy credential,
+    # service:tito/api-docs-ci, minted 2026-11-09 with
+    # `carlos services create --role deploy --app api-docs --rungs edge api-docs-ci`.
+    # It is bound to this one app and may move only the edge channel.
+    # Rotate: `carlos services rotate --account tito api-docs-ci`, then
+    # update the secret.
+    #
+    # The CLI is the vendor's signed release, pinned by tag and sha256 the
+    # same as titogo's deploy workflow; bump both together.
+    - name: Fetch the carlos CLI (pinned tag + sha)
+      env:
+        GH_TOKEN: ${{ github.token }}
+        CARLOS_CLI_TAG: v0.28.0
+        CARLOS_CLI_SHA256: a89b54b647f639e95a73a9e9cbcd8d6a62a070fac43bd60bf17168a51399fbca
+      run: |
+        gh release download "$CARLOS_CLI_TAG" -R carlosframework/releases \
+          --pattern carlos-linux-amd64 --output carlos-cli --clobber
+        echo "$CARLOS_CLI_SHA256  carlos-cli" | sha256sum -c -
+        chmod +x carlos-cli
+
+    - name: Ship to CARLOS and promote to edge
+      env:
+        CARLOS_CONSOLE: https://console.platform.tito.io
+        CARLOS_SERVICE_TOKEN: ${{ secrets.CARLOS_SERVICE_TOKEN }}
+      run: |
+        rm -rf carlos-site && mkdir carlos-site
+        cp -R build/. carlos-site/
+        cp carlos/_redirects carlos/robots.txt carlos-site/
+        ver="${GITHUB_SHA::12}"
+        echo "ver=$ver" >> "$GITHUB_ENV"
+        ./carlos-cli ship --app api-docs --account-id bae --kind static --version "$ver" --no-prompt carlos-site
+        ./carlos-cli promote --app api-docs --account-id bae --no-prompt "$ver" edge
+
+    # Red means the docs on CARLOS are not this build. The edge stamps
+    # X-Carlos-Version from the channel, re-checked about once a minute.
+    - name: Serving check
+      run: |
+        for i in $(seq 30); do
+          got=$(curl -sI --max-time 5 https://api-docs.bae.platform.tito.io/docs/api/ | tr -d '\r' | sed -n 's/^x-carlos-version: //Ip')
+          [ "$got" = "$ver" ] && { echo "serving $ver"; exit 0; }
+          echo "serving ${got:-nothing yet}, want $ver ($i/30)"; sleep 10
+        done
+        exit 1
