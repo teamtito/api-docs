@@ -105,7 +105,7 @@
     "start_at": {
       "description": "The time the event is going to start based on the `start_date` and `start_time`, e.g. 2020-12-31T13:00:00.000+01:00",
       "type": "timestamp",
-      "read_only": false,
+      "read_only": true,
       "required": false
     },
     "end_date": {
@@ -123,7 +123,7 @@
     "end_at": {
       "description": "The time the event is going to end based on the `end_date` and `end_time`, e.g. 2020-12-31T18:00:00.000+01:00",
       "type": "timestamp",
-      "read_only": false,
+      "read_only": true,
       "required": false
     },
     "date_or_range": {

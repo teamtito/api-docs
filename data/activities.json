@@ -44,7 +44,7 @@
       "required": false
     },
     "release_ids": {
-      "description": "A list of `Release` `id` attributes that are part of the activity.",
+      "description": "A list of `Release` `id` attributes that are part of the activity. In version 3.0 responses this is returned as an array of `Release` slugs rather than numeric ids (see the changelog).",
       "type": "array",
       "read_only": false,
       "required": false
